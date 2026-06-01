@@ -1,0 +1,432 @@
+[
+  {
+    "slug": "springvale-lane",
+    "project": "Springvale Lane",
+    "category": "Exteriors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/springvale-lane.jpg",
+    "thumb": "assets/img/springvale-lane-thumb.jpg"
+  },
+  {
+    "slug": "1611-polecat-lane",
+    "project": "Polecat Lane",
+    "category": "Exteriors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1611-polecat-lane.jpg",
+    "thumb": "assets/img/1611-polecat-lane-thumb.jpg"
+  },
+  {
+    "slug": "1611-polecat-lane-2",
+    "project": "Polecat Lane",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1611-polecat-lane-2.jpg",
+    "thumb": "assets/img/1611-polecat-lane-2-thumb.jpg"
+  },
+  {
+    "slug": "1611-polecat-lane-3",
+    "project": "Polecat Lane",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1611-polecat-lane-3.jpg",
+    "thumb": "assets/img/1611-polecat-lane-3-thumb.jpg"
+  },
+  {
+    "slug": "1611-polecat-lane-4",
+    "project": "Polecat Lane",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1611-polecat-lane-4.jpg",
+    "thumb": "assets/img/1611-polecat-lane-4-thumb.jpg"
+  },
+  {
+    "slug": "1063-thomas-jefferson-st",
+    "project": "Thomas Jefferson St",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1063-thomas-jefferson-st.jpg",
+    "thumb": "assets/img/1063-thomas-jefferson-st-thumb.jpg"
+  },
+  {
+    "slug": "1063-thomas-jefferson-st-2",
+    "project": "Thomas Jefferson St",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1063-thomas-jefferson-st-2.jpg",
+    "thumb": "assets/img/1063-thomas-jefferson-st-2-thumb.jpg"
+  },
+  {
+    "slug": "1063-thomas-jefferson-st-3",
+    "project": "Thomas Jefferson St",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1063-thomas-jefferson-st-3.jpg",
+    "thumb": "assets/img/1063-thomas-jefferson-st-3-thumb.jpg"
+  },
+  {
+    "slug": "1063-thomas-jefferson-st-4",
+    "project": "Thomas Jefferson St",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/1063-thomas-jefferson-st-4.jpg",
+    "thumb": "assets/img/1063-thomas-jefferson-st-4-thumb.jpg"
+  },
+  {
+    "slug": "218-15th-st-ne",
+    "project": "15th Street NE",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/218-15th-st-ne.jpg",
+    "thumb": "assets/img/218-15th-st-ne-thumb.jpg"
+  },
+  {
+    "slug": "218-15th-st-ne-2",
+    "project": "15th Street NE",
+    "category": "Kitchens",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/218-15th-st-ne-2.jpg",
+    "thumb": "assets/img/218-15th-st-ne-2-thumb.jpg"
+  },
+  {
+    "slug": "329-15th-st-ne",
+    "project": "15th Street NE",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/329-15th-st-ne.jpg",
+    "thumb": "assets/img/329-15th-st-ne-thumb.jpg"
+  },
+  {
+    "slug": "329-15th-st-ne-2",
+    "project": "15th Street NE",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/329-15th-st-ne-2.jpg",
+    "thumb": "assets/img/329-15th-st-ne-2-thumb.jpg"
+  },
+  {
+    "slug": "329-15th-st-ne-3",
+    "project": "15th Street NE",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/329-15th-st-ne-3.jpg",
+    "thumb": "assets/img/329-15th-st-ne-3-thumb.jpg"
+  },
+  {
+    "slug": "2210-monteiro-ave",
+    "project": "Monteiro Avenue",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2210-monteiro-ave.jpg",
+    "thumb": "assets/img/2210-monteiro-ave-thumb.jpg"
+  },
+  {
+    "slug": "2210-monteiro-ave-2",
+    "project": "Monteiro Avenue",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2210-monteiro-ave-2.jpg",
+    "thumb": "assets/img/2210-monteiro-ave-2-thumb.jpg"
+  },
+  {
+    "slug": "2210-monteiro-ave-3",
+    "project": "Monteiro Avenue",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2210-monteiro-ave-3.jpg",
+    "thumb": "assets/img/2210-monteiro-ave-3-thumb.jpg"
+  },
+  {
+    "slug": "2210-monteiro-ave-4",
+    "project": "Monteiro Avenue",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2210-monteiro-ave-4.jpg",
+    "thumb": "assets/img/2210-monteiro-ave-4-thumb.jpg"
+  },
+  {
+    "slug": "2903-east-marshall-st",
+    "project": "East Marshall St",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2903-east-marshall-st.jpg",
+    "thumb": "assets/img/2903-east-marshall-st-thumb.jpg"
+  },
+  {
+    "slug": "2903-east-marshall-st-2",
+    "project": "East Marshall St",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2903-east-marshall-st-2.jpg",
+    "thumb": "assets/img/2903-east-marshall-st-2-thumb.jpg"
+  },
+  {
+    "slug": "2903-east-marshall-st-3",
+    "project": "East Marshall St",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/2903-east-marshall-st-3.jpg",
+    "thumb": "assets/img/2903-east-marshall-st-3-thumb.jpg"
+  },
+  {
+    "slug": "617-elliot-st-ne",
+    "project": "Elliot Street NE",
+    "category": "Interiors",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/617-elliot-st-ne.jpg",
+    "thumb": "assets/img/617-elliot-st-ne-thumb.jpg"
+  },
+  {
+    "slug": "25",
+    "project": "Kitchen Remodel",
+    "category": "Kitchens",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/25.jpg",
+    "thumb": "assets/img/25-thumb.jpg"
+  },
+  {
+    "slug": "26",
+    "project": "Interior Finishes",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/26.jpg",
+    "thumb": "assets/img/26-thumb.jpg"
+  },
+  {
+    "slug": "29",
+    "project": "Kitchen Remodel",
+    "category": "Kitchens",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/29.jpg",
+    "thumb": "assets/img/29-thumb.jpg"
+  },
+  {
+    "slug": "31",
+    "project": "Kitchen Remodel",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/31.jpg",
+    "thumb": "assets/img/31-thumb.jpg"
+  },
+  {
+    "slug": "30",
+    "project": "Bathroom Remodel",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/30.jpg",
+    "thumb": "assets/img/30-thumb.jpg"
+  },
+  {
+    "slug": "27",
+    "project": "Bathroom Remodel",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/27.jpg",
+    "thumb": "assets/img/27-thumb.jpg"
+  },
+  {
+    "slug": "23",
+    "project": "Interior Finishes",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/23.jpg",
+    "thumb": "assets/img/23-thumb.jpg"
+  },
+  {
+    "slug": "24",
+    "project": "Interior Finishes",
+    "category": "Interiors",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/24.jpg",
+    "thumb": "assets/img/24-thumb.jpg"
+  },
+  {
+    "slug": "28",
+    "project": "Kitchen Remodel",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/28.jpg",
+    "thumb": "assets/img/28-thumb.jpg"
+  },
+  {
+    "slug": "3d-sage-kitchen-1",
+    "project": "Sage Kitchen Concept",
+    "category": "3D Designs",
+    "featured": true,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-sage-kitchen-1.jpg",
+    "thumb": "assets/img/3d-sage-kitchen-1-thumb.jpg"
+  },
+  {
+    "slug": "3d-sage-kitchen-2",
+    "project": "Sage Kitchen Concept",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-sage-kitchen-2.jpg",
+    "thumb": "assets/img/3d-sage-kitchen-2-thumb.jpg"
+  },
+  {
+    "slug": "3d-sage-kitchen-3",
+    "project": "Sage Kitchen Concept",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-sage-kitchen-3.jpg",
+    "thumb": "assets/img/3d-sage-kitchen-3-thumb.jpg"
+  },
+  {
+    "slug": "3d-tiny-home-exterior",
+    "project": "Tiny Home Design",
+    "category": "3D Designs",
+    "featured": true,
+    "w": 1920,
+    "h": 887,
+    "src": "assets/img/3d-tiny-home-exterior.jpg",
+    "thumb": "assets/img/3d-tiny-home-exterior-thumb.jpg"
+  },
+  {
+    "slug": "3d-tiny-home-kitchen",
+    "project": "Tiny Home Design",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 887,
+    "src": "assets/img/3d-tiny-home-kitchen.jpg",
+    "thumb": "assets/img/3d-tiny-home-kitchen-thumb.jpg"
+  },
+  {
+    "slug": "3d-tiny-home-bath",
+    "project": "Tiny Home Design",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 887,
+    "src": "assets/img/3d-tiny-home-bath.jpg",
+    "thumb": "assets/img/3d-tiny-home-bath-thumb.jpg"
+  },
+  {
+    "slug": "3d-tiny-home-living",
+    "project": "Tiny Home Design",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 887,
+    "src": "assets/img/3d-tiny-home-living.jpg",
+    "thumb": "assets/img/3d-tiny-home-living-thumb.jpg"
+  },
+  {
+    "slug": "3d-modern-kitchen-1",
+    "project": "Modern Kitchen Concept",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 895,
+    "src": "assets/img/3d-modern-kitchen-1.jpg",
+    "thumb": "assets/img/3d-modern-kitchen-1-thumb.jpg"
+  },
+  {
+    "slug": "3d-modern-kitchen-2",
+    "project": "Modern Kitchen Concept",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 895,
+    "src": "assets/img/3d-modern-kitchen-2.jpg",
+    "thumb": "assets/img/3d-modern-kitchen-2-thumb.jpg"
+  },
+  {
+    "slug": "3d-covered-patio-1",
+    "project": "Covered Patio Design",
+    "category": "3D Designs",
+    "featured": true,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-covered-patio-1.jpg",
+    "thumb": "assets/img/3d-covered-patio-1-thumb.jpg"
+  },
+  {
+    "slug": "3d-covered-patio-2",
+    "project": "Covered Patio Design",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-covered-patio-2.jpg",
+    "thumb": "assets/img/3d-covered-patio-2-thumb.jpg"
+  },
+  {
+    "slug": "3d-covered-patio-3",
+    "project": "Covered Patio Design",
+    "category": "3D Designs",
+    "featured": false,
+    "w": 1920,
+    "h": 868,
+    "src": "assets/img/3d-covered-patio-3.jpg",
+    "thumb": "assets/img/3d-covered-patio-3-thumb.jpg"
+  }
+]
