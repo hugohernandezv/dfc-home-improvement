@@ -88,16 +88,16 @@ def process_logo():
 # (filename, project, category, featured-on-home)
 PHOTOS = [
     # Kitchens (hi-res project photos)
-    ("Kitchen Springvale Lane.png",  "Springvale Lane",     "Kitchens",  False),
-    ("Kitchen Thomas Jefferson.png", "Thomas Jefferson St", "Kitchens",  True),
-    ("Kitchen Polecat Lane.png",     "Polecat Lane",        "Kitchens",  False),
-    ("Kitchen Reymet Road.png",      "Reymet Road",         "Kitchens",  False),
-    ("Kitchen 15th Street NE.png",   "15th Street NE",      "Kitchens",  True),
-    ("Kitchen Monteiro Ave.png",     "Monteiro Avenue",     "Kitchens",  True),
-    ("Kitchen North Ave.png",        "North Avenue",        "Kitchens",  False),
-    ("Kitchen East Marshall.png",    "East Marshall St",    "Kitchens",  True),
-    ("Kitchen Channing Street.png",  "Channing Street",     "Kitchens",  False),
-    ("Kitchen Elliott Street.png",   "Elliott Street NE",   "Kitchens",  False),
+    ("Kitchen Springvale Lane.png",  "Springvale Lane",     "Homepage",  False),
+    ("Kitchen Thomas Jefferson.png", "Thomas Jefferson St", "Homepage",  True),
+    ("Kitchen Polecat Lane.png",     "Polecat Lane",        "Homepage",  False),
+    ("Kitchen Reymet Road.png",      "Reymet Road",         "Homepage",  False),
+    ("Kitchen 15th Street NE.png",   "15th Street NE",      "Homepage",  True),
+    ("Kitchen Monteiro Ave.png",     "Monteiro Avenue",     "Homepage",  True),
+    ("Kitchen North Ave.png",        "North Avenue",        "Homepage",  False),
+    ("Kitchen East Marshall.png",    "East Marshall St",    "Homepage",  True),
+    ("Kitchen Channing Street.png",  "Channing Street",     "Homepage",  False),
+    ("Kitchen Elliott Street.png",   "Elliott Street NE",   "Homepage",  False),
     # Bathrooms (hi-res project photos)
     ("Bath Springvale Lane.png",     "Springvale Lane",     "Bathrooms", False),
     ("Bath Thomas Jefferson.png",    "Thomas Jefferson St", "Bathrooms", False),
@@ -129,6 +129,8 @@ PHOTOS = [
     ("3D Covered Patio 2.jpg",                         "Covered Patio Design",   "3D Designs", False),
     ("3D Covered Patio 3.jpg",                         "Covered Patio Design",   "3D Designs", False),
 ]
+# Kitchen portfolio gallery (curated from Canva, watermark cropped)
+PHOTOS += [(f"Design Kitchen {i:02d}.png", "Kitchen Design", "Kitchens", False) for i in range(1, 24)]
 
 def process_photos():
     manifest = []

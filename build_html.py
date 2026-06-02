@@ -116,6 +116,17 @@ def header(current):
   </div>
 </div>"""
 
+# ---------------------------------------------------------------- PAGE HEAD (text, no photo)
+def page_head(crumb, title, desc):
+    return f"""
+<section class="page-head">
+  <div class="wrap reveal">
+    <p class="breadcrumb"><a href="index.html">Home</a> / {crumb}</p>
+    <h1>{title}</h1>
+    <p class="ph-desc">{desc}</p>
+  </div>
+</section>"""
+
 # ---------------------------------------------------------------- CTA (every page)
 def cta():
     return f"""
@@ -431,14 +442,7 @@ def build_new_construction():
 
     body = f"""
 <main id="top">
-  <section class="page-hero">
-    <div class="ph-bg"><img src="{img('outdoor-15th-street-deck')}" alt="New custom home built by DFC Home Improvement"></div>
-    <div class="ph-inner">
-      <p class="breadcrumb reveal"><a href="index.html">Home</a> / New Construction</p>
-      <h1 class="reveal">New construction, built right from the ground up.</h1>
-      <p class="reveal d1">Custom homes, additions, dormers, foundations and roofing — full-service construction managed by one accountable, Class A licensed team.</p>
-    </div>
-  </section>
+{page_head("New Construction", "New construction, built right from the ground up.", "Custom homes, additions, dormers, foundations and roofing — full-service construction managed by one accountable, Class A licensed team.")}
 
   <!-- New Homes feature row -->
   <section class="section wrap" id="new-homes">
@@ -524,14 +528,7 @@ def build_renovations():
 
     body = f"""
 <main id="top">
-  <section class="page-hero">
-    <div class="ph-bg"><img src="{img('kitchen-monteiro-ave')}" alt="Whole-home renovation by DFC Home Improvement"></div>
-    <div class="ph-inner">
-      <p class="breadcrumb reveal"><a href="index.html">Home</a> / Renovations</p>
-      <h1 class="reveal">Renovations that reimagine the home you're in.</h1>
-      <p class="reveal d1">Kitchens, bathrooms and whole-home remodels — designed and built by one team, from first sketch to final walkthrough.</p>
-    </div>
-  </section>
+{page_head("Renovations", "Renovations that reimagine the home you're in.", "Kitchens, bathrooms and whole-home remodels — designed and built by one team, from first sketch to final walkthrough.")}
 {''.join(blocks)}
 
   <!-- 3D Design & Rendering -->
@@ -570,35 +567,50 @@ def build_renovations():
 
 # ================================================================ PORTFOLIO
 def build_portfolio():
-    cats = ["All", "Kitchens", "Bathrooms", "Outdoor", "3D Designs"]
-    filt = "\n".join(
-        f'        <button class="{"active" if c=="All" else ""}" data-filter="{c.lower()}">{c}</button>'
-        for c in cats)
-    order = sorted(M.values(), key=lambda x: (not x["featured"], x["project"]))
-    figs = []
-    for x in order:
-        figs.append(
-            f"""        <figure data-category="{x['category'].lower()}" data-full="{x['src']}" data-proj="{html.escape(x['project'])}" data-cat="{x['category']}">
-          <img src="{x['thumb']}" alt="{html.escape(x['project'])} — {x['category']} project by DFC Home Improvement" loading="lazy">
-          <span class="g-zoom" aria-hidden="true">{ZOOM}</span>
-        </figure>""")
+    # landing: one tile per category -> opens that category's gallery page
+    tiles = [
+        ("Kitchens",   "portfolio-kitchens.html",  "design-kitchen-03"),
+        ("Bathrooms",  "portfolio-bathrooms.html", "bath-marble-suite"),
+        ("3D Designs", "portfolio-3d.html",        "3d-sage-kitchen-1"),
+    ]
+    tile_html = "\n".join(
+        f"""      <a class="cat-tile reveal" href="{href}">
+        <img src="{img(slug)}" alt="{label} portfolio by DFC Home Improvement" loading="lazy">
+        <div class="ct-cap"><h2>{label}</h2><span class="link-arrow light">View gallery {ARROW}</span></div>
+      </a>""" for label, href, slug in tiles)
     body = f"""
 <main id="top">
-  <section class="page-hero">
-    <div class="ph-bg"><img src="{img('outdoor-15th-street-patio')}" alt="Outdoor patio and deck by DFC Home Improvement"></div>
-    <div class="ph-inner">
-      <p class="breadcrumb reveal"><a href="index.html">Home</a> / Portfolio</p>
-      <h1 class="reveal">A portfolio of custom homes, renovations &amp; finishes.</h1>
-      <p class="reveal d1">Real projects across Northern Virginia, Washington DC and Richmond. Filter by space, or click any image to view it larger.</p>
+{page_head("Portfolio", "Our work, by space.", "Explore completed DFC projects across Northern Virginia, Washington DC and Richmond. Choose a category to see the full gallery.")}
+  <section class="section--tight wrap">
+    <div class="cat-tiles">
+{tile_html}
     </div>
   </section>
+{cta()}
+</main>"""
+    page("portfolio.html",
+         head("Portfolio | DFC Home Improvement — Kitchens, Bathrooms & 3D Designs",
+              "Browse completed DFC Home Improvement projects — kitchens, bathrooms and 3D design renderings across Northern Virginia, DC and Richmond.",
+              "portfolio"),
+         body, "portfolio")
+
+def build_category(cat, fname, title, desc):
+    items = [x for x in M.values() if x["category"] == cat]
+    items.sort(key=lambda x: (not x["featured"], x["slug"]))
+    figs = "\n".join(
+        f"""        <figure data-full="{x['src']}" data-proj="{html.escape(x['project'])}" data-cat="{x['category']}">
+          <img src="{x['thumb']}" alt="{html.escape(x['project'])} — {x['category']} by DFC Home Improvement" loading="lazy">
+          <span class="g-zoom" aria-hidden="true">{ZOOM}</span>
+        </figure>""" for x in items)
+    crumb = f'<a href="portfolio.html">Portfolio</a> / {title}'
+    body = f"""
+<main id="top">
+{page_head(crumb, title, desc)}
   <section class="section--tight wrap">
-    <div class="filters reveal" id="filters">
-{filt}
+    <div class="gallery gallery--2col" id="gallery">
+{figs}
     </div>
-    <div class="gallery" id="gallery">
-{chr(10).join(figs)}
-    </div>
+    <div class="cat-nav reveal"><a class="btn" href="portfolio.html">← Back to all categories</a></div>
   </section>
 {cta()}
 </main>
@@ -609,10 +621,8 @@ def build_portfolio():
   <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
   <div class="lb-cap" id="lbCap"></div>
 </div>"""
-    page("portfolio.html",
-         head("Portfolio | DFC Home Improvement — Custom Homes & Renovations",
-              "Browse completed DFC Home Improvement projects: custom homes, kitchens, bathrooms and full interior renovations across Northern Virginia, DC and Richmond.",
-              "portfolio"),
+    page(fname,
+         head(f"{title} | DFC Home Improvement Portfolio", desc, "portfolio"),
          body, "portfolio")
 
 # ================================================================ CONTACT
@@ -620,14 +630,7 @@ def build_contact():
     areas = " · ".join(AREAS)
     body = f"""
 <main id="top">
-  <section class="page-hero">
-    <div class="ph-bg"><img src="{img('kitchen-15th-street-ne')}" alt="Kitchen remodeled by DFC Home Improvement"></div>
-    <div class="ph-inner">
-      <p class="breadcrumb reveal"><a href="index.html">Home</a> / Contact</p>
-      <h1 class="reveal">Let's talk about your project.</h1>
-      <p class="reveal d1">Tell us a little about what you have in mind. We'll follow up to schedule your free evaluation — no obligation, honest pricing, expert guidance.</p>
-    </div>
-  </section>
+{page_head("Contact", "Let's talk about your project.", "Tell us a little about what you have in mind. We'll follow up to schedule your free evaluation — no obligation, honest pricing, expert guidance.")}
   <section class="section--tight wrap">
     <div class="contact-grid">
       <div class="contact-info reveal">
@@ -644,6 +647,7 @@ def build_contact():
           <input type="hidden" name="_subject" value="New website lead — DFC Home Improvement">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Thanks for reaching out to DFC Home Improvement! We've received your request and someone from our team will personally follow up within 24 hours to schedule your free, no-obligation evaluation. In the meantime, here's a quick look at what we do: https://www.dfchomeimprovement.com/assets/dfc-brochure.pdf — If it's urgent, call or text us at {PHONE_DISP}. — The DFC Home Improvement Team">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <div class="field"><label for="name">Full name <span class="req">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></div>
           <div class="field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(703) 000-0000" required></div>
@@ -682,14 +686,7 @@ def build_privacy():
     updated = "June 1, 2026"
     body = f"""
 <main id="top">
-  <section class="page-hero">
-    <div class="ph-bg"><img src="{img('kitchen-monteiro-ave')}" alt=""></div>
-    <div class="ph-inner">
-      <p class="breadcrumb reveal"><a href="index.html">Home</a> / Privacy Policy</p>
-      <h1 class="reveal">Privacy Policy</h1>
-      <p class="reveal d1">How DFC Home Improvement collects, uses and protects the information you share with us.</p>
-    </div>
-  </section>
+{page_head("Privacy Policy", "Privacy Policy", "How DFC Home Improvement collects, uses and protects the information you share with us.")}
   <section class="section--tight wrap">
     <div class="legal reveal">
       <p class="legal-updated">Last updated: {updated}</p>
@@ -770,6 +767,12 @@ if __name__ == "__main__":
     build_new_construction()
     build_renovations()
     build_portfolio()
+    build_category("Kitchens", "portfolio-kitchens.html", "Kitchens",
+                   "Custom kitchen remodels and new builds across Northern Virginia, Washington DC and Richmond.")
+    build_category("Bathrooms", "portfolio-bathrooms.html", "Bathrooms",
+                   "Spa-style baths, custom tile showers and finish work, designed and built by one team.")
+    build_category("3D Designs", "portfolio-3d.html", "3D Designs",
+                   "Photoreal 3D renderings we create so you can see your project before we build it.")
     build_contact()
     build_privacy()
     # remove the old services page if present

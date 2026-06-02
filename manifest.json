@@ -2,7 +2,7 @@
   {
     "slug": "kitchen-springvale-lane",
     "project": "Springvale Lane",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -12,7 +12,7 @@
   {
     "slug": "kitchen-thomas-jefferson",
     "project": "Thomas Jefferson St",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -22,7 +22,7 @@
   {
     "slug": "kitchen-polecat-lane",
     "project": "Polecat Lane",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -32,7 +32,7 @@
   {
     "slug": "kitchen-reymet-road",
     "project": "Reymet Road",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -42,7 +42,7 @@
   {
     "slug": "kitchen-15th-street-ne",
     "project": "15th Street NE",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -52,7 +52,7 @@
   {
     "slug": "kitchen-monteiro-ave",
     "project": "Monteiro Avenue",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -62,7 +62,7 @@
   {
     "slug": "kitchen-north-ave",
     "project": "North Avenue",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -72,7 +72,7 @@
   {
     "slug": "kitchen-east-marshall",
     "project": "East Marshall St",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -82,7 +82,7 @@
   {
     "slug": "kitchen-channing-street",
     "project": "Channing Street",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -92,7 +92,7 @@
   {
     "slug": "kitchen-elliott-street",
     "project": "Elliott Street NE",
-    "category": "Kitchens",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -368,5 +368,235 @@
     "h": 868,
     "src": "assets/img/3d-covered-patio-3.jpg",
     "thumb": "assets/img/3d-covered-patio-3-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-01",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 787,
+    "h": 595,
+    "src": "assets/img/design-kitchen-01.jpg",
+    "thumb": "assets/img/design-kitchen-01-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-02",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1112,
+    "h": 695,
+    "src": "assets/img/design-kitchen-02.jpg",
+    "thumb": "assets/img/design-kitchen-02-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-03",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1008,
+    "h": 693,
+    "src": "assets/img/design-kitchen-03.jpg",
+    "thumb": "assets/img/design-kitchen-03-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-04",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1078,
+    "h": 678,
+    "src": "assets/img/design-kitchen-04.jpg",
+    "thumb": "assets/img/design-kitchen-04-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-05",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 988,
+    "h": 688,
+    "src": "assets/img/design-kitchen-05.jpg",
+    "thumb": "assets/img/design-kitchen-05-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-06",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 997,
+    "h": 626,
+    "src": "assets/img/design-kitchen-06.jpg",
+    "thumb": "assets/img/design-kitchen-06-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-07",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 846,
+    "h": 672,
+    "src": "assets/img/design-kitchen-07.jpg",
+    "thumb": "assets/img/design-kitchen-07-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-08",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1021,
+    "h": 645,
+    "src": "assets/img/design-kitchen-08.jpg",
+    "thumb": "assets/img/design-kitchen-08-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-09",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 962,
+    "h": 668,
+    "src": "assets/img/design-kitchen-09.jpg",
+    "thumb": "assets/img/design-kitchen-09-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-10",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 936,
+    "h": 696,
+    "src": "assets/img/design-kitchen-10.jpg",
+    "thumb": "assets/img/design-kitchen-10-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-11",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 989,
+    "h": 669,
+    "src": "assets/img/design-kitchen-11.jpg",
+    "thumb": "assets/img/design-kitchen-11-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-12",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 845,
+    "h": 692,
+    "src": "assets/img/design-kitchen-12.jpg",
+    "thumb": "assets/img/design-kitchen-12-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-13",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1022,
+    "h": 671,
+    "src": "assets/img/design-kitchen-13.jpg",
+    "thumb": "assets/img/design-kitchen-13-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-14",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1016,
+    "h": 677,
+    "src": "assets/img/design-kitchen-14.jpg",
+    "thumb": "assets/img/design-kitchen-14-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-15",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1003,
+    "h": 667,
+    "src": "assets/img/design-kitchen-15.jpg",
+    "thumb": "assets/img/design-kitchen-15-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-16",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 970,
+    "h": 660,
+    "src": "assets/img/design-kitchen-16.jpg",
+    "thumb": "assets/img/design-kitchen-16-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-17",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 905,
+    "h": 611,
+    "src": "assets/img/design-kitchen-17.jpg",
+    "thumb": "assets/img/design-kitchen-17-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-18",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1059,
+    "h": 655,
+    "src": "assets/img/design-kitchen-18.jpg",
+    "thumb": "assets/img/design-kitchen-18-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-19",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1040,
+    "h": 667,
+    "src": "assets/img/design-kitchen-19.jpg",
+    "thumb": "assets/img/design-kitchen-19-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-20",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 715,
+    "h": 544,
+    "src": "assets/img/design-kitchen-20.jpg",
+    "thumb": "assets/img/design-kitchen-20-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-21",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1070,
+    "h": 668,
+    "src": "assets/img/design-kitchen-21.jpg",
+    "thumb": "assets/img/design-kitchen-21-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-22",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1045,
+    "h": 654,
+    "src": "assets/img/design-kitchen-22.jpg",
+    "thumb": "assets/img/design-kitchen-22-thumb.jpg"
+  },
+  {
+    "slug": "design-kitchen-23",
+    "project": "Kitchen Design",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1075,
+    "h": 670,
+    "src": "assets/img/design-kitchen-23.jpg",
+    "thumb": "assets/img/design-kitchen-23-thumb.jpg"
   }
 ]
