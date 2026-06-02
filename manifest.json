@@ -102,7 +102,7 @@
   {
     "slug": "bath-springvale-lane",
     "project": "Springvale Lane",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -112,7 +112,7 @@
   {
     "slug": "bath-thomas-jefferson",
     "project": "Thomas Jefferson St",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -122,7 +122,7 @@
   {
     "slug": "bath-polecat-lane",
     "project": "Polecat Lane",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -132,7 +132,7 @@
   {
     "slug": "bath-reymet-road",
     "project": "Reymet Road",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -142,7 +142,7 @@
   {
     "slug": "bath-15th-street-ne",
     "project": "15th Street NE",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -152,7 +152,7 @@
   {
     "slug": "bath-monteiro-ave",
     "project": "Monteiro Avenue",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -162,7 +162,7 @@
   {
     "slug": "bath-north-ave",
     "project": "North Avenue",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -172,7 +172,7 @@
   {
     "slug": "bath-channing-street",
     "project": "Channing Street",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -182,7 +182,7 @@
   {
     "slug": "bath-elliott-street",
     "project": "Elliott Street NE",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": false,
     "w": 1920,
     "h": 1080,
@@ -192,7 +192,7 @@
   {
     "slug": "bath-marble-suite",
     "project": "Marble Suite",
-    "category": "Bathrooms",
+    "category": "Homepage",
     "featured": true,
     "w": 1920,
     "h": 1080,
@@ -370,233 +370,493 @@
     "thumb": "assets/img/3d-covered-patio-3-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-01",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-01",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 787,
-    "h": 595,
-    "src": "assets/img/design-kitchen-01.jpg",
-    "thumb": "assets/img/design-kitchen-01-thumb.jpg"
+    "w": 1574,
+    "h": 1190,
+    "src": "assets/img/kitchen-gallery-01.jpg",
+    "thumb": "assets/img/kitchen-gallery-01-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-02",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-02",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1112,
-    "h": 695,
-    "src": "assets/img/design-kitchen-02.jpg",
-    "thumb": "assets/img/design-kitchen-02-thumb.jpg"
+    "w": 1920,
+    "h": 1202,
+    "src": "assets/img/kitchen-gallery-02.jpg",
+    "thumb": "assets/img/kitchen-gallery-02-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-03",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-03",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1008,
-    "h": 693,
-    "src": "assets/img/design-kitchen-03.jpg",
-    "thumb": "assets/img/design-kitchen-03-thumb.jpg"
+    "w": 1920,
+    "h": 1320,
+    "src": "assets/img/kitchen-gallery-03.jpg",
+    "thumb": "assets/img/kitchen-gallery-03-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-04",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-04",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1078,
-    "h": 678,
-    "src": "assets/img/design-kitchen-04.jpg",
-    "thumb": "assets/img/design-kitchen-04-thumb.jpg"
+    "w": 1920,
+    "h": 1208,
+    "src": "assets/img/kitchen-gallery-04.jpg",
+    "thumb": "assets/img/kitchen-gallery-04-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-05",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-05",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 988,
-    "h": 688,
-    "src": "assets/img/design-kitchen-05.jpg",
-    "thumb": "assets/img/design-kitchen-05-thumb.jpg"
+    "w": 1920,
+    "h": 1336,
+    "src": "assets/img/kitchen-gallery-05.jpg",
+    "thumb": "assets/img/kitchen-gallery-05-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-06",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-06",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 997,
-    "h": 626,
-    "src": "assets/img/design-kitchen-06.jpg",
-    "thumb": "assets/img/design-kitchen-06-thumb.jpg"
+    "w": 1505,
+    "h": 1311,
+    "src": "assets/img/kitchen-gallery-06.jpg",
+    "thumb": "assets/img/kitchen-gallery-06-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-07",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-07",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 846,
-    "h": 672,
-    "src": "assets/img/design-kitchen-07.jpg",
-    "thumb": "assets/img/design-kitchen-07-thumb.jpg"
+    "w": 1920,
+    "h": 1206,
+    "src": "assets/img/kitchen-gallery-07.jpg",
+    "thumb": "assets/img/kitchen-gallery-07-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-08",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-08",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1021,
-    "h": 645,
-    "src": "assets/img/design-kitchen-08.jpg",
-    "thumb": "assets/img/design-kitchen-08-thumb.jpg"
+    "w": 1686,
+    "h": 1342,
+    "src": "assets/img/kitchen-gallery-08.jpg",
+    "thumb": "assets/img/kitchen-gallery-08-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-09",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-09",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 962,
-    "h": 668,
-    "src": "assets/img/design-kitchen-09.jpg",
-    "thumb": "assets/img/design-kitchen-09-thumb.jpg"
+    "w": 1920,
+    "h": 1214,
+    "src": "assets/img/kitchen-gallery-09.jpg",
+    "thumb": "assets/img/kitchen-gallery-09-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-10",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-10",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 936,
-    "h": 696,
-    "src": "assets/img/design-kitchen-10.jpg",
-    "thumb": "assets/img/design-kitchen-10-thumb.jpg"
+    "w": 1253,
+    "h": 1303,
+    "src": "assets/img/kitchen-gallery-10.jpg",
+    "thumb": "assets/img/kitchen-gallery-10-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-11",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-11",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 989,
-    "h": 669,
-    "src": "assets/img/design-kitchen-11.jpg",
-    "thumb": "assets/img/design-kitchen-11-thumb.jpg"
+    "w": 1920,
+    "h": 1332,
+    "src": "assets/img/kitchen-gallery-11.jpg",
+    "thumb": "assets/img/kitchen-gallery-11-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-12",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-12",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 845,
-    "h": 692,
-    "src": "assets/img/design-kitchen-12.jpg",
-    "thumb": "assets/img/design-kitchen-12-thumb.jpg"
+    "w": 1871,
+    "h": 1388,
+    "src": "assets/img/kitchen-gallery-12.jpg",
+    "thumb": "assets/img/kitchen-gallery-12-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-13",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-13",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1022,
-    "h": 671,
-    "src": "assets/img/design-kitchen-13.jpg",
-    "thumb": "assets/img/design-kitchen-13-thumb.jpg"
+    "w": 1920,
+    "h": 1299,
+    "src": "assets/img/kitchen-gallery-13.jpg",
+    "thumb": "assets/img/kitchen-gallery-13-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-14",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-14",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1016,
-    "h": 677,
-    "src": "assets/img/design-kitchen-14.jpg",
-    "thumb": "assets/img/design-kitchen-14-thumb.jpg"
+    "w": 1686,
+    "h": 1384,
+    "src": "assets/img/kitchen-gallery-14.jpg",
+    "thumb": "assets/img/kitchen-gallery-14-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-15",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-15",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1003,
-    "h": 667,
-    "src": "assets/img/design-kitchen-15.jpg",
-    "thumb": "assets/img/design-kitchen-15-thumb.jpg"
+    "w": 1920,
+    "h": 1263,
+    "src": "assets/img/kitchen-gallery-15.jpg",
+    "thumb": "assets/img/kitchen-gallery-15-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-16",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-16",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 970,
-    "h": 660,
-    "src": "assets/img/design-kitchen-16.jpg",
-    "thumb": "assets/img/design-kitchen-16-thumb.jpg"
+    "w": 1920,
+    "h": 1280,
+    "src": "assets/img/kitchen-gallery-16.jpg",
+    "thumb": "assets/img/kitchen-gallery-16-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-17",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-17",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 905,
-    "h": 611,
-    "src": "assets/img/design-kitchen-17.jpg",
-    "thumb": "assets/img/design-kitchen-17-thumb.jpg"
+    "w": 1920,
+    "h": 1276,
+    "src": "assets/img/kitchen-gallery-17.jpg",
+    "thumb": "assets/img/kitchen-gallery-17-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-18",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-18",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1059,
-    "h": 655,
-    "src": "assets/img/design-kitchen-18.jpg",
-    "thumb": "assets/img/design-kitchen-18-thumb.jpg"
+    "w": 1920,
+    "h": 1308,
+    "src": "assets/img/kitchen-gallery-18.jpg",
+    "thumb": "assets/img/kitchen-gallery-18-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-19",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-19",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1040,
-    "h": 667,
-    "src": "assets/img/design-kitchen-19.jpg",
-    "thumb": "assets/img/design-kitchen-19-thumb.jpg"
+    "w": 1807,
+    "h": 1220,
+    "src": "assets/img/kitchen-gallery-19.jpg",
+    "thumb": "assets/img/kitchen-gallery-19-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-20",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-20",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 715,
-    "h": 544,
-    "src": "assets/img/design-kitchen-20.jpg",
-    "thumb": "assets/img/design-kitchen-20-thumb.jpg"
+    "w": 1920,
+    "h": 1186,
+    "src": "assets/img/kitchen-gallery-20.jpg",
+    "thumb": "assets/img/kitchen-gallery-20-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-21",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-21",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1070,
-    "h": 668,
-    "src": "assets/img/design-kitchen-21.jpg",
-    "thumb": "assets/img/design-kitchen-21-thumb.jpg"
+    "w": 1920,
+    "h": 1229,
+    "src": "assets/img/kitchen-gallery-21.jpg",
+    "thumb": "assets/img/kitchen-gallery-21-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-22",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-22",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1045,
-    "h": 654,
-    "src": "assets/img/design-kitchen-22.jpg",
-    "thumb": "assets/img/design-kitchen-22-thumb.jpg"
+    "w": 1425,
+    "h": 1088,
+    "src": "assets/img/kitchen-gallery-22.jpg",
+    "thumb": "assets/img/kitchen-gallery-22-thumb.jpg"
   },
   {
-    "slug": "design-kitchen-23",
-    "project": "Kitchen Design",
+    "slug": "kitchen-gallery-23",
+    "project": "Kitchen",
     "category": "Kitchens",
     "featured": false,
-    "w": 1075,
-    "h": 670,
-    "src": "assets/img/design-kitchen-23.jpg",
-    "thumb": "assets/img/design-kitchen-23-thumb.jpg"
+    "w": 1920,
+    "h": 1197,
+    "src": "assets/img/kitchen-gallery-23.jpg",
+    "thumb": "assets/img/kitchen-gallery-23-thumb.jpg"
+  },
+  {
+    "slug": "kitchen-gallery-24",
+    "project": "Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1196,
+    "src": "assets/img/kitchen-gallery-24.jpg",
+    "thumb": "assets/img/kitchen-gallery-24-thumb.jpg"
+  },
+  {
+    "slug": "kitchen-gallery-25",
+    "project": "Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1196,
+    "src": "assets/img/kitchen-gallery-25.jpg",
+    "thumb": "assets/img/kitchen-gallery-25-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-01",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1030,
+    "src": "assets/img/bath-gallery-01.jpg",
+    "thumb": "assets/img/bath-gallery-01-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-02",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1198,
+    "src": "assets/img/bath-gallery-02.jpg",
+    "thumb": "assets/img/bath-gallery-02-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-03",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1187,
+    "src": "assets/img/bath-gallery-03.jpg",
+    "thumb": "assets/img/bath-gallery-03-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-04",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1373,
+    "h": 1171,
+    "src": "assets/img/bath-gallery-04.jpg",
+    "thumb": "assets/img/bath-gallery-04-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-05",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1346,
+    "h": 1222,
+    "src": "assets/img/bath-gallery-05.jpg",
+    "thumb": "assets/img/bath-gallery-05-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-06",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1439,
+    "h": 1237,
+    "src": "assets/img/bath-gallery-06.jpg",
+    "thumb": "assets/img/bath-gallery-06-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-07",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1199,
+    "h": 1329,
+    "src": "assets/img/bath-gallery-07.jpg",
+    "thumb": "assets/img/bath-gallery-07-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-08",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1292,
+    "h": 1152,
+    "src": "assets/img/bath-gallery-08.jpg",
+    "thumb": "assets/img/bath-gallery-08-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-09",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1185,
+    "src": "assets/img/bath-gallery-09.jpg",
+    "thumb": "assets/img/bath-gallery-09-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-10",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1744,
+    "h": 1128,
+    "src": "assets/img/bath-gallery-10.jpg",
+    "thumb": "assets/img/bath-gallery-10-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-11",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1206,
+    "src": "assets/img/bath-gallery-11.jpg",
+    "thumb": "assets/img/bath-gallery-11-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-12",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 937,
+    "src": "assets/img/bath-gallery-12.jpg",
+    "thumb": "assets/img/bath-gallery-12-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-13",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1274,
+    "src": "assets/img/bath-gallery-13.jpg",
+    "thumb": "assets/img/bath-gallery-13-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-14",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 880,
+    "src": "assets/img/bath-gallery-14.jpg",
+    "thumb": "assets/img/bath-gallery-14-thumb.jpg"
+  },
+  {
+    "slug": "bath-gallery-15",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1066,
+    "src": "assets/img/bath-gallery-15.jpg",
+    "thumb": "assets/img/bath-gallery-15-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-01",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1822,
+    "h": 1345,
+    "src": "assets/img/wholehome-gallery-01.jpg",
+    "thumb": "assets/img/wholehome-gallery-01-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-02",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1825,
+    "h": 1315,
+    "src": "assets/img/wholehome-gallery-02.jpg",
+    "thumb": "assets/img/wholehome-gallery-02-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-03",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1287,
+    "src": "assets/img/wholehome-gallery-03.jpg",
+    "thumb": "assets/img/wholehome-gallery-03-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-04",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1092,
+    "src": "assets/img/wholehome-gallery-04.jpg",
+    "thumb": "assets/img/wholehome-gallery-04-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-05",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1347,
+    "h": 1166,
+    "src": "assets/img/wholehome-gallery-05.jpg",
+    "thumb": "assets/img/wholehome-gallery-05-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-06",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1015,
+    "src": "assets/img/wholehome-gallery-06.jpg",
+    "thumb": "assets/img/wholehome-gallery-06-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-07",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1013,
+    "src": "assets/img/wholehome-gallery-07.jpg",
+    "thumb": "assets/img/wholehome-gallery-07-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-08",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1016,
+    "src": "assets/img/wholehome-gallery-08.jpg",
+    "thumb": "assets/img/wholehome-gallery-08-thumb.jpg"
+  },
+  {
+    "slug": "wholehome-gallery-09",
+    "project": "Whole-Home Renovation",
+    "category": "Whole-Home Renovations",
+    "featured": false,
+    "w": 1920,
+    "h": 1016,
+    "src": "assets/img/wholehome-gallery-09.jpg",
+    "thumb": "assets/img/wholehome-gallery-09-thumb.jpg"
   }
 ]

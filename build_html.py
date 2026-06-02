@@ -569,9 +569,10 @@ def build_renovations():
 def build_portfolio():
     # landing: one tile per category -> opens that category's gallery page
     tiles = [
-        ("Kitchens",   "portfolio-kitchens.html",  "design-kitchen-03"),
-        ("Bathrooms",  "portfolio-bathrooms.html", "bath-marble-suite"),
-        ("3D Designs", "portfolio-3d.html",        "3d-sage-kitchen-1"),
+        ("Kitchens",               "portfolio-kitchens.html",  "kitchen-gallery-01"),
+        ("Bathrooms",              "portfolio-bathrooms.html", "bath-gallery-01"),
+        ("Whole-Home Renovations", "portfolio-wholehome.html", "wholehome-gallery-01"),
+        ("3D Designs",             "portfolio-3d.html",        "3d-sage-kitchen-1"),
     ]
     tile_html = "\n".join(
         f"""      <a class="cat-tile reveal" href="{href}">
@@ -773,6 +774,8 @@ if __name__ == "__main__":
                    "Spa-style baths, custom tile showers and finish work, designed and built by one team.")
     build_category("3D Designs", "portfolio-3d.html", "3D Designs",
                    "Photoreal 3D renderings we create so you can see your project before we build it.")
+    build_category("Whole-Home Renovations", "portfolio-wholehome.html", "Whole-Home Renovations",
+                   "Full-home transformations — living spaces, additions and finishes carried out end to end.")
     build_contact()
     build_privacy()
     # remove the old services page if present

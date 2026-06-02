@@ -4,7 +4,7 @@
    - optimize the heavy source photos into web JPEGs (large + thumb)
    - emit a manifest.json describing the gallery."""
 import json, re, os
-from PIL import Image
+from PIL import Image, ImageFilter, ImageDraw
 
 SRC_PHOTOS = "/Users/hugohernandez/Documentos/DFC/website/photos/Photos"
 SRC_LOGO   = "/Users/hugohernandez/Desktop/DFC Logo/concept-3.png"
@@ -74,14 +74,18 @@ def process_logo():
     mark = im.crop((0, 0, im.width, int(im.height*0.60)))
     mbb = mark.split()[-1].getbbox()
     mark = mark.crop(mbb)
-    side = max(mark.size)
-    sq = Image.new("RGBA", (side, side), (0,0,0,0))
-    sq.paste(mark, ((side-mark.width)//2, (side-mark.height)//2), mark)
-    # black-on-transparent favicon
-    rr,gg,bb,aa = sq.split()
-    fav = Image.merge("RGBA", (Image.new("L",sq.size,0x09), Image.new("L",sq.size,0x04), Image.new("L",sq.size,0x02), aa))
+    # white house mark on a sage-green rounded square — visible on light OR dark browser tabs
+    ma = mark.split()[-1]
+    white = Image.merge("RGBA", (Image.new("L",mark.size,255), Image.new("L",mark.size,255), Image.new("L",mark.size,255), ma))
+    side = int(max(mark.size) * 1.5)
+    canvas = Image.new("RGBA", (side, side), (0x31,0x3d,0x2c,255))
+    rmask = Image.new("L", (side, side), 0)
+    ImageDraw.Draw(rmask).rounded_rectangle([0,0,side-1,side-1], radius=int(side*0.22), fill=255)
+    canvas.putalpha(rmask)
+    mw = int(side*0.62); sc = mw/white.width; mh = int(white.height*sc)
+    canvas.alpha_composite(white.resize((mw,mh), Image.LANCZOS), ((side-mw)//2, (side-mh)//2))
     for sz in (180, 64, 32):
-        fav.resize((sz,sz), Image.LANCZOS).save(os.path.join(LOGO, f"favicon-{sz}.png"))
+        canvas.resize((sz,sz), Image.LANCZOS).save(os.path.join(LOGO, f"favicon-{sz}.png"))
     print("logo:", im.size, "-> white/black/favicon done")
 
 # ---------- PHOTOS ----------
@@ -99,16 +103,16 @@ PHOTOS = [
     ("Kitchen Channing Street.png",  "Channing Street",     "Homepage",  False),
     ("Kitchen Elliott Street.png",   "Elliott Street NE",   "Homepage",  False),
     # Bathrooms (hi-res project photos)
-    ("Bath Springvale Lane.png",     "Springvale Lane",     "Bathrooms", False),
-    ("Bath Thomas Jefferson.png",    "Thomas Jefferson St", "Bathrooms", False),
-    ("Bath Polecat Lane.png",        "Polecat Lane",        "Bathrooms", True),
-    ("Bath Reymet Road.png",         "Reymet Road",         "Bathrooms", False),
-    ("Bath 15th Street NE.png",      "15th Street NE",      "Bathrooms", True),
-    ("Bath Monteiro Ave.png",        "Monteiro Avenue",     "Bathrooms", True),
-    ("Bath North Ave.png",           "North Avenue",        "Bathrooms", False),
-    ("Bath Channing Street.png",     "Channing Street",     "Bathrooms", False),
-    ("Bath Elliott Street.png",      "Elliott Street NE",   "Bathrooms", False),
-    ("Bath Marble Suite.png",        "Marble Suite",        "Bathrooms", True),
+    ("Bath Springvale Lane.png",     "Springvale Lane",     "Homepage", False),
+    ("Bath Thomas Jefferson.png",    "Thomas Jefferson St", "Homepage", False),
+    ("Bath Polecat Lane.png",        "Polecat Lane",        "Homepage", True),
+    ("Bath Reymet Road.png",         "Reymet Road",         "Homepage", False),
+    ("Bath 15th Street NE.png",      "15th Street NE",      "Homepage", True),
+    ("Bath Monteiro Ave.png",        "Monteiro Avenue",     "Homepage", True),
+    ("Bath North Ave.png",           "North Avenue",        "Homepage", False),
+    ("Bath Channing Street.png",     "Channing Street",     "Homepage", False),
+    ("Bath Elliott Street.png",      "Elliott Street NE",   "Homepage", False),
+    ("Bath Marble Suite.png",        "Marble Suite",        "Homepage", True),
     # Outdoor (patios & decks, hi-res project photos)
     ("Outdoor Polecat Patio.png",       "Polecat Lane",     "Outdoor",   True),
     ("Outdoor Polecat Patio 2.png",     "Polecat Lane",     "Outdoor",   False),
@@ -129,8 +133,10 @@ PHOTOS = [
     ("3D Covered Patio 2.jpg",                         "Covered Patio Design",   "3D Designs", False),
     ("3D Covered Patio 3.jpg",                         "Covered Patio Design",   "3D Designs", False),
 ]
-# Kitchen portfolio gallery (curated from Canva, watermark cropped)
-PHOTOS += [(f"Design Kitchen {i:02d}.png", "Kitchen Design", "Kitchens", False) for i in range(1, 24)]
+# Portfolio galleries (from Canva, 2x export, watermark cropped)
+PHOTOS += [(f"Kitchen Gallery {i:02d}.png",   "Kitchen",                "Kitchens",                 False) for i in range(1, 26)]
+PHOTOS += [(f"Bath Gallery {i:02d}.png",      "Bathroom",               "Bathrooms",                False) for i in range(1, 16)]
+PHOTOS += [(f"WholeHome Gallery {i:02d}.png", "Whole-Home Renovation",  "Whole-Home Renovations",   False) for i in range(1, 10)]
 
 def process_photos():
     manifest = []
@@ -148,11 +154,13 @@ def process_photos():
         # large (long side 1920)
         scale = min(1.0, 1920/max(w,h))
         lg = im.resize((round(w*scale), round(h*scale)), Image.LANCZOS) if scale<1 else im
-        lg.save(os.path.join(IMG, slug+".jpg"), "JPEG", quality=82, optimize=True, progressive=True)
+        lg = lg.filter(ImageFilter.UnsharpMask(radius=1.4, percent=85, threshold=2))
+        lg.save(os.path.join(IMG, slug+".jpg"), "JPEG", quality=86, optimize=True, progressive=True)
         # thumb (long side 900)
         ts = min(1.0, 900/max(w,h))
         th = im.resize((round(w*ts), round(h*ts)), Image.LANCZOS) if ts<1 else im
-        th.save(os.path.join(IMG, slug+"-thumb.jpg"), "JPEG", quality=78, optimize=True, progressive=True)
+        th = th.filter(ImageFilter.UnsharpMask(radius=1.0, percent=80, threshold=2))
+        th.save(os.path.join(IMG, slug+"-thumb.jpg"), "JPEG", quality=82, optimize=True, progressive=True)
         manifest.append({"slug":slug, "project":project, "category":cat,
                          "featured":feat, "w":lg.width, "h":lg.height,
                          "src":f"assets/img/{slug}.jpg", "thumb":f"assets/img/{slug}-thumb.jpg"})
