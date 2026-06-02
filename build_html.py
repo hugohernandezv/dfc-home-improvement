@@ -170,7 +170,7 @@ def footer():
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 DFC Home Improvement. Class A Licensed &amp; Insured.</span>
+      <span>© 2026 DFC Home Improvement. Class A Licensed &amp; Insured. · <a href="privacy.html">Privacy Policy</a></span>
       <span class="fb-right"><a href="index.html#areas">{areas}</a></span>
     </div>
   </div>
@@ -677,12 +677,101 @@ def build_contact():
               "contact"),
          body, "contact")
 
+# ================================================================ PRIVACY POLICY
+def build_privacy():
+    updated = "June 1, 2026"
+    body = f"""
+<main id="top">
+  <section class="page-hero">
+    <div class="ph-bg"><img src="{img('1063-thomas-jefferson-st')}" alt=""></div>
+    <div class="ph-inner">
+      <p class="breadcrumb reveal"><a href="index.html">Home</a> / Privacy Policy</p>
+      <h1 class="reveal">Privacy Policy</h1>
+      <p class="reveal d1">How DFC Home Improvement collects, uses and protects the information you share with us.</p>
+    </div>
+  </section>
+  <section class="section--tight wrap">
+    <div class="legal reveal">
+      <p class="legal-updated">Last updated: {updated}</p>
+
+      <p>DFC Home Improvement ("DFC," "we," "us" or "our") is a Class A licensed design-build general contractor serving Northern Virginia, Washington DC and Richmond. This Privacy Policy explains what information we collect, how we use it, and the choices you have when you visit <a href="https://www.dfchomeimprovement.com">dfchomeimprovement.com</a>, contact us, or respond to our advertisements on platforms such as Facebook and Instagram.</p>
+
+      <h2>Information we collect</h2>
+      <p><strong>Information you provide.</strong> When you submit our consultation request form, respond to a Facebook or Instagram lead ad, call or text us, or email us, we collect the details you share — typically your name, phone number, email address, project address or service area, and a description of the work you're considering.</p>
+      <p><strong>Information collected automatically.</strong> Like most websites, our site and its providers may automatically receive standard technical data such as your IP address, browser and device type, and the pages you view. Our pages load Google Fonts and an embedded map, which may receive your IP address as part of delivering those features.</p>
+      <p><strong>Advertising data.</strong> If you engage with our ads on Meta platforms (Facebook, Instagram) or Google, those platforms and any advertising tools we use (such as the Meta Pixel or conversion tracking) may collect information about your interaction with the ad and our site, and share lead or aggregated information with us.</p>
+
+      <h2>How we use your information</h2>
+      <ul>
+        <li>Respond to your inquiry and schedule a consultation or estimate</li>
+        <li>Prepare quotes and provide the construction, renovation and design services you request</li>
+        <li>Communicate with you about your project, including follow-up by phone, text or email</li>
+        <li>Operate, maintain and improve our website and services</li>
+        <li>Measure and improve the performance of our advertising</li>
+        <li>Comply with legal obligations and protect our rights</li>
+      </ul>
+
+      <h2>How we share information</h2>
+      <p>We do <strong>not</strong> sell your personal information. We share it only as needed to run our business:</p>
+      <ul>
+        <li><strong>Service providers</strong> that help us operate — for example our CRM and quoting system (Jobber), our web-form and email delivery provider (FormSubmit), our website host (Railway), and our email provider (Google Workspace).</li>
+        <li><strong>Advertising platforms</strong> (Meta, Google) when you reach us through their lead or advertising tools.</li>
+        <li><strong>Legal and safety reasons</strong> — when required by law or to protect our rights, our customers or the public.</li>
+      </ul>
+
+      <h2>Third-party services</h2>
+      <p>Some tools and features we use are operated by third parties with their own privacy policies:</p>
+      <ul>
+        <li>Meta (Facebook / Instagram) — <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy</a></li>
+        <li>Google — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        <li>Jobber — <a href="https://getjobber.com/privacy-policy/" target="_blank" rel="noopener">getjobber.com/privacy-policy</a></li>
+        <li>FormSubmit — <a href="https://formsubmit.co/" target="_blank" rel="noopener">formsubmit.co</a></li>
+      </ul>
+
+      <h2>Cookies &amp; tracking technologies</h2>
+      <p>We and our advertising partners may use cookies, pixels and similar technologies to operate the site and to understand and improve ad performance. You can control cookies through your browser settings, and manage ad personalization through <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener">Meta's ad preferences</a>, <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google's ad settings</a>, and the industry opt-out tools at <a href="https://optout.aboutads.info" target="_blank" rel="noopener">optout.aboutads.info</a>.</p>
+
+      <h2>Data retention</h2>
+      <p>We keep your information for as long as needed to respond to your request, provide our services, and meet legal, tax and recordkeeping requirements. You may ask us to delete information we are not required to retain.</p>
+
+      <h2>Your choices &amp; rights</h2>
+      <p>You can opt out of marketing messages at any time by asking us to stop contacting you or replying "STOP" to a text. Depending on where you live — including Virginia residents under the Virginia Consumer Data Protection Act — you may have the right to access, correct or delete your personal information, or to opt out of certain processing. To make a request, contact us using the details below and we will respond as required by applicable law.</p>
+
+      <h2>Data security</h2>
+      <p>We take reasonable measures to protect your information. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+
+      <h2>Children's privacy</h2>
+      <p>Our website and services are intended for adults. We do not knowingly collect personal information from children under 13.</p>
+
+      <h2>Links to other sites</h2>
+      <p>Our site may link to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their policies.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we'll revise the "Last updated" date above, and material changes will be posted on this page.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions about this Privacy Policy or your information, contact:</p>
+      <p><strong>DFC Home Improvement</strong><br>
+      Phone / Text: <a href="tel:+17035968375">(703) 596-8375</a><br>
+      Email: <a href="mailto:admin@dfchomeimprovement.com">admin@dfchomeimprovement.com</a><br>
+      Service area: Northern Virginia · Washington DC · Richmond</p>
+    </div>
+  </section>
+{cta()}
+</main>"""
+    page("privacy.html",
+         head("Privacy Policy | DFC Home Improvement",
+              "How DFC Home Improvement collects, uses and protects your information across our website and our Facebook and Instagram advertising.",
+              "privacy"),
+         body, "privacy")
+
 if __name__ == "__main__":
     build_index()
     build_new_construction()
     build_renovations()
     build_portfolio()
     build_contact()
+    build_privacy()
     # remove the old services page if present
     old = os.path.join(ROOT, "services.html")
     if os.path.exists(old): os.remove(old); print("removed services.html")

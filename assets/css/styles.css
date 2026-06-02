@@ -364,6 +364,14 @@ body.menu-open { overflow: hidden; }
 .footer-social a { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: var(--on-night); transition: color .3s, background .3s, border-color .3s; margin: 0; }
 .footer-social a:hover { color: var(--night); background: #fff; border-color: #fff; }
 .footer-social svg { width: 19px; height: 19px; }
+.legal { max-width: 74ch; margin-inline: auto; }
+.legal .legal-updated { color: var(--ink-mute); font-size: 0.82rem; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 2.4em; }
+.legal h2 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); margin-top: 1.8em; margin-bottom: .5em; }
+.legal p { color: var(--ink-soft); line-height: 1.75; margin-bottom: 1.1em; }
+.legal ul { margin: 0 0 1.5em 1.2em; display: grid; gap: .55em; }
+.legal li { color: var(--ink-soft); line-height: 1.6; }
+.legal a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
+.legal strong { color: var(--ink); }
 
 /* ============================================================
    PAGE HERO (inner pages — photo + overlay)
