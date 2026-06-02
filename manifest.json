@@ -1,313 +1,253 @@
 [
   {
-    "slug": "springvale-lane",
+    "slug": "kitchen-springvale-lane",
     "project": "Springvale Lane",
-    "category": "Exteriors",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/kitchen-springvale-lane.jpg",
+    "thumb": "assets/img/kitchen-springvale-lane-thumb.jpg"
+  },
+  {
+    "slug": "kitchen-thomas-jefferson",
+    "project": "Thomas Jefferson St",
+    "category": "Kitchens",
     "featured": true,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/springvale-lane.jpg",
-    "thumb": "assets/img/springvale-lane-thumb.jpg"
+    "src": "assets/img/kitchen-thomas-jefferson.jpg",
+    "thumb": "assets/img/kitchen-thomas-jefferson-thumb.jpg"
   },
   {
-    "slug": "1611-polecat-lane",
-    "project": "Polecat Lane",
-    "category": "Exteriors",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1611-polecat-lane.jpg",
-    "thumb": "assets/img/1611-polecat-lane-thumb.jpg"
-  },
-  {
-    "slug": "1611-polecat-lane-2",
+    "slug": "kitchen-polecat-lane",
     "project": "Polecat Lane",
     "category": "Kitchens",
     "featured": false,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/1611-polecat-lane-2.jpg",
-    "thumb": "assets/img/1611-polecat-lane-2-thumb.jpg"
+    "src": "assets/img/kitchen-polecat-lane.jpg",
+    "thumb": "assets/img/kitchen-polecat-lane-thumb.jpg"
   },
   {
-    "slug": "1611-polecat-lane-3",
-    "project": "Polecat Lane",
-    "category": "Bathrooms",
+    "slug": "kitchen-reymet-road",
+    "project": "Reymet Road",
+    "category": "Kitchens",
     "featured": false,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/1611-polecat-lane-3.jpg",
-    "thumb": "assets/img/1611-polecat-lane-3-thumb.jpg"
+    "src": "assets/img/kitchen-reymet-road.jpg",
+    "thumb": "assets/img/kitchen-reymet-road-thumb.jpg"
   },
   {
-    "slug": "1611-polecat-lane-4",
-    "project": "Polecat Lane",
-    "category": "Interiors",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1611-polecat-lane-4.jpg",
-    "thumb": "assets/img/1611-polecat-lane-4-thumb.jpg"
-  },
-  {
-    "slug": "1063-thomas-jefferson-st",
-    "project": "Thomas Jefferson St",
-    "category": "Interiors",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1063-thomas-jefferson-st.jpg",
-    "thumb": "assets/img/1063-thomas-jefferson-st-thumb.jpg"
-  },
-  {
-    "slug": "1063-thomas-jefferson-st-2",
-    "project": "Thomas Jefferson St",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1063-thomas-jefferson-st-2.jpg",
-    "thumb": "assets/img/1063-thomas-jefferson-st-2-thumb.jpg"
-  },
-  {
-    "slug": "1063-thomas-jefferson-st-3",
-    "project": "Thomas Jefferson St",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1063-thomas-jefferson-st-3.jpg",
-    "thumb": "assets/img/1063-thomas-jefferson-st-3-thumb.jpg"
-  },
-  {
-    "slug": "1063-thomas-jefferson-st-4",
-    "project": "Thomas Jefferson St",
-    "category": "Interiors",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/1063-thomas-jefferson-st-4.jpg",
-    "thumb": "assets/img/1063-thomas-jefferson-st-4-thumb.jpg"
-  },
-  {
-    "slug": "218-15th-st-ne",
-    "project": "15th Street NE",
-    "category": "Interiors",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/218-15th-st-ne.jpg",
-    "thumb": "assets/img/218-15th-st-ne-thumb.jpg"
-  },
-  {
-    "slug": "218-15th-st-ne-2",
+    "slug": "kitchen-15th-street-ne",
     "project": "15th Street NE",
     "category": "Kitchens",
     "featured": true,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/218-15th-st-ne-2.jpg",
-    "thumb": "assets/img/218-15th-st-ne-2-thumb.jpg"
+    "src": "assets/img/kitchen-15th-street-ne.jpg",
+    "thumb": "assets/img/kitchen-15th-street-ne-thumb.jpg"
   },
   {
-    "slug": "329-15th-st-ne",
-    "project": "15th Street NE",
+    "slug": "kitchen-monteiro-ave",
+    "project": "Monteiro Avenue",
+    "category": "Kitchens",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/kitchen-monteiro-ave.jpg",
+    "thumb": "assets/img/kitchen-monteiro-ave-thumb.jpg"
+  },
+  {
+    "slug": "kitchen-north-ave",
+    "project": "North Avenue",
     "category": "Kitchens",
     "featured": false,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/329-15th-st-ne.jpg",
-    "thumb": "assets/img/329-15th-st-ne-thumb.jpg"
+    "src": "assets/img/kitchen-north-ave.jpg",
+    "thumb": "assets/img/kitchen-north-ave-thumb.jpg"
   },
   {
-    "slug": "329-15th-st-ne-2",
-    "project": "15th Street NE",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/329-15th-st-ne-2.jpg",
-    "thumb": "assets/img/329-15th-st-ne-2-thumb.jpg"
-  },
-  {
-    "slug": "329-15th-st-ne-3",
-    "project": "15th Street NE",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/329-15th-st-ne-3.jpg",
-    "thumb": "assets/img/329-15th-st-ne-3-thumb.jpg"
-  },
-  {
-    "slug": "2210-monteiro-ave",
-    "project": "Monteiro Avenue",
-    "category": "Bathrooms",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/2210-monteiro-ave.jpg",
-    "thumb": "assets/img/2210-monteiro-ave-thumb.jpg"
-  },
-  {
-    "slug": "2210-monteiro-ave-2",
-    "project": "Monteiro Avenue",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/2210-monteiro-ave-2.jpg",
-    "thumb": "assets/img/2210-monteiro-ave-2-thumb.jpg"
-  },
-  {
-    "slug": "2210-monteiro-ave-3",
-    "project": "Monteiro Avenue",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/2210-monteiro-ave-3.jpg",
-    "thumb": "assets/img/2210-monteiro-ave-3-thumb.jpg"
-  },
-  {
-    "slug": "2210-monteiro-ave-4",
-    "project": "Monteiro Avenue",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/2210-monteiro-ave-4.jpg",
-    "thumb": "assets/img/2210-monteiro-ave-4-thumb.jpg"
-  },
-  {
-    "slug": "2903-east-marshall-st",
+    "slug": "kitchen-east-marshall",
     "project": "East Marshall St",
-    "category": "Interiors",
+    "category": "Kitchens",
     "featured": true,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/2903-east-marshall-st.jpg",
-    "thumb": "assets/img/2903-east-marshall-st-thumb.jpg"
+    "src": "assets/img/kitchen-east-marshall.jpg",
+    "thumb": "assets/img/kitchen-east-marshall-thumb.jpg"
   },
   {
-    "slug": "2903-east-marshall-st-2",
+    "slug": "kitchen-channing-street",
+    "project": "Channing Street",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/kitchen-channing-street.jpg",
+    "thumb": "assets/img/kitchen-channing-street-thumb.jpg"
+  },
+  {
+    "slug": "kitchen-elliott-street",
+    "project": "Elliott Street NE",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/kitchen-elliott-street.jpg",
+    "thumb": "assets/img/kitchen-elliott-street-thumb.jpg"
+  },
+  {
+    "slug": "bath-springvale-lane",
+    "project": "Springvale Lane",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-springvale-lane.jpg",
+    "thumb": "assets/img/bath-springvale-lane-thumb.jpg"
+  },
+  {
+    "slug": "bath-thomas-jefferson",
+    "project": "Thomas Jefferson St",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-thomas-jefferson.jpg",
+    "thumb": "assets/img/bath-thomas-jefferson-thumb.jpg"
+  },
+  {
+    "slug": "bath-polecat-lane",
+    "project": "Polecat Lane",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-polecat-lane.jpg",
+    "thumb": "assets/img/bath-polecat-lane-thumb.jpg"
+  },
+  {
+    "slug": "bath-reymet-road",
+    "project": "Reymet Road",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-reymet-road.jpg",
+    "thumb": "assets/img/bath-reymet-road-thumb.jpg"
+  },
+  {
+    "slug": "bath-15th-street-ne",
+    "project": "15th Street NE",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-15th-street-ne.jpg",
+    "thumb": "assets/img/bath-15th-street-ne-thumb.jpg"
+  },
+  {
+    "slug": "bath-monteiro-ave",
+    "project": "Monteiro Avenue",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-monteiro-ave.jpg",
+    "thumb": "assets/img/bath-monteiro-ave-thumb.jpg"
+  },
+  {
+    "slug": "bath-north-ave",
+    "project": "North Avenue",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-north-ave.jpg",
+    "thumb": "assets/img/bath-north-ave-thumb.jpg"
+  },
+  {
+    "slug": "bath-channing-street",
+    "project": "Channing Street",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-channing-street.jpg",
+    "thumb": "assets/img/bath-channing-street-thumb.jpg"
+  },
+  {
+    "slug": "bath-elliott-street",
+    "project": "Elliott Street NE",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-elliott-street.jpg",
+    "thumb": "assets/img/bath-elliott-street-thumb.jpg"
+  },
+  {
+    "slug": "bath-marble-suite",
+    "project": "Marble Suite",
+    "category": "Bathrooms",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/bath-marble-suite.jpg",
+    "thumb": "assets/img/bath-marble-suite-thumb.jpg"
+  },
+  {
+    "slug": "outdoor-polecat-patio",
+    "project": "Polecat Lane",
+    "category": "Outdoor",
+    "featured": true,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/outdoor-polecat-patio.jpg",
+    "thumb": "assets/img/outdoor-polecat-patio-thumb.jpg"
+  },
+  {
+    "slug": "outdoor-polecat-patio-2",
+    "project": "Polecat Lane",
+    "category": "Outdoor",
+    "featured": false,
+    "w": 1920,
+    "h": 1080,
+    "src": "assets/img/outdoor-polecat-patio-2.jpg",
+    "thumb": "assets/img/outdoor-polecat-patio-2-thumb.jpg"
+  },
+  {
+    "slug": "outdoor-east-marshall-patio",
     "project": "East Marshall St",
-    "category": "Bathrooms",
+    "category": "Outdoor",
     "featured": false,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/2903-east-marshall-st-2.jpg",
-    "thumb": "assets/img/2903-east-marshall-st-2-thumb.jpg"
+    "src": "assets/img/outdoor-east-marshall-patio.jpg",
+    "thumb": "assets/img/outdoor-east-marshall-patio-thumb.jpg"
   },
   {
-    "slug": "2903-east-marshall-st-3",
-    "project": "East Marshall St",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/2903-east-marshall-st-3.jpg",
-    "thumb": "assets/img/2903-east-marshall-st-3-thumb.jpg"
-  },
-  {
-    "slug": "617-elliot-st-ne",
-    "project": "Elliot Street NE",
-    "category": "Interiors",
+    "slug": "outdoor-15th-street-deck",
+    "project": "15th Street NE",
+    "category": "Outdoor",
     "featured": true,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/617-elliot-st-ne.jpg",
-    "thumb": "assets/img/617-elliot-st-ne-thumb.jpg"
+    "src": "assets/img/outdoor-15th-street-deck.jpg",
+    "thumb": "assets/img/outdoor-15th-street-deck-thumb.jpg"
   },
   {
-    "slug": "25",
-    "project": "Kitchen Remodel",
-    "category": "Kitchens",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/25.jpg",
-    "thumb": "assets/img/25-thumb.jpg"
-  },
-  {
-    "slug": "26",
-    "project": "Interior Finishes",
-    "category": "Interiors",
+    "slug": "outdoor-15th-street-patio",
+    "project": "15th Street NE",
+    "category": "Outdoor",
     "featured": false,
     "w": 1920,
     "h": 1080,
-    "src": "assets/img/26.jpg",
-    "thumb": "assets/img/26-thumb.jpg"
-  },
-  {
-    "slug": "29",
-    "project": "Kitchen Remodel",
-    "category": "Kitchens",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/29.jpg",
-    "thumb": "assets/img/29-thumb.jpg"
-  },
-  {
-    "slug": "31",
-    "project": "Kitchen Remodel",
-    "category": "Kitchens",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/31.jpg",
-    "thumb": "assets/img/31-thumb.jpg"
-  },
-  {
-    "slug": "30",
-    "project": "Bathroom Remodel",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/30.jpg",
-    "thumb": "assets/img/30-thumb.jpg"
-  },
-  {
-    "slug": "27",
-    "project": "Bathroom Remodel",
-    "category": "Bathrooms",
-    "featured": true,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/27.jpg",
-    "thumb": "assets/img/27-thumb.jpg"
-  },
-  {
-    "slug": "23",
-    "project": "Interior Finishes",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/23.jpg",
-    "thumb": "assets/img/23-thumb.jpg"
-  },
-  {
-    "slug": "24",
-    "project": "Interior Finishes",
-    "category": "Interiors",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/24.jpg",
-    "thumb": "assets/img/24-thumb.jpg"
-  },
-  {
-    "slug": "28",
-    "project": "Kitchen Remodel",
-    "category": "Kitchens",
-    "featured": false,
-    "w": 1920,
-    "h": 1080,
-    "src": "assets/img/28.jpg",
-    "thumb": "assets/img/28-thumb.jpg"
+    "src": "assets/img/outdoor-15th-street-patio.jpg",
+    "thumb": "assets/img/outdoor-15th-street-patio-thumb.jpg"
   },
   {
     "slug": "3d-sage-kitchen-1",

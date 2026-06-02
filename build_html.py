@@ -36,7 +36,7 @@ def head(title, desc, page):
     jsonld = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness",
         "name": "DFC Home Improvement",
-        "image": "https://dfchomeimprovement.com/assets/img/218-15th-st-ne.jpg",
+        "image": "https://dfchomeimprovement.com/assets/img/kitchen-thomas-jefferson.jpg",
         "url": "https://dfchomeimprovement.com/", "telephone": PHONE_TEL, "priceRange": "$$$",
         "slogan": "Your home should feel like a vacation.",
         "description": ("Class A licensed design-build general contractor for custom homes, new "
@@ -56,7 +56,7 @@ def head(title, desc, page):
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/218-15th-st-ne.jpg">
+<meta property="og:image" content="assets/img/kitchen-thomas-jefferson.jpg">
 <meta name="theme-color" content="#313d2c">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
@@ -208,12 +208,12 @@ def build_index():
     trades_html = "\n".join(f"          <li>{t}</li>" for t in trades)
 
     work = [
-        ("tall", "springvale-lane", "Springvale Lane", "Custom Home"),
-        ("wide", "1063-thomas-jefferson-st-4", "Thomas Jefferson St", "Interiors"),
-        ("box",  "29", "Kitchen Remodel", "Kitchens"),
-        ("box",  "2210-monteiro-ave", "Monteiro Avenue", "Bathrooms"),
-        ("half", "2903-east-marshall-st", "East Marshall St", "Interiors"),
-        ("half", "1611-polecat-lane-4", "Polecat Lane", "Interiors"),
+        ("tall", "bath-channing-street", "Channing Street", "Bathroom"),
+        ("wide", "outdoor-polecat-patio", "Polecat Lane", "Outdoor"),
+        ("box",  "kitchen-east-marshall", "East Marshall St", "Kitchen"),
+        ("box",  "bath-15th-street-ne", "15th Street NE", "Bathroom"),
+        ("half", "kitchen-elliott-street", "Elliott Street NE", "Kitchen"),
+        ("half", "kitchen-reymet-road", "Reymet Road", "Kitchen"),
     ]
     work_html = "\n".join(
         f"""        <a class="work-item {cls} reveal" href="portfolio.html">
@@ -244,7 +244,7 @@ def build_index():
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"><img src="{img('218-15th-st-ne')}" alt="Refined living room renovated by DFC Home Improvement" fetchpriority="high"></div>
+    <div class="hero-bg"><img src="{img('kitchen-thomas-jefferson')}" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
     <div class="hero-inner">
       <img class="hero-logo" src="assets/logo/dfc-logo-white.png" alt="DFC Home Improvement">
       <h1>Your home should feel like a vacation.</h1>
@@ -290,7 +290,7 @@ def build_index():
     </div>
     <div class="pillars">
       <a class="pillar reveal" href="new-construction.html">
-        <img src="{img('1611-polecat-lane')}" alt="New custom home construction by DFC Home Improvement" loading="lazy">
+        <img src="{img('outdoor-15th-street-deck')}" alt="New custom home construction by DFC Home Improvement" loading="lazy">
         <div class="p-body">
           <div class="p-num">01 — Build new</div>
           <h3>New Construction</h3>
@@ -299,7 +299,7 @@ def build_index():
         </div>
       </a>
       <a class="pillar reveal d1" href="renovations.html">
-        <img src="{img('1063-thomas-jefferson-st')}" alt="Whole-home renovation by DFC Home Improvement" loading="lazy">
+        <img src="{img('kitchen-monteiro-ave')}" alt="Whole-home renovation by DFC Home Improvement" loading="lazy">
         <div class="p-body">
           <div class="p-num">02 — Reimagine</div>
           <h3>Renovations</h3>
@@ -321,7 +321,7 @@ def build_index():
       <p style="margin-top:1.4em;color:rgba(255,255,255,.74)">Custom millwork, stone, tile and lighting brought together with clean communication and a job site held to a higher standard.</p>
       <p style="margin-top:2rem"><a class="link-arrow light" href="portfolio.html">See the portfolio {ARROW}</a></p>
     </div>
-    <div class="f-img"><img src="{img('617-elliot-st-ne')}" alt="Renovated living room with custom fireplace and hardwood floors" loading="lazy"></div>
+    <div class="f-img"><img src="{img('bath-marble-suite')}" alt="Spa-style marble bathroom by DFC Home Improvement" loading="lazy"></div>
   </section>
 
   <!-- SELECTED WORK -->
@@ -432,7 +432,7 @@ def build_new_construction():
     body = f"""
 <main id="top">
   <section class="page-hero">
-    <div class="ph-bg"><img src="{img('1611-polecat-lane')}" alt="New custom home built by DFC Home Improvement"></div>
+    <div class="ph-bg"><img src="{img('outdoor-15th-street-deck')}" alt="New custom home built by DFC Home Improvement"></div>
     <div class="ph-inner">
       <p class="breadcrumb reveal"><a href="index.html">Home</a> / New Construction</p>
       <h1 class="reveal">New construction, built right from the ground up.</h1>
@@ -449,7 +449,7 @@ def build_new_construction():
         <p style="margin-top:1.1em">From land evaluation through final move-in, we guide you through architecture, permitting, foundation, framing and finishes — treating each build as a personal reflection of how you want to live.</p>
         <ul>{''.join(f'<li>{b}</li>' for b in bullets_newhomes)}</ul>
       </div>
-      <div class="media reveal d1"><img src="{img('1611-polecat-lane-4')}" alt="Interior of a new home built by DFC Home Improvement" loading="lazy"></div>
+      <div class="media reveal d1"><img src="{img('kitchen-polecat-lane')}" alt="Custom kitchen by DFC Home Improvement" loading="lazy"></div>
     </div>
   </section>
 
@@ -486,13 +486,13 @@ def build_new_construction():
 # ================================================================ RENOVATIONS
 def build_renovations():
     rows = [
-        ("kitchen", "Kitchen Remodeling", "01", "218-15th-st-ne-2", False,
+        ("kitchen", "Kitchen Remodeling", "01", "kitchen-north-ave", False,
          "A unified team handles layout, cabinetry, countertops, tile and electrical — improving how your kitchen works as much as how it looks.",
          ["Full renovations &amp; reconfigurations", "Custom cabinetry &amp; islands", "Countertops, backsplash &amp; tile", "Flooring, trim, paint &amp; appliances"]),
-        ("bathroom", "Bathroom Renovations", "02", "2210-monteiro-ave", True,
+        ("bathroom", "Bathroom Renovations", "02", "bath-monteiro-ave", True,
          "Demolition, waterproofing, tile, plumbing and finish carpentry coordinated as one accountable job — built for durability and a spa-grade feel.",
          ["Primary, guest &amp; powder baths", "Custom tile showers &amp; waterproofing", "Vanities, lighting &amp; fixtures", "Glass, flooring &amp; finish detail"]),
-        ("full-home", "Whole-Home Renovations", "03", "617-elliot-st-ne", False,
+        ("full-home", "Whole-Home Renovations", "03", "kitchen-springvale-lane", False,
          "Kitchen and bath updates, room expansions, basement finishing and exterior improvements — managed start to finish with one point of responsibility.",
          ["Layout reconfiguration &amp; additions", "Basement finishing", "Structural repairs", "Exterior &amp; full-home finish upgrades"]),
     ]
@@ -525,7 +525,7 @@ def build_renovations():
     body = f"""
 <main id="top">
   <section class="page-hero">
-    <div class="ph-bg"><img src="{img('1063-thomas-jefferson-st')}" alt="Whole-home renovation by DFC Home Improvement"></div>
+    <div class="ph-bg"><img src="{img('kitchen-monteiro-ave')}" alt="Whole-home renovation by DFC Home Improvement"></div>
     <div class="ph-inner">
       <p class="breadcrumb reveal"><a href="index.html">Home</a> / Renovations</p>
       <h1 class="reveal">Renovations that reimagine the home you're in.</h1>
@@ -570,7 +570,7 @@ def build_renovations():
 
 # ================================================================ PORTFOLIO
 def build_portfolio():
-    cats = ["All", "Kitchens", "Bathrooms", "Interiors", "3D Designs"]
+    cats = ["All", "Kitchens", "Bathrooms", "Outdoor", "3D Designs"]
     filt = "\n".join(
         f'        <button class="{"active" if c=="All" else ""}" data-filter="{c.lower()}">{c}</button>'
         for c in cats)
@@ -585,7 +585,7 @@ def build_portfolio():
     body = f"""
 <main id="top">
   <section class="page-hero">
-    <div class="ph-bg"><img src="{img('springvale-lane')}" alt="Custom home by DFC Home Improvement at dusk"></div>
+    <div class="ph-bg"><img src="{img('outdoor-15th-street-patio')}" alt="Outdoor patio and deck by DFC Home Improvement"></div>
     <div class="ph-inner">
       <p class="breadcrumb reveal"><a href="index.html">Home</a> / Portfolio</p>
       <h1 class="reveal">A portfolio of custom homes, renovations &amp; finishes.</h1>
@@ -621,7 +621,7 @@ def build_contact():
     body = f"""
 <main id="top">
   <section class="page-hero">
-    <div class="ph-bg"><img src="{img('218-15th-st-ne-2')}" alt="Kitchen remodeled by DFC Home Improvement"></div>
+    <div class="ph-bg"><img src="{img('kitchen-15th-street-ne')}" alt="Kitchen remodeled by DFC Home Improvement"></div>
     <div class="ph-inner">
       <p class="breadcrumb reveal"><a href="index.html">Home</a> / Contact</p>
       <h1 class="reveal">Let's talk about your project.</h1>
@@ -683,7 +683,7 @@ def build_privacy():
     body = f"""
 <main id="top">
   <section class="page-hero">
-    <div class="ph-bg"><img src="{img('1063-thomas-jefferson-st')}" alt=""></div>
+    <div class="ph-bg"><img src="{img('kitchen-monteiro-ave')}" alt=""></div>
     <div class="ph-inner">
       <p class="breadcrumb reveal"><a href="index.html">Home</a> / Privacy Policy</p>
       <h1 class="reveal">Privacy Policy</h1>
