@@ -1118,5 +1118,65 @@
     "h": 853,
     "src": "assets/img/sample-living-02.jpg",
     "thumb": "assets/img/sample-living-02-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-01",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-01.jpg",
+    "thumb": "assets/img/redfin-kitchen-01-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-02",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-02.jpg",
+    "thumb": "assets/img/redfin-kitchen-02-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-03",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-03.jpg",
+    "thumb": "assets/img/redfin-kitchen-03-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-04",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-04.jpg",
+    "thumb": "assets/img/redfin-kitchen-04-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-05",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-05.jpg",
+    "thumb": "assets/img/redfin-kitchen-05-thumb.jpg"
+  },
+  {
+    "slug": "redfin-kitchen-06",
+    "project": "Featured Kitchen",
+    "category": "Kitchens",
+    "featured": false,
+    "w": 1080,
+    "h": 701,
+    "src": "assets/img/redfin-kitchen-06.jpg",
+    "thumb": "assets/img/redfin-kitchen-06-thumb.jpg"
   }
 ]

@@ -166,6 +166,8 @@ PHOTOS += [
     ("Sample Living 01.png",  "Featured Renovation", "Whole-Home Renovations", False),
     ("Sample Living 02.png",  "Featured Renovation", "Whole-Home Renovations", False),
 ]
+# Redfin listing kitchen photos (MLS logo cropped off)
+PHOTOS += [(f"Redfin Kitchen {i:02d}.png", "Featured Kitchen", "Kitchens", False) for i in range(1, 7)]
 
 def process_photos():
     manifest = []
