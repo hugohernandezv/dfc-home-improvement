@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Review DFC Home Improvement</title>
+  <style>
+    :root {
+      --paper: #efeee9;
+      --panel: #ffffff;
+      --ink: #101010;
+      --muted: #5e665e;
+      --line: #cfd3cf;
+      --soft: #f5f4ef;
+      --accent: #dfe4df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .shell {
+      width: min(600px, 100%);
+      background: var(--panel);
+    }
+
+    .brand {
+      background: var(--accent);
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .brand img {
+      width: 150px;
+      max-width: 150px;
+      height: auto;
+      display: inline-block;
+    }
+
+    .content {
+      padding: 30px 28px 0;
+    }
+
+    .eyebrow {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    h1 {
+      margin: 36px 0 0;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .hero-divider {
+      margin: 18px 0 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .greeting {
+      padding: 28px 28px 0;
+    }
+
+    .intro {
+      margin: 0 0 18px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #171717;
+    }
+
+    .job-block {
+      margin: 6px 0 24px;
+      background: var(--soft);
+      border-left: 4px solid var(--ink);
+      padding: 18px 20px;
+    }
+
+    .job-label {
+      margin: 0 0 8px;
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .job-text {
+      margin: 0;
+      font-size: 15px;
+      line-height: 24px;
+      color: #161616;
+    }
+
+    .form-section {
+      padding: 0 28px;
+    }
+
+    .form {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    label,
+    .field-label {
+      display: block;
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font: 15px/24px Arial, Helvetica, sans-serif;
+      padding: 14px 15px;
+      border-radius: 0;
+      outline: none;
+      min-height: 124px;
+      resize: vertical;
+    }
+
+    textarea:focus {
+      border-color: var(--ink);
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    .stars {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .star-option {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .star-option input {
+      appearance: none;
+      -webkit-appearance: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .star-option span {
+      display: flex;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      cursor: pointer;
+      font-size: 22px;
+      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .star-option input:checked + span,
+    .star-option:hover span {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    button {
+      display: inline-block;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      line-height: 20px;
+      padding: 16px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 0;
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: default;
+    }
+
+    .result {
+      display: none;
+      margin-top: 32px;
+      padding: 26px;
+      background: var(--soft);
+      border-left: 4px solid var(--ink);
+    }
+
+    .result h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 400;
+    }
+
+    .result p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .footer {
+      padding: 24px 28px 36px;
+      border-top: 1px solid var(--line);
+      margin-top: 32px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .owner-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .owner-photo {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 1px solid #d7d3c8;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .owner-name {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      color: var(--ink);
+    }
+
+    .owner-title {
+      margin: 3px 0 0;
+      font-size: 12px;
+      line-height: 18px;
+      color: var(--muted);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .social-links a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .social-links img {
+      display: block;
+      width: 22px;
+      height: 22px;
+      border: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        padding: 0;
+        align-items: stretch;
+      }
+
+      .content,
+      .greeting,
+      .form-section,
+      .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .star-option span {
+        height: 48px;
+        font-size: 18px;
+      }
+
+      .owner-photo {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="shell" aria-labelledby="page-title">
+      <div class="brand">
+        <img src="https://dfchomeimprovement.com/wp-content/uploads/2024/09/main-logo.png" alt="DFC Home Improvement">
+      </div>
+
+      <div class="content">
+        <div class="eyebrow">Thank you for trusting DFC Home Improvement</div>
+        <h1 id="page-title">How was your<br>experience?</h1>
+        <hr class="hero-divider">
+      </div>
+
+      <div class="greeting">
+        <p class="intro">Hi <span id="greet-name">there</span>,</p>
+        <p class="intro">Thank you for choosing DFC Home Improvement. It was a privilege to help with your project, and we truly appreciate the opportunity to bring care, craftsmanship, and attention to detail into your home.</p>
+
+        <div class="job-block hidden" id="job-block">
+          <p class="job-label">Recent work completed for you</p>
+          <p class="job-text" id="job-text"></p>
+        </div>
+
+        <p class="intro">Your feedback helps our team follow up with care and continue improving the way we serve local homeowners.</p>
+      </div>
+
+      <div class="form-section">
+        <form class="form" id="review-form">
+          <div class="field-label">Overall rating</div>
+          <div class="stars" role="radiogroup" aria-label="Overall rating">
+            <label class="star-option">
+              <input type="radio" name="rating" value="1" required>
+              <span>1</span>
+            </label>
+            <label class="star-option">
+              <input type="radio" name="rating" value="2">
+              <span>2</span>
+            </label>
+            <label class="star-option">
+              <input type="radio" name="rating" value="3">
+              <span>3</span>
+            </label>
+            <label class="star-option">
+              <input type="radio" name="rating" value="4">
+              <span>4</span>
+            </label>
+            <label class="star-option">
+              <input type="radio" name="rating" value="5">
+              <span>5</span>
+            </label>
+          </div>
+
+          <div class="field hidden" id="comments-field">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Tell us what we could have done better."></textarea>
+          </div>
+
+          <div class="actions hidden" id="submit-actions">
+            <button type="submit" id="submit-btn">Submit Feedback</button>
+          </div>
+        </form>
+
+        <div class="result" id="feedback-result" aria-live="polite">
+          <h2>Thank you for your feedback.</h2>
+          <p>We are sorry the experience was not excellent. Our team will review your comments and reach out to make it right.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-inner">
+          <div class="owner-info">
+            <img class="owner-photo" src="https://production-next-images-cdn.thumbtack.com/i/431446785448460290/desktop/standard/thumb" alt="Brian Stone">
+            <div>
+              <p class="owner-name">Brian Stone</p>
+              <p class="owner-title">Owner</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/dfchomeimprovement/" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/ios-filled/50/101010/instagram-new.png" width="22" height="22" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/DFCHome" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/ios-filled/50/101010/facebook-new.png" width="22" height="22" alt="Facebook">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // ─── Config ────────────────────────────────────────────────────────────────
+    const GOOGLE_REVIEW_URL = 'https://g.page/r/CSMD0idi2zYHEBM/review';
+    // Private feedback (<4 stars) is emailed to the team via FormSubmit (already used by DFC's site).
+    const FORMSPREE_ENDPOINT = 'https://formsubmit.co/ajax/admin@dfchomeimprovement.com';
+    // ───────────────────────────────────────────────────────────────────────────
+
+    const form = document.querySelector('#review-form');
+    const commentsField = document.querySelector('#comments-field');
+    const submitActions = document.querySelector('#submit-actions');
+    const feedbackResult = document.querySelector('#feedback-result');
+    const submitBtn = document.querySelector('#submit-btn');
+
+    // Personalize from the email link, e.g. /review?name=Sarah&job=Kitchen%20remodel
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const name = p.get('name');
+      if (name) document.querySelector('#greet-name').textContent = name;
+      const job = p.get('job');
+      if (job) {
+        document.querySelector('#job-text').textContent = job;
+        document.querySelector('#job-block').classList.remove('hidden');
+      }
+    })();
+
+    document.querySelector('.stars').addEventListener('click', (e) => {
+      const option = e.target.closest('.star-option');
+      if (!option) return;
+
+      const input = option.querySelector('input[type="radio"]');
+      input.checked = true;
+      const rating = parseInt(input.value, 10);
+
+      if (rating >= 4) {
+        window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer');
+      } else {
+        commentsField.classList.remove('hidden');
+        submitActions.classList.remove('hidden');
+      }
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const rating = document.querySelector('input[name="rating"]:checked')?.value;
+      const comments = document.querySelector('#comments').value;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `⚠️ Private review (${rating}★) — follow up`,
+            _template: 'table',
+            source: 'Review funnel (dfchomeimprovement.com/review)',
+            rating: `${rating} star${rating > 1 ? 's' : ''}`,
+            comments: comments || '(no comments provided)'
+          })
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          feedbackResult.style.display = 'block';
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Feedback';
+          alert('There was a problem sending your feedback. Please try again.');
+        }
+      } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Feedback';
+        alert('There was a problem sending your feedback. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
