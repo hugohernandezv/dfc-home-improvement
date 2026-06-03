@@ -181,7 +181,7 @@ def footer():
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 DFC Home Improvement. Class A Licensed &amp; Insured. · <a href="privacy.html">Privacy Policy</a></span>
+      <span>© 2026 DFC Home Improvement. Class A Licensed &amp; Insured. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></span>
       <span class="fb-right"><a href="index.html#areas">{areas}</a></span>
     </div>
   </div>
@@ -738,6 +738,65 @@ def build_privacy():
               "privacy"),
          body, "privacy")
 
+# ================================================================ TERMS OF SERVICE
+def build_terms():
+    updated = "June 1, 2026"
+    body = f"""
+<main id="top">
+{page_head("Terms of Service", "Terms of Service", "The terms that govern your use of our website and our estimates, quotes and communications.")}
+  <section class="section--tight wrap">
+    <div class="legal reveal">
+      <p class="legal-updated">Last updated: {updated}</p>
+
+      <p>These Terms of Service ("Terms") govern your access to and use of the website at <a href="https://www.dfchomeimprovement.com">dfchomeimprovement.com</a> (the "Site") and your interactions with DFC Home Improvement ("DFC," "we," "us" or "our"), a Class A licensed design-build general contractor serving Northern Virginia, Washington DC and Richmond. By using the Site, requesting an estimate, or communicating with us, you agree to these Terms. If you do not agree, please do not use the Site.</p>
+
+      <h2>Use of our website</h2>
+      <p>You may use the Site for lawful, personal and non-commercial purposes — to learn about our services, view our work, and request a consultation. You agree not to misuse the Site, attempt to gain unauthorized access to it, disrupt its operation, or use it to violate any applicable law. The Site, its content, layout, logos and photography are owned by DFC or our licensors and are protected by intellectual-property laws; you may not copy, reproduce or republish them without our written permission.</p>
+
+      <h2>Estimates, proposals and quotes</h2>
+      <p>Information on the Site — including service descriptions, project galleries and any pricing references — is provided for general information only and does not constitute an offer, a quote, or a binding contract. Any budget figure or "starting at" range we mention is an estimate, not a fixed price.</p>
+      <p>A binding agreement is created only when DFC issues a written quote or proposal for your specific project and that document is accepted and signed by you. Quotes are valid for the period stated on them (and otherwise for 30 days) and may be revised if the scope, site conditions, selections, or material costs change. The signed quote or contract, together with any written change orders, governs the work — and in the event of any conflict with these Terms, that signed document controls.</p>
+
+      <h2>Scheduling and site access</h2>
+      <p>Consultations, evaluations and project schedules are arranged by appointment and may be affected by weather, permitting, inspections, material availability, and circumstances beyond our control. You agree to provide safe and reasonable access to the project site so we can perform the agreed work.</p>
+
+      <h2>Communications and text-message consent</h2>
+      <p>When you give us your phone number — for example by submitting our consultation form, responding to one of our ads, or contacting us — you agree that we may contact you by phone call, text message (SMS) and email about your inquiry, your project, scheduling, and quotes. Message and data rates may apply, and message frequency varies. You can opt out of text messages at any time by replying <strong>STOP</strong>, or ask us to stop contacting you, and we will honor your request. How we handle the information you share is described in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <h2>Third-party links and platforms</h2>
+      <p>The Site and our advertising may link to or operate through third-party platforms — such as Jobber, Google, Facebook and Instagram — each with its own terms and privacy policies. We are not responsible for the content, products or practices of those third parties, and your use of their services is governed by their terms.</p>
+
+      <h2>Disclaimers</h2>
+      <p>The Site and its content are provided "as is" and "as available" without warranties of any kind, whether express or implied, including any implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Site will be uninterrupted, error-free, or free of harmful components. This section concerns your use of the Site; the warranties for any construction work we perform are set out in your signed contract.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>To the fullest extent permitted by law, DFC and its owners, employees and contractors will not be liable for any indirect, incidental, special, consequential or punitive damages, or any loss of data, arising out of or relating to your use of the Site. Nothing in these Terms limits any liability that cannot be limited under applicable law.</p>
+
+      <h2>Indemnification</h2>
+      <p>You agree to indemnify and hold harmless DFC from any claims, damages or expenses arising out of your misuse of the Site or your violation of these Terms or any applicable law.</p>
+
+      <h2>Governing law</h2>
+      <p>These Terms are governed by the laws of the Commonwealth of Virginia, without regard to its conflict-of-laws rules. Any dispute relating to the Site or these Terms will be subject to the exclusive jurisdiction of the state and federal courts located in Virginia.</p>
+
+      <h2>Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. When we do, we'll revise the "Last updated" date above, and the updated Terms take effect when posted on this page. Your continued use of the Site after changes are posted means you accept the revised Terms.</p>
+
+      <h2>Contact us</h2>
+      <p>If you have questions about these Terms, contact:</p>
+      <p><strong>DFC Home Improvement</strong><br>
+      Phone / Text: <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a><br>
+      Email: <a href="mailto:{EMAIL}">{EMAIL}</a><br>
+      Service area: Northern Virginia · Washington DC · Richmond</p>
+    </div>
+  </section>
+{cta()}
+</main>"""
+    page("terms.html",
+         head("Terms of Service | DFC Home Improvement",
+              "The terms that govern your use of the DFC Home Improvement website, our estimates and quotes, and how we communicate with you.",
+              "terms"),
+         body, "terms")
+
 if __name__ == "__main__":
     build_index()
     build_new_construction()
@@ -753,6 +812,7 @@ if __name__ == "__main__":
                    "Full-home transformations — living spaces, additions and finishes carried out end to end.")
     build_contact()
     build_privacy()
+    build_terms()
     # remove the old services page if present
     old = os.path.join(ROOT, "services.html")
     if os.path.exists(old): os.remove(old); print("removed services.html")
