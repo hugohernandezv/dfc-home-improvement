@@ -544,7 +544,7 @@ def build_renovations():
 def build_portfolio():
     # landing: one tile per category -> opens that category's gallery page
     tiles = [
-        ("Kitchens",               "portfolio-kitchens.html",  "kitchen-gallery-01"),
+        ("Kitchens",               "portfolio-kitchens.html",  "kitchen-p1-01"),
         ("Bathrooms",              "portfolio-bathrooms.html", "bath-gallery-01"),
         ("Whole-Home Renovations", "portfolio-wholehome.html", "wholehome-gallery-01"),
         ("3D Designs",             "portfolio-3d.html",        "3d-cook-1"),
@@ -622,14 +622,26 @@ THREED_GROUPS = [
 ]
 
 KITCHEN_GROUPS = [
-    {"title":"White & Gray Shaker","slugs":["kitchen-gallery-01","kitchen-gallery-02","kitchen-gallery-08","kitchen-gallery-09","kitchen-gallery-14","kitchen-gallery-15","kitchen-gallery-16","kitchen-gallery-23","sample-kitchen-01","redfin-kitchen-05"],
-     "desc":"White shaker cabinetry paired with a soft gray island — our signature look. Crisp yet warm, the two-tone palette feels clean and current without ever feeling cold; the kind of kitchen that's bright to cook in and easy to live in."},
-    {"title":"Bright All-White","slugs":["kitchen-gallery-05","kitchen-gallery-06","kitchen-gallery-07","kitchen-gallery-10","kitchen-gallery-18","redfin-kitchen-01","redfin-kitchen-02","redfin-kitchen-03","redfin-kitchen-04"],
-     "desc":"All-white kitchens with quartz counters and clean lines. They transmit calm and space — light bounces everywhere, making even a modest footprint feel open, airy and timeless."},
-    {"title":"Bold Islands","slugs":["kitchen-gallery-11","kitchen-gallery-12","kitchen-gallery-13","kitchen-gallery-20","kitchen-gallery-21","kitchen-gallery-25"],
-     "desc":"Light cabinetry anchored by a statement island in navy or warm wood. The deeper tone grounds the room and adds character — confident and inviting, with a natural focal point that pulls everyone in."},
-    {"title":"Patterned & Polished","slugs":["kitchen-gallery-03","kitchen-gallery-04","kitchen-gallery-17","kitchen-gallery-19","kitchen-gallery-22","kitchen-gallery-24","redfin-kitchen-06"],
-     "desc":"Where the details do the talking — patterned tile backsplashes, marble surfaces and brushed-brass fixtures. These kitchens feel elevated and considered, equal parts everyday function and finish."},
+    {"title":"Geometric Backsplash Kitchen","slugs":["kitchen-p1-01","kitchen-p1-02","kitchen-p1-03","kitchen-p1-04"],
+     "desc":"Crisp white shaker cabinetry meets a deep gray island and a bold black-and-white geometric backsplash, tied together with brass pendants and a sunny breakfast nook. It feels lively and current — a confident, social kitchen with just enough pattern to give it personality."},
+    {"title":"Bright Galley Kitchen","slugs":["kitchen-p2-01","kitchen-p2-02","kitchen-p2-03"],
+     "desc":"A compact, efficient layout in white and soft gray with subway tile and a full stainless suite. Bright and uncomplicated, it transmits a clean, easy calm — proof that a smaller footprint can still feel open and refined."},
+    {"title":"Warm Wood Accent Kitchen","slugs":["kitchen-p3-01","kitchen-p3-02","kitchen-p3-03"],
+     "desc":"White cabinetry warmed by a natural wood island and counter, with under-cabinet lighting and an open connection to the stair hall. The mix of crisp white and warm timber feels inviting and grounded — modern, but never cold."},
+    {"title":"Coastal Navy Island","slugs":["kitchen-p4-01","kitchen-p4-02","kitchen-p4-03"],
+     "desc":"White perimeter cabinetry anchored by a navy island, pale wood floors and airy pendants that open to the dining space. The palette feels fresh and coastal — relaxed, breezy and made for gathering."},
+    {"title":"Classic White & Gray","slugs":["kitchen-p5-01","kitchen-p5-02","kitchen-p5-03"],
+     "desc":"Our signature pairing — white shaker uppers, a gray island and quartz counters under elegant pendant lighting. Timeless and balanced, it feels bright and welcoming, the kind of kitchen that never goes out of style."},
+    {"title":"Marble & Brass Kitchen","slugs":["kitchen-p6-01","kitchen-p6-02","kitchen-p6-03"],
+     "desc":"White cabinetry elevated by marble counters and backsplash, a sculptural brass bridge faucet and warm hardwood floors. Polished and a touch glamorous, it transmits quiet luxury — refined without ever feeling fussy."},
+    {"title":"White & Wood Island","slugs":["kitchen-p7-01","kitchen-p7-02","kitchen-p7-03"],
+     "desc":"Bright white cabinetry paired with a warm wood island and waterfall quartz, finished with statement lighting. The contrast of cool white and natural wood feels modern and organic — clean lines with a soft, livable warmth."},
+    {"title":"Transitional Family Kitchen","slugs":["kitchen-p8-01","kitchen-p8-02","kitchen-p8-03"],
+     "desc":"White and gray cabinetry, quartz counters and a full stainless suite with double ovens. Practical and put-together, it feels like a true family kitchen — hardworking, bright and effortlessly classic."},
+    {"title":"Open-Concept White Kitchen","slugs":["redfin-kitchen-01","redfin-kitchen-02","redfin-kitchen-03"],
+     "desc":"A bright, open-plan white kitchen with a marble backsplash, central island and pendant lighting that flows into the living space. It feels expansive and welcoming — a true heart-of-the-home layout."},
+    {"title":"Row-Home Chef's Kitchen","slugs":["redfin-kitchen-04","redfin-kitchen-05","redfin-kitchen-06"],
+     "desc":"A crisp white kitchen built for cooking — a generous island, full stainless suite and clean lines that make the most of a city row-home footprint. Functional and refined, it feels calm and uncluttered."},
 ]
 
 def build_grouped(fname, title, desc, groups):
