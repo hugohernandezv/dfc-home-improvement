@@ -404,6 +404,7 @@ body.menu-open { overflow: hidden; }
 .proj-head .proj-desc { color: var(--ink-soft); font-size: clamp(1rem,1.2vw,1.14rem); line-height: 1.75; }
 .proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(14px,1.8vw,24px); align-items: start; }
 .proj-grid figure { margin: 0; position: relative; overflow: hidden; border-radius: 4px; cursor: zoom-in; }
+.proj-grid figure:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .proj-grid figure img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease); }
 .proj-grid figure:hover img { transform: scale(1.03); }
 .proj-grid .g-zoom { position: absolute; top: 14px; right: 14px; width: 38px; height: 38px; border-radius: 999px; background: rgba(255,255,255,.92); display: flex; align-items: center; justify-content: center; color: var(--ink); opacity: 0; transform: scale(.85); transition: opacity .3s, transform .3s; }
