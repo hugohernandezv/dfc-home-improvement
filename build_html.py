@@ -218,19 +218,6 @@ def build_index():
               "Bathroom Remodels", "Decks &amp; Patios", "Electrical &amp; Plumbing", "Design-Build &amp; Rendering"]
     trades_html = "\n".join(f"          <li>{t}</li>" for t in trades)
 
-    work = [
-        ("tall", "bath-channing-street", "Channing Street", "Bathroom"),
-        ("wide", "outdoor-polecat-patio", "Polecat Lane", "Outdoor"),
-        ("box",  "kitchen-east-marshall", "East Marshall St", "Kitchen"),
-        ("box",  "bath-15th-street-ne", "15th Street NE", "Bathroom"),
-        ("half", "kitchen-elliott-street", "Elliott Street NE", "Kitchen"),
-        ("half", "kitchen-reymet-road", "Reymet Road", "Kitchen"),
-    ]
-    work_html = "\n".join(
-        f"""        <a class="work-item {cls} reveal" href="portfolio.html">
-          <img src="{img(s)}" alt="{html.escape(proj)} — {cat} project by DFC Home Improvement" loading="lazy">
-          <div class="w-cap"><h3>{proj}</h3><span>{cat}</span></div>
-        </a>""" for cls, s, proj, cat in work)
 
     process = [
         ("01","Evaluate","We discuss goals, site conditions, scope and budget direction, then agree on the right next step — with no pressure."),
@@ -333,18 +320,6 @@ def build_index():
       <p style="margin-top:2rem"><a class="link-arrow light" href="portfolio.html">See the portfolio {ARROW}</a></p>
     </div>
     <div class="f-img"><img src="{img('bath-marble-suite')}" alt="Spa-style marble bathroom by DFC Home Improvement" loading="lazy"></div>
-  </section>
-
-  <!-- SELECTED WORK -->
-  <section class="section wrap">
-    <div class="head-row">
-      <div class="reveal"><p class="eyebrow">Selected work</p><h2>Recent homes &amp; renovations.</h2></div>
-      <p class="h-right reveal d1">Custom homes, full renovations, kitchens and baths completed across the region.</p>
-    </div>
-    <div class="work-grid">
-{work_html}
-    </div>
-    <div style="margin-top:clamp(34px,4vw,54px)" class="reveal"><a class="btn" href="portfolio.html">View full portfolio</a></div>
   </section>
 
   <!-- PROCESS -->
