@@ -530,154 +530,144 @@
     "thumb": "assets/img/kitchen-p8-03-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-01",
+    "slug": "bath-p10-01",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
-    "h": 1030,
-    "src": "assets/img/bath-gallery-01.jpg",
-    "thumb": "assets/img/bath-gallery-01-thumb.jpg"
+    "h": 1151,
+    "src": "assets/img/bath-p10-01.jpg",
+    "thumb": "assets/img/bath-p10-01-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-02",
+    "slug": "bath-p10-02",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
-    "h": 1198,
-    "src": "assets/img/bath-gallery-02.jpg",
-    "thumb": "assets/img/bath-gallery-02-thumb.jpg"
+    "h": 1154,
+    "src": "assets/img/bath-p10-02.jpg",
+    "thumb": "assets/img/bath-p10-02-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-03",
+    "slug": "bath-p10-03",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
-    "h": 1187,
-    "src": "assets/img/bath-gallery-03.jpg",
-    "thumb": "assets/img/bath-gallery-03-thumb.jpg"
+    "h": 1156,
+    "src": "assets/img/bath-p10-03.jpg",
+    "thumb": "assets/img/bath-p10-03-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-04",
+    "slug": "bath-p11-01",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1373,
-    "h": 1171,
-    "src": "assets/img/bath-gallery-04.jpg",
-    "thumb": "assets/img/bath-gallery-04-thumb.jpg"
+    "w": 1920,
+    "h": 1200,
+    "src": "assets/img/bath-p11-01.jpg",
+    "thumb": "assets/img/bath-p11-01-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-05",
+    "slug": "bath-p11-02",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1346,
-    "h": 1222,
-    "src": "assets/img/bath-gallery-05.jpg",
-    "thumb": "assets/img/bath-gallery-05-thumb.jpg"
-  },
-  {
-    "slug": "bath-gallery-06",
-    "project": "Bathroom",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1439,
-    "h": 1237,
-    "src": "assets/img/bath-gallery-06.jpg",
-    "thumb": "assets/img/bath-gallery-06-thumb.jpg"
-  },
-  {
-    "slug": "bath-gallery-07",
-    "project": "Bathroom",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1199,
+    "w": 1386,
     "h": 1329,
-    "src": "assets/img/bath-gallery-07.jpg",
-    "thumb": "assets/img/bath-gallery-07-thumb.jpg"
+    "src": "assets/img/bath-p11-02.jpg",
+    "thumb": "assets/img/bath-p11-02-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-08",
+    "slug": "bath-p12-01",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1292,
-    "h": 1152,
-    "src": "assets/img/bath-gallery-08.jpg",
-    "thumb": "assets/img/bath-gallery-08-thumb.jpg"
+    "w": 1900,
+    "h": 1330,
+    "src": "assets/img/bath-p12-01.jpg",
+    "thumb": "assets/img/bath-p12-01-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-09",
+    "slug": "bath-p13-01",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1841,
+    "h": 1086,
+    "src": "assets/img/bath-p13-01.jpg",
+    "thumb": "assets/img/bath-p13-01-thumb.jpg"
+  },
+  {
+    "slug": "bath-p13-02",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
-    "h": 1185,
-    "src": "assets/img/bath-gallery-09.jpg",
-    "thumb": "assets/img/bath-gallery-09-thumb.jpg"
+    "h": 1204,
+    "src": "assets/img/bath-p13-02.jpg",
+    "thumb": "assets/img/bath-p13-02-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-10",
-    "project": "Bathroom",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1744,
-    "h": 1128,
-    "src": "assets/img/bath-gallery-10.jpg",
-    "thumb": "assets/img/bath-gallery-10-thumb.jpg"
-  },
-  {
-    "slug": "bath-gallery-11",
+    "slug": "bath-p14-01",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
     "h": 1206,
-    "src": "assets/img/bath-gallery-11.jpg",
-    "thumb": "assets/img/bath-gallery-11-thumb.jpg"
+    "src": "assets/img/bath-p14-01.jpg",
+    "thumb": "assets/img/bath-p14-01-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-12",
+    "slug": "bath-p14-02",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1920,
-    "h": 937,
-    "src": "assets/img/bath-gallery-12.jpg",
-    "thumb": "assets/img/bath-gallery-12-thumb.jpg"
+    "w": 1145,
+    "h": 1257,
+    "src": "assets/img/bath-p14-02.jpg",
+    "thumb": "assets/img/bath-p14-02-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-13",
+    "slug": "bath-p14-03",
+    "project": "Bathroom",
+    "category": "Bathrooms",
+    "featured": false,
+    "w": 1402,
+    "h": 1208,
+    "src": "assets/img/bath-p14-03.jpg",
+    "thumb": "assets/img/bath-p14-03-thumb.jpg"
+  },
+  {
+    "slug": "bath-p14-04",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
     "w": 1920,
     "h": 1274,
-    "src": "assets/img/bath-gallery-13.jpg",
-    "thumb": "assets/img/bath-gallery-13-thumb.jpg"
+    "src": "assets/img/bath-p14-04.jpg",
+    "thumb": "assets/img/bath-p14-04-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-14",
+    "slug": "bath-p14-05",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1920,
-    "h": 880,
-    "src": "assets/img/bath-gallery-14.jpg",
-    "thumb": "assets/img/bath-gallery-14-thumb.jpg"
+    "w": 1544,
+    "h": 1170,
+    "src": "assets/img/bath-p14-05.jpg",
+    "thumb": "assets/img/bath-p14-05-thumb.jpg"
   },
   {
-    "slug": "bath-gallery-15",
+    "slug": "bath-p14-06",
     "project": "Bathroom",
     "category": "Bathrooms",
     "featured": false,
-    "w": 1920,
-    "h": 1066,
-    "src": "assets/img/bath-gallery-15.jpg",
-    "thumb": "assets/img/bath-gallery-15-thumb.jpg"
+    "w": 1265,
+    "h": 1342,
+    "src": "assets/img/bath-p14-06.jpg",
+    "thumb": "assets/img/bath-p14-06-thumb.jpg"
   },
   {
     "slug": "wholehome-gallery-01",
@@ -978,26 +968,6 @@
     "h": 887,
     "src": "assets/img/3d-harry-3.jpg",
     "thumb": "assets/img/3d-harry-3-thumb.jpg"
-  },
-  {
-    "slug": "sample-bath-01",
-    "project": "Featured Bathroom",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1086,
-    "h": 724,
-    "src": "assets/img/sample-bath-01.jpg",
-    "thumb": "assets/img/sample-bath-01-thumb.jpg"
-  },
-  {
-    "slug": "sample-bath-02",
-    "project": "Featured Bathroom",
-    "category": "Bathrooms",
-    "featured": false,
-    "w": 1400,
-    "h": 1074,
-    "src": "assets/img/sample-bath-02.jpg",
-    "thumb": "assets/img/sample-bath-02-thumb.jpg"
   },
   {
     "slug": "sample-living-01",

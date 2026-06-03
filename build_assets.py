@@ -127,7 +127,11 @@ PHOTOS = [
 # Portfolio galleries (from Canva, 2x export, watermark cropped)
 PHOTOS += [(f"Kitchen P1 {i:02d}.png", "Kitchen", "Kitchens", False) for i in range(1, 5)]
 PHOTOS += [(f"Kitchen P{p} {i:02d}.png", "Kitchen", "Kitchens", False) for p in range(2, 9) for i in range(1, 4)]
-PHOTOS += [(f"Bath Gallery {i:02d}.png",      "Bathroom",               "Bathrooms",                False) for i in range(1, 16)]
+PHOTOS += [(f"Bath P10 {i:02d}.png", "Bathroom", "Bathrooms", False) for i in range(1, 4)]
+PHOTOS += [(f"Bath P11 {i:02d}.png", "Bathroom", "Bathrooms", False) for i in range(1, 3)]
+PHOTOS += [("Bath P12 01.png", "Bathroom", "Bathrooms", False)]
+PHOTOS += [(f"Bath P13 {i:02d}.png", "Bathroom", "Bathrooms", False) for i in range(1, 3)]
+PHOTOS += [(f"Bath P14 {i:02d}.png", "Bathroom", "Bathrooms", False) for i in range(1, 7)]
 PHOTOS += [(f"WholeHome Gallery {i:02d}.png", "Whole-Home Renovation",  "Whole-Home Renovations",   False) for i in range(1, 10)]
 # Added designs: 3D renders (project Perspectives PDFs) + Sample Works photos
 PHOTOS += [
@@ -152,8 +156,6 @@ PHOTOS += [
     ("3D Harry 1.png",    "3D Rendering", "3D Designs", False),
     ("3D Harry 2.png",    "3D Rendering", "3D Designs", False),
     ("3D Harry 3.png",    "3D Rendering", "3D Designs", False),
-    ("Sample Bath 01.png",    "Featured Bathroom",   "Bathrooms",              False),
-    ("Sample Bath 02.png",    "Featured Bathroom",   "Bathrooms",              False),
     ("Sample Living 01.png",  "Featured Renovation", "Whole-Home Renovations", False),
     ("Sample Living 02.png",  "Featured Renovation", "Whole-Home Renovations", False),
 ]

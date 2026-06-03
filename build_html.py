@@ -545,7 +545,7 @@ def build_portfolio():
     # landing: one tile per category -> opens that category's gallery page
     tiles = [
         ("Kitchens",               "portfolio-kitchens.html",  "kitchen-p1-01"),
-        ("Bathrooms",              "portfolio-bathrooms.html", "bath-gallery-01"),
+        ("Bathrooms",              "portfolio-bathrooms.html", "bath-p10-01"),
         ("Whole-Home Renovations", "portfolio-wholehome.html", "wholehome-gallery-01"),
         ("3D Designs",             "portfolio-3d.html",        "3d-cook-1"),
     ]
@@ -642,6 +642,19 @@ KITCHEN_GROUPS = [
      "desc":"A bright, open-plan white kitchen with a marble backsplash, central island and pendant lighting that flows into the living space. It feels expansive and welcoming — a true heart-of-the-home layout."},
     {"title":"Row-Home Chef's Kitchen","slugs":["redfin-kitchen-04","redfin-kitchen-05","redfin-kitchen-06"],
      "desc":"A crisp white kitchen built for cooking — a generous island, full stainless suite and clean lines that make the most of a city row-home footprint. Functional and refined, it feels calm and uncluttered."},
+]
+
+BATH_GROUPS = [
+    {"title":"Bright Marble Spa Bath","slugs":["bath-p10-01","bath-p10-02","bath-p10-03"],
+     "desc":"A light-filled primary bath wrapped in marble, with a glass walk-in shower, a freestanding soaking tub and a crisp white double vanity beneath big windows. Warm brass and matte black mix for contrast — it feels open, fresh and restorative, a personal spa flooded with daylight."},
+    {"title":"Moody Black & Marble Bath","slugs":["bath-p11-01","bath-p11-02"],
+     "desc":"A dramatic bath that plays a charcoal accent wall against bright marble and matte-black fixtures. The contrast feels bold and intimate — confident and a little luxe, a space with real depth and character."},
+    {"title":"Sculptural Soaking Tub","slugs":["bath-p12-01"],
+     "desc":"Floor-to-ceiling marble frames a sculptural freestanding tub, finished with matte-black fixtures and a clean built-in niche. Minimal and serene, it transmits pure calm — a quiet retreat built around the simple ritual of a long soak."},
+    {"title":"Warm Marble & Brass Bath","slugs":["bath-p13-01","bath-p13-02"],
+     "desc":"Marble and warm wood tones meet brushed brass, a round backlit mirror and a glass shower. The mix of cool stone and warm metal feels welcoming and grounded — polished, but easy to relax in."},
+    {"title":"Arched-Mirror Glam Bath","slugs":["bath-p14-01","bath-p14-02","bath-p14-03","bath-p14-04","bath-p14-05","bath-p14-06"],
+     "desc":"An elegant bath with arched mirrors, gold sconces, blush-veined marble and a frameless glass shower over a white double vanity. Refined and a touch glamorous, it feels bright, romantic and special — a true showpiece."},
 ]
 
 def build_grouped(fname, title, desc, groups):
@@ -888,8 +901,9 @@ if __name__ == "__main__":
     build_grouped("portfolio-kitchens.html", "Kitchens",
                   "Custom kitchen remodels and new builds across Northern Virginia, Washington DC and Richmond — grouped by style.",
                   KITCHEN_GROUPS)
-    build_category("Bathrooms", "portfolio-bathrooms.html", "Bathrooms",
-                   "Spa-style baths, custom tile showers and finish work, designed and built by one team.")
+    build_grouped("portfolio-bathrooms.html", "Bathrooms",
+                  "Spa-style baths, custom tile showers and finish work — explored project by project.",
+                  BATH_GROUPS)
     build_grouped("portfolio-3d.html", "3D Designs",
                   "Photoreal 3D renderings we create so you can see your project before we build it — explored project by project.",
                   THREED_GROUPS)
