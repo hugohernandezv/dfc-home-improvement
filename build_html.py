@@ -516,7 +516,7 @@ def build_renovations():
           <ul><li>Photoreal interior &amp; exterior renderings</li><li>Kitchen, bath &amp; whole-home visualizations</li><li>Material, color &amp; finish previews</li><li>Layout &amp; floor-plan studies before construction</li></ul>
           <p style="margin-top:1.6em"><a class="link-arrow" href="portfolio.html">See 3D designs in the portfolio {ARROW}</a></p>
         </div>
-        <div class="media reveal"><img src="{img('3d-sage-kitchen-1')}" alt="Photoreal 3D kitchen rendering by DFC Home Improvement" loading="lazy"></div>
+        <div class="media reveal"><img src="{img('3d-cook-1')}" alt="Photoreal 3D kitchen rendering by DFC Home Improvement" loading="lazy"></div>
     </div></div>
   </section>
 
@@ -547,7 +547,7 @@ def build_portfolio():
         ("Kitchens",               "portfolio-kitchens.html",  "kitchen-gallery-01"),
         ("Bathrooms",              "portfolio-bathrooms.html", "bath-gallery-01"),
         ("Whole-Home Renovations", "portfolio-wholehome.html", "wholehome-gallery-01"),
-        ("3D Designs",             "portfolio-3d.html",        "3d-sage-kitchen-1"),
+        ("3D Designs",             "portfolio-3d.html",        "3d-cook-1"),
     ]
     tile_html = "\n".join(
         f"""      <a class="cat-tile reveal" href="{href}">
@@ -603,28 +603,33 @@ def build_category(cat, fname, title, desc):
 
 # ====================================== PROJECT-GROUPED CATEGORY (editorial)
 THREED_GROUPS = [
-    {"title":"Modern Tiny Home","slugs":["3d-tiny-home-exterior","3d-tiny-home-kitchen","3d-tiny-home-living","3d-tiny-home-bath"],
-     "desc":"A fully designed compact home that lives large — a clean white exterior, a black-and-white galley kitchen, a warm living space with a linear fireplace, and a marble-and-brass bath. Proof that thoughtful design makes every square foot count."},
     {"title":"Sage Shaker Kitchen","slugs":["3d-cook-1","3d-cook-2","3d-cook-3"],
-     "desc":"Sage-green shaker cabinetry paired with a warm wood island, quartz counters, brass pendants and a marble-look backsplash — a fresh, timeless take on the family kitchen."},
+     "desc":"Sage-green shaker cabinetry paired with a warm wood island, quartz counters, brass pendants and a marble-look backsplash. The soft green and natural wood give the room a calm, grounded warmth — fresh yet timeless, it's a kitchen that invites you to slow down and gather."},
     {"title":"White Kitchen & Spa Baths","slugs":["3d-emily-1","3d-emily-2","3d-emily-3","3d-emily-4","3d-emily-5"],
-     "desc":"A crisp all-white kitchen with a generous island and designer lighting, carried through to spa-style bathrooms with floating vanities and full-height tile."},
+     "desc":"A crisp all-white kitchen with a generous island and designer lighting, carried through to spa-style bathrooms with floating vanities and full-height tile. Light and uncluttered, the spaces feel airy and quietly luxurious — a sense of calm at the start and end of every day."},
     {"title":"Two-Tone Island Kitchen","slugs":["3d-bradley-1","3d-bradley-2"],
-     "desc":"White perimeter cabinetry grounded by a deep, contrasting island, topped with quartz and finished with statement pendant lighting."},
-    {"title":"Covered Patio & Pergola","slugs":["3d-covered-patio-1","3d-covered-patio-2","3d-covered-patio-3"],
-     "desc":"An outdoor living room — a cedar-tone pergola, comfortable lounge seating and clean railings that extend the home into the backyard."},
-    {"title":"Sage Kitchen Concept","slugs":["3d-sage-kitchen-1","3d-sage-kitchen-2","3d-sage-kitchen-3"],
-     "desc":"A design study in soft sage and white — shaker doors, a butcher-block island and warm metal accents for an inviting, lived-in feel."},
-    {"title":"Modern White Kitchen","slugs":["3d-modern-kitchen-1","3d-modern-kitchen-2"],
-     "desc":"Bright, minimal and functional — flat-front white cabinetry, an oversized island and clean sightlines made for everyday entertaining."},
+     "desc":"White perimeter cabinetry grounded by a deep, contrasting island, waterfall quartz and statement pendants. The contrast reads confident and modern — bold but balanced, a kitchen with real presence that still feels welcoming."},
     {"title":"Custom Tile Bath Suite","slugs":["3d-brendan-1","3d-brendan-2","3d-brendan-3"],
-     "desc":"Floor-to-ceiling tile, a frameless glass shower and a clean floating vanity for a calm, hotel-grade bathroom."},
+     "desc":"Floor-to-ceiling tile, a frameless glass shower and a clean floating vanity. The effect is serene and spa-like — a calm, hotel-grade retreat that feels like a daily reset."},
     {"title":"Spa Bath Retreat","slugs":["3d-harry-1","3d-harry-2","3d-harry-3"],
-     "desc":"A moody, spa-inspired bath with a barn-door entry, large-format tile and a sculptural vanity wall."},
+     "desc":"A spa-inspired bath with a barn-door entry, large-format tile and a sculptural vanity wall. Moody and intimate, it feels grounded and restorative — quiet luxury you can truly unwind in."},
     {"title":"Kitchen & Bath Refresh","slugs":["3d-bridetta-1","3d-bridetta-2","3d-bridetta-3"],
-     "desc":"A coordinated kitchen and bath remodel in a light, transitional palette — white cabinetry, quartz surfaces and brushed fixtures."},
+     "desc":"A coordinated kitchen and bath in a light, transitional palette — white cabinetry, quartz surfaces and brushed fixtures. Bright and welcoming, the spaces feel fresh, easy and effortlessly put-together."},
+    {"title":"Covered Patio & Pergola","slugs":["3d-covered-patio-1","3d-covered-patio-2","3d-covered-patio-3"],
+     "desc":"A cedar-tone pergola, lounge seating and clean railings that extend the home into the backyard. It transmits ease and escape — a relaxed outdoor room made for slow mornings and evening gatherings."},
     {"title":"Wraparound Porch & Great Room","slugs":["3d-ginger-1","3d-ginger-2"],
-     "desc":"An addition that opens the home up — a covered porch for outdoor living and a bright, connected great room inside."},
+     "desc":"An addition that opens the home up — a covered porch for outdoor living and a bright, connected great room inside. It transmits warmth and openness: a home that breathes and brings people together."},
+]
+
+KITCHEN_GROUPS = [
+    {"title":"White & Gray Shaker","slugs":["kitchen-gallery-01","kitchen-gallery-02","kitchen-gallery-08","kitchen-gallery-09","kitchen-gallery-14","kitchen-gallery-15","kitchen-gallery-16","kitchen-gallery-23","sample-kitchen-01","redfin-kitchen-05"],
+     "desc":"White shaker cabinetry paired with a soft gray island — our signature look. Crisp yet warm, the two-tone palette feels clean and current without ever feeling cold; the kind of kitchen that's bright to cook in and easy to live in."},
+    {"title":"Bright All-White","slugs":["kitchen-gallery-05","kitchen-gallery-06","kitchen-gallery-07","kitchen-gallery-10","kitchen-gallery-18","redfin-kitchen-01","redfin-kitchen-02","redfin-kitchen-03","redfin-kitchen-04"],
+     "desc":"All-white kitchens with quartz counters and clean lines. They transmit calm and space — light bounces everywhere, making even a modest footprint feel open, airy and timeless."},
+    {"title":"Bold Islands","slugs":["kitchen-gallery-11","kitchen-gallery-12","kitchen-gallery-13","kitchen-gallery-20","kitchen-gallery-21","kitchen-gallery-25"],
+     "desc":"Light cabinetry anchored by a statement island in navy or warm wood. The deeper tone grounds the room and adds character — confident and inviting, with a natural focal point that pulls everyone in."},
+    {"title":"Patterned & Polished","slugs":["kitchen-gallery-03","kitchen-gallery-04","kitchen-gallery-17","kitchen-gallery-19","kitchen-gallery-22","kitchen-gallery-24","redfin-kitchen-06"],
+     "desc":"Where the details do the talking — patterned tile backsplashes, marble surfaces and brushed-brass fixtures. These kitchens feel elevated and considered, equal parts everyday function and finish."},
 ]
 
 def build_grouped(fname, title, desc, groups):
@@ -868,8 +873,9 @@ if __name__ == "__main__":
     build_new_construction()
     build_renovations()
     build_portfolio()
-    build_category("Kitchens", "portfolio-kitchens.html", "Kitchens",
-                   "Custom kitchen remodels and new builds across Northern Virginia, Washington DC and Richmond.")
+    build_grouped("portfolio-kitchens.html", "Kitchens",
+                  "Custom kitchen remodels and new builds across Northern Virginia, Washington DC and Richmond — grouped by style.",
+                  KITCHEN_GROUPS)
     build_category("Bathrooms", "portfolio-bathrooms.html", "Bathrooms",
                    "Spa-style baths, custom tile showers and finish work, designed and built by one team.")
     build_grouped("portfolio-3d.html", "3D Designs",
