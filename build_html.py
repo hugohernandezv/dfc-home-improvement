@@ -601,6 +601,72 @@ def build_category(cat, fname, title, desc):
          head(f"{title} | DFC Home Improvement Portfolio", desc, "portfolio"),
          body, "portfolio")
 
+# ====================================== PROJECT-GROUPED CATEGORY (editorial)
+THREED_GROUPS = [
+    {"title":"Modern Tiny Home","slugs":["3d-tiny-home-exterior","3d-tiny-home-kitchen","3d-tiny-home-living","3d-tiny-home-bath"],
+     "desc":"A fully designed compact home that lives large — a clean white exterior, a black-and-white galley kitchen, a warm living space with a linear fireplace, and a marble-and-brass bath. Proof that thoughtful design makes every square foot count."},
+    {"title":"Sage Shaker Kitchen","slugs":["3d-cook-1","3d-cook-2","3d-cook-3"],
+     "desc":"Sage-green shaker cabinetry paired with a warm wood island, quartz counters, brass pendants and a marble-look backsplash — a fresh, timeless take on the family kitchen."},
+    {"title":"White Kitchen & Spa Baths","slugs":["3d-emily-1","3d-emily-2","3d-emily-3","3d-emily-4","3d-emily-5"],
+     "desc":"A crisp all-white kitchen with a generous island and designer lighting, carried through to spa-style bathrooms with floating vanities and full-height tile."},
+    {"title":"Two-Tone Island Kitchen","slugs":["3d-bradley-1","3d-bradley-2"],
+     "desc":"White perimeter cabinetry grounded by a deep, contrasting island, topped with quartz and finished with statement pendant lighting."},
+    {"title":"Covered Patio & Pergola","slugs":["3d-covered-patio-1","3d-covered-patio-2","3d-covered-patio-3"],
+     "desc":"An outdoor living room — a cedar-tone pergola, comfortable lounge seating and clean railings that extend the home into the backyard."},
+    {"title":"Sage Kitchen Concept","slugs":["3d-sage-kitchen-1","3d-sage-kitchen-2","3d-sage-kitchen-3"],
+     "desc":"A design study in soft sage and white — shaker doors, a butcher-block island and warm metal accents for an inviting, lived-in feel."},
+    {"title":"Modern White Kitchen","slugs":["3d-modern-kitchen-1","3d-modern-kitchen-2"],
+     "desc":"Bright, minimal and functional — flat-front white cabinetry, an oversized island and clean sightlines made for everyday entertaining."},
+    {"title":"Custom Tile Bath Suite","slugs":["3d-brendan-1","3d-brendan-2","3d-brendan-3"],
+     "desc":"Floor-to-ceiling tile, a frameless glass shower and a clean floating vanity for a calm, hotel-grade bathroom."},
+    {"title":"Spa Bath Retreat","slugs":["3d-harry-1","3d-harry-2","3d-harry-3"],
+     "desc":"A moody, spa-inspired bath with a barn-door entry, large-format tile and a sculptural vanity wall."},
+    {"title":"Kitchen & Bath Refresh","slugs":["3d-bridetta-1","3d-bridetta-2","3d-bridetta-3"],
+     "desc":"A coordinated kitchen and bath remodel in a light, transitional palette — white cabinetry, quartz surfaces and brushed fixtures."},
+    {"title":"Wraparound Porch & Great Room","slugs":["3d-ginger-1","3d-ginger-2"],
+     "desc":"An addition that opens the home up — a covered porch for outdoor living and a bright, connected great room inside."},
+]
+
+def build_grouped(fname, title, desc, groups):
+    secs = []
+    for g in groups:
+        figs = "\n".join(
+            f"""          <figure data-full="{M[s]['src']}" data-proj="{html.escape(g['title'])}" data-cat="{html.escape(title)}">
+            <img src="{M[s]['thumb']}" alt="{html.escape(g['title'])} — {html.escape(title)} by DFC Home Improvement" loading="lazy">
+            <span class="g-zoom" aria-hidden="true">{ZOOM}</span>
+          </figure>""" for s in g['slugs'])
+        secs.append(f"""
+  <section class="proj reveal">
+    <div class="wrap">
+      <div class="proj-head">
+        <p class="eyebrow">{html.escape(title)}</p>
+        <h2>{html.escape(g['title'])}</h2>
+        <p class="proj-desc">{g['desc']}</p>
+      </div>
+      <div class="proj-grid">
+{figs}
+      </div>
+    </div>
+  </section>""")
+    crumb = f'<a href="portfolio.html">Portfolio</a> / {title}'
+    body = f"""
+<main id="top">
+{page_head(crumb, title, desc)}
+  <div id="gallery">
+{''.join(secs)}
+  </div>
+  <div class="section--tight wrap"><div class="cat-nav reveal"><a class="btn" href="portfolio.html">← Back to all categories</a></div></div>
+{cta()}
+</main>
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Project image">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>"""
+    page(fname, head(f"{title} | DFC Home Improvement Portfolio", desc, "portfolio"), body, "portfolio")
+
 # ================================================================ CONTACT
 def build_contact():
     areas = " · ".join(AREAS)
@@ -806,8 +872,9 @@ if __name__ == "__main__":
                    "Custom kitchen remodels and new builds across Northern Virginia, Washington DC and Richmond.")
     build_category("Bathrooms", "portfolio-bathrooms.html", "Bathrooms",
                    "Spa-style baths, custom tile showers and finish work, designed and built by one team.")
-    build_category("3D Designs", "portfolio-3d.html", "3D Designs",
-                   "Photoreal 3D renderings we create so you can see your project before we build it.")
+    build_grouped("portfolio-3d.html", "3D Designs",
+                  "Photoreal 3D renderings we create so you can see your project before we build it — explored project by project.",
+                  THREED_GROUPS)
     build_category("Whole-Home Renovations", "portfolio-wholehome.html", "Whole-Home Renovations",
                    "Full-home transformations — living spaces, additions and finishes carried out end to end.")
     build_contact()
