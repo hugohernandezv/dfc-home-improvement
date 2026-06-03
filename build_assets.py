@@ -137,6 +137,35 @@ PHOTOS = [
 PHOTOS += [(f"Kitchen Gallery {i:02d}.png",   "Kitchen",                "Kitchens",                 False) for i in range(1, 26)]
 PHOTOS += [(f"Bath Gallery {i:02d}.png",      "Bathroom",               "Bathrooms",                False) for i in range(1, 16)]
 PHOTOS += [(f"WholeHome Gallery {i:02d}.png", "Whole-Home Renovation",  "Whole-Home Renovations",   False) for i in range(1, 10)]
+# Added designs: 3D renders (project Perspectives PDFs) + Sample Works photos
+PHOTOS += [
+    ("3D Ginger 1.png",   "3D Rendering", "3D Designs", False),
+    ("3D Ginger 2.png",   "3D Rendering", "3D Designs", False),
+    ("3D Emily 1.png",    "3D Rendering", "3D Designs", False),
+    ("3D Emily 2.png",    "3D Rendering", "3D Designs", False),
+    ("3D Emily 3.png",    "3D Rendering", "3D Designs", False),
+    ("3D Emily 4.png",    "3D Rendering", "3D Designs", False),
+    ("3D Emily 5.png",    "3D Rendering", "3D Designs", False),
+    ("3D Bradley 1.png",  "3D Rendering", "3D Designs", False),
+    ("3D Bradley 2.png",  "3D Rendering", "3D Designs", False),
+    ("3D Cook 1.png",     "3D Rendering", "3D Designs", False),
+    ("3D Cook 2.png",     "3D Rendering", "3D Designs", False),
+    ("3D Cook 3.png",     "3D Rendering", "3D Designs", False),
+    ("3D Brendan 1.png",  "3D Rendering", "3D Designs", False),
+    ("3D Brendan 2.png",  "3D Rendering", "3D Designs", False),
+    ("3D Brendan 3.png",  "3D Rendering", "3D Designs", False),
+    ("3D Bridetta 1.png", "3D Rendering", "3D Designs", False),
+    ("3D Bridetta 2.png", "3D Rendering", "3D Designs", False),
+    ("3D Bridetta 3.png", "3D Rendering", "3D Designs", False),
+    ("3D Harry 1.png",    "3D Rendering", "3D Designs", False),
+    ("3D Harry 2.png",    "3D Rendering", "3D Designs", False),
+    ("3D Harry 3.png",    "3D Rendering", "3D Designs", False),
+    ("Sample Kitchen 01.png", "Featured Kitchen",    "Kitchens",               False),
+    ("Sample Bath 01.png",    "Featured Bathroom",   "Bathrooms",              False),
+    ("Sample Bath 02.png",    "Featured Bathroom",   "Bathrooms",              False),
+    ("Sample Living 01.png",  "Featured Renovation", "Whole-Home Renovations", False),
+    ("Sample Living 02.png",  "Featured Renovation", "Whole-Home Renovations", False),
+]
 
 def process_photos():
     manifest = []
