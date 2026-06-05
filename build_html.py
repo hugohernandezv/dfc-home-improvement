@@ -8,6 +8,8 @@ M = {x["slug"]: x for x in json.load(open(os.path.join(ROOT, "manifest.json")))}
 PHONE_DISP = "(703) 596-8375"
 PHONE_TEL  = "+17035968375"
 EMAIL      = "admin@dfchomeimprovement.com"
+# Jobber public work-request form ("Request Evaluation" CTA)
+JOBBER_FORM = "https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/new"
 AREAS = ["Northern Virginia", "Fairfax", "Arlington", "Alexandria", "Falls Church",
          "Vienna", "McLean", "Richmond", "Washington DC"]
 MAP_SRC = ("https://www.openstreetmap.org/export/embed.html?"
@@ -100,7 +102,7 @@ def header(current):
   </nav>
   <div class="header-right">
     <a class="header-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
-    <a class="btn header-cta" href="contact.html">Request Evaluation</a>
+    <a class="btn header-cta" href="{JOBBER_FORM}" target="_blank" rel="noopener">Request Evaluation</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
