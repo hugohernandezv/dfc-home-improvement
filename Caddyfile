@@ -1,6 +1,11 @@
 :{$PORT:8080} {
 	root * /usr/share/caddy
 	encode gzip
+	# Canonical host: 301 the bare apex → www, preserving path + query.
+	# Host-scoped (apex only), so www is unaffected. Inert until DNS points
+	# dfchomeimprovement.com at Railway (needs apex CNAME-flattening, e.g. Cloudflare).
+	@apex host dfchomeimprovement.com
+	redir @apex https://www.dfchomeimprovement.com{uri} permanent
 	# clean URLs: /privacy → privacy.html, /terms → terms.html
 	try_files {path} {path}/ {path}.html
 	file_server
