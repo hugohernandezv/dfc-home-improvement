@@ -5,197 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Review DFC Home Improvement</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/logo/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #efeee9;
-      --panel: #ffffff;
-      --ink: #101010;
-      --muted: #5e665e;
-      --line: #cfd3cf;
-      --soft: #f5f4ef;
-      --accent: #dfe4df;
+      --ink:        #0d0805;
+      --ink-soft:   rgba(13, 8, 5, 0.70);
+      --ink-mute:   rgba(13, 8, 5, 0.50);
+      --paper:      #f5f1ea;
+      --paper-2:    #ece5da;
+      --white:      #ffffff;
+      --line:       rgba(13, 8, 5, 0.14);
+      --line-soft:  rgba(13, 8, 5, 0.08);
+      --accent:     #9a6e4c;
+      --accent-ink: #7c573a;
+      --sage-soft:  #e9ede3;
+      --sage:       #7b8a70;
+      --sage-deep:  #313d2c;
+      --sage-deep2: #283120;
+      --gold:       #c08a2d;
+      --head: "Urbanist", system-ui, -apple-system, sans-serif;
+      --sans: "DM Sans", system-ui, -apple-system, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       background: var(--paper);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 16.5px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     .page {
       min-height: 100vh;
-      padding: 28px 12px;
+      padding: 32px 14px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .shell {
-      width: min(600px, 100%);
-      background: var(--panel);
+      width: min(580px, 100%);
+      background: var(--white);
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 30px 80px -45px rgba(13, 8, 5, 0.45);
     }
 
     .brand {
-      background: var(--accent);
-      padding: 16px 20px;
+      background: var(--sage-deep2);
+      padding: 26px 20px;
       text-align: center;
     }
 
     .brand img {
-      width: 150px;
-      max-width: 150px;
+      width: 158px;
+      max-width: 158px;
       height: auto;
       display: inline-block;
     }
 
-    .content {
-      padding: 30px 28px 0;
-    }
+    .content { padding: 36px 34px 0; }
 
     .eyebrow {
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
-      font-size: 15px;
-      line-height: 23px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7em;
+      margin: 0 0 1.1rem;
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-ink);
+    }
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--accent);
     }
 
     h1 {
-      margin: 36px 0 0;
-      font-size: 28px;
-      line-height: 36px;
-      font-weight: 400;
-      letter-spacing: 0;
+      margin: 0;
+      font-family: var(--head);
+      font-size: clamp(2rem, 5.4vw, 2.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.012em;
+      font-weight: 500;
+      color: var(--ink);
     }
 
     .hero-divider {
-      margin: 18px 0 0;
+      margin: 22px 0 0;
       border: 0;
       border-top: 1px solid var(--line);
     }
 
-    .greeting {
-      padding: 28px 28px 0;
-    }
+    .greeting { padding: 26px 34px 0; }
 
     .intro {
-      margin: 0 0 18px;
-      font-size: 15px;
-      line-height: 24px;
-      color: #171717;
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink-soft);
     }
+    .intro strong { color: var(--ink); font-weight: 600; }
 
     .job-block {
-      margin: 6px 0 24px;
-      background: var(--soft);
-      border-left: 4px solid var(--ink);
-      padding: 18px 20px;
+      margin: 8px 0 22px;
+      background: var(--sage-soft);
+      border-left: 3px solid var(--sage-deep);
+      padding: 16px 18px;
     }
 
     .job-label {
-      margin: 0 0 8px;
-      font-size: 11px;
-      line-height: 16px;
-      letter-spacing: 1.6px;
+      margin: 0 0 6px;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--accent-ink);
+      font-weight: 600;
     }
 
-    .job-text {
-      margin: 0;
-      font-size: 15px;
-      line-height: 24px;
-      color: #161616;
-    }
+    .job-text { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--ink); }
 
-    .form-section {
-      padding: 0 28px;
-    }
+    .form-section { padding: 0 34px; }
 
     .form {
       border-top: 1px solid var(--line);
-      padding-top: 24px;
+      padding-top: 26px;
     }
 
-    label,
     .field-label {
       display: block;
+      margin: 0 0 14px;
+      color: var(--accent-ink);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ---- star rating ---- */
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .star {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 4px;
+      font-size: 44px;
+      line-height: 1;
+      cursor: pointer;
+      color: rgba(13, 8, 5, 0.16);
+      transition: color 140ms var(--ease), transform 140ms var(--ease);
+    }
+    .star:hover { transform: translateY(-2px); }
+    .star.on { color: var(--gold); }
+    .star:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    .stars-hint {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-mute);
+    }
+
+    label.comments-label {
+      display: block;
       margin: 0 0 9px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      line-height: 18px;
+      color: var(--accent-ink);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     textarea {
       width: 100%;
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--white);
       color: var(--ink);
-      font: 15px/24px Arial, Helvetica, sans-serif;
+      font: 15.5px/1.6 var(--sans);
       padding: 14px 15px;
-      border-radius: 0;
       outline: none;
-      min-height: 124px;
+      min-height: 122px;
       resize: vertical;
     }
+    textarea:focus { border-color: var(--accent); }
 
-    textarea:focus {
-      border-color: var(--ink);
-    }
-
-    .field {
-      margin-bottom: 22px;
-    }
-
-    .stars {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .star-option {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .star-option input {
-      appearance: none;
-      -webkit-appearance: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1px;
-      height: 1px;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .star-option span {
-      display: flex;
-      height: 56px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--line);
-      background: var(--soft);
-      cursor: pointer;
-      font-size: 22px;
-      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
-    }
-
-    .star-option input:checked + span,
-    .star-option:hover span {
-      border-color: var(--ink);
-      background: var(--ink);
-      color: #fff;
-    }
+    .field { margin-bottom: 22px; }
 
     .actions {
       display: flex;
@@ -204,146 +219,85 @@
       align-items: center;
     }
 
-    button {
-      display: inline-block;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border: 1px solid var(--ink);
       background: var(--ink);
       color: #fff;
       cursor: pointer;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.4px;
-      line-height: 20px;
-      padding: 16px 30px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      padding: 1.05em 2.1em;
       text-decoration: none;
       text-transform: uppercase;
-      border-radius: 0;
+      transition: background .4s var(--ease), color .4s var(--ease);
     }
+    .btn:hover { background: transparent; color: var(--ink); }
+    .btn--sage { background: var(--sage-deep); border-color: var(--sage-deep); }
+    .btn--sage:hover { background: transparent; color: var(--sage-deep); }
+    .btn:disabled { opacity: 0.5; cursor: default; }
 
-    button:disabled {
-      opacity: 0.55;
-      cursor: default;
-    }
-
-    .result {
-      display: none;
-      margin-top: 32px;
+    /* ---- panels ---- */
+    .panel {
+      margin-top: 28px;
       padding: 26px;
-      background: var(--soft);
-      border-left: 4px solid var(--ink);
+      background: var(--sage-soft);
+      border-left: 3px solid var(--sage-deep);
     }
-
-    .result h2 {
+    .panel h2 {
       margin: 0 0 10px;
-      font-size: 22px;
-      line-height: 30px;
-      font-weight: 400;
+      font-family: var(--head);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--ink);
     }
-
-    .result p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 24px;
-    }
+    .panel p { margin: 0 0 18px; color: var(--ink-soft); font-size: 15.5px; }
+    .panel p:last-child { margin-bottom: 0; }
 
     .footer {
-      padding: 24px 28px 36px;
+      padding: 26px 34px 34px;
       border-top: 1px solid var(--line);
-      margin-top: 32px;
+      margin-top: 34px;
     }
-
     .footer-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
     }
-
-    .owner-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
+    .owner-info { display: flex; align-items: center; gap: 13px; }
     .owner-photo {
-      width: 76px;
-      height: 76px;
+      width: 60px; height: 60px;
       border-radius: 50%;
-      border: 1px solid #d7d3c8;
+      border: 1px solid var(--line);
       object-fit: cover;
       display: block;
       flex-shrink: 0;
     }
-
-    .owner-name {
-      margin: 0;
-      font-size: 16px;
-      line-height: 22px;
-      font-weight: bold;
-      color: var(--ink);
-    }
-
+    .owner-name { margin: 0; font-family: var(--head); font-size: 16px; font-weight: 600; color: var(--ink); }
     .owner-title {
-      margin: 3px 0 0;
-      font-size: 12px;
-      line-height: 18px;
-      color: var(--muted);
-      letter-spacing: 1.2px;
+      margin: 2px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      color: var(--ink-mute);
     }
+    .social-links { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .social-links img { display: block; width: 21px; height: 21px; border: 0; opacity: 0.8; }
+    .social-links a:hover img { opacity: 1; }
 
-    .social-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
+    .hidden { display: none !important; }
 
-    .social-links a {
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .social-links img {
-      display: block;
-      width: 22px;
-      height: 22px;
-      border: 0;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    @media (max-width: 620px) {
-      .page {
-        padding: 0;
-        align-items: stretch;
-      }
-
-      .content,
-      .greeting,
-      .form-section,
-      .footer {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-        line-height: 32px;
-      }
-
-      .star-option span {
-        height: 48px;
-        font-size: 18px;
-      }
-
-      .owner-photo {
-        width: 60px;
-        height: 60px;
-      }
+    @media (max-width: 600px) {
+      .page { padding: 0; align-items: stretch; }
+      .content, .greeting, .form-section, .footer { padding-left: 22px; padding-right: 22px; }
+      .star { font-size: 38px; }
+      .owner-photo { width: 52px; height: 52px; }
     }
   </style>
 </head>
@@ -351,66 +305,61 @@
   <main class="page">
     <section class="shell" aria-labelledby="page-title">
       <div class="brand">
-        <img src="https://dfchomeimprovement.com/wp-content/uploads/2024/09/main-logo.png" alt="DFC Home Improvement">
+        <img src="assets/logo/dfc-logo-white.png" alt="DFC Home Improvement">
       </div>
 
       <div class="content">
-        <div class="eyebrow">Thank you for trusting DFC Home Improvement</div>
-        <h1 id="page-title">How was your<br>experience?</h1>
+        <div class="eyebrow">Your feedback</div>
+        <h1 id="page-title">How was your experience?</h1>
         <hr class="hero-divider">
       </div>
 
       <div class="greeting">
         <p class="intro">Hi <span id="greet-name">there</span>,</p>
-        <p class="intro">Thank you for choosing DFC Home Improvement. It was a privilege to help with your project, and we truly appreciate the opportunity to bring care, craftsmanship, and attention to detail into your home.</p>
+        <p class="intro">Thank you for choosing <strong>DFC Home Improvement</strong>. It was a privilege to help with your project, and we truly appreciate the opportunity to bring care, craftsmanship, and attention to detail into your home.</p>
 
         <div class="job-block hidden" id="job-block">
           <p class="job-label">Recent work completed for you</p>
           <p class="job-text" id="job-text"></p>
         </div>
 
-        <p class="intro">Your feedback helps our team follow up with care and continue improving the way we serve local homeowners.</p>
+        <p class="intro">Your feedback helps our team keep improving the way we serve local homeowners. It only takes a moment.</p>
       </div>
 
       <div class="form-section">
         <form class="form" id="review-form">
-          <div class="field-label">Overall rating</div>
-          <div class="stars" role="radiogroup" aria-label="Overall rating">
-            <label class="star-option">
-              <input type="radio" name="rating" value="1" required>
-              <span>1</span>
-            </label>
-            <label class="star-option">
-              <input type="radio" name="rating" value="2">
-              <span>2</span>
-            </label>
-            <label class="star-option">
-              <input type="radio" name="rating" value="3">
-              <span>3</span>
-            </label>
-            <label class="star-option">
-              <input type="radio" name="rating" value="4">
-              <span>4</span>
-            </label>
-            <label class="star-option">
-              <input type="radio" name="rating" value="5">
-              <span>5</span>
-            </label>
+          <div class="field-label">Tap a star to rate your experience</div>
+          <div class="stars" id="stars" role="radiogroup" aria-label="Overall rating">
+            <button type="button" class="star" data-value="1" role="radio" aria-checked="false" aria-label="1 star">&#9733;</button>
+            <button type="button" class="star" data-value="2" role="radio" aria-checked="false" aria-label="2 stars">&#9733;</button>
+            <button type="button" class="star" data-value="3" role="radio" aria-checked="false" aria-label="3 stars">&#9733;</button>
+            <button type="button" class="star" data-value="4" role="radio" aria-checked="false" aria-label="4 stars">&#9733;</button>
+            <button type="button" class="star" data-value="5" role="radio" aria-checked="false" aria-label="5 stars">&#9733;</button>
           </div>
+          <p class="stars-hint" id="stars-hint">1 = poor &nbsp;·&nbsp; 5 = excellent</p>
+          <input type="hidden" id="rating-input" name="rating" value="">
 
           <div class="field hidden" id="comments-field">
-            <label for="comments">Comments</label>
-            <textarea id="comments" name="comments" placeholder="Tell us what we could have done better."></textarea>
+            <label class="comments-label" for="comments">What could we have done better?</label>
+            <textarea id="comments" name="comments" placeholder="Tell us a little about your experience so we can make it right."></textarea>
           </div>
 
           <div class="actions hidden" id="submit-actions">
-            <button type="submit" id="submit-btn">Submit Feedback</button>
+            <button type="submit" class="btn" id="submit-btn">Send Feedback</button>
           </div>
         </form>
 
-        <div class="result" id="feedback-result" aria-live="polite">
+        <!-- 4–5 stars: route to Google -->
+        <div class="panel hidden" id="positive-panel" aria-live="polite">
+          <h2>That just made our day.</h2>
+          <p>Would you share a few words on Google? It takes 30 seconds and helps other local homeowners find us.</p>
+          <a class="btn btn--sage" href="https://g.page/r/CSMD0idi2zYHEBM/review" target="_blank" rel="noopener noreferrer" id="google-btn">Post my Google review</a>
+        </div>
+
+        <!-- after private submit -->
+        <div class="panel hidden" id="feedback-result" aria-live="polite">
           <h2>Thank you for your feedback.</h2>
-          <p>We are sorry the experience was not excellent. Our team will review your comments and reach out to make it right.</p>
+          <p>We're sorry the experience wasn't excellent. Brian and the team will review your comments personally and reach out to make it right.</p>
         </div>
       </div>
 
@@ -424,11 +373,11 @@
             </div>
           </div>
           <div class="social-links">
-            <a href="https://www.instagram.com/dfchomeimprovement/" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.icons8.com/ios-filled/50/101010/instagram-new.png" width="22" height="22" alt="Instagram">
+            <a href="https://www.instagram.com/dfchomeimprovement/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="https://img.icons8.com/ios-filled/50/101010/instagram-new.png" width="21" height="21" alt="Instagram">
             </a>
-            <a href="https://www.facebook.com/DFCHome" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.icons8.com/ios-filled/50/101010/facebook-new.png" width="22" height="22" alt="Facebook">
+            <a href="https://www.facebook.com/DFCHome" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="https://img.icons8.com/ios-filled/50/101010/facebook-new.png" width="21" height="21" alt="Facebook">
             </a>
           </div>
         </div>
@@ -439,17 +388,64 @@
   <script>
     // ─── Config ────────────────────────────────────────────────────────────────
     const GOOGLE_REVIEW_URL = 'https://g.page/r/CSMD0idi2zYHEBM/review';
-    // Private feedback (<4 stars) is emailed to the team via FormSubmit (already used by DFC's site).
-    const FORMSPREE_ENDPOINT = 'https://formsubmit.co/ajax/admin@dfchomeimprovement.com';
+    // Private feedback (<4 stars) is emailed to the team via FormSubmit.
+    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/admin@dfchomeimprovement.com';
     // ───────────────────────────────────────────────────────────────────────────
 
-    const form = document.querySelector('#review-form');
-    const commentsField = document.querySelector('#comments-field');
-    const submitActions = document.querySelector('#submit-actions');
+    const stars         = Array.from(document.querySelectorAll('.star'));
+    const ratingInput    = document.querySelector('#rating-input');
+    const starsHint      = document.querySelector('#stars-hint');
+    const form           = document.querySelector('#review-form');
+    const commentsField  = document.querySelector('#comments-field');
+    const submitActions  = document.querySelector('#submit-actions');
+    const positivePanel  = document.querySelector('#positive-panel');
     const feedbackResult = document.querySelector('#feedback-result');
-    const submitBtn = document.querySelector('#submit-btn');
+    const submitBtn      = document.querySelector('#submit-btn');
+    const googleBtn      = document.querySelector('#google-btn');
 
-    // Personalize from the email link, e.g. /review?name=Sarah&job=Kitchen%20remodel
+    function paint(value) {
+      stars.forEach(s => {
+        const on = Number(s.dataset.value) <= value;
+        s.classList.toggle('on', on);
+        s.setAttribute('aria-checked', Number(s.dataset.value) === value ? 'true' : 'false');
+      });
+    }
+
+    function choose(value, opts) {
+      opts = opts || {};
+      ratingInput.value = value;
+      paint(value);
+      if (starsHint) starsHint.style.display = 'none';
+
+      if (value >= 4) {
+        commentsField.classList.add('hidden');
+        submitActions.classList.add('hidden');
+        feedbackResult.classList.add('hidden');
+        positivePanel.classList.remove('hidden');
+        googleBtn.setAttribute('href', GOOGLE_REVIEW_URL);
+        if (!opts.silent) {
+          // Best-effort auto-open; the button is the reliable fallback if blocked.
+          window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer');
+        }
+      } else {
+        positivePanel.classList.add('hidden');
+        commentsField.classList.remove('hidden');
+        submitActions.classList.remove('hidden');
+      }
+    }
+
+    // hover preview
+    stars.forEach(star => {
+      star.addEventListener('mouseenter', () => paint(Number(star.dataset.value)));
+      star.addEventListener('click', () => choose(Number(star.dataset.value)));
+    });
+    document.querySelector('#stars').addEventListener('mouseleave', () => {
+      paint(Number(ratingInput.value) || 0);
+    });
+
+    // Personalize + deep-link from the email, e.g.
+    //   /review?name=Sarah&job=Kitchen%20remodel        (greeting + job)
+    //   /review?rating=2&name=Sarah                      (star pre-selected from email)
     (function () {
       const p = new URLSearchParams(location.search);
       const name = p.get('name');
@@ -459,40 +455,28 @@
         document.querySelector('#job-text').textContent = job;
         document.querySelector('#job-block').classList.remove('hidden');
       }
-    })();
-
-    document.querySelector('.stars').addEventListener('click', (e) => {
-      const option = e.target.closest('.star-option');
-      if (!option) return;
-
-      const input = option.querySelector('input[type="radio"]');
-      input.checked = true;
-      const rating = parseInt(input.value, 10);
-
-      if (rating >= 4) {
-        window.open(GOOGLE_REVIEW_URL, '_blank', 'noopener,noreferrer');
-      } else {
-        commentsField.classList.remove('hidden');
-        submitActions.classList.remove('hidden');
+      const r = parseInt(p.get('rating'), 10);
+      if (r >= 1 && r <= 5) {
+        // Don't auto-open a popup on page load (browsers block it); show the
+        // Google button for 4–5 and let the customer tap it.
+        choose(r, { silent: true });
+        document.querySelector('#review-form').scrollIntoView({ block: 'center' });
       }
-    });
+    })();
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      const rating = document.querySelector('input[name="rating"]:checked')?.value;
+      const rating = ratingInput.value;
+      if (!rating) return;
       const comments = document.querySelector('#comments').value;
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
       try {
-        const response = await fetch(FORMSPREE_ENDPOINT, {
+        const response = await fetch(FORMSUBMIT_ENDPOINT, {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
           body: JSON.stringify({
             _subject: `⚠️ Private review (${rating}★) — follow up`,
             _template: 'table',
@@ -504,15 +488,15 @@
 
         if (response.ok) {
           form.style.display = 'none';
-          feedbackResult.style.display = 'block';
+          feedbackResult.classList.remove('hidden');
         } else {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Submit Feedback';
+          submitBtn.textContent = 'Send Feedback';
           alert('There was a problem sending your feedback. Please try again.');
         }
       } catch {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Submit Feedback';
+        submitBtn.textContent = 'Send Feedback';
         alert('There was a problem sending your feedback. Please try again.');
       }
     });
