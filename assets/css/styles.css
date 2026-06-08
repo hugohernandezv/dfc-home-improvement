@@ -527,6 +527,16 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
 .form-note { font-size: 0.9rem; color: var(--ink-mute); }
 .form-note a { color: var(--accent-ink); border-bottom: 1px solid currentColor; }
 
+/* Jobber embedded request form on contact page */
+.jobber-embed { margin: 4px 0 6px; }
+.jobber-embed iframe { width: 100% !important; border: 0; }
+.or-divider {
+  display: flex; align-items: center; gap: 16px;
+  margin: 26px 0 26px; color: var(--ink-mute);
+  font-size: 0.8rem; letter-spacing: 0.09em; text-transform: uppercase;
+}
+.or-divider::before, .or-divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
 /* ============================================================
    REVEAL
    ============================================================ */

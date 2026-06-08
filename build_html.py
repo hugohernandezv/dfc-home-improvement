@@ -10,6 +10,10 @@ PHONE_TEL  = "+17035968375"
 EMAIL      = "admin@dfchomeimprovement.com"
 # Jobber public work-request form ("Request Evaluation" CTA)
 JOBBER_FORM = "https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/new"
+# Jobber work-request form embedded inline on the contact page
+JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
+<link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
+<script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534" form_url="https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/embedded_work_request_form?form_id=2323534"></script>"""
 AREAS = ["Northern Virginia", "Fairfax", "Arlington", "Alexandria", "Falls Church",
          "Vienna", "McLean", "Richmond", "Washington DC"]
 MAP_SRC = ("https://www.openstreetmap.org/export/embed.html?"
@@ -714,8 +718,13 @@ def build_contact():
         <div class="ci-block"><div class="ci-lab">Credentials</div><div class="ci-val small">Class A Licensed General Contractor · Licensed &amp; Insured · Design-Build</div></div>
         <div class="ci-block"><div class="ci-lab">Response time</div><div class="ci-val small">We follow up on new requests within 24 hours.</div></div>
       </div>
-      <div class="form-card reveal d1">
+      <div class="form-card">
         <div class="fc-title">Request a free consultation</div>
+        <p class="fc-sub">Book your on-site assessment online — pick a date, add photos, and it goes straight into our scheduling system.</p>
+        <div class="jobber-embed">
+          {JOBBER_EMBED}
+        </div>
+        <div class="or-divider"><span>or just send us a message</span></div>
         <p class="fc-sub">Fields marked <span style="color:var(--accent)">*</span> are required.</p>
         <form class="lead-form" id="leadForm" action="https://formsubmit.co/{EMAIL}" method="POST">
           <input type="hidden" name="_subject" value="New website lead — DFC Home Improvement">
