@@ -4,3 +4,6 @@ FROM caddy:2-alpine
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY assets /usr/share/caddy/assets
 COPY *.html /usr/share/caddy/
+# Subfolder pages (e.g. /cost/*) — *.html above only matches the root level,
+# so each content subdirectory must be copied explicitly or it 404s in prod.
+COPY cost /usr/share/caddy/cost
