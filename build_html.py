@@ -724,35 +724,7 @@ def build_contact():
         <div class="jobber-embed">
           {JOBBER_EMBED}
         </div>
-        <div class="or-divider"><span>or just send us a message</span></div>
-        <p class="fc-sub">Fields marked <span style="color:var(--accent)">*</span> are required.</p>
-        <form class="lead-form" id="leadForm" action="https://formsubmit.co/{EMAIL}" method="POST">
-          <input type="hidden" name="_subject" value="New website lead — DFC Home Improvement">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_autoresponse" value="Thanks for reaching out to DFC Home Improvement! We've received your request and someone from our team will personally follow up within 24 hours to schedule your free, no-obligation evaluation. In the meantime, here's a quick look at what we do: https://www.dfchomeimprovement.com/assets/dfc-brochure.pdf — If it's urgent, call or text us at {PHONE_DISP}. — The DFC Home Improvement Team">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-          <div class="field"><label for="name">Full name <span class="req">*</span></label><input id="name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></div>
-          <div class="field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(703) 000-0000" required></div>
-          <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required></div>
-          <div class="field"><label for="address">Project address</label><input id="address" name="address" type="text" autocomplete="street-address" placeholder="City or full address"></div>
-          <div class="field wide"><label for="type">Project type</label>
-            <select id="type" name="project_type">
-              <option>Custom home / new construction</option>
-              <option>Whole-home renovation / addition</option>
-              <option>Kitchen remodel</option>
-              <option>Bathroom remodel</option>
-              <option>Deck / patio / exterior</option>
-              <option>3D design / rendering</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field wide"><label for="message">Tell us about your project</label><textarea id="message" name="message" rows="5" placeholder="What are you hoping to build or change?"></textarea></div>
-          <div class="form-actions">
-            <button class="btn btn--sage" type="submit">Send request</button>
-            <span class="form-note">Prefer to talk? Call <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>.</span>
-          </div>
-        </form>
+        <p class="form-note">Prefer to talk? Call or text <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>.</p>
       </div>
     </div>
   </section>
