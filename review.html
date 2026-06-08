@@ -448,9 +448,12 @@
     //   /review?rating=2&name=Sarah                      (star pre-selected from email)
     (function () {
       const p = new URLSearchParams(location.search);
-      const name = p.get('name');
+      // Ignore unreplaced merge tags ({{first_name}}, *|FNAME|*, etc.) so the
+      // page never shows a broken greeting — falls back to "Hi there,".
+      const clean = v => (v && !/[{}|*]/.test(v)) ? v.trim() : '';
+      const name = clean(p.get('name'));
       if (name) document.querySelector('#greet-name').textContent = name;
-      const job = p.get('job');
+      const job = clean(p.get('job'));
       if (job) {
         document.querySelector('#job-text').textContent = job;
         document.querySelector('#job-block').classList.remove('hidden');
