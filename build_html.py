@@ -84,6 +84,7 @@ def header(current):
         link("new-construction.html", "New Construction", "new"),
         link("renovations.html", "Renovations", "ren"),
         link("portfolio.html", "Portfolio", "portfolio"),
+        link("our-process.html", "Our Process", "process"),
         link("index.html#areas", "Service Areas", "areas"),
         link("contact.html", "Contact", "contact"),
     ])
@@ -92,6 +93,7 @@ def header(current):
         '<a href="new-construction.html">New Construction</a>',
         '<a href="renovations.html">Renovations</a>',
         '<a href="portfolio.html">Portfolio</a>',
+        '<a href="our-process.html">Our Process</a>',
         '<a href="index.html#areas">Service Areas</a>',
         '<a href="contact.html">Contact</a>',
     ])
@@ -168,6 +170,7 @@ def footer():
         <a href="new-construction.html">New Construction</a>
         <a href="renovations.html">Renovations</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="our-process.html">Our Process</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
@@ -876,6 +879,125 @@ def build_terms():
               "terms"),
          body, "terms")
 
+# ================================================================ OUR PROCESS
+def build_process():
+    DESC = ("See how a DFC project moves from a tired, dated space to a finished room you love — with a "
+            "photoreal 3D design in between, so you can shape every decision before we build.")
+
+    steps = [
+        ("01", "Listen &amp; plan",
+         "We start with your goals, how you live in the space and a realistic budget direction — no pressure and no guesswork."),
+        ("02", "Design in 3D",
+         "We model your project in photoreal 3D, so you can walk the space, test finishes and adjust the layout before anything is ordered or demolished."),
+        ("03", "Build &amp; adapt",
+         "Our licensed, insured crews build it — and because it's your home, we adapt along the way: a different island, a warmer finish, one more window."),
+    ]
+    steps_html = "\n".join(
+        f'''        <div class="proc-step reveal d{i}"><div class="ps-no">{n}</div><h3>{t}</h3><p>{b}</p></div>'''
+        for i, (n, t, b) in enumerate(steps, 1))
+
+    def proc_block(num, room, title, desc, has3d):
+        slug = f"p{num:02d}"
+        stages = [("Before", "", "before", "before renovation")]
+        if has3d:
+            stages.append(("3D Design", " stage-tag--design", "3d", "3D design rendering"))
+        stages.append(("Finished", " stage-tag--final", "final", "finished project"))
+        figs = "\n".join(
+            f'''        <figure class="proc-stage">
+          <span class="stage-tag{cls}">{lab}</span>
+          <img src="assets/process/{slug}-{k}.jpg" alt="{html.escape(title)} — {alt} by DFC Home Improvement" loading="lazy">
+        </figure>''' for lab, cls, k, alt in stages)
+        ncols = "3" if has3d else "2"
+        return f'''  <article class="proc reveal">
+    <div class="proc-head">
+      <p class="eyebrow">{html.escape(room)}</p>
+      <h2>{html.escape(title)}</h2>
+      <p class="proc-desc">{html.escape(desc)}</p>
+    </div>
+    <div class="proc-stages proc-stages--{ncols}">
+{figs}
+    </div>
+  </article>'''
+
+    featured = [
+        (6, "Kitchen · 218 15th Street, Washington DC", "White & Navy Chef's Kitchen",
+         "A closed-in layout opened into a bright white-and-navy kitchen anchored by a marble waterfall island. We rendered it in 3D first, so the homeowners could weigh island size, cabinet color and pendant placement before a single cabinet was ordered.", True),
+        (4, "Kitchen · East Marshall, Richmond", "Warm Shaker Kitchen",
+         "Designed in 3D as a crisp white kitchen with a marble waterfall island — then, when the owners wanted more warmth, we swapped in a wood butcher-block island. Same layout, adapted to them. That flexibility is the whole point of designing first.", True),
+        (7, "Living Room · 218 15th Street, Washington DC", "Open-Concept Great Room",
+         "A warm wood-slat feature wall, a linear fireplace and floating shelves — modeled in 3D so the proportions and millwork felt right long before framing began.", True),
+        (8, "Bathroom", "Arched-Mirror Spa Bath",
+         "Twin arched mirrors, warm brass fixtures and a frameless glass shower — planned down to the sconce placement in the 3D, then built to match.", True),
+        (10, "Whole-Home · Exterior", "Farmhouse Exterior Transformation",
+         "A tired facade reimagined as a bright farmhouse with a covered porch. The 3D let the owners choose siding, trim and rooflines with confidence before the first board went up.", True),
+    ]
+    more = [
+        (1, "Kitchen", "Geometric Backsplash Kitchen",
+         "A cramped, dated kitchen reborn with white shaker cabinets, a charcoal island and a bold black-and-white geometric backsplash."),
+        (2, "Bathroom", "Marble Spa Bath",
+         "A dim, worn bathroom transformed into a marble spa with a freestanding soaking tub and a glass walk-in shower."),
+        (3, "Kitchen", "Two-Tone Galley Kitchen",
+         "A tight galley made bright and efficient with white upper cabinets, soft-gray bases and a full stainless suite."),
+        (5, "Bathroom", "Freestanding-Tub Retreat",
+         "A full gut renovation into a calm marble bath with a sculptural freestanding tub and twin rain showers."),
+        (9, "Kitchen", "Classic White & Gray Kitchen",
+         "Our signature pairing — white perimeter cabinets, a gray island and warm wood floors under elegant pendant lighting."),
+        (11, "Kitchen", "Marble & Brass Kitchen",
+         "An elegant cream kitchen finished with marble counters, a sculptural brass bridge faucet and a professional range."),
+        (12, "Bathroom", "Warm Marble Bath",
+         "Warm cream marble, brushed-gold fixtures and a custom double vanity for an everyday-luxury bathroom."),
+    ]
+    featured_html = "\n".join(proc_block(n, r, t, d, True) for n, r, t, d, _ in featured)
+    more_html = "\n".join(proc_block(n, r, t, d, False) for n, r, t, d in more)
+
+    body = f"""
+<main id="top">
+{page_head("Our Process", "Our Process", DESC)}
+  <section class="section bg-sage">
+    <div class="wrap">
+      <div class="split split--center">
+        <div class="reveal">
+          <p class="eyebrow">How we work</p>
+          <h2>From first idea to finished room — you see it before we build it.</h2>
+        </div>
+        <div class="body reveal d1">
+          <p>Every DFC project follows the same path: we listen, we design, then we build. Before demolition starts, we create a photoreal 3D model of your space — so you can see the finished result and change your mind while it's still just pixels.</p>
+          <p>Below are real DFC projects shown stage by stage. And because it's your home, the plan flexes to fit you at every step of the way.</p>
+        </div>
+      </div>
+      <div class="proc-steps">
+{steps_html}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--tight wrap">
+    <div class="head-row">
+      <div class="reveal"><p class="eyebrow">Before · 3D Design · Finished</p><h2>The full journey, project by project.</h2></div>
+      <p class="h-right reveal d1">Each project reads left to right — the space before, the 3D design we created, and the finished room we built.</p>
+    </div>
+    <div class="proc-legend reveal">
+      <span class="pl"><span class="dot"></span> Before</span>
+      <span class="pl"><span class="dot design"></span> 3D design</span>
+      <span class="pl"><span class="dot final"></span> Finished</span>
+    </div>
+{featured_html}
+  </section>
+
+  <section class="section--tight wrap" style="padding-top:0">
+    <div class="head-row">
+      <div class="reveal"><p class="eyebrow">More transformations</p><h2>Before &amp; after, the DFC way.</h2></div>
+      <p class="h-right reveal d1">A few more spaces taken from dated to done — demolished, rebuilt and finished by one accountable team.</p>
+    </div>
+{more_html}
+  </section>
+{cta()}
+</main>"""
+    page("our-process.html",
+         head("Our Process | DFC Home Improvement — Before, 3D Design & Finished",
+              DESC, "process"),
+         body, "process")
+
 if __name__ == "__main__":
     build_index()
     build_new_construction()
@@ -892,6 +1014,7 @@ if __name__ == "__main__":
                   THREED_GROUPS)
     build_category("Whole-Home Renovations", "portfolio-wholehome.html", "Whole-Home Renovations",
                    "Full-home transformations — living spaces, additions and finishes carried out end to end.")
+    build_process()
     build_contact()
     build_privacy()
     build_terms()
