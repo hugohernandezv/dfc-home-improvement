@@ -896,18 +896,18 @@ def build_process():
         f'''        <div class="proc-step reveal d{i}"><div class="ps-no">{n}</div><h3>{t}</h3><p>{b}</p></div>'''
         for i, (n, t, b) in enumerate(steps, 1))
 
-    def proc_block(num, room, title, desc, has3d):
-        slug = f"p{num:02d}"
-        stages = [("Before", "", "before", "before renovation")]
-        if has3d:
-            stages.append(("3D Design", " stage-tag--design", "3d", "3D design rendering"))
-        stages.append(("Finished", " stage-tag--final", "final", "finished project"))
+    TAG = {"before": ("Before", "", "before renovation"),
+           "3d": ("3D Design", " stage-tag--design", "3D design rendering"),
+           "final": ("Finished", " stage-tag--final", "finished project")}
+
+    def proc_block(room, title, desc, stages):
+        # stages: ordered list of (kind, filename), kind in before | 3d | final
         figs = "\n".join(
             f'''        <figure class="proc-stage">
-          <span class="stage-tag{cls}">{lab}</span>
-          <img src="assets/process/{slug}-{k}.jpg" alt="{html.escape(title)} — {alt} by DFC Home Improvement" loading="lazy">
-        </figure>''' for lab, cls, k, alt in stages)
-        ncols = "3" if has3d else "2"
+          <span class="stage-tag{TAG[k][1]}">{TAG[k][0]}</span>
+          <img src="assets/process/{fn}" alt="{html.escape(title)} — {TAG[k][2]} by DFC Home Improvement" loading="lazy">
+        </figure>''' for k, fn in stages)
+        ncols = "2" if len(stages) == 2 else "3"
         return f'''  <article class="proc reveal">
     <div class="proc-head">
       <p class="eyebrow">{html.escape(room)}</p>
@@ -920,35 +920,50 @@ def build_process():
   </article>'''
 
     featured = [
-        (6, "Kitchen · 218 15th Street, Washington DC", "White & Navy Chef's Kitchen",
-         "A closed-in layout opened into a bright white-and-navy kitchen anchored by a marble waterfall island. We rendered it in 3D first, so the homeowners could weigh island size, cabinet color and pendant placement before a single cabinet was ordered.", True),
-        (4, "Kitchen · East Marshall, Richmond", "Warm Shaker Kitchen",
-         "Designed in 3D as a crisp white kitchen with a marble waterfall island — then, when the owners wanted more warmth, we swapped in a wood butcher-block island. Same layout, adapted to them. That flexibility is the whole point of designing first.", True),
-        (7, "Living Room · 218 15th Street, Washington DC", "Open-Concept Great Room",
-         "A warm wood-slat feature wall, a linear fireplace and floating shelves — modeled in 3D so the proportions and millwork felt right long before framing began.", True),
-        (8, "Bathroom", "Arched-Mirror Spa Bath",
-         "Twin arched mirrors, warm brass fixtures and a frameless glass shower — planned down to the sconce placement in the 3D, then built to match.", True),
-        (10, "Whole-Home · Exterior", "Farmhouse Exterior Transformation",
-         "A tired facade reimagined as a bright farmhouse with a covered porch. The 3D let the owners choose siding, trim and rooflines with confidence before the first board went up.", True),
+        ("Kitchen · 218 15th Street, Washington DC", "White & Navy Chef's Kitchen",
+         "A closed-in layout opened into a bright white-and-navy kitchen anchored by a marble waterfall island. We rendered it in 3D first, so the homeowners could weigh island size, cabinet color and pendant placement before a single cabinet was ordered.",
+         [("before", "p06-before.jpg"), ("3d", "p06-3d.jpg"), ("final", "p06-final.jpg")]),
+        ("Kitchen · East Marshall, Richmond", "Warm Shaker Kitchen",
+         "Designed in 3D as a crisp white kitchen with a marble waterfall island — then, when the owners wanted more warmth, we swapped in a wood butcher-block island. Same layout, adapted to them. That flexibility is the whole point of designing first.",
+         [("before", "p04-before.jpg"), ("3d", "p04-3d.jpg"), ("final", "p04-final.jpg"), ("final", "p04-final-2.jpg")]),
+        ("Kitchen", "Classic White & Gray Kitchen",
+         "Our signature pairing — white perimeter cabinets, a soft-gray island and warm wood floors under elegant pendants. We modeled the kitchen in 3D so the family could test the island size and the open flow to the dining area before building.",
+         [("before", "p09-before.jpg"), ("3d", "p09-3d.jpg"), ("3d", "p09-3d-2.jpg"),
+          ("final", "p09-final.jpg"), ("final", "p09-final-2.jpg"), ("final", "p09-final-3.jpg")]),
+        ("Kitchen · Monteiro Ave, Richmond", "Geometric Backsplash Kitchen",
+         "A dated, closed-off kitchen reimagined with white shaker cabinets, a charcoal island and a bold black-and-white geometric backsplash. The 3D settled the island, backsplash and dining flow before demolition ever began.",
+         [("before", "p01-before.jpg"), ("3d", "p01-3d.jpg"), ("3d", "p01-3d-2.jpg"),
+          ("final", "p01-final.jpg"), ("final", "p01-final-2.jpg"), ("final", "p01-final-3.jpg")]),
+        ("Bathroom", "Arched-Mirror Spa Bath",
+         "Twin arched mirrors, warm brass fixtures and a frameless glass shower — planned down to the sconce placement in the 3D, then built to match.",
+         [("before", "p08-before.jpg"), ("3d", "p08-3d.jpg"), ("final", "p08-final.jpg")]),
+        ("Bathroom · Monteiro Ave, Richmond", "Marble Spa Bath",
+         "A cramped bath rebuilt as a serene marble spa with a freestanding soaking tub, brushed-brass fixtures and a glass walk-in shower — rendered in 3D so the marble, tub and fixtures were locked in before the first tile went up.",
+         [("before", "p02-before.jpg"), ("3d", "p02-3d.jpg"), ("3d", "p02-3d-2.jpg"),
+          ("final", "p02-final.jpg"), ("final", "p02-final-2.jpg")]),
+        ("Living Room · 218 15th Street, Washington DC", "Open-Concept Great Room",
+         "A warm wood-slat feature wall, a linear fireplace and floating shelves — modeled in 3D so the proportions and millwork felt right long before framing began.",
+         [("before", "p07-before.jpg"), ("3d", "p07-3d.jpg"), ("final", "p07-final.jpg")]),
+        ("Whole-Home · Exterior", "Farmhouse Exterior Transformation",
+         "A tired facade reimagined as a bright farmhouse with a covered porch. The 3D let the owners choose siding, trim and rooflines with confidence before the first board went up.",
+         [("before", "p10-before.jpg"), ("3d", "p10-3d.jpg"), ("final", "p10-final.jpg")]),
     ]
     more = [
-        (1, "Kitchen", "Geometric Backsplash Kitchen",
-         "A cramped, dated kitchen reborn with white shaker cabinets, a charcoal island and a bold black-and-white geometric backsplash."),
-        (2, "Bathroom", "Marble Spa Bath",
-         "A dim, worn bathroom transformed into a marble spa with a freestanding soaking tub and a glass walk-in shower."),
-        (3, "Kitchen", "Two-Tone Galley Kitchen",
-         "A tight galley made bright and efficient with white upper cabinets, soft-gray bases and a full stainless suite."),
-        (5, "Bathroom", "Freestanding-Tub Retreat",
-         "A full gut renovation into a calm marble bath with a sculptural freestanding tub and twin rain showers."),
-        (9, "Kitchen", "Classic White & Gray Kitchen",
-         "Our signature pairing — white perimeter cabinets, a gray island and warm wood floors under elegant pendant lighting."),
-        (11, "Kitchen", "Marble & Brass Kitchen",
-         "An elegant cream kitchen finished with marble counters, a sculptural brass bridge faucet and a professional range."),
-        (12, "Bathroom", "Warm Marble Bath",
-         "Warm cream marble, brushed-gold fixtures and a custom double vanity for an everyday-luxury bathroom."),
+        ("Kitchen", "Two-Tone Galley Kitchen",
+         "A tight galley made bright and efficient with white upper cabinets, soft-gray bases and a full stainless suite.",
+         [("before", "p03-before.jpg"), ("final", "p03-final.jpg")]),
+        ("Bathroom", "Freestanding-Tub Retreat",
+         "A full gut renovation into a calm marble bath with a sculptural freestanding tub and twin rain showers.",
+         [("before", "p05-before.jpg"), ("final", "p05-final.jpg")]),
+        ("Kitchen", "Marble & Brass Kitchen",
+         "An elegant cream kitchen finished with marble counters, a sculptural brass bridge faucet and a professional range.",
+         [("before", "p11-before.jpg"), ("final", "p11-final.jpg")]),
+        ("Bathroom", "Warm Marble Bath",
+         "Warm cream marble, brushed-gold fixtures and a custom double vanity for an everyday-luxury bathroom.",
+         [("before", "p12-before.jpg"), ("final", "p12-final.jpg")]),
     ]
-    featured_html = "\n".join(proc_block(n, r, t, d, True) for n, r, t, d, _ in featured)
-    more_html = "\n".join(proc_block(n, r, t, d, False) for n, r, t, d in more)
+    featured_html = "\n".join(proc_block(r, t, d, st) for r, t, d, st in featured)
+    more_html = "\n".join(proc_block(r, t, d, st) for r, t, d, st in more)
 
     body = f"""
 <main id="top">
