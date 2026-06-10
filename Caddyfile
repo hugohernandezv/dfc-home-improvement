@@ -2,10 +2,15 @@
 	root * /usr/share/caddy
 	encode gzip
 	# Canonical host: 301 the bare apex → www, preserving path + query.
-	# Host-scoped (apex only), so www is unaffected. Inert until DNS points
-	# dfchomeimprovement.com at Railway (needs apex CNAME-flattening, e.g. Cloudflare).
+	# Host-scoped (apex only), so www is unaffected. Live since 2026-06-10
+	# (apex DNS moved to Cloudflare, CNAME-flattened to Railway).
 	@apex host dfchomeimprovement.com
 	redir @apex https://www.dfchomeimprovement.com{uri} permanent
+	# Serve trailing-slash URLs (/page/ → page.html). Ad platforms and inbound
+	# links often append a slash, and our canonical tags use one; without this
+	# they 404. Internal rewrite → 200, preserves the query string.
+	@trailingslash path_regexp dir ^/(.+?)/+$
+	rewrite @trailingslash /{re.dir.1}
 	# clean URLs: /privacy → privacy.html, /terms → terms.html
 	try_files {path} {path}/ {path}.html
 	file_server
