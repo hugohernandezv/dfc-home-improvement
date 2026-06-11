@@ -37,6 +37,17 @@ FB_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 def img(s): return M[s]["src"]
 def thumb(s): return M[s]["thumb"]
 
+# Google tag (gtag.js) — Google Ads / Analytics
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QRMHK61G1N');
+</script>"""
+
 # ---------------------------------------------------------------- HEAD
 def head(title, desc, page):
     jsonld = {
@@ -54,6 +65,7 @@ def head(title, desc, page):
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js');</script>
