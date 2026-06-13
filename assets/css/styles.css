@@ -175,6 +175,19 @@ strong { color: var(--ink); font-weight: 600; }
   transition: color .3s;
 }
 .site-header.scrolled .header-phone { color: var(--ink); }
+.header-portal {
+  display: inline-flex; align-items: center; gap: 0.45em;
+  color: #fff; font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  opacity: 0.86; transition: color .3s, opacity .3s;
+}
+.header-portal:hover { opacity: 1; }
+.header-portal svg {
+  width: 15px; height: 15px; flex: 0 0 auto;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.site-header.scrolled .header-portal { color: var(--ink); }
 .header-cta {
   padding: 0.78em 1.5em; font-size: 0.76rem;
   border-color: rgba(255,255,255,.65); color: #fff;
@@ -582,6 +595,8 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   :root { --section: clamp(58px, 14vw, 92px); }
   body { font-size: 17px; }
   h1 { font-size: clamp(2.4rem, 11vw, 3.2rem); }
+  .header-right { gap: 14px; }
+  .header-portal span { display: none; }
   .trades, .stats, .gallery, .gallery.filtered { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
