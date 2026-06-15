@@ -123,10 +123,7 @@ def header(current):
   <div class="header-right">
     <a class="header-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
     <a class="btn header-cta" href="{JOBBER_FORM}" target="_blank" rel="noopener">Request Evaluation</a>
-    <a class="header-portal" href="{EMPLOYEE_PORTAL}" rel="nofollow" title="Employee portal" aria-label="Open employee portal">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-      <span>Portal</span>
-    </a>
+    <a class="header-portal" href="{EMPLOYEE_PORTAL}" rel="nofollow" title="Employee portal" aria-label="Open employee portal">Employee</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
