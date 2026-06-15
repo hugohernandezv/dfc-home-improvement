@@ -10,6 +10,8 @@ PHONE_TEL  = "+17035968375"
 EMAIL      = "admin@dfchomeimprovement.com"
 # Jobber public work-request form ("Request Evaluation" CTA)
 JOBBER_FORM = "https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/new"
+# Employee portal is served through the marketing site's /employee reverse proxy.
+EMPLOYEE_PORTAL = "/employee/"
 # Jobber work-request form embedded inline on the contact page
 JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
 <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
@@ -121,6 +123,10 @@ def header(current):
   <div class="header-right">
     <a class="header-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
     <a class="btn header-cta" href="{JOBBER_FORM}" target="_blank" rel="noopener">Request Evaluation</a>
+    <a class="header-portal" href="{EMPLOYEE_PORTAL}" rel="nofollow" title="Employee portal" aria-label="Open employee portal">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span>Portal</span>
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
@@ -131,6 +137,7 @@ def header(current):
         {m_nav}
   </nav>
   <div class="m-foot">
+    <a href="{EMPLOYEE_PORTAL}" rel="nofollow">Employee Portal</a>
     <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
     <a href="mailto:{EMAIL}">{EMAIL}</a>
   </div>

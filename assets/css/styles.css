@@ -179,15 +179,20 @@ strong { color: var(--ink); font-weight: 600; }
   display: inline-flex; align-items: center; gap: 0.45em;
   color: #fff; font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.12em; text-transform: uppercase;
-  opacity: 0.86; transition: color .3s, opacity .3s;
+  padding: 0.62em 0.95em;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 4px;
+  opacity: 0.9;
+  transition: color .3s, opacity .3s, background .3s, border-color .3s;
 }
-.header-portal:hover { opacity: 1; }
+.header-portal:hover { opacity: 1; background: rgba(255,255,255,.12); }
 .header-portal svg {
   width: 15px; height: 15px; flex: 0 0 auto;
   fill: none; stroke: currentColor; stroke-width: 2;
   stroke-linecap: round; stroke-linejoin: round;
 }
-.site-header.scrolled .header-portal { color: var(--ink); }
+.site-header.scrolled .header-portal { color: var(--ink); border-color: var(--ink); }
+.site-header.scrolled .header-portal:hover { background: var(--ink); color: #fff; }
 .header-cta {
   padding: 0.78em 1.5em; font-size: 0.76rem;
   border-color: rgba(255,255,255,.65); color: #fff;
