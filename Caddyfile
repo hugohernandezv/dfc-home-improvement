@@ -6,14 +6,29 @@
 	# (apex DNS moved to Cloudflare, CNAME-flattened to Railway).
 	@apex host dfchomeimprovement.com
 	redir @apex https://www.dfchomeimprovement.com{uri} permanent
-	# Serve trailing-slash URLs (/page/ → page.html). Ad platforms and inbound
-	# links often append a slash, and our canonical tags use one; without this
-	# they 404. Internal rewrite → 200, preserves the query string.
-	@trailingslash path_regexp dir ^/(.+?)/+$
-	rewrite @trailingslash /{re.dir.1}
-	# clean URLs: /privacy → privacy.html, /terms → terms.html
-	try_files {path} {path}/ {path}.html
-	file_server
+
+	# Employee portal: reverse-proxy /employee* to the dfc-portal Railway service.
+	# The portal app is built under the /employee base path, so paths pass through
+	# unchanged (no prefix stripping). Host header is set so Railway routes to it.
+	@portal path /employee /employee/*
+	handle @portal {
+		reverse_proxy https://dfc-portal-production.up.railway.app {
+			header_up Host dfc-portal-production.up.railway.app
+		}
+	}
+
+	# Static marketing site (everything else).
+	handle {
+		# Serve trailing-slash URLs (/page/ → page.html). Ad platforms and inbound
+		# links often append a slash, and our canonical tags use one; without this
+		# they 404. Internal rewrite → 200, preserves the query string.
+		@trailingslash path_regexp dir ^/(.+?)/+$
+		rewrite @trailingslash /{re.dir.1}
+		# clean URLs: /privacy → privacy.html, /terms → terms.html
+		try_files {path} {path}/ {path}.html
+		file_server
+	}
+
 	# friendly 404 → home
 	handle_errors {
 		@notfound expression {http.error.status_code} == 404

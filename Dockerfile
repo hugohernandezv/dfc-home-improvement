@@ -6,7 +6,7 @@ FROM caddy:2-alpine
 # Bumped -2: a manual snapshot deploy (COPY .) overwrote the git image and again
 # shipped without review.html, 404ing /review (Caddy then serves home). Force a
 # clean git-based rebuild of the canonical Dockerfile.
-ARG CACHE_BUST=2026-06-10-2
+ARG CACHE_BUST=2026-06-15-employee-proxy
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY assets /usr/share/caddy/assets
 COPY *.html /usr/share/caddy/
