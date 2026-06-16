@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DFC Home Improvement — Summer Kitchen & Bath Special</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d0805; --paper:#f5f1ea; --white:#fff; --accent:#9a6e4c; --accent-ink:#7c573a;
+    --sage:#7b8a70; --sage-soft:#e9ede3; --sage-deep:#313d2c; --night:#14100c;
+    --gold:#f0b429; --tan:#d8c3ad;
+    --head:"Urbanist",system-ui,sans-serif; --sans:"DM Sans",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.55;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.08;letter-spacing:-.5px;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);}
+  .stars{color:var(--gold);letter-spacing:1px;}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--head);font-weight:700;
+    font-size:1.05rem;background:var(--gold);color:var(--ink);padding:16px 30px;border-radius:50px;
+    text-decoration:none;border:none;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.16);transition:transform .12s;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn--ghost{background:transparent;color:var(--ink);border:1.5px solid rgba(13,8,5,.28);box-shadow:none;}
+  .on-dark .btn--ghost{color:#fff;border-color:rgba(255,255,255,.4);}
+
+  /* sticky header */
+  header{position:sticky;top:0;z-index:50;background:rgba(245,241,234,.96);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(13,8,5,.08);}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:11px 22px;max-width:1080px;margin:0 auto;}
+  .bar img{height:34px;}
+  .bar-cta{display:flex;align-items:center;gap:14px;}
+  .bar .phone{font-family:var(--head);font-weight:700;color:var(--ink);text-decoration:none;font-size:.98rem;}
+  .bar .btn{padding:10px 20px;font-size:.92rem;}
+
+  /* hero */
+  .hero{position:relative;color:#fff;text-align:center;overflow:hidden;}
+  .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%;}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,8,5,.62) 0%,rgba(13,8,5,.5) 45%,rgba(13,8,5,.82) 100%);}
+  .hero .wrap{position:relative;padding:62px 22px 70px;}
+  .hero .eyebrow{color:var(--tan);}
+  .hero h1{font-size:clamp(2.1rem,7vw,3.4rem);color:#fff;margin:14px 0 16px;text-shadow:0 3px 18px rgba(0,0,0,.4);}
+  .hero p.lead{font-size:1.12rem;max-width:620px;margin:0 auto 22px;color:rgba(255,255,255,.94);}
+  .offer-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(240,180,41,.16);
+    border:1.5px solid var(--gold);color:#fff;font-family:var(--head);font-weight:700;
+    padding:11px 20px;border-radius:50px;font-size:1.02rem;margin-bottom:26px;}
+  .offer-pill b{color:var(--gold);}
+  .hero .ctas{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;}
+  .hero .rating{margin-top:24px;font-weight:600;font-size:.98rem;color:rgba(255,255,255,.92);}
+
+  /* trust strip */
+  .trust{background:var(--night);color:#fff;}
+  .trust .row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 34px;padding:20px 22px;
+    max-width:1080px;margin:0 auto;text-align:center;font-family:var(--head);font-weight:600;font-size:.96rem;}
+  .trust .row span{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.92);}
+  .trust .dot{color:var(--gold);}
+
+  /* generic section */
+  section.blk{padding:64px 0;}
+  .bg-paper{background:var(--paper);} .bg-white{background:var(--white);}
+  .bg-sage{background:var(--sage-soft);} .bg-night{background:var(--night);color:#fff;}
+  .center{text-align:center;}
+  .blk h2{font-size:clamp(1.7rem,5vw,2.5rem);margin-bottom:12px;}
+  .blk .sub{font-size:1.08rem;max-width:620px;margin:0 auto 8px;opacity:.86;}
+  .bg-night .sub{color:rgba(255,255,255,.85);}
+  .sec-cta{margin-top:36px;text-align:center;}
+
+  /* steps */
+  .steps{display:grid;gap:18px;grid-template-columns:1fr;margin-top:38px;}
+  .step{background:var(--white);border:1px solid rgba(13,8,5,.07);border-radius:18px;padding:28px 26px;
+    box-shadow:0 6px 20px rgba(13,8,5,.05);}
+  .step .n{width:46px;height:46px;border-radius:50%;background:var(--sage);color:#fff;font-family:var(--head);
+    font-weight:700;font-size:1.25rem;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .step h3{font-size:1.28rem;margin-bottom:7px;}
+  .step p{opacity:.82;font-size:1rem;}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px;}
+  .gal figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+  .gal figure:hover img{transform:scale(1.05);}
+  .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 11px;color:#fff;
+    font-family:var(--head);font-weight:600;font-size:.92rem;
+    background:linear-gradient(transparent,rgba(13,8,5,.8));}
+
+  /* 3d */
+  .threed{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;margin-top:14px;}
+  .threed img{border-radius:16px;width:100%;box-shadow:0 14px 40px rgba(0,0,0,.4);}
+  .threed .tag{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--head);
+    font-weight:700;font-size:.8rem;letter-spacing:.05em;padding:6px 13px;border-radius:7px;margin-bottom:14px;}
+
+  /* reviews */
+  .agg{text-align:center;margin-bottom:8px;}
+  .agg .big{font-family:var(--head);font-weight:800;font-size:2.6rem;line-height:1;color:var(--ink);}
+  .agg .stars{font-size:1.5rem;}
+  .revs{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px;}
+  .rev{background:var(--white);border:1px solid rgba(13,8,5,.07);border-radius:16px;padding:24px 24px;
+    box-shadow:0 6px 18px rgba(13,8,5,.05);}
+  .rev .stars{font-size:1.05rem;}
+  .rev p{font-size:1.04rem;margin:11px 0 14px;color:#2a211a;}
+  .rev .who{display:flex;align-items:center;gap:11px;}
+  .rev .av{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:flex;
+    align-items:center;justify-content:center;font-family:var(--head);font-weight:700;}
+  .rev .who b{font-family:var(--head);} .rev .who small{display:block;opacity:.6;font-size:.8rem;}
+
+  /* story */
+  .story{max-width:760px;margin:0 auto;text-align:center;}
+  .story .quote{font-family:var(--head);font-weight:500;font-size:clamp(1.25rem,3.4vw,1.7rem);
+    line-height:1.42;color:var(--ink);margin:18px 0 24px;}
+  .story .sig{font-family:var(--head);font-weight:700;font-size:1.1rem;}
+  .story .sig small{display:block;font-family:var(--sans);font-weight:500;opacity:.6;font-size:.92rem;margin-top:2px;}
+  .cross{font-size:1.4rem;color:var(--accent);}
+
+  /* form */
+  #quote .panel{max-width:560px;margin:30px auto 0;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:30px 26px;}
+  #quote label{display:block;font-family:var(--head);font-weight:600;font-size:.9rem;margin:0 0 6px;color:rgba(255,255,255,.92);}
+  #quote input,#quote select{width:100%;padding:14px 15px;border-radius:11px;border:1px solid rgba(255,255,255,.22);
+    background:rgba(13,8,5,.35);color:#fff;font-family:var(--sans);font-size:1rem;margin-bottom:15px;}
+  #quote input::placeholder{color:rgba(255,255,255,.5);}
+  #quote .btn{width:100%;justify-content:center;font-size:1.12rem;padding:17px;margin-top:4px;}
+  #quote .or{text-align:center;margin-top:16px;color:rgba(255,255,255,.8);font-size:.95rem;}
+  #quote .or a{color:var(--gold);font-weight:700;text-decoration:none;}
+  .deadline-pill{display:inline-block;background:var(--gold);color:var(--ink);font-family:var(--head);
+    font-weight:700;padding:8px 18px;border-radius:50px;font-size:.95rem;margin-bottom:6px;}
+
+  /* footer */
+  footer{background:#0a0705;color:rgba(255,255,255,.72);padding:42px 0 30px;text-align:center;font-size:.92rem;}
+  footer img{height:34px;margin:0 auto 16px;}
+  footer .lic{font-family:var(--head);font-weight:600;color:#fff;margin-bottom:8px;}
+  footer a{color:var(--gold);text-decoration:none;}
+  footer .areas{margin:14px auto 0;max-width:640px;opacity:.7;font-size:.84rem;}
+
+  /* desktop */
+  @media(min-width:780px){
+    .steps{grid-template-columns:1fr 1fr 1fr;}
+    .gal{grid-template-columns:1fr 1fr 1fr;}
+    .threed{grid-template-columns:1fr 1fr;}
+    .revs{grid-template-columns:1fr 1fr 1fr;}
+    section.blk{padding:84px 0;}
+    .hero .wrap{padding:96px 22px 104px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <img src="/summer/img/logo-black.png" alt="DFC Home Improvement">
+    <div class="bar-cta">
+      <a class="phone" href="tel:+17035968375">(703)&nbsp;596-8375</a>
+      <a class="btn" href="#quote">Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="bg" src="/summer/img/hero.jpg" alt="Custom kitchen by DFC Home Improvement">
+  <div class="scrim"></div>
+  <div class="wrap">
+    <div class="eyebrow">Kitchen &amp; Bath Remodeling &middot; Northern Virginia &amp; DC</div>
+    <h1>Still cooking in a kitchen<br>you've outgrown?</h1>
+    <p class="lead">DFC designs and builds kitchens &amp; baths you'll actually love — and you'll see the whole space in 3D <em>before</em> we ever pick up a tool.</p>
+    <div class="offer-pill">☀ Summer Special — <b>$2,500&nbsp;OFF</b> + FREE 3D Design</div>
+    <div class="ctas">
+      <a class="btn" href="#quote">Get My Free Quote →</a>
+      <a class="btn btn--ghost" href="tel:+17035968375" style="color:#fff;border-color:rgba(255,255,255,.45)">Call (703) 596-8375</a>
+    </div>
+    <div class="rating"><span class="stars">★★★★★</span> &nbsp;4.8 &middot; 55 Google Reviews &nbsp;&middot;&nbsp; 4.8 &middot; 240 Thumbtack Reviews</div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="row">
+    <span><span class="dot">✓</span> Class A Licensed &amp; Insured</span>
+    <span><span class="dot">★</span> 4.8 · 55 Google Reviews</span>
+    <span><span class="dot">★</span> 4.8 · 240 Thumbtack Reviews</span>
+    <span><span class="dot">✓</span> Free 3D Design Preview</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="blk bg-paper">
+  <div class="wrap center">
+    <div class="eyebrow">How it works</div>
+    <h2>Remodeling, without the guesswork</h2>
+    <p class="sub">Three simple steps from "I wish" to "I love it" — no surprises, no subcontractor runaround.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Free in-home consult</h3><p>We listen to how you live, measure the space, and talk honest budget — at no cost.</p></div>
+      <div class="step"><div class="n">2</div><h3>See it in 3D</h3><p>You walk through your new kitchen or bath in a 3D design before we build a thing.</p></div>
+      <div class="step"><div class="n">3</div><h3>One crew builds it</h3><p>Our licensed team handles everything, start to finish, with a clean job site and daily updates.</p></div>
+    </div>
+    <div class="sec-cta"><a class="btn" href="#quote">Start with my free quote →</a></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="blk bg-white">
+  <div class="wrap center">
+    <div class="eyebrow">Recent work</div>
+    <h2>Kitchens &amp; baths across NoVA &amp; DC</h2>
+    <p class="sub">Real DFC projects — designed and built by our team.</p>
+    <div class="gal">
+      <figure><img src="/summer/img/kitchen-polecat-lane.jpg" alt="Kitchen remodel"><figcaption>Custom Kitchen</figcaption></figure>
+      <figure><img src="/summer/img/bath-monteiro-ave.jpg" alt="Bathroom remodel"><figcaption>Spa-Style Bath</figcaption></figure>
+      <figure><img src="/summer/img/kitchen-15th-street-ne.jpg" alt="Kitchen remodel"><figcaption>Open-Concept Kitchen</figcaption></figure>
+      <figure><img src="/summer/img/bath-thomas-jefferson.jpg" alt="Bathroom remodel"><figcaption>Marble Bath</figcaption></figure>
+      <figure><img src="/summer/img/kitchen-monteiro-ave.jpg" alt="Kitchen remodel"><figcaption>Bright Family Kitchen</figcaption></figure>
+      <figure><img src="/summer/img/bath-north-ave.jpg" alt="Bathroom remodel"><figcaption>Modern Bath</figcaption></figure>
+    </div>
+    <div class="sec-cta"><a class="btn" href="#quote">Get my free quote →</a></div>
+  </div>
+</section>
+
+<!-- 3D DIFFERENTIATOR -->
+<section class="blk bg-night on-dark">
+  <div class="wrap center">
+    <div class="eyebrow" style="color:var(--gold)">Our difference</div>
+    <h2>See it before we build it</h2>
+    <p class="sub">No more guessing from a quote on a napkin. Every DFC project starts with a true-to-life 3D design — so you can change the layout, finishes and colors on screen, and only build once it's exactly right.</p>
+    <div class="threed">
+      <div><span class="tag">3D DESIGN PREVIEW</span><img src="/summer/img/3d-render-1.jpg" alt="3D kitchen design preview"></div>
+      <div><span class="tag">3D DESIGN PREVIEW</span><img src="/summer/img/3d-render-2.jpg" alt="3D design preview"></div>
+    </div>
+    <div class="sec-cta"><a class="btn" href="#quote">Book my free 3D design →</a></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="blk bg-sage">
+  <div class="wrap center">
+    <div class="eyebrow">What neighbors say</div>
+    <h2>Rated 4.8 by 295 homeowners</h2>
+    <div class="agg"><span class="stars">★★★★★</span> &nbsp;<span style="font-weight:600">4.8 on Google &middot; 4.8 on Thumbtack</span></div>
+    <div class="revs">
+      <div class="rev"><div class="stars">★★★★★</div><p>"Have used DFC for three projects so far, and will certainly continue. Each time they've been on time and professional, and they walk me through every option I have."</p><div class="who"><div class="av">H</div><div><b>Heather Savel</b><small>Google Review</small></div></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"This is the second project DFC has successfully completed on my property. We've been very pleased with their work and timely completion."</p><div class="who"><div class="av">R</div><div><b>R. Scott</b><small>Google Review</small></div></div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"DFC handled everything professionally and made sure the work was done right. Their craftsmanship was strong, and they communicated well throughout the job."</p><div class="who"><div class="av">A</div><div><b>Ash Lei</b><small>Google Review</small></div></div></div>
+    </div>
+    <div class="sec-cta"><a class="btn" href="#quote">Get my free quote →</a></div>
+  </div>
+</section>
+
+<!-- BRIAN'S STORY -->
+<section class="blk bg-paper">
+  <div class="wrap">
+    <div class="story">
+      <div class="cross">✝</div>
+      <div class="eyebrow" style="margin-top:8px">A note from our owner</div>
+      <p class="quote">"At DFC, faith comes first. We're proud to be a Christian, family-minded company — we believe in Jesus, and that belief sets the standard for how we treat people and how we build.<br><br>We don't cut corners, because we build every home like it's our own. The test we hold every project to is simple: would we be proud to put this in our own mother's home? If the answer isn't yes, it isn't finished."</p>
+      <div class="sig">Brian Stone<small>Owner — DFC Home Improvement</small></div>
+      <div class="sec-cta"><a class="btn" href="#quote">Let's talk about your project →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER + FORM -->
+<section class="blk bg-night on-dark" id="quote">
+  <div class="wrap center">
+    <span class="deadline-pill">⏳ Book by June 30</span>
+    <h2>Claim your $2,500 OFF<br>+ Free 3D Design</h2>
+    <p class="sub">Tell us about your project and we'll reach out to schedule your free in-home consultation. No pressure, no obligation.</p>
+    <div class="panel">
+      <form action="https://formsubmit.co/admin@dfchomeimprovement.com" method="POST">
+        <label>Full name</label>
+        <input type="text" name="name" placeholder="Jane Smith" required>
+        <label>Phone</label>
+        <input type="tel" name="phone" placeholder="(703) 555-0123" required>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="jane@email.com" required>
+        <label>What are you planning?</label>
+        <select name="project" required>
+          <option value="" disabled selected>Choose your project…</option>
+          <option>Kitchen remodel</option>
+          <option>Bathroom remodel</option>
+          <option>Kitchen + Bath</option>
+          <option>Whole-home / Other</option>
+        </select>
+        <input type="hidden" name="_subject" value="New Summer Special lead — $2,500 OFF landing page">
+        <input type="hidden" name="_template" value="table">
+        <button class="btn" type="submit">Get My Free Quote →</button>
+      </form>
+      <div class="or">Prefer to talk? Call <a href="tel:+17035968375">(703) 596-8375</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="/summer/img/logo-white.png" alt="DFC Home Improvement">
+  <div class="lic">Class A Licensed &amp; Insured · Design-Build Contractor</div>
+  <div>Serving Northern Virginia &amp; Washington, DC · <a href="tel:+17035968375">(703) 596-8375</a> · <a href="https://dfchomeimprovement.com">dfchomeimprovement.com</a></div>
+  <div class="areas">McLean · Vienna · Falls Church · Tysons · Arlington · Alexandria · Fairfax · Great Falls · Oakton · Reston · Washington, DC</div>
+</footer>
+
+</body>
+</html>

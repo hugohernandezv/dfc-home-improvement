@@ -6,10 +6,12 @@ FROM caddy:2-alpine
 # Bumped -2: a manual snapshot deploy (COPY .) overwrote the git image and again
 # shipped without review.html, 404ing /review (Caddy then serves home). Force a
 # clean git-based rebuild of the canonical Dockerfile.
-ARG CACHE_BUST=2026-06-15-employee-proxy
+ARG CACHE_BUST=2026-06-16-summer-landing
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY assets /usr/share/caddy/assets
 COPY *.html /usr/share/caddy/
 # Subfolder pages (e.g. /cost/*) — *.html above only matches the root level,
 # so each content subdirectory must be copied explicitly or it 404s in prod.
 COPY cost /usr/share/caddy/cost
+# FB ad landing page at /summer (self-contained: own index.html + img/).
+COPY summer /usr/share/caddy/summer
