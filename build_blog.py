@@ -24,6 +24,23 @@ GTAG = """<!-- Google tag (gtag.js) -->
   gtag('config', 'G-QRMHK61G1N');
 </script>"""
 
+META_PIXEL = """<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1029300153267702');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1029300153267702&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->"""
+
 ARTICLE_CSS = """<style>
 .article-body { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
 .article-body h2 { font-size: 1.45rem; margin: 2.4rem 0 .9rem; }
@@ -85,6 +102,7 @@ def head_block(title, desc, canonical_path, og_image, jsonld=None):
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 {ld}{ARTICLE_CSS}
+{META_PIXEL}
 </head>
 <body data-page="article">"""
 
