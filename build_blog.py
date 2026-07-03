@@ -40,8 +40,8 @@ ARTICLE_CSS = """<style>
 .stat-box { flex: 1 1 160px; background: #313d2c; border-radius: 10px; padding: 1.2rem 1rem; text-align: center; }
 .stat-box .n { font-family: 'Urbanist', sans-serif; font-size: 1.7rem; font-weight: 700; color: #c08a2d; }
 .stat-box .l { font-size: .8rem; color: rgba(255,255,255,.75); margin-top: .3rem; line-height: 1.4; }
-.author-box { display: flex; align-items: center; gap: 1rem; border-top: 1px solid rgba(13,8,5,.12); margin-top: 2.6rem; padding-top: 1.6rem; }
-.author-box img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
+.author-box { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .35rem; border-top: 1px solid rgba(13,8,5,.12); margin-top: 2.6rem; padding-top: 2rem; }
+.author-box img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin-bottom: .4rem; }
 .author-box .a-name { font-family: 'Urbanist', sans-serif; font-weight: 700; color: #0d0805; }
 .author-box .a-role { font-size: .88rem; color: #7c573a; }
 .article-sources { font-size: .85rem; color: rgba(13,8,5,.55); margin-top: 1.6rem; }
@@ -130,7 +130,7 @@ AUTHOR_BOX = """<div class="author-box">
       <img src="/assets/img/brian-owner.jpg" alt="Brian Stone, Owner of DFC Home Improvement">
       <div>
         <div class="a-name">Brian Stone</div>
-        <div class="a-role">Owner — DFC Home Improvement · Class A Licensed &amp; Insured</div>
+        <div class="a-role">Owner, DFC Home Improvement · Class A Licensed &amp; Insured</div>
       </div>
     </div>"""
 
@@ -192,38 +192,38 @@ ARTICLES = [
         "tag": "Maintenance",
         "title": "Your End-of-Summer Home Checklist: 7 Quick Checks That Prevent Expensive Repairs",
         "card_title": "Your end-of-summer home checklist",
-        "desc": "Seven 20-minute checks — A/C, deck, caulk, gutters, water heater, trim and roof — that catch problems while they're still cheap. From a Class A licensed NoVA contractor.",
+        "desc": "Seven 20-minute checks (A/C, deck, caulk, gutters, water heater, trim and roof) that catch problems while they're still cheap. From a Class A licensed NoVA contractor.",
         "card_desc": "Seven 20-minute checks that catch problems while they're still cheap to fix.",
         "hero": "/assets/img/patio-pergola-summer.jpg",
         "hero_alt": "Backyard pergola patio in summer",
         "date": "2026-07-03",
         "date_disp": "July 2026",
         "body": """
-    <p>Most of the expensive repairs we get called for started as something small a season earlier — a hairline of failed caulk, a clogged downspout, a filter nobody changed. Here are seven quick checks, most of them 20 minutes or less, that catch problems while they're still cheap to fix.</p>
+    <p>Most of the expensive repairs we get called for started as something small a season earlier: a hairline of failed caulk, a clogged downspout, a filter nobody changed. Here are seven quick checks, most of them 20 minutes or less, that catch problems while they're still cheap to fix.</p>
 
     <h2>1. Give your A/C room to breathe</h2>
-    <p>Swap the filter, rinse the outdoor unit gently with a garden hose, and keep at least two feet of clearance around it — no shrubs, no stacked patio furniture. Late summer is when overworked systems fail, and they usually pick the hottest weekend of the year to do it. If your system is 15+ years old, it's worth having it looked at before it becomes an emergency replacement.</p>
+    <p>Swap the filter, rinse the outdoor unit gently with a garden hose, and keep at least two feet of clearance around it, with no shrubs and no stacked patio furniture. Late summer is when overworked systems fail, and they usually pick the hottest weekend of the year to do it. If your system is 15+ years old, it's worth having it looked at before it becomes an emergency replacement.</p>
 
     <h2>2. Do the deck water test</h2>
-    <p>Sprinkle water on a few boards. If it beads up, your sealer is still working. If it soaks straight in, the wood is drinking every storm — time to clean and re-seal. While you're out there, check for popped nails, soft spots and wobbly railings. A loose railing is a safety issue, not a cosmetic one.</p>
+    <p>Sprinkle water on a few boards. If it beads up, your sealer is still working. If it soaks straight in, the wood is drinking every storm. Time to clean and re-seal. While you're out there, check for popped nails, soft spots and wobbly railings. A loose railing is a safety issue, not a cosmetic one.</p>
 
     <h2>3. Check the caulk where tub meets tile</h2>
     <p>Dark, cracked or peeling caulk lets water get behind the wall, where it rots framing quietly for years before anything shows. An $8 tube of caulk today can prevent a four-figure repair later. If the grout around it is crumbling too, that's the wall telling you water is already finding a way in.</p>
 
     <h2>4. Clear gutters before the fall rain</h2>
-    <p>Clogged gutters dump water right at your foundation — the number one cause of the wet-basement calls we get. Make sure downspouts push water at least four feet away from the house. It's the cheapest basement waterproofing there is.</p>
+    <p>Clogged gutters dump water right at your foundation, the number one cause of the wet-basement calls we get. Make sure downspouts push water at least four feet away from the house. It's the cheapest basement waterproofing there is.</p>
 
     <h2>5. Flush the water heater</h2>
-    <p>Sediment builds up at the bottom of the tank and makes the heater work harder for less hot water. Draining a few gallons through the valve once a year extends its life — a 20-minute job with a garden hose and a floor drain.</p>
+    <p>Sediment builds up at the bottom of the tank and makes the heater work harder for less hot water. Draining a few gallons through the valve once a year extends its life, and it's a 20-minute job with a garden hose and a floor drain.</p>
 
     <h2>6. Poke the exterior trim</h2>
-    <p>Press a screwdriver into window sills and door frames. Paint can look fine while the wood underneath has gone soft. Caught early, it's a trim repair; caught late, it's the whole frame — and sometimes what's behind it.</p>
+    <p>Press a screwdriver into window sills and door frames. Paint can look fine while the wood underneath has gone soft. Caught early, it's a trim repair; caught late, it's the whole frame, and sometimes what's behind it.</p>
 
     <h2>7. Look up after the next big storm</h2>
-    <p>Scan your ceilings for new stains and take a quick sniff in the attic — a musty smell means moisture is getting in somewhere. Roof leaks show up inside long after they start outside, so the earlier you catch the signal, the smaller the fix.</p>
+    <p>Scan your ceilings for new stains and take a quick sniff in the attic: a musty smell means moisture is getting in somewhere. Roof leaks show up inside long after they start outside, so the earlier you catch the signal, the smaller the fix.</p>
 
     <div class="callout">
-      <p><strong>Found something that's more than a Saturday fix?</strong> Send us a photo and we'll tell you straight whether it's a quick repair or something bigger. From handyman fixes to full remodels — one licensed team. Call <a href="tel:+17035968375">(703) 596-8375</a> or <a href="/contact.html">get in touch</a>.</p>
+      <p><strong>Found something that's more than a Saturday fix?</strong> Send us a photo and we'll tell you straight whether it's a quick repair or something bigger. From handyman fixes to full remodels, one licensed team. Call <a href="tel:+17035968375">(703) 596-8375</a> or <a href="/contact.html">get in touch</a>.</p>
     </div>
 """,
     },
@@ -232,42 +232,42 @@ ARTICLES = [
         "tag": "Hiring a Contractor",
         "title": "5 Remodeling Mistakes That Cost Homeowners Thousands (and How to Avoid Them)",
         "card_title": "5 remodeling mistakes that cost homeowners thousands",
-        "desc": "The lowest bid, the missing permit, the design you never saw — the five mistakes NoVA homeowners make when hiring a remodeler, and the 2-minute checks that avoid them.",
-        "card_desc": "The lowest bid, the missing permit, the design you never saw — and how to avoid all five.",
+        "desc": "The lowest bid, the missing permit, the design you never saw: the five mistakes NoVA homeowners make when hiring a remodeler, and the 2-minute checks that avoid them.",
+        "card_desc": "The lowest bid, the missing permit, the design you never saw, and how to avoid all five.",
         "hero": "/assets/img/wholehome-gallery-03.jpg",
         "hero_alt": "Finished living room renovation by DFC Home Improvement",
         "date": "2026-07-03",
         "date_disp": "July 2026",
         "body": """
-    <p>A good chunk of our work is fixing projects that went sideways with someone else. The same five mistakes come up again and again — here's how to avoid them, whoever you hire.</p>
+    <p>A good chunk of our work is fixing projects that went sideways with someone else. The same five mistakes come up again and again. Here's how to avoid them, whoever you hire.</p>
 
     <h2>1. Taking the bid that's way below the others</h2>
-    <p>If three bids land near each other and one is dramatically lower, that bid isn't a deal — it's missing scope. It comes back later as change orders, and by then you can't switch contractors without paying twice. The gap between a licensed contractor and the cheapest bid can run $20,000–$40,000 on a mid-range kitchen. Compare what's <em>included</em>, not just the bottom line.</p>
+    <p>If three bids land near each other and one is dramatically lower, that bid isn't a deal. It's missing scope. It comes back later as change orders, and by then you can't switch contractors without paying twice. The gap between a licensed contractor and the cheapest bid can run $20,000 to $40,000 on a mid-range kitchen. Compare what's <em>included</em>, not just the bottom line.</p>
 
     <h2>2. Letting anyone skip the permit</h2>
-    <p>"We can save you money by skipping the permit" is a red flag, not a favor. In Fairfax, Arlington and Alexandria, moving plumbing, electrical or walls requires one — and unpermitted work surfaces at resale, when it's most expensive to fix. The permit also buys you a county inspector checking the work; that's protection you already paid taxes for.</p>
+    <p>"We can save you money by skipping the permit" is a red flag, not a favor. In Fairfax, Arlington and Alexandria, moving plumbing, electrical or walls requires one, and unpermitted work surfaces at resale, when it's most expensive to fix. The permit also buys you a county inspector checking the work; that's protection you already paid taxes for.</p>
 
     <h2>3. Approving a design they've never actually seen</h2>
-    <p>A quote and a handshake is not a plan. Insist on seeing the space — layout, finishes, colors — before demolition day. Changes on a screen are free; changes mid-build are not. It's why every DFC project starts with a true-to-life 3D walkthrough before we pick up a tool.</p>
+    <p>A quote and a handshake is not a plan. Insist on seeing the space (layout, finishes, colors) before demolition day. Changes on a screen are free; changes mid-build are not. It's why every DFC project starts with a true-to-life 3D walkthrough before we pick up a tool.</p>
 
     <h2>4. Paying too much before work happens</h2>
-    <p>A reasonable deposit is normal. Half the project in cash up front is not. Payments should be tied to completed milestones in writing — demo done, rough-in passed inspection, cabinets installed — so the money always follows the work, never the promises.</p>
+    <p>A reasonable deposit is normal. Half the project in cash up front is not. Payments should be tied to completed milestones in writing (demo done, rough-in passed inspection, cabinets installed) so the money always follows the work, never the promises.</p>
 
     <h2>5. Skipping the 2-minute license check</h2>
-    <p>Virginia lets you verify any contractor's license free at <a href="https://www.dpor.virginia.gov" target="_blank" rel="noopener">dpor.virginia.gov</a>. Look for a Class A license — the state's highest classification — and ask for a certificate of insurance sent directly from the insurer, not a photocopy. Two minutes of checking beats two years of litigation.</p>
+    <p>Virginia lets you verify any contractor's license free at <a href="https://www.dpor.virginia.gov" target="_blank" rel="noopener">dpor.virginia.gov</a>. Look for a Class A license, the state's highest classification, and ask for a certificate of insurance sent directly from the insurer, not a photocopy. Two minutes of checking beats two years of litigation.</p>
 
     <div class="callout">
-      <p><strong>Planning a project this year?</strong> Keep this list handy when you're comparing bids — including ours. DFC is Class A licensed and insured, every project is permitted, designed in 3D before we build, and billed by milestone. <a href="/estimate.html">Get a free estimate</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
+      <p><strong>Planning a project this year?</strong> Keep this list handy when you're comparing bids, including ours. DFC is Class A licensed and insured, every project is permitted, designed in 3D before we build, and billed by milestone. <a href="/estimate.html">Get a free estimate</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
     </div>
 """,
     },
     {
         "slug": "nova-home-values-2026",
         "tag": "Market Watch",
-        "title": "Your Home Is Worth More Again in 2026 — Here's How Northern Virginia Homeowners Can Use That",
-        "card_title": "Your home is worth more again — here's how to use that",
+        "title": "Your Home Is Worth More Again in 2026: Here's How Northern Virginia Homeowners Can Use That",
+        "card_title": "Your home is worth more again: here's how to use that",
         "desc": "Fairfax County 2026 assessments rose ~4% on average and NoVA inventory stays tight. What rising values and ~6% rates mean for the move-vs-improve decision.",
-        "card_desc": "Assessments up ~4%, rates near 6% — what that combination means for the move-vs-improve math.",
+        "card_desc": "Assessments up ~4%, rates near 6%. What that combination means for the move-vs-improve math.",
         "hero": "/assets/img/wholehome-gallery-01.jpg",
         "hero_alt": "Renovated living room by DFC Home Improvement",
         "date": "2026-07-03",
@@ -282,16 +282,16 @@ ARTICLES = [
     </div>
 
     <h2>Moving got more expensive than improving</h2>
-    <p>Selling into a tight market is the easy part — it's the buying back in that hurts. Trade a pandemic-era mortgage rate for roughly 6% on the next house and your monthly payment can jump even if the next house is smaller. For a lot of NoVA families, the math now clearly favors making the house you have into the house you want.</p>
+    <p>Selling into a tight market is the easy part. It's the buying back in that hurts. Trade a pandemic-era mortgage rate for roughly 6% on the next house and your monthly payment can jump even if the next house is smaller. For a lot of NoVA families, the math now clearly favors making the house you have into the house you want.</p>
 
     <h2>Your equity quietly grew again</h2>
-    <p>Years of rising assessments mean many homeowners are sitting on significant equity — equity that can fund a kitchen, bath or addition, often at better terms than any other borrowing available to them. The house has already earned the renovation; the question is whether you cash that in by selling or by staying and living better.</p>
+    <p>Years of rising assessments mean many homeowners are sitting on significant equity that can fund a kitchen, bath or addition, often at better terms than any other borrowing available to them. The house has already earned the renovation; the question is whether you cash that in by selling or by staying and living better.</p>
 
     <h2>Updated homes do best in exactly this market</h2>
-    <p>With buyers still competing over limited inventory, the homes that appraise and sell strongest are the updated ones. Whether you sell in two years or stay twenty, work done right — permitted, designed, documented — protects the value this market keeps adding.</p>
+    <p>With buyers still competing over limited inventory, the homes that appraise and sell strongest are the updated ones. Whether you sell in two years or stay twenty, work done right (permitted, designed, documented) protects the value this market keeps adding.</p>
 
     <div class="callout">
-      <p><strong>Thinking about what your equity could build?</strong> Tell us what you're dreaming about and we'll give you a real number to plan around — and a 3D design so you can see it before deciding anything. <a href="/estimate.html">See your price range in 60 seconds</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
+      <p><strong>Thinking about what your equity could build?</strong> Tell us what you're dreaming about and we'll give you a real number to plan around, and a 3D design so you can see it before deciding anything. <a href="/estimate.html">See your price range in 60 seconds</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
     </div>
 
     <p class="article-sources">Sources: <a href="https://www.fairfaxcounty.gov/taxes/real-estate/press-release-notices-sent" target="_blank" rel="noopener">Fairfax County Department of Tax Administration, 2026 assessments</a> · <a href="https://www.nvar.com/news/2025-12-29/2026-economic-market-forecast/" target="_blank" rel="noopener">NVAR 2026 Regional Housing Market Forecast</a></p>
@@ -300,8 +300,8 @@ ARTICLES = [
     {
         "slug": "nova-home-insurance-rising-2026",
         "tag": "Market Watch",
-        "title": "Home Insurance Is Jumping 15–25% in Northern Virginia — 5 Upgrades That Push Back",
-        "card_title": "Home insurance is jumping in NoVA — here's how to push back",
+        "title": "Home Insurance Is Jumping 15 to 25% in Northern Virginia: 5 Upgrades That Push Back",
+        "card_title": "Home insurance is jumping in NoVA: here's how to push back",
         "desc": "Virginia is seeing some of the steepest homeowners insurance increases in the country in 2026. Five home upgrades that can actually bring your premium down.",
         "card_desc": "Virginia premiums are among the fastest-rising in the country. Five upgrades that fight back.",
         "hero": "/assets/img/bath-marble-suite.jpg",
@@ -309,63 +309,63 @@ ARTICLES = [
         "date": "2026-07-03",
         "date_disp": "July 2026",
         "body": """
-    <p>If your homeowners insurance renewal made you wince this year, you're not alone. Industry analyses put Virginia among the states with the steepest premium increases in the country for 2026, with homeowners in Fairfax, Arlington, Loudoun and Prince William counties reporting 15–25% year-over-year jumps — often without ever filing a claim.</p>
+    <p>If your homeowners insurance renewal made you wince this year, you're not alone. Industry analyses put Virginia among the states with the steepest premium increases in the country for 2026, with homeowners in Fairfax, Arlington, Loudoun and Prince William counties reporting 15 to 25% year-over-year jumps, often without ever filing a claim.</p>
     <p>The drivers are mostly out of your hands: storm losses across the region, pricier building materials pushing up replacement-cost estimates, and rising reinsurance costs that carriers pass straight through to premiums. But what your specific house costs to insure is <em>not</em> out of your hands. Five things that actually move the number:</p>
 
-    <h2>1. Ask your carrier which upgrades earn discounts — before you renew</h2>
-    <p>Every insurer keeps a list — roof age, water protection, updated systems, security. Ten minutes on the phone tells you exactly which improvements pay twice: once in your home, once on your premium.</p>
+    <h2>1. Ask your carrier which upgrades earn discounts before you renew</h2>
+    <p>Every insurer keeps a list: roof age, water protection, updated systems, security. Ten minutes on the phone tells you exactly which improvements pay twice: once in your home, once on your premium.</p>
 
     <h2>2. The roof matters more than anything else</h2>
-    <p>Roof age is one of the first things underwriters look at, and an aging roof can mean surcharges — or a non-renewal letter. If yours is approaching 20 years, replacing it on your schedule beats replacing it on the insurer's.</p>
+    <p>Roof age is one of the first things underwriters look at, and an aging roof can mean surcharges, or a non-renewal letter. If yours is approaching 20 years, replacing it on your schedule beats replacing it on the insurer's.</p>
 
     <h2>3. Stop water before it starts</h2>
-    <p>Water damage is the most common home claim there is. Leak sensors under sinks and behind the washing machine, plus an automatic shutoff valve, cost a few hundred dollars. Many carriers discount for them — and they prevent the claim that would spike your rate for years.</p>
+    <p>Water damage is the most common home claim there is. Leak sensors under sinks and behind the washing machine, plus an automatic shutoff valve, cost a few hundred dollars. Many carriers discount for them, and they prevent the claim that would spike your rate for years.</p>
 
     <h2>4. Update the systems insurers worry about</h2>
-    <p>Older electrical panels, aging water heaters and outdated plumbing are quiet premium-inflators in NoVA's older neighborhoods — some panel brands and pipe types can even make a home hard to insure at all. If your home is 30+ years old and largely untouched, a systems check is worth scheduling.</p>
+    <p>Older electrical panels, aging water heaters and outdated plumbing are quiet premium-inflators in NoVA's older neighborhoods. Some panel brands and pipe types can even make a home hard to insure at all. If your home is 30+ years old and largely untouched, a systems check is worth scheduling.</p>
 
-    <h2>5. Document your renovations — they work in your favor</h2>
-    <p>Permitted, documented renovations update your home's replacement-cost profile accurately and give you leverage when you shop your policy — which, in this market, you should do every couple of years.</p>
+    <h2>5. Document your renovations: they work in your favor</h2>
+    <p>Permitted, documented renovations update your home's replacement-cost profile accurately and give you leverage when you shop your policy, which in this market you should do every couple of years.</p>
 
     <div class="callout">
-      <p><strong>Already planning one of these upgrades?</strong> We handle roofing-to-plumbing updates as one licensed team — permitted, inspected and documented, so the work counts with your insurer too. <a href="/contact.html">Get in touch</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
+      <p><strong>Already planning one of these upgrades?</strong> We handle roofing-to-plumbing updates as one licensed team: permitted, inspected and documented, so the work counts with your insurer too. <a href="/contact.html">Get in touch</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
     </div>
 
-    <p class="article-sources">Insurance guidance is general information, not advice — confirm available discounts with your carrier.</p>
+    <p class="article-sources">Insurance guidance is general information, not advice. Confirm available discounts with your carrier.</p>
 """,
     },
     {
         "slug": "federal-energy-tax-credits-ended-2026",
         "tag": "Market Watch",
-        "title": "The Federal Energy Tax Credits Ended December 31 — What Still Pays Homeowners Back in 2026",
-        "card_title": "The federal energy credits are gone — what still pays you back",
+        "title": "The Federal Energy Tax Credits Ended December 31: What Still Pays Homeowners Back in 2026",
+        "card_title": "The federal energy credits are gone: what still pays you back",
         "desc": "The 25C and 25D credits for insulation, windows, HVAC and solar ended Dec 31, 2025. What NoVA homeowners can still claim, and what still saves money in 2026.",
-        "card_desc": "Insulation, window and HVAC credits ended Dec 31. What you can still claim — and what still saves.",
+        "card_desc": "Insulation, window and HVAC credits ended Dec 31. What you can still claim, and what still saves.",
         "hero": "/assets/img/kitchen-east-marshall.jpg",
         "hero_alt": "Modern kitchen by DFC Home Improvement",
         "date": "2026-07-03",
         "date_disp": "July 2026",
         "body": """
-    <p>Quick heads-up if energy upgrades were on your list: the federal tax credits for insulation, windows, doors, HVAC systems and solar — the Energy Efficient Home Improvement Credit (25C) and the Residential Clean Energy Credit (25D) — ended on December 31, 2025. They were originally scheduled to run through 2032, but last year's tax legislation moved the cutoff up. Projects completed in 2026 no longer qualify for a federal credit.</p>
+    <p>Quick heads-up if energy upgrades were on your list: the federal tax credits for insulation, windows, doors, HVAC systems and solar (the Energy Efficient Home Improvement Credit, 25C, and the Residential Clean Energy Credit, 25D) ended on December 31, 2025. They were originally scheduled to run through 2032, but last year's tax legislation moved the cutoff up. Projects completed in 2026 no longer qualify for a federal credit.</p>
     <p>Before you shelve those plans, here's what's still on the table:</p>
 
     <h2>1. Did work in 2025? Claim it this tax season</h2>
-    <p>Upgrades completed and placed in service by December 31, 2025 still qualify on the return you file this year — up to $3,200 per year under the old home-improvement credit. Dig out the receipts and manufacturer certificates before you file, and confirm the details with your tax professional.</p>
+    <p>Upgrades completed and placed in service by December 31, 2025 still qualify on the return you file this year, up to $3,200 per year under the old home-improvement credit. Dig out the receipts and manufacturer certificates before you file, and confirm the details with your tax professional.</p>
 
     <h2>2. State and utility rebates didn't disappear</h2>
-    <p>Virginia utilities and local programs still run their own rebates for efficient HVAC equipment, water heaters and insulation. They're smaller than the federal credits were, but they're real money — always worth a check before a project. We flag applicable programs when we quote.</p>
+    <p>Virginia utilities and local programs still run their own rebates for efficient HVAC equipment, water heaters and insulation. They're smaller than the federal credits were, but they're real money and always worth a check before a project. We flag applicable programs when we quote.</p>
 
     <h2>3. Efficiency still pays the old-fashioned way</h2>
-    <p>The credits sweetened the deal; they were never the deal. Air sealing and insulation remain the cheapest comfort-per-dollar upgrade in our climate, and a right-sized modern system beats a struggling 20-year-old unit on every summer bill — credit or no credit.</p>
+    <p>The credits sweetened the deal; they were never the deal. Air sealing and insulation remain the cheapest comfort-per-dollar upgrade in our climate, and a right-sized modern system beats a struggling 20-year-old unit on every summer bill, credit or no credit.</p>
 
     <h2>4. Replace on your schedule, not the equipment's</h2>
-    <p>If your A/C or furnace is 15+ years old, the question isn't if — it's whether you replace it planned (compare options, catch rebates, schedule comfortably) or in an emergency during a heat wave, when you'll pay rush pricing for whatever's on the truck.</p>
+    <p>If your A/C or furnace is 15+ years old, the question isn't if. It's whether you replace it planned (compare options, catch rebates, schedule comfortably) or in an emergency during a heat wave, when you'll pay rush pricing for whatever's on the truck.</p>
 
     <div class="callout">
-      <p><strong>A/C or furnace getting up there in years?</strong> Our HVAC team installs and replaces central systems across Northern Virginia — we'll tell you honestly whether yours has good years left or it's time to plan. <a href="/contact.html">Get in touch</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
+      <p><strong>A/C or furnace getting up there in years?</strong> Our HVAC team installs and replaces central systems across Northern Virginia. We'll tell you honestly whether yours has good years left or it's time to plan. <a href="/contact.html">Get in touch</a> or call <a href="tel:+17035968375">(703) 596-8375</a>.</p>
     </div>
 
-    <p class="article-sources">Tax information is general — confirm your situation with a tax professional. Sources: <a href="https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit" target="_blank" rel="noopener">IRS — Energy Efficient Home Improvement Credit</a> · <a href="https://www.energystar.gov/about/federal-tax-credits" target="_blank" rel="noopener">ENERGY STAR — Federal Tax Credits</a></p>
+    <p class="article-sources">Tax information is general. Confirm your situation with a tax professional. Sources: <a href="https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit" target="_blank" rel="noopener">IRS: Energy Efficient Home Improvement Credit</a> · <a href="https://www.energystar.gov/about/federal-tax-credits" target="_blank" rel="noopener">ENERGY STAR: Federal Tax Credits</a></p>
 """,
     },
 ]
@@ -440,7 +440,7 @@ def build_index():
         <div class="bc-body">
           <span class="bc-tag">Cost Guide</span>
           <h3>How much does a kitchen remodel cost in Northern Virginia?</h3>
-          <p>Real 2026 numbers by scope tier — and where the money actually goes.</p>
+          <p>Real 2026 numbers by scope tier, and where the money actually goes.</p>
           <span class="bc-date">June 2026</span>
         </div>
       </a>""")
@@ -450,8 +450,8 @@ def build_index():
 <section class="page-head">
   <div class="wrap reveal">
     <p class="breadcrumb"><a href="/index.html">Home</a> / Blog</p>
-    <h1>Home Notes — the DFC blog</h1>
-    <p class="ph-desc">Practical advice for Northern Virginia, DC and Richmond homeowners — maintenance checklists, real cost numbers, market news and how to hire well. Written by the team that does the work.</p>
+    <h1>Home Notes: the DFC blog</h1>
+    <p class="ph-desc">Practical advice for Northern Virginia, DC and Richmond homeowners: maintenance checklists, real cost numbers, market news and how to hire well. Written by the team that does the work.</p>
   </div>
 </section>
 
@@ -468,13 +468,13 @@ def build_index():
     jsonld = {
         "@context": "https://schema.org",
         "@type": "Blog",
-        "name": "Home Notes — the DFC Home Improvement blog",
+        "name": "Home Notes: the DFC Home Improvement blog",
         "url": f"{SITE}/blog/",
         "publisher": {"@type": "Organization", "name": "DFC Home Improvement", "url": SITE},
     }
     doc = (
         head_block(
-            "Home Notes — Homeowner Advice & Local Market News | DFC Home Improvement",
+            "Home Notes: Homeowner Advice & Local Market News | DFC Home Improvement",
             "Practical advice for NoVA, DC and Richmond homeowners: maintenance checklists, real remodel costs, market news and how to hire a contractor well.",
             "/blog/", "/assets/img/kitchen-polecat-warm.jpg", jsonld,
         )
