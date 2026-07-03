@@ -100,6 +100,7 @@ def header(current):
         link("portfolio.html", "Portfolio", "portfolio"),
         link("our-process.html", "Our Process", "process"),
         link("index.html#areas", "Service Areas", "areas"),
+        link("blog/", "Blog", "blog"),
         link("contact.html", "Contact", "contact"),
     ])
     m_nav = "\n        ".join([
@@ -109,6 +110,7 @@ def header(current):
         '<a href="portfolio.html">Portfolio</a>',
         '<a href="our-process.html">Our Process</a>',
         '<a href="index.html#areas">Service Areas</a>',
+        '<a href="blog/">Blog</a>',
         '<a href="contact.html">Contact</a>',
     ])
     return f"""
@@ -187,6 +189,7 @@ def footer():
         <a href="renovations.html">Renovations</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="our-process.html">Our Process</a>
+        <a href="blog/">Blog</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
