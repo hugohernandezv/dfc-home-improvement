@@ -169,6 +169,7 @@ FOOTER = f"""<footer class="site-footer">
       <div class="footer-brand">
         <img src="/assets/logo/dfc-logo-white.png" alt="DFC Home Improvement">
         <p>Class A licensed design-build general contractor. One accountable team from first concept to final walkthrough.</p>
+        <a class="footer-bbb" href="https://www.bbb.org/us/va/fairfax/profile/residential-general-contractor/dfc-home-improvement-0241-236106972/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-280-80-bbb-236106972.png" style="border: 0; margin-top: 18px; max-width: 220px; height: auto;" alt="DFC Home Improvement BBB Business Review" /></a>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>

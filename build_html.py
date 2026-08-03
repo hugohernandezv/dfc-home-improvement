@@ -199,6 +199,7 @@ def footer():
           <a href="{IG_URL}" target="_blank" rel="noopener" aria-label="DFC Home Improvement on Instagram">{IG_ICON}</a>
           <a href="{FB_URL}" target="_blank" rel="noopener" aria-label="DFC Home Improvement on Facebook">{FB_ICON}</a>
         </div>
+        <a class="footer-bbb" href="https://www.bbb.org/us/va/fairfax/profile/residential-general-contractor/dfc-home-improvement-0241-236106972/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-dc-easternpa.bbb.org/seals/blue-seal-280-80-bbb-236106972.png" style="border: 0; margin-top: 18px; max-width: 220px; height: auto;" alt="DFC Home Improvement BBB Business Review" /></a>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
