@@ -213,8 +213,8 @@ ARTICLES = [
         "card_title": "How much does a kitchen remodel cost in Northern Virginia?",
         "desc": "Real 2026 kitchen remodel prices in Fairfax, Vienna, McLean, Arlington and Alexandria: four price tiers, what sits inside each one, and the three decisions that move the total. From a Class A licensed design-build contractor.",
         "card_desc": "Real 2026 numbers from a contractor who builds them: four price tiers and what moves the total.",
-        "hero": "/assets/img/kitchen-channing-street.jpg",
-        "hero_alt": "Renovated kitchen with island and custom cabinetry in Northern Virginia",
+        "hero": "/assets/img/kitchen-polecat-warm.jpg",
+        "hero_alt": "Renovated kitchen with white cabinetry, range hood and warm wood floors in Northern Virginia",
         "date": "2026-08-05",
         "date_disp": "August 2026",
         "body": """
