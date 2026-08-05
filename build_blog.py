@@ -207,6 +207,44 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "kitchen-remodel-cost-northern-virginia",
+        "tag": "Cost Guide",
+        "title": "How Much Does a Kitchen Remodel Cost in Northern Virginia? (2026)",
+        "card_title": "How much does a kitchen remodel cost in Northern Virginia?",
+        "desc": "Real 2026 kitchen remodel prices in Fairfax, Vienna, McLean, Arlington and Alexandria: four price tiers, what sits inside each one, and the three decisions that move the total. From a Class A licensed design-build contractor.",
+        "card_desc": "Real 2026 numbers from a contractor who builds them: four price tiers and what moves the total.",
+        "hero": "/assets/img/kitchen-channing-street.jpg",
+        "hero_alt": "Renovated kitchen with island and custom cabinetry in Northern Virginia",
+        "date": "2026-08-05",
+        "date_disp": "August 2026",
+        "body": """
+    <p>"What's this going to cost me?" is the first question every homeowner asks, and the one most contractors dodge until they are standing in your kitchen. So here are the real numbers we see building kitchens in Fairfax, Vienna, McLean, Arlington and Alexandria in 2026, along with what actually sits inside each tier.</p>
+
+    <h2>$18,000 to $35,000 &middot; Cosmetic refresh</h2>
+    <p>Cabinet reface or repaint, new countertops, backsplash, lighting and hardware. The layout stays exactly where it is, so there is no plumbing or electrical rerouting and no permit drama. This is the tier for a kitchen that functions fine but looks tired, and it is the fastest way to a dramatic visual change.</p>
+
+    <h2>$55,000 to $90,000 &middot; Mid-range gut</h2>
+    <p>Everything comes out. Semi-custom cabinets, quartz countertops, tile backsplash, new flooring, updated lighting and appliances, and usually some electrical work to bring the room up to current code. Minor layout changes live here too: moving a sink a few feet, widening a doorway, adding an island where the plumbing allows it.</p>
+
+    <h2>$90,000 to $140,000 &middot; Full renovation with layout changes</h2>
+    <p>This is where walls come down. Opening the kitchen to the living or dining room, relocating plumbing and gas lines, custom cabinetry, upgraded appliance packages and structural work with an engineer's stamp when a wall is load bearing. Most of the "before and after" transformations people picture live in this tier.</p>
+
+    <h2>$140,000 and up &middot; High-end and additions</h2>
+    <p>Full custom cabinetry, premium stone, professional appliance suites, and often an addition or bump-out that grows the footprint. At this level the kitchen is usually part of a larger whole-home project.</p>
+
+    <h2>The three decisions that move your number the most</h2>
+    <p><strong>Cabinets.</strong> They are typically 30 to 40 percent of a kitchen budget. The jump from stock to semi-custom is meaningful; the jump from semi-custom to full custom is where budgets get away from people. If you need to save, this is the most powerful lever you have.</p>
+    <p><strong>Whether the layout moves.</strong> Keeping sink, stove and refrigerator where they are avoids rerouting plumbing, gas and electrical, and that alone can be the difference between two tiers. Moving them buys you the kitchen you actually want, which is often worth it, but it should be a decision you make on purpose rather than one that surprises you.</p>
+    <p><strong>What is hiding behind the walls.</strong> In homes built before 1990 we regularly find outdated wiring, undersized panels or plumbing that has to be brought to code once it is exposed. A good contractor tells you this is possible before you sign, not after demolition.</p>
+
+    <h2>How to compare quotes without getting burned</h2>
+    <p>The cheapest quote is almost never the cheapest project. When you compare, look at what each proposal actually includes: are appliances in there, or excluded? Is the countertop a specific material and thickness, or a placeholder allowance that gets "adjusted" later? Are permits included? Is there a line for the unexpected, or will every surprise become a change order?</p>
+    <p>On our projects, every material and every dollar is in writing before work begins, and you see a photoreal 3D design of your finished kitchen before we touch anything. That way the number you approve is the number you pay, and the kitchen you imagined is the kitchen that gets built.</p>
+
+    <p>If you want a real number for your kitchen, not a range, we are happy to put one together. No obligation, and the 3D design is free.</p>
+"""
+    },
+    {
         "slug": "end-of-summer-home-checklist",
         "tag": "Maintenance",
         "title": "Your End-of-Summer Home Checklist: 7 Quick Checks That Prevent Expensive Repairs",
