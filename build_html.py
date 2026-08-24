@@ -18,8 +18,21 @@ JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
 <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534" form_url="https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/embedded_work_request_form?form_id=2323534"></script>"""
 AREAS = ["Northern Virginia", "Fairfax", "Arlington", "Alexandria", "Falls Church",
          "Vienna", "McLean", "Richmond", "Washington DC"]
+# Local-SEO service area (Reinstate Labs homepage handoff, 2026-08)
+NOVA_LOCATIONS = ["Fairfax", "Fairfax Station", "Vienna", "Oakton", "McLean", "Arlington",
+                  "Alexandria", "Falls Church", "Annandale", "Burke", "Springfield",
+                  "Centreville", "Chantilly", "Herndon", "Reston"]
+SCHEMA_AREAS = ["Northern Virginia"] + NOVA_LOCATIONS + ["Washington DC", "Fredericksburg",
+                                                          "Stafford", "Richmond"]
+ADDR_STREET   = "3060 Williams Drive Suite 300"
+ADDR_LOCALITY = "Fairfax"
+ADDR_REGION   = "VA"
+ADDR_ZIP      = "22031"
 MAP_SRC = ("https://www.openstreetmap.org/export/embed.html?"
            "bbox=-77.62%2C38.62%2C-76.86%2C39.08&amp;layer=mapnik&amp;marker=38.8462%2C-77.3064")
+# Google Business Profile pin, embedded in the footer
+GBP_MAP_SRC = ("https://www.google.com/maps?q=3060%20Williams%20Dr%20Suite%20300%2C%20Fairfax"
+               "%2C%20VA%2022031&amp;z=13&amp;output=embed")
 
 ARROW = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
          'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>')
@@ -78,8 +91,12 @@ def head(title, desc, page):
         "description": ("Class A licensed design-build general contractor for custom homes, new "
                         "construction, additions and whole-home renovations across Northern Virginia, "
                         "Richmond and Washington DC."),
-        "areaServed": AREAS,
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "30"},
+        "address": {"@type": "PostalAddress", "streetAddress": ADDR_STREET,
+                    "addressLocality": ADDR_LOCALITY, "addressRegion": ADDR_REGION,
+                    "postalCode": ADDR_ZIP, "addressCountry": "US"},
+        "sameAs": [IG_URL, FB_URL],
+        "areaServed": SCHEMA_AREAS,
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "58"},
     }
     return f"""<!doctype html>
 <html lang="en">
@@ -224,7 +241,9 @@ def footer():
         <h4>Get in touch</h4>
         <a class="big" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
         <a href="mailto:{EMAIL}">{EMAIL}</a>
+        <p>{ADDR_STREET},<br>{ADDR_LOCALITY}, {ADDR_REGION} {ADDR_ZIP}</p>
         <p>Serving Northern Virginia, Richmond<br>&amp; Washington DC.</p>
+        <iframe class="footer-map" title="DFC Home Improvement — Fairfax, VA on Google Maps" loading="lazy" src="{GBP_MAP_SRC}"></iframe>
       </div>
     </div>
     <div class="footer-bottom">
@@ -261,9 +280,44 @@ def build_index():
     ]
     notes_html = "\n".join(review_card(q, n) for q, n in notes)
 
-    trades = ["New Homes &amp; Additions", "Dormers &amp; Roofing", "Foundations", "Kitchen Remodels",
-              "Bathroom Remodels", "Decks &amp; Patios", "Electrical &amp; Plumbing", "Design-Build &amp; Rendering"]
-    trades_html = "\n".join(f"          <li>{t}</li>" for t in trades)
+    # Featured service links (Reinstate Labs order), each pointing at its strongest page
+    trades = [
+        ("Kitchen Remodeling",                   "kitchen-remodeling-northern-virginia.html"),
+        ("Bathroom Remodeling",                  "bathroom-remodeling-northern-virginia.html"),
+        ("Whole-Home Renovations",               "renovations.html#full-home"),
+        ("Home Additions",                       "home-additions-northern-virginia.html"),
+        ("Basement Finishing",                   "basement-finishing-northern-virginia.html"),
+        ("Custom Homes &amp; New Construction",  "new-construction.html"),
+        ("Decks &amp; Patios",                   "deck-builder-northern-virginia.html"),
+        ("Design-Build &amp; 3D Rendering",      "design-build-contractor-northern-virginia.html"),
+    ]
+    trades_html = "\n".join(f'          <li><a href="{href}">{t}</a></li>' for t, href in trades)
+
+    faqs = [
+        ("What areas does DFC Home Improvement serve?",
+         "DFC Home Improvement serves homeowners throughout Northern Virginia, including Fairfax, Vienna, McLean, Reston, Arlington, Alexandria, Falls Church and surrounding communities. We also take projects in Washington DC, Fredericksburg, Stafford and the Richmond area."),
+        ("What types of home remodeling projects do you handle?",
+         "We handle kitchen remodeling, bathroom remodeling, whole-home renovations, home additions, basement finishing, decks and outdoor living projects, as well as custom homes and new construction. Our team can also coordinate plumbing, electrical, HVAC and other work required for the project."),
+        ("Do you handle both the design and construction?",
+         "Yes. DFC Home Improvement is a design-build general contractor, which means one team can coordinate planning, design, permits, materials, construction and project management from the initial concept through the final walkthrough."),
+        ("Can I see what my renovation will look like before construction starts?",
+         "Yes. DFC Home Improvement uses photoreal 3D design and detailed material planning to help homeowners understand the proposed layout, finishes and overall direction of the project before construction begins."),
+        ("Do you build home additions in Northern Virginia?",
+         "Yes. We design and build home additions throughout Northern Virginia, including the Fairfax area. Our team can coordinate the design, permits, materials, construction and trades needed to add functional living space to an existing home."),
+        ("Does DFC Home Improvement build custom homes?",
+         "Yes. DFC Home Improvement provides custom home and new construction services, with one team coordinating the project from early planning and design through permits, construction and final completion."),
+        ("Is DFC Home Improvement licensed and insured?",
+         "Yes. DFC Home Improvement is a Class A licensed contractor in Virginia and is licensed in Washington DC. The company is bonded and insured and is also a BBB Accredited Business with an A+ rating."),
+    ]
+    faq_html = "\n".join(
+        f"""        <details{' open' if i == 0 else ''}>
+          <summary>{q}</summary>
+          <div class="faq-a"><p>{a}</p></div>
+        </details>""" for i, (q, a) in enumerate(faqs))
+    faq_jsonld = {"@context": "https://schema.org", "@type": "FAQPage",
+                  "mainEntity": [{"@type": "Question", "name": q,
+                                  "acceptedAnswer": {"@type": "Answer", "text": a}}
+                                 for q, a in faqs]}
 
 
     process = [
@@ -277,12 +331,12 @@ def build_index():
         for n, t, b in process)
 
     stats = [("A","Class A licensed contractor"),("1","Accountable team, concept to finish"),
-             ("9","Cities &amp; counties served"),("5.0","Average client rating")]
+             ("9","Cities &amp; counties served"),("4.8","Average Google rating")]
     stats_html = "\n".join(
         f"""        <div class="stat reveal d{i}"><div class="s-num">{n}</div><div class="s-lab">{l}</div></div>"""
         for i, (n, l) in enumerate(stats, 1))
 
-    areas_html = "\n".join(f'            <span>{a}</span>' for a in AREAS)
+    areas_html = "\n".join(f'            <span>{a}</span>' for a in NOVA_LOCATIONS)
 
     body = f"""
 <main id="top">
@@ -292,8 +346,9 @@ def build_index():
     <div class="hero-bg"><img src="{img('kitchen-thomas-jefferson')}" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
     <div class="hero-inner">
       <img class="hero-logo" src="assets/logo/dfc-logo-white.png" alt="DFC Home Improvement">
-      <h1>Your home should feel like a vacation.</h1>
-      <p class="hero-kicker">Class A Design–Build · Northern Virginia · Richmond · DC</p>
+      <p class="hero-tagline">Your home should feel like a vacation.</p>
+      <h1 class="hero-service">Kitchen &amp; Bathroom Remodeling in Northern Virginia</h1>
+      <p class="hero-kicker">Class A Design-Build · Northern Virginia · Richmond · DC</p>
       <div class="hero-actions">
         <a class="btn btn--light" href="contact.html">Request a free consultation</a>
         <a class="btn btn--light" href="portfolio.html" style="background:rgba(255,255,255,.08)">View our work</a>
@@ -319,8 +374,8 @@ def build_index():
           <h2>A more deliberate way to build, remodel and invest in your home.</h2>
         </div>
         <div class="body reveal d1">
-          <p>DFC Home Improvement is a Class A licensed general contractor and design-build specialist serving Northern Virginia — Fairfax, Arlington, Alexandria, Falls Church, Vienna and McLean — as well as Richmond and Washington DC.</p>
-          <p>We help homeowners move from concept to construction with one team handling planning, design coordination, budgeting, trade management and finish work — so your project stays organized and on schedule from first walkthrough to the last detail.</p>
+          <p>DFC Home Improvement is a Class A licensed general contractor and design-build specialist serving homeowners across Northern Virginia, including Fairfax, Arlington, Alexandria, Falls Church, Vienna and McLean, as well as Washington DC and the Richmond area. We handle kitchen and bathroom remodeling, whole-home renovations, additions and custom construction with one team coordinating the project from planning through final walkthrough.</p>
+          <p>From 3D design and permitting to materials, construction and project management, the process stays with one accountable team so homeowners are not left coordinating multiple companies.</p>
           <p style="margin-top:1.6em"><a class="link-arrow" href="renovations.html">Explore what we do {ARROW}</a></p>
         </div>
       </div>
@@ -339,7 +394,7 @@ def build_index():
         <div class="p-body">
           <div class="p-num">01 — Build new</div>
           <h3>New Construction</h3>
-          <p>Custom homes, additions, dormers, roofing and foundations — full-service construction from land to move-in.</p>
+          <p>Custom homes, additions and new construction managed from planning and permits through the final build.</p>
           <span class="link-arrow light">Explore new construction {ARROW}</span>
         </div>
       </a>
@@ -348,7 +403,7 @@ def build_index():
         <div class="p-body">
           <div class="p-num">02 — Reimagine</div>
           <h3>Renovations</h3>
-          <p>Kitchens, bathrooms, whole-home remodels and design-build — refined spaces tailored to the way you live.</p>
+          <p>Kitchen, bathroom and whole-home remodeling handled from design through construction by one team.</p>
           <span class="link-arrow light">Explore renovations {ARROW}</span>
         </div>
       </a>
@@ -406,8 +461,8 @@ def build_index():
       <div class="areas-grid">
         <div class="reveal">
           <p class="eyebrow">Service areas</p>
-          <h2>Building across Northern Virginia, Richmond &amp; DC.</h2>
-          <p style="margin-top:1.2em">We work throughout the region's most established residential communities. Don't see your town? Reach out — we likely cover it.</p>
+          <h2>Serving Northern Virginia, Richmond &amp; Washington DC</h2>
+          <p style="margin-top:1.2em">DFC Home Improvement serves homeowners throughout Northern Virginia, with a focus on Fairfax and surrounding communities. We also work throughout Washington DC, Fredericksburg, Stafford and the Richmond area.</p>
           <div class="areas-list">
 {areas_html}
           </div>
@@ -416,11 +471,22 @@ def build_index():
       </div>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section class="section wrap" id="faq">
+    <div class="head-row simple reveal" style="display:block;max-width:60ch;margin-bottom:clamp(34px,4vw,56px)">
+      <p class="eyebrow">FAQs</p><h2>Home remodeling questions, answered.</h2>
+    </div>
+    <div class="faq reveal" style="margin-inline:0">
+{faq_html}
+    </div>
+  </section>
+  <script type="application/ld+json">{json.dumps(faq_jsonld)}</script>
 {cta()}
 </main>"""
     page("index.html",
-         head("DFC Home Improvement | Custom Homes & Renovations in Northern Virginia",
-              "Class A licensed design-build contractor for custom homes, new construction, additions and whole-home renovations across Northern Virginia, Richmond and Washington DC.",
+         head("Kitchen & Bathroom Remodeling Northern VA | DFC Home Improvement",
+              "Class A licensed design-build contractor for kitchen and bathroom remodeling, whole-home renovations and additions in Northern Virginia, including Fairfax.",
               "home"),
          body, "home")
 

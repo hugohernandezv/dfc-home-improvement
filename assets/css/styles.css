@@ -238,7 +238,15 @@ body.menu-open { overflow: hidden; }
 }
 .hero-inner { position: relative; z-index: 2; width: min(940px, 100%); }
 .hero-logo { width: clamp(168px, 24vw, 290px); margin: 0 auto clamp(26px, 3vw, 40px); filter: drop-shadow(0 6px 28px rgba(0,0,0,.35)); }
-.hero h1 { color: #fff; font-size: clamp(2.7rem, 6vw, 5rem); text-shadow: 0 2px 30px rgba(0,0,0,.32); }
+.hero-tagline {
+  font-family: var(--head); font-weight: 500; line-height: 1.05; letter-spacing: -0.012em;
+  margin: 0; color: #fff; font-size: clamp(2.7rem, 6vw, 5rem); text-shadow: 0 2px 30px rgba(0,0,0,.32);
+}
+.hero h1.hero-service {
+  margin: 1.3rem auto 0; color: rgba(255,255,255,.95);
+  font-size: clamp(1.25rem, 2.3vw, 1.7rem); font-weight: 500; letter-spacing: 0.01em;
+  text-shadow: 0 2px 24px rgba(0,0,0,.3);
+}
 .hero-kicker {
   margin: 1.5rem auto 0; font-family: var(--sans); font-size: 0.8rem; font-weight: 600;
   letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,.82);
@@ -285,6 +293,8 @@ body.menu-open { overflow: hidden; }
   display: flex; align-items: center; gap: 12px;
 }
 .trades li::before { content: ""; width: 7px; height: 7px; background: var(--sage); flex: 0 0 auto; }
+.trades li a { color: inherit; transition: color .3s; }
+.trades li a:hover { color: var(--accent-ink); }
 
 /* ============================================================
    FEATURE BAND
@@ -374,6 +384,7 @@ body.menu-open { overflow: hidden; }
 .footer-col a, .footer-col p { display: block; color: var(--on-night); font-size: 1rem; margin-bottom: 12px; transition: color .3s; }
 .footer-col a:hover { color: #fff; }
 .footer-contact a.big { font-family: var(--head); font-size: 1.6rem; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.footer-map { display: block; width: 100%; max-width: 340px; height: 180px; border: 0; border-radius: 8px; margin-top: 16px; filter: grayscale(0.35) contrast(1.02); }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding-block: 30px; font-size: 0.86rem; color: var(--ink-mute); }
 .footer-bottom .fb-right { display: flex; gap: 22px; color: var(--on-night); }
 .footer-bottom a:hover { color: #fff; }
