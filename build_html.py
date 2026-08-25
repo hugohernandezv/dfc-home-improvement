@@ -30,9 +30,12 @@ ADDR_REGION   = "VA"
 ADDR_ZIP      = "22031"
 MAP_SRC = ("https://www.openstreetmap.org/export/embed.html?"
            "bbox=-77.62%2C38.62%2C-76.86%2C39.08&amp;layer=mapnik&amp;marker=38.8462%2C-77.3064")
-# Google Business Profile pin, embedded in the footer
-GBP_MAP_SRC = ("https://www.google.com/maps?q=3060%20Williams%20Dr%20Suite%20300%2C%20Fairfax"
-               "%2C%20VA%2022031&amp;z=13&amp;output=embed")
+# Google Business Profile embed (iframe src provided by Reinstate Labs 2026-08-25;
+# points at the actual DFC GBP listing, not a plain address pin)
+GBP_MAP_SRC = ("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397841.8167024655"
+               "!2d-77.21790544999999!3d38.82927295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+               "!3m3!1m2!1s0x846a25461367bc67%3A0x736db6227d20323!2sDFC%20Home%20Improvement"
+               "!5e0!3m2!1sen!2s!4v1787672110932!5m2!1sen!2s")
 
 ARROW = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
          'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>')
@@ -243,7 +246,7 @@ def footer():
         <a href="mailto:{EMAIL}">{EMAIL}</a>
         <p>{ADDR_STREET},<br>{ADDR_LOCALITY}, {ADDR_REGION} {ADDR_ZIP}</p>
         <p>Serving Northern Virginia, Richmond<br>&amp; Washington DC.</p>
-        <iframe class="footer-map" title="DFC Home Improvement — Fairfax, VA on Google Maps" loading="lazy" src="{GBP_MAP_SRC}"></iframe>
+        <iframe class="footer-map" title="DFC Home Improvement on Google Maps" loading="lazy" src="{GBP_MAP_SRC}" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
     <div class="footer-bottom">
