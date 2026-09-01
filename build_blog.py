@@ -400,8 +400,8 @@ ARTICLES = [
         "card_title": "The federal energy credits are gone: what still pays you back",
         "desc": "The 25C and 25D credits for insulation, windows, HVAC and solar ended Dec 31, 2025. What NoVA homeowners can still claim, and what still saves money in 2026.",
         "card_desc": "Insulation, window and HVAC credits ended Dec 31. What you can still claim, and what still saves.",
-        "hero": "/assets/img/kitchen-east-marshall.jpg",
-        "hero_alt": "Modern kitchen by DFC Home Improvement",
+        "hero": "/assets/img/sunroom-monteiro-ave.jpg",
+        "hero_alt": "Sunlit living room with large windows by DFC Home Improvement",
         "date": "2026-07-03",
         "date_disp": "July 2026",
         "body": """
