@@ -209,6 +209,62 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "remodel-timeline-before-the-holidays",
+        "tag": "Planning",
+        "title": "How Long Does a Remodel Really Take? When to Start If You Want It Done Before the Holidays",
+        "card_title": "How long a remodel really takes, and when to start for the holidays",
+        "desc": "The real timeline of a design-build remodel in Northern Virginia, DC and Richmond, from signing to the last coat of paint: design, selections, permits, materials, construction, and the start dates that still land before Thanksgiving and Christmas.",
+        "card_desc": "Design, permits, materials, construction: what each step takes, and the start dates that still land before Thanksgiving and Christmas.",
+        "hero": "/assets/img/kitchen-15th-street-ne.jpg",
+        "hero_alt": "Open kitchen with a marble island and dining area renovated by DFC Home Improvement",
+        "date": "2026-09-09",
+        "date_disp": "September 2026",
+        "body": """
+    <p>Every September the same question comes in: "Can we have it done by Thanksgiving?" The honest answer depends on what has to happen between the day you sign and the first day of demolition, and most of that is not construction. Here is the sequence the way we actually plan it, with the timing we work from, so you can see which projects still make it this year and which ones are honestly a January story.</p>
+
+    <h2>Step 1 &middot; Design and 3D renders</h2>
+    <p>Once you sign and make your deposit, we schedule a design intake over Zoom with our design director. In that meeting we confirm the scope, decide whether another home visit is needed to verify anything, and start on the selections. The first 3D renders are usually ready within 5 to 7 business days, and you see your finished kitchen or bathroom before anyone touches a wall.</p>
+    <p>This is also where the most time is won or lost. A homeowner who picks tile, cabinets and fixtures in the first week keeps the whole schedule moving. A homeowner who takes a month to decide has moved the finish date by a month, and there is no way to get it back later.</p>
+
+    <h2>Step 2 &middot; Permits</h2>
+    <p>Not every project needs one. A bathroom that keeps its layout or a cosmetic kitchen update often needs only trade permits, or none at all. Anything that moves plumbing, opens a wall or touches structure does, and we pull it. Counties in our area typically take 1 to 3 weeks depending on their load, and in the fall that load is real: everyone is trying to finish before the holidays.</p>
+
+    <h2>Step 3 &middot; Materials</h2>
+    <p>Materials get ordered the moment selections are final, which is why Step 1 matters so much. Cabinets are the long pole in most kitchens: stock lines ship in a week or two, semi-custom typically runs 4 to 6 weeks, and full custom can take 8 to 12. Tile, vanities, fixtures and glass are shorter, but special orders and backorders still happen. Everything is delivered and staged within about 7 business days before the crew starts, so the first day on site is a working day, not a waiting day.</p>
+
+    <h2>Step 4 &middot; Construction</h2>
+    <p>Once the permit is approved and materials are in, the crew is onsite within about 10 business days. From there, the typical construction windows we plan around:</p>
+    <ul>
+      <li><strong>Bathroom, same layout:</strong> 2 to 3 weeks.</li>
+      <li><strong>Bathroom with walls or plumbing moving:</strong> 4 to 6 weeks.</li>
+      <li><strong>Kitchen, same layout:</strong> 4 to 6 weeks.</li>
+      <li><strong>Kitchen with walls coming down:</strong> 8 to 12 weeks, plus engineering if a wall is load bearing.</li>
+      <li><strong>Basement finishing:</strong> 6 to 10 weeks.</li>
+      <li><strong>Additions and whole-home renovations:</strong> several months, planned individually.</li>
+    </ul>
+
+    <h2>What actually delays a project</h2>
+    <p><strong>Late selections.</strong> By far the most common one. Every week a decision waits is a week added to the end.</p>
+    <p><strong>Changes mid build.</strong> Adding a niche, moving an outlet or swapping the tile after demo is fine, but each one is a written change order, and each one costs days. Decide in design, not on site.</p>
+    <p><strong>Concealed conditions.</strong> In homes built before 1990 we regularly open a wall and find outdated wiring, old pipe or a subfloor that rotted under a slow leak nobody knew about. We document it, price the fix as a written change order and get your approval before proceeding. It rarely adds more than a few days, but it is the reason we never promise a date to the day.</p>
+    <p><strong>The holidays themselves.</strong> Suppliers and inspectors slow down the last two weeks of December. A project that is supposed to finish on December 23 is a project that finishes in January.</p>
+
+    <h2>Working backwards from the holidays</h2>
+    <p>Assuming selections are made in the first week of design and the permit comes back on the normal schedule, this is roughly how the calendar looks from mid September:</p>
+    <ul>
+      <li><strong>Bathroom, same layout:</strong> signed by early October, done before Thanksgiving. Signed by early November, done before Christmas.</li>
+      <li><strong>Bathroom with layout changes, or a kitchen that keeps its layout:</strong> signed by mid September, done before Thanksgiving. Signed by early October, done before Christmas.</li>
+      <li><strong>Kitchen with walls moving, or a basement:</strong> signed now, Christmas is realistic. Thanksgiving is not, and we would rather tell you that today than in November.</li>
+      <li><strong>Additions and whole-home projects:</strong> start design now and the build lands in the new year, which is the best time to build them anyway.</li>
+    </ul>
+
+    <h2>If you want it done this year</h2>
+    <p>The clock starts when we see the space, not when you decide. A few photos and the address are enough for us to put a quote together, and if the project fits the calendar we will tell you straight. If it does not, we will tell you that too, and plan it for the first weeks of the new year instead of rushing it through the holidays.</p>
+
+    <p class="article-sources">Timelines are typical ranges from our own projects and depend on selections, permit review, material availability and existing conditions. Your project schedule is confirmed in writing before work begins.</p>
+"""
+    },
+    {
         "slug": "bathroom-remodel-cost-northern-virginia",
         "tag": "Cost Guide",
         "title": "How Much Does a Bathroom Remodel Cost in Northern Virginia? (2026)",
