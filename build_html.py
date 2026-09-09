@@ -88,8 +88,8 @@ def head(title, desc, page):
     jsonld = {
         "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness",
         "name": "DFC Home Improvement",
-        "image": "https://dfchomeimprovement.com/assets/img/kitchen-thomas-jefferson.jpg",
-        "url": "https://dfchomeimprovement.com/", "telephone": PHONE_TEL, "priceRange": "$$$",
+        "image": "https://www.dfchomeimprovement.com/assets/img/kitchen-thomas-jefferson.jpg",
+        "url": "https://www.dfchomeimprovement.com/", "telephone": PHONE_TEL, "priceRange": "$$$",
         "slogan": "Your home should feel like a vacation.",
         "description": ("Class A licensed design-build general contractor for custom homes, new "
                         "construction, additions and whole-home renovations across Northern Virginia, "
@@ -260,6 +260,10 @@ def footer():
 </html>"""
 
 def page(fname, head_html, body_html, current):
+    # One canonical URL per page: the root for the homepage, the .html path
+    # everywhere else, always on www (apex 301s to www). Reinstate Labs, 2026-09-09.
+    canonical = "https://www.dfchomeimprovement.com/" + ("" if fname == "index.html" else fname)
+    head_html = head_html.replace("</head>", f'<link rel="canonical" href="{canonical}">\n</head>', 1)
     doc = head_html + header(current) + body_html + footer()
     with open(os.path.join(ROOT, fname), "w") as f:
         f.write(doc)

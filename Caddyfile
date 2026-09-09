@@ -22,6 +22,9 @@
 		# Serve trailing-slash URLs (/page/ → page.html). Ad platforms and inbound
 		# links often append a slash, and our canonical tags use one; without this
 		# they 404. Internal rewrite → 200, preserves the query string.
+		# One homepage URL: /index.html 301s to / (Reinstate Labs, 2026-09-09).
+		@indexhtml path /index.html
+		redir @indexhtml / permanent
 		@trailingslash path_regexp dir ^/(.+?)/+$
 		rewrite @trailingslash /{re.dir.1}
 		# clean URLs: /privacy → privacy.html, /terms → terms.html
