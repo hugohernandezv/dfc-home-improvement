@@ -209,6 +209,54 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "fall-home-checklist-northern-virginia",
+        "tag": "Maintenance",
+        "title": "Your Fall Home Checklist: 8 Things to Do Before the First Frost in Northern Virginia",
+        "card_title": "Your fall home checklist: 8 things to do before the first frost",
+        "desc": "Eight checks for your heating system, outdoor faucets, gutters, drafts, fireplace, dryer vent, detectors and sump pump before the cold settles in, from a Class A licensed Northern Virginia contractor. Most take twenty minutes.",
+        "card_desc": "Heating, outdoor water, gutters after the leaves, drafts, fireplace, dryer vent, detectors and the sump pump, before the cold settles in.",
+        "hero": "/assets/img/outdoor-polecat-patio.jpg",
+        "hero_alt": "White two-story home with black shutters and a full-width front porch built by DFC Home Improvement",
+        "date": "2026-09-15",
+        "date_disp": "September 2026",
+        "body": """
+    <p>The first hard freeze in Northern Virginia usually arrives somewhere between late October and the middle of November. Most of the winter emergencies we get called for started as something small in September: a hose left on an outdoor faucet, a furnace that never got a new filter, a downspout that dumped a month of leaves at the foundation. Here are the eight checks we would do on our own homes this month, in the order we would do them. Most take twenty minutes. None takes more than an afternoon.</p>
+
+    <h2>1. Run the heat before you need it</h2>
+    <p>Pick a mild day, switch the thermostat to heat and let it run for ten or fifteen minutes. A burning-dust smell for the first few minutes is normal. A smell that does not clear, a system that keeps cycling on and off, or air that never gets warm is not, and September is the month to find that out. Swap the filter while you are at it, and if you have a heat pump, clear leaves and mulch away from the outdoor unit. Systems older than about fifteen years deserve a professional tune-up before the season, and our own HVAC team does them.</p>
+
+    <h2>2. Disconnect the hoses and shut off outdoor water</h2>
+    <p>This is the one that floods finished basements. Even a frost-free faucet will split if a hose is left attached, because the water trapped in the line has nowhere to go when it freezes. Disconnect every hose, drain it and store it. If your outdoor faucets have an interior shutoff valve, close it and open the outside spigot to drain the pipe. Irrigation systems need to be blown out with compressed air before the first freeze, not after.</p>
+
+    <h2>3. Do the gutters again, after the leaves</h2>
+    <p>If you cleaned your gutters at the end of summer, good. Plan on a second pass in November once the oaks and maples finish dropping. Clogged gutters send water straight down the foundation wall, and in a cold snap that water becomes ice along the roof edge. Check that every downspout still discharges at least four feet from the house and that the extensions did not get kicked loose over the summer.</p>
+
+    <h2>4. Find the drafts while it is still comfortable to fix them</h2>
+    <p>On a windy day, hold a lit incense stick or a strip of tissue near window frames, door edges, the attic hatch and the spots where pipes and cables come through exterior walls. Wherever it moves, air is moving. Weatherstripping on doors and a bead of exterior caulk around window trim are the cheapest heating improvements a house can get, and an uninsulated attic hatch leaks more heat than most people would guess. If a window fogs between the panes, the seal has failed and no caulk will fix it. That one is a replacement conversation.</p>
+
+    <h2>5. Have the fireplace looked at before the first fire</h2>
+    <p>A wood-burning fireplace that saw regular use last winter should be inspected and swept before this one. Creosote builds up quietly, and the first cold night is not the moment to discover a blocked flue or a damper stuck open. Gas fireplaces are simpler: confirm the pilot lights, the glass is clean and the vent outside is clear. If a fireplace has not been used in years, have it checked before you light it.</p>
+
+    <h2>6. Clean the dryer vent</h2>
+    <p>Lint in a dryer duct plus the heavier laundry loads of winter is a fire risk that takes half an hour to remove. Pull the dryer out, disconnect the duct and clear it end to end, then check that the flap on the exterior vent opens freely and closes fully. A flap stuck open is also a draft, and an open door for mice looking for somewhere warm.</p>
+
+    <h2>7. Test the smoke and carbon monoxide detectors</h2>
+    <p>Heating season is carbon monoxide season. Press the test button on every unit, replace the batteries, and check the manufacture date printed on the back: smoke detectors are meant to be replaced after ten years, and most CO detectors after five to seven depending on the model. If you do not have a CO detector on each sleeping floor and near the furnace, this is the month to add them.</p>
+
+    <h2>8. Test the sump pump and check the grading</h2>
+    <p>Pour a bucket of water into the sump pit and confirm the pump kicks on and the water leaves. Then walk the discharge line outside and make sure it drains away from the house and will not freeze into a solid plug in January. While you are out there, look at the soil against the foundation. It should slope away from the house. Where it has settled into a low spot, top it up now, before the fall rains find it.</p>
+
+    <h2>The project to plan now</h2>
+    <p>Fall is when the calendar for interior work gets set. Bathrooms, basements and kitchens build well through the winter because the work happens indoors, and the homeowners who start design in September and October are the ones enjoying the finished space by early spring. If there is a project you keep putting off, this is a good month to get it on paper. We laid out the whole sequence from signing to the last coat of paint in <a href="/blog/remodel-timeline-before-the-holidays">our remodel timeline post</a>.</p>
+
+    <div class="callout">
+      <p><strong>Found something that is more than a Saturday fix?</strong> Send us a photo and we will tell you straight whether it is a quick repair or a bigger job. Heating, handyman repairs and full remodels, one licensed team. Call <a href="tel:+17035968375">(703) 596-8375</a> or <a href="/contact.html">get in touch</a>.</p>
+    </div>
+
+    <p class="article-sources">General guidance for typical homes in Northern Virginia, DC and Richmond; conditions vary by house. When in doubt, have a licensed professional take a look.</p>
+""",
+    },
+    {
         "slug": "remodel-timeline-before-the-holidays",
         "tag": "Planning",
         "title": "How Long Does a Remodel Really Take? When to Start If You Want It Done Before the Holidays",
