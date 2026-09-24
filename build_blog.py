@@ -215,8 +215,8 @@ ARTICLES = [
         "card_title": "Water damage: the first 48 hours, and how the rebuild quote works",
         "desc": "A burst pipe, a failed shower pan or a leak under the sink: the steps that protect your home and your insurance claim in the first two days, how mitigation and rebuild fit together, and how a restoration quote lines up with the adjuster's estimate. From a Class A licensed contractor serving Northern Virginia, DC and Richmond.",
         "card_desc": "Stop the water, document everything, dry it right, and understand how mitigation, the adjuster's estimate and the rebuild quote fit together.",
-        "hero": "/assets/img/bath-elliott-street.jpg",
-        "hero_alt": "Renovated bathroom with marble tile, white vanity and matte black fixtures by DFC Home Improvement",
+        "hero": "/assets/img/bath-monteiro-ave.jpg",
+        "hero_alt": "Primary bathroom with marble tile, a glass shower with gold trim and a freestanding tub renovated by DFC Home Improvement",
         "date": "2026-09-24",
         "date_disp": "September 2026",
         "body": """
