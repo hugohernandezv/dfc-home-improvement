@@ -209,6 +209,50 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "water-damage-first-48-hours",
+        "tag": "Repairs",
+        "title": "Water Where It Should Not Be: What to Do in the First 48 Hours, and How the Rebuild Quote Works",
+        "card_title": "Water damage: the first 48 hours, and how the rebuild quote works",
+        "desc": "A burst pipe, a failed shower pan or a leak under the sink: the steps that protect your home and your insurance claim in the first two days, how mitigation and rebuild fit together, and how a restoration quote lines up with the adjuster's estimate. From a Class A licensed contractor serving Northern Virginia, DC and Richmond.",
+        "card_desc": "Stop the water, document everything, dry it right, and understand how mitigation, the adjuster's estimate and the rebuild quote fit together.",
+        "hero": "/assets/img/bath-elliott-street.jpg",
+        "hero_alt": "Renovated bathroom with marble tile, white vanity and matte black fixtures by DFC Home Improvement",
+        "date": "2026-09-24",
+        "date_disp": "September 2026",
+        "body": """
+    <p>Most of the water damage calls we get do not start with a flood. They start with a shower floor that has been leaking into the ceiling below for months, a dishwasher line that let go overnight, or a toilet supply that finally failed while everyone was at work. What you do in the first two days decides how big the repair gets and how smoothly the insurance side goes. Here is the order we would follow in our own homes, and then a plain explanation of how the rebuild quote actually works, because that part confuses almost everyone.</p>
+
+    <h2>1. Stop the water at the source</h2>
+    <p>Every fixture has a shutoff. Sinks and toilets have valves right behind them, water heaters have one on the cold line coming in, and the whole house has a main valve, usually where the water line enters the basement or near the meter. If you cannot find the source fast, close the main. If the water is near outlets, a panel or the ceiling light below, switch off the breakers for that area before you touch anything.</p>
+
+    <h2>2. Take photos before you clean anything</h2>
+    <p>Photograph and video the standing water, the wet walls and floors, the damaged belongings and the source itself before you move or dry anything. Get a wide shot of each room and close-ups of the worst spots. This is the evidence your insurance company will ask for, and once things are dried out and torn out, it is gone. Keep the failed part if you can, the split hose, the cracked fitting, the loose tile.</p>
+
+    <h2>3. Call your insurer and know your deductible</h2>
+    <p>Sudden and accidental water damage is usually covered by a standard homeowner policy. Slow leaks that went unnoticed for a long time, and damage from lack of maintenance, often are not, so the first question the adjuster asks is when it started and how you found it. Have your policy number ready, describe what happened without guessing at causes you do not know, and ask what your deductible is. That number matters for the decision below.</p>
+
+    <h2>4. Get it dry within 48 hours</h2>
+    <p>Mold starts growing in wet drywall and framing in about two days. A mitigation company pulls up wet flooring, cuts out saturated drywall, sets dehumidifiers and air movers, and takes moisture readings until the structure is dry. For a small spill you can do the same with towels, fans and a dehumidifier, but anything that soaked a ceiling, ran under a floor or sat overnight deserves professional drying. The insurer often has mitigation companies they work with, and you are also free to call your own.</p>
+
+    <h2>5. Do not rebuild until two things are true</h2>
+    <p>The source has to be fixed and the area has to be dry. Mitigation companies leave the room open on purpose: bare subfloor, studs showing, a clean edge where the drywall was cut. That is not neglect, it is the space waiting for the rebuild. If a contractor offers to close it up before the moisture readings are back to normal, that is the wrong contractor.</p>
+
+    <h2>How the rebuild quote works</h2>
+    <p>This is where homeowners get lost, so here is the whole picture. Mitigation and rebuild are two separate jobs, often two separate companies, and two separate invoices. Mitigation is the dry-out. The rebuild is putting the room back: subfloor, drywall, insulation, trim, paint, tile or flooring, cabinets, fixtures.</p>
+    <p>Your adjuster will write an estimate for the rebuild based on what they saw or what the mitigation company documented. That estimate is a starting point, not a final word. The best thing you can do is share it with the contractor you want to use, so their quote can be lined up with it item by item. Where the adjuster missed something, like the baseboard that also has to come off or the closet that shares the wet wall, a contractor who has done this before writes it up and the adjuster reviews a supplement. That back and forth is normal.</p>
+    <p>Two terms come up every time. Like kind and quality means the policy pays to put back what you had, at the same grade. Matching is the harder one: if your engineered hardwood or tile is discontinued, a patch may not match and the adjuster decides how far the replacement extends. If you want to use the moment to upgrade, say from a laminate to tile or to a different layout, the difference is paid out of pocket, and a good quote shows that difference clearly instead of blending it in.</p>
+
+    <h2>What we need to quote a rebuild</h2>
+    <p>Photos of every affected area as it sits today, including the ceiling or room below if the water traveled, the mitigation company's report if you have one, the adjuster's estimate if it has come in, and the address. With those we can usually put together a preliminary quote without a visit and tell you which items line up with the estimate and which ones do not. If you are still waiting on the adjuster, we can start with our own and adjust once theirs arrives.</p>
+
+    <div class="callout">
+      <p><strong>Dealing with water damage right now?</strong> Send us the photos and the adjuster's estimate if you have it, and we will tell you straight what the rebuild involves and how it lines up. Drywall, flooring, tile, trim, paint, plumbing and full bathroom or kitchen rebuilds, one licensed team. Call <a href="tel:+17035968375">(703) 596-8375</a> or <a href="/contact.html">get in touch</a>.</p>
+    </div>
+
+    <p class="article-sources">General guidance for typical homes in Northern Virginia, DC and Richmond; coverage depends on your policy and the cause of the loss. Confirm details with your insurance company.</p>
+""",
+    },
+    {
         "slug": "fall-home-checklist-northern-virginia",
         "tag": "Maintenance",
         "title": "Your Fall Home Checklist: 8 Things to Do Before the First Frost in Northern Virginia",
