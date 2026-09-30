@@ -209,6 +209,55 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "see-it-before-you-build-it-3d-design",
+        "tag": "Design",
+        "title": "See It Before You Build It: How 3D Design Keeps a Remodel on Track",
+        "card_title": "See it before you build it: how 3D design keeps a remodel on track",
+        "desc": "Why the design step matters more than any other part of a kitchen, bathroom or whole-home remodel: what a photoreal 3D design actually shows, the decisions it settles before demolition, what it cannot replace, and how to get ready for a design meeting. From a Class A licensed design-build contractor serving Northern Virginia, DC and Richmond.",
+        "card_desc": "What a 3D design shows, the decisions it settles before demolition, what it cannot replace, and how to prepare for a design meeting.",
+        "hero": "/assets/img/3d-bradley-1.jpg",
+        "hero_alt": "Photoreal 3D rendering of a kitchen with a black island, white cabinets and brass pendants designed by DFC Home Improvement",
+        "date": "2026-09-30",
+        "date_disp": "September 2026",
+        "body": """
+    <p>Ask anyone who has lived through a remodel what they would do differently and the answer is almost never about the crew. It is about a decision they made too late: the island that ended up too close to the range, the tile that looked different on a wall than on a sample board, the pendant lights nobody measured for until the electrician was standing in the kitchen. Every one of those is a design decision that got made on site instead of on screen. The 3D design step exists to move those decisions forward, to a point where changing your mind costs a conversation instead of a change order.</p>
+
+    <h2>What a 3D design actually is</h2>
+    <p>It is your room, not a stock picture. We measure the space, then model it with the proposed layout, cabinets, counters, tile, flooring, plumbing fixtures, lighting and paint colors, and render it photoreal so you can look at it the way you would look at a photo of a finished project. You see how the light falls, how much walkway is left between the island and the fridge, whether the shower niche lines up with the tile grid, and how the two colors you liked separately actually sit next to each other.</p>
+    <p>You get several views of the same room, and we revise them until the design is right. That back and forth is the whole point. Moving a wall on screen takes an afternoon. Moving it after framing takes a crew, a dumpster and a permit revision.</p>
+
+    <h2>The decisions it settles before demolition</h2>
+    <ul>
+      <li><strong>Layout.</strong> Where the sink, range, fridge and island go, and whether the room still works when two people are in it. Clearances that look fine on a floor plan often do not in three dimensions.</li>
+      <li><strong>Selections.</strong> Cabinet style and color, counter material, tile size and pattern, flooring, hardware finish, fixture finish. Seeing them together is how you avoid a kitchen that is three good ideas that do not agree.</li>
+      <li><strong>Lighting.</strong> Recessed cans, pendants, sconces and under-cabinet light are placed in the model, so the electrical plan comes from the design instead of from a guess on rough-in day.</li>
+      <li><strong>Everyone in the house.</strong> A rendering is something a spouse, a parent or a teenager can react to. A floor plan usually is not. Getting the household to agree before ordering saves the most expensive kind of change, the one made after materials arrive.</li>
+      <li><strong>The permit set.</strong> Once the design is approved, the drawings for permits and the material order come from it. That is what keeps the schedule honest: the crew starts when the design is locked and the materials are on site, not before.</li>
+    </ul>
+
+    <h2>What it cannot replace</h2>
+    <p>A rendering shows the room as designed. It does not show what is inside the walls. Old plumbing routed the wrong way, a beam where the open wall was supposed to be, a floor that is out of level by more than the tile can hide: those are found on site and handled as concealed conditions, in writing, before the work continues. A good design reduces surprises. It does not eliminate them, and anyone who tells you otherwise has not opened enough walls.</p>
+    <p>It also does not replace samples. Screens vary. Once the design is close, we still put the actual tile, counter and cabinet door sample in your kitchen, in your light, before anything is ordered.</p>
+
+    <h2>Where it sits in the timeline</h2>
+    <p>The design step runs after the project is approved and before permits. In practice that means intake and measurements first, then the renderings and revisions, then selections, then the permit drawings, and only then a crew start date. If you are aiming for a specific window, the design step is the part to start early, because it is the one step that depends on your decisions rather than ours. We wrote about how the whole sequence lines up in our <a href="/blog/remodel-timeline-before-the-holidays.html">remodel timeline guide</a>.</p>
+
+    <h2>How to get ready for a design meeting</h2>
+    <ol>
+      <li><strong>Collect a handful of inspiration photos</strong>, and for each one, know what you like about it. Usually it is one thing: the island color, the way the shower is laid out, the lighting. That is far more useful than a folder of fifty kitchens.</li>
+      <li><strong>Write down the must-haves and the nice-to-haves</strong> as two separate lists. A double oven, a bench in the shower, a spot for the dog bowls. The design has to serve the first list; the second list is where budget conversations happen.</li>
+      <li><strong>Think about who uses the room and how.</strong> Who cooks, how many people at the counter, whether the bathroom has to work for aging parents. Those answers change the layout more than any finish does.</li>
+      <li><strong>Bring your patience for measurements.</strong> Our first visit is mostly a tape measure and a camera. It is not exciting, but every rendering and every drawing depends on it.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Planning a kitchen, bathroom or whole-home remodel?</strong> Start with the design conversation and see the room before anything is torn out. One team from first concept to final walkthrough: design, permits, materials and construction. Call <a href="tel:+17035968375">(703) 596-8375</a>, <a href="/contact.html">request an evaluation</a>, or see how the process works on <a href="/our-process.html">our process page</a>.</p>
+    </div>
+
+    <p class="article-sources">Design scope and the number of rendering revisions are confirmed in writing for each project. Concealed conditions found once work begins are documented and approved in writing before any additional work proceeds.</p>
+""",
+    },
+    {
         "slug": "water-damage-first-48-hours",
         "tag": "Repairs",
         "title": "Water Where It Should Not Be: What to Do in the First 48 Hours, and How the Rebuild Quote Works",
