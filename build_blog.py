@@ -16,7 +16,7 @@ EMAIL = "admin@dfchomeimprovement.com"
 
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261009f"
+ASSET_VER = "20261009g"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -128,7 +128,7 @@ HEADER = f"""<header class="site-header" id="siteHeader">
     <a class="btn header-cta" href="/contact.html">Free Consultation</a>
     <a class="header-quick" href="tel:{PHONE_TEL}" aria-label="Call {PHONE_DISP}">Call</a>
     <a class="header-quick" href="sms:{PHONE_TEL}" aria-label="Text {PHONE_DISP}">Text</a>
-    <a class="header-portal" href="/employee/" rel="nofollow" title="Employee portal" aria-label="Open employee portal">Employee</a>
+    <a class="header-portal" href="/employee/" rel="nofollow" title="Employee portal" aria-label="Open employee portal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10" r="3.2"/><path d="M6.3 18.5c1.3-2.2 3.3-3.4 5.7-3.4s4.4 1.2 5.7 3.4"/></svg></a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>

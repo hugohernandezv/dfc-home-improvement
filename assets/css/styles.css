@@ -228,8 +228,12 @@ strong { color: var(--ink); font-weight: 600; }
 .site-header .brand .mark-black { display: block; }
 .site-header .header-cta { border-color: var(--ink); color: var(--ink); }
 .site-header .header-cta:hover { background: var(--ink); color: #fff; }
-.site-header .header-portal { color: #fff; background: var(--sage-deep); border-color: var(--sage-deep); opacity: 1; }
-.site-header .header-portal:hover { background: var(--ink); border-color: var(--ink); }
+.site-header .header-portal {
+  width: 36px; height: 36px; padding: 0; border: 0; border-radius: 50%;
+  background: transparent; color: var(--ink); opacity: .55;
+}
+.site-header .header-portal svg { width: 24px; height: 24px; }
+.site-header .header-portal:hover { opacity: 1; background: rgba(13,8,5,.07); }
 .site-header .header-quick { color: var(--ink); border-color: var(--ink); }
 .site-header .header-quick[href^="tel:"] { background: var(--sage-deep); border-color: var(--sage-deep); color: #fff; }
 /* Mobile menu open: header turns clear again over the dark green menu panel */
@@ -272,16 +276,17 @@ body.menu-open { overflow: hidden; }
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.10); }
 .hero-inner { position: relative; z-index: 2; width: min(940px, 100%); }
 .hero-logo { width: clamp(130px, 12vw, 180px); margin: 0 auto clamp(18px, 2vw, 26px); filter: drop-shadow(0 6px 28px rgba(0,0,0,.35)); }
 .hero-tagline {
   font-family: var(--head); font-weight: 500; line-height: 1.05; letter-spacing: -0.012em;
-  margin: 0; color: #fff; font-size: clamp(2.7rem, 6vw, 5rem); text-shadow: 0 2px 30px rgba(0,0,0,.32);
+  margin: 0; color: #fff; font-size: clamp(2.7rem, 6vw, 5rem); text-shadow: 0 2px 6px rgba(0,0,0,.28), 0 4px 30px rgba(0,0,0,.32);
 }
 .hero h1.hero-service {
   margin: 1.3rem auto 0; color: rgba(255,255,255,.95);
   font-size: clamp(1.25rem, 2.3vw, 1.7rem); font-weight: 500; letter-spacing: 0.01em;
-  text-shadow: 0 2px 24px rgba(0,0,0,.3);
+  text-shadow: 0 1px 4px rgba(0,0,0,.35), 0 2px 24px rgba(0,0,0,.3);
 }
 .hero-kicker {
   margin: 1.5rem auto 0; font-family: var(--sans); font-size: 0.8rem; font-weight: 600;
