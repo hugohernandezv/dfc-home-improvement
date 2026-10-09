@@ -1,7 +1,6 @@
 <?php
-// GET /api/google -> {"rating":4.8,"count":63,"url":"...","reviews":[...]}
-// DFC's Google rating, review count and its 5-star reviews (the Places API
-// returns at most 5 reviews per place). Google is asked at most once every
+// GET /api/google -> {"rating":4.8,"count":63,"url":"..."}
+// DFC's Google rating and review count. Google is asked at most once every
 // CACHE_TTL seconds; the cached copy is served in between, and the last good
 // copy if Google is unreachable. Key: Railway variable GOOGLE_PLACES_KEY.
 
@@ -19,18 +18,6 @@ function cached() {
     return is_array($data) ? $data : null;
 }
 
-function review_out(array $r) {
-    $text = $r['originalText']['text'] ?? ($r['text']['text'] ?? '');
-    return [
-        'author'   => $r['authorAttribution']['displayName'] ?? 'Google user',
-        'photo'    => $r['authorAttribution']['photoUri'] ?? '',
-        'when'     => $r['relativePublishTimeDescription'] ?? '',
-        'time'     => $r['publishTime'] ?? '',
-        'rating'   => (int) ($r['rating'] ?? 0),
-        'text'     => trim(preg_replace('/[ \t]+/', ' ', $text)),
-        'link'     => $r['googleMapsUri'] ?? MAPS_URL,
-    ];
-}
 
 $data = cached();
 $fresh = $data && (time() - ($data['fetched_at'] ?? 0) < CACHE_TTL);
@@ -44,22 +31,17 @@ if (!$fresh) {
             CURLOPT_TIMEOUT        => 8,
             CURLOPT_HTTPHEADER     => [
                 'X-Goog-Api-Key: ' . $key,
-                'X-Goog-FieldMask: rating,userRatingCount,reviews',
+                'X-Goog-FieldMask: rating,userRatingCount',
             ],
         ]);
         $body = curl_exec($ch);
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $res  = ($code === 200 && $body) ? json_decode($body, true) : null;
         if (isset($res['rating'], $res['userRatingCount'])) {
-            $reviews = array_map('review_out', $res['reviews'] ?? []);
-            // Only 5-star reviews with real text; newest first.
-            $reviews = array_values(array_filter($reviews, fn($r) => $r['rating'] === 5 && strlen($r['text']) >= 40));
-            usort($reviews, fn($a, $b) => strcmp($b['time'], $a['time']));
             $data = [
                 'rating'     => round((float) $res['rating'], 1),
                 'count'      => (int) $res['userRatingCount'],
                 'url'        => MAPS_URL,
-                'reviews'    => $reviews,
                 'fetched_at' => time(),
             ];
             @file_put_contents(CACHE, json_encode($data), LOCK_EX);
