@@ -100,7 +100,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261009l"
+ASSET_VER = "20261009m"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -406,7 +406,7 @@ def build_index():
         <span class="hr-stars" aria-hidden="true">★★★★★</span>
         <span class="hr-score"><strong data-gr-rating>{GOOGLE_RATING}</strong> · <span data-gr-count>{GOOGLE_REVIEWS}</span> Google reviews</span>
       </a>
-      <p class="hero-tagline">Your home should feel like a vacation.</p>
+      <p class="hero-tagline"><span class="hw" style="--i:0">Your</span> <span class="hw" style="--i:1">home</span> <span class="hw" style="--i:2">should</span> <span class="hw" style="--i:3">feel</span> <span class="hw" style="--i:4">like</span> <span class="hw" style="--i:5">a</span> <span class="hw" style="--i:6">vacation.</span></p>
       <h1 class="hero-service">Kitchen &amp; Bathroom Remodeling in Northern Virginia</h1>
       <ul class="hero-chips" aria-label="Credentials and service area">
         <li>Class A Design-Build</li><li>BBB A+ Accredited</li><li>Northern Virginia</li><li>Richmond</li><li>DC</li>
