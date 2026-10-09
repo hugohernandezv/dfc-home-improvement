@@ -210,6 +210,8 @@ strong { color: var(--ink); font-weight: 600; }
   transition: color .3s, background .3s, border-color .3s;
 }
 .header-quick[href^="tel:"] { background: #fff; border-color: #fff; color: var(--ink); }
+.header-quick { gap: 7px; line-height: 1; }
+.header-quick svg { width: 15px; height: 15px; flex: none; }
 .site-header.scrolled .header-quick { color: var(--ink); border-color: var(--ink); }
 .site-header.scrolled .header-quick[href^="tel:"] { background: var(--sage-deep); border-color: var(--sage-deep); color: #fff; }
 
@@ -244,7 +246,7 @@ body.menu-open .site-header .nav-toggle span { background: #fff; }
 body.menu-open .site-header .header-quick { color: #fff; border-color: rgba(255,255,255,.6); }
 body.menu-open .site-header .header-quick[href^="tel:"] { background: #fff; border-color: #fff; color: var(--ink); }
 
-.nav-toggle { display: none; flex-direction: column; gap: 6px; width: 46px; height: 46px; border: 0; background: transparent; padding: 0; }
+.nav-toggle { display: none; flex-direction: column; justify-content: center; gap: 6px; width: 46px; height: 46px; border: 0; background: transparent; padding: 0; }
 .nav-toggle span { display: block; width: 28px; height: 2px; background: #fff; margin-left: auto; transition: transform .4s var(--ease), opacity .3s, background .3s; }
 .site-header .nav-toggle span { background: var(--ink); }
 
