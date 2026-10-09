@@ -162,7 +162,9 @@ def header(current):
   </nav>
   <div class="header-right">
     <a class="header-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
-    <a class="btn header-cta" href="{JOBBER_FORM}" target="_blank" rel="noopener">Request Evaluation</a>
+    <a class="btn header-cta" href="{JOBBER_FORM}" target="_blank" rel="noopener">Free Consultation</a>
+    <a class="header-quick" href="tel:{PHONE_TEL}" aria-label="Call {PHONE_DISP}">Call</a>
+    <a class="header-quick" href="sms:{PHONE_TEL}" aria-label="Text {PHONE_DISP}">Text</a>
     <a class="header-portal" href="{EMPLOYEE_PORTAL}" rel="nofollow" title="Employee portal" aria-label="Open employee portal">Employee</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -201,6 +203,7 @@ def cta():
       <div class="cta-actions">
         <a class="btn btn--light" href="contact.html">Request a free consultation</a>
         <a class="link-arrow light" href="tel:{PHONE_TEL}">Call {PHONE_DISP} {ARROW}</a>
+        <a class="link-arrow light" href="sms:{PHONE_TEL}">Text us {ARROW}</a>
       </div>
     </div>
   </section>"""
@@ -255,6 +258,7 @@ def footer():
     </div>
   </div>
 </footer>
+<script src="assets/js/track.js" defer></script>
 <script src="assets/js/script.js" defer></script>
 </body>
 </html>"""
@@ -360,15 +364,10 @@ def build_index():
         <a class="btn btn--light" href="contact.html">Request a free consultation</a>
         <a class="btn btn--light" href="portfolio.html" style="background:rgba(255,255,255,.08)">View our work</a>
       </div>
-    </div>
-  </section>
-
-  <!-- RATING STRIP -->
-  <section class="rating-strip">
-    <div class="wrap rs-inner">
-      <div class="rs-stars" aria-hidden="true">★★★★★</div>
-      <div class="rs-score"><strong>4.8</strong> / 5 on Google Reviews</div>
-      <div class="rs-note">Rated by homeowners across Northern Virginia, DC &amp; Richmond</div>
+      <a class="hero-rating" href="#reviews">
+        <span class="hr-stars" aria-hidden="true">★★★★★</span>
+        <span class="hr-score"><strong>4.8</strong> / 5 on Google Reviews</span>
+      </a>
     </div>
   </section>
 
@@ -452,7 +451,7 @@ def build_index():
   </section>
 
   <!-- CLIENT NOTES -->
-  <section class="section wrap">
+  <section class="section wrap" id="reviews">
     <div class="head-row">
       <div class="reveal"><p class="eyebrow">Client notes</p><h2>Trusted for communication, craft and complicated work.</h2></div>
       <p class="h-right reveal d1">A few words from homeowners across Northern Virginia, DC and Richmond.</p>
@@ -822,11 +821,11 @@ def build_contact():
     areas = " · ".join(AREAS)
     body = f"""
 <main id="top">
-{page_head("Contact", "Let's talk about your project.", "Tell us a little about what you have in mind. We'll follow up to schedule your free evaluation — no obligation, honest pricing, expert guidance.")}
+{page_head("Contact", "Let's talk about your project.", "Tell us a little about what you have in mind. We'll call you to talk it through, then set up a visit if it's a fit. No obligation, honest pricing, expert guidance.")}
   <section class="section--tight wrap">
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <div class="ci-block"><div class="ci-lab">Call or text</div><div class="ci-val"><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></div></div>
+        <div class="ci-block"><div class="ci-lab">Call or text</div><div class="ci-val"><a href="tel:{PHONE_TEL}">{PHONE_DISP}</a></div><div class="ci-quick"><a href="tel:{PHONE_TEL}">Call</a><a href="sms:{PHONE_TEL}">Text</a></div></div>
         <div class="ci-block"><div class="ci-lab">Email</div><div class="ci-val"><a href="mailto:{EMAIL}">{EMAIL}</a></div></div>
         <div class="ci-block"><div class="ci-lab">Service area</div><div class="ci-val small">{areas}</div></div>
         <div class="ci-block"><div class="ci-lab">Credentials</div><div class="ci-val small">Class A Licensed General Contractor · Licensed &amp; Insured · Design-Build</div></div>
@@ -834,11 +833,11 @@ def build_contact():
       </div>
       <div class="form-card">
         <div class="fc-title">Request a free consultation</div>
-        <p class="fc-sub">Book your on-site assessment online — pick a date, add photos, and it goes straight into our scheduling system.</p>
+        <p class="fc-sub">Tell us about your project and add photos if you have them. We'll call you within 24 hours to talk it through.</p>
         <div class="jobber-embed">
           {JOBBER_EMBED}
         </div>
-        <p class="form-note">Prefer to talk? Call or text <a href="tel:{PHONE_TEL}">{PHONE_DISP}</a>.</p>
+        <p class="form-note">Prefer to talk? <a href="tel:{PHONE_TEL}">Call</a> or <a href="sms:{PHONE_TEL}">text</a> {PHONE_DISP}.</p>
       </div>
     </div>
   </section>

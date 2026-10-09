@@ -121,7 +121,9 @@ HEADER = f"""<header class="site-header" id="siteHeader">
   </nav>
   <div class="header-right">
     <a class="header-phone" href="tel:{PHONE_TEL}">{PHONE_DISP}</a>
-    <a class="btn header-cta" href="/contact.html">Request Evaluation</a>
+    <a class="btn header-cta" href="/contact.html">Free Consultation</a>
+    <a class="header-quick" href="tel:{PHONE_TEL}" aria-label="Call {PHONE_DISP}">Call</a>
+    <a class="header-quick" href="sms:{PHONE_TEL}" aria-label="Text {PHONE_DISP}">Text</a>
     <a class="header-portal" href="/employee/" rel="nofollow" title="Employee portal" aria-label="Open employee portal">Employee</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -159,6 +161,7 @@ CTA_BAND = f"""<section class="section cta-band">
     <div class="cta-actions">
       <a class="btn btn--light" href="/contact.html">Request a free consultation</a>
       <a class="link-arrow light" href="tel:{PHONE_TEL}">Call {PHONE_DISP} <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      <a class="link-arrow light" href="sms:{PHONE_TEL}">Text us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>"""
@@ -201,6 +204,7 @@ FOOTER = f"""<footer class="site-footer">
     </div>
   </div>
 </footer>
+<script src="/assets/js/track.js" defer></script>
 <script src="/assets/js/script.js" defer></script>
 </body>
 </html>"""
