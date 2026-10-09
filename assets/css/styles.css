@@ -32,6 +32,7 @@
 
   --maxw: 1280px;
   --gutter: clamp(22px, 5vw, 80px);
+  --rr-overlap: clamp(64px, 8vw, 104px);   /* how far the reviews slider rides up into the hero */
   --section: clamp(78px, 11vw, 168px);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -238,7 +239,7 @@ body.menu-open { overflow: hidden; }
    ============================================================ */
 .hero {
   position: relative; min-height: 86svh; display: grid; place-items: center;
-  text-align: center; color: #fff; overflow: hidden; padding: 120px var(--gutter) 90px;
+  text-align: center; color: #fff; overflow: hidden; padding: 120px var(--gutter) calc(var(--rr-overlap) + 40px);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
@@ -277,17 +278,65 @@ body.menu-open { overflow: hidden; }
   .hero { padding-top: 104px; }
   .hero-tagline { font-size: clamp(2.6rem, 5vw, 4rem); }
 }
-/* Google rating, right under the hero buttons */
+/* Google rating pill: white glass, above the headline, links to the Google listing */
 .hero-rating {
   display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px;
-  margin-top: clamp(1.4rem, 2.4vw, 2rem); padding: 0.55em 1.2em; border-radius: 100px;
-  background: rgba(13,8,5,.34); border: 1px solid rgba(255,255,255,.18);
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  color: rgba(255,255,255,.92); font-size: 0.95rem; transition: background .3s;
+  margin-bottom: clamp(1.1rem, 2vw, 1.6rem); padding: 0.55em 1.25em; border-radius: 100px;
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.45);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2);
+  box-shadow: 0 6px 24px rgba(13,8,5,.18);
+  color: #fff; font-size: 0.95rem; text-shadow: 0 1px 8px rgba(0,0,0,.35);
+  transition: background .3s, border-color .3s;
 }
-.hero-rating:hover { background: rgba(13,8,5,.5); }
-.hr-stars { color: #f0b429; letter-spacing: 0.14em; }
+.hero-rating:hover { background: rgba(255,255,255,.26); border-color: rgba(255,255,255,.7); }
+.hr-stars { color: #f6c24a; letter-spacing: 0.14em; }
 .hr-score strong { font-family: var(--head); font-weight: 600; font-size: 1.12rem; color: #fff; }
+
+/* ============================================================
+   GOOGLE REVIEWS SLIDER  (overlaps the hero's bottom edge)
+   ============================================================ */
+.review-rail {
+  position: relative; z-index: 3; margin-top: calc(-1 * var(--rr-overlap));
+  background: linear-gradient(to bottom, transparent var(--rr-overlap), var(--sage-soft) var(--rr-overlap));
+}
+.review-rail[hidden] { display: none; }
+.rr-track {
+  display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 4px var(--gutter) 26px; scroll-padding-inline: var(--gutter);
+  scrollbar-width: none; -ms-overflow-style: none; outline: none;
+}
+.rr-track::-webkit-scrollbar { display: none; }
+.rr-card {
+  flex: 0 0 clamp(280px, 29vw, 372px); scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 10px;
+  background: #fff; border-radius: 8px; padding: 22px 22px 20px;
+  border: 1px solid rgba(13,8,5,.06);
+  box-shadow: 0 22px 44px -22px rgba(13,8,5,.42), 0 2px 6px rgba(13,8,5,.05);
+}
+.rr-head { display: flex; align-items: center; gap: 12px; }
+.rr-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: none; background: var(--sage-soft2); }
+.rr-avatar--letter { display: grid; place-items: center; font-family: var(--head); font-weight: 600; color: var(--sage-deep); }
+.rr-who { min-width: 0; flex: 1; }
+.rr-name { font-family: var(--head); font-weight: 600; font-size: 1rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rr-when { font-size: 0.8rem; color: var(--ink-mute); }
+.rr-g { width: 22px; height: 22px; flex: none; }
+.rr-stars { color: #f0b429; letter-spacing: 0.12em; font-size: 0.98rem; }
+.rr-text {
+  margin: 0; color: var(--ink-soft); font-size: 0.95rem; line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rr-more { margin-top: auto; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-deep); }
+.rr-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.rr-nav { display: flex; justify-content: center; gap: 10px; padding-bottom: 6px; }
+.rr-btn {
+  width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid rgba(13,8,5,.22); background: #fff; color: var(--ink); cursor: pointer;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.rr-btn svg { width: 18px; height: 18px; }
+.rr-btn:hover { background: var(--sage-deep); border-color: var(--sage-deep); color: #fff; }
+/* the section after the slider no longer needs its full top padding */
+.review-rail:not([hidden]) + script + .section { padding-top: clamp(48px, 6vw, 96px); }
 .ci-quick { display: none; gap: 10px; margin-top: 14px; }
 .ci-quick a {
   display: inline-flex; align-items: center; justify-content: center; min-width: 96px;
@@ -658,13 +707,14 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   .header-right { gap: 10px; }
   .brand img { height: 46px; }
   /* Hero: tighter stack so the buttons and Google rating land on the first screen */
-  .hero { min-height: 88svh; padding: 96px var(--gutter) 36px; }
+  .hero { min-height: 88svh; padding: 96px var(--gutter) calc(var(--rr-overlap) + 22px); }
   .hero-tagline { font-size: clamp(2.05rem, 9.2vw, 2.5rem); }
   .hero h1.hero-service { margin-top: 0.75rem; font-size: 1.08rem; }
   .hero-kicker { margin-top: 0.8rem; font-size: 0.66rem; letter-spacing: 0.15em; }
   .hero-actions { margin-top: 1.5rem; gap: 10px; flex-direction: column; align-items: center; }
   .hero-actions .btn { width: min(100%, 300px); padding-block: 1em; }
-  .hero-rating { margin-top: 1.1rem; font-size: 0.86rem; }
+  .hero-rating { margin-bottom: 1rem; font-size: 0.86rem; }
+  .rr-card { flex-basis: 84vw; }
   .trades, .stats, .gallery, .gallery.filtered { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }

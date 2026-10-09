@@ -22,6 +22,15 @@
 		}
 	}
 
+	# Server-side features (Google rating/reviews, later the AI tools): proxy
+	# /api/* to the dfc-api Railway service over the private network. Same
+	# environment, same name, so preview talks to preview and production to
+	# production. API_UPSTREAM overrides it if the service is ever renamed.
+	@api path /api/*
+	handle @api {
+		reverse_proxy {$API_UPSTREAM:dfc-api.railway.internal:8080}
+	}
+
 	# Static marketing site (everything else).
 	handle {
 		# Serve trailing-slash URLs (/page/ → page.html). Ad platforms and inbound

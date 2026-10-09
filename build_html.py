@@ -16,6 +16,11 @@ EMPLOYEE_PORTAL = "/employee/"
 JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
 <link rel="stylesheet" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" media="screen" />
 <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534" form_url="https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/embedded_work_request_form?form_id=2323534"></script>"""
+# Google Business Profile rating. These are the numbers baked into the page;
+# the homepage pill refreshes them live from /api/google-rating (dfc-api).
+GOOGLE_RATING  = "4.8"
+GOOGLE_REVIEWS = "63"
+GOOGLE_MAPS_URL = "https://maps.app.goo.gl/AUjVDsK2nXdHqPy68"
 AREAS = ["Northern Virginia", "Fairfax", "Arlington", "Alexandria", "Falls Church",
          "Vienna", "McLean", "Richmond", "Washington DC"]
 # Local-SEO service area (Reinstate Labs homepage handoff, 2026-08)
@@ -99,7 +104,7 @@ def head(title, desc, page):
                     "postalCode": ADDR_ZIP, "addressCountry": "US"},
         "sameAs": [IG_URL, FB_URL],
         "areaServed": SCHEMA_AREAS,
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "58"},
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": GOOGLE_RATING, "reviewCount": GOOGLE_REVIEWS},
     }
     return f"""<!doctype html>
 <html lang="en">
@@ -356,6 +361,10 @@ def build_index():
   <section class="hero">
     <div class="hero-bg"><img src="{img('kitchen-thomas-jefferson')}" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
     <div class="hero-inner">
+      <a class="hero-rating" href="{GOOGLE_MAPS_URL}" target="_blank" rel="noopener" data-google-rating aria-label="Rated {GOOGLE_RATING} out of 5 from {GOOGLE_REVIEWS} Google reviews">
+        <span class="hr-stars" aria-hidden="true">★★★★★</span>
+        <span class="hr-score"><strong data-gr-rating>{GOOGLE_RATING}</strong> · <span data-gr-count>{GOOGLE_REVIEWS}</span> Google reviews</span>
+      </a>
       <p class="hero-tagline">Your home should feel like a vacation.</p>
       <h1 class="hero-service">Kitchen &amp; Bathroom Remodeling in Northern Virginia</h1>
       <p class="hero-kicker">Class A Design-Build · Northern Virginia · Richmond · DC</p>
@@ -363,12 +372,19 @@ def build_index():
         <a class="btn btn--light" href="contact.html">Request a free consultation</a>
         <a class="btn btn--light" href="portfolio.html" style="background:rgba(255,255,255,.08)">View our work</a>
       </div>
-      <a class="hero-rating" href="#reviews">
-        <span class="hr-stars" aria-hidden="true">★★★★★</span>
-        <span class="hr-score"><strong>4.8</strong> / 5 on Google Reviews</span>
-      </a>
     </div>
   </section>
+
+  <!-- GOOGLE REVIEWS SLIDER: filled live from /api/google by google.js and
+       overlapping the hero's bottom edge. Stays hidden if the API is down. -->
+  <section class="review-rail" aria-label="Google reviews" data-review-rail hidden>
+    <div class="rr-track" data-rr-track tabindex="0"></div>
+    <div class="rr-nav">
+      <button class="rr-btn" type="button" data-rr-prev aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button class="rr-btn" type="button" data-rr-next aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </section>
+  <script src="assets/js/google.js" defer></script>
 
   <!-- WHO WE ARE (sage) -->
   <section class="section bg-sage who">
