@@ -296,7 +296,7 @@ body.menu-open { overflow: hidden; }
 /* Lighter overlay: give the small text and outline buttons their own contrast */
 .hero-kicker { color: #fff; text-shadow: 0 1px 14px rgba(0,0,0,.7), 0 0 3px rgba(0,0,0,.45); }
 .hero .hero-actions .btn--light {
-  background-color: rgba(13,8,5,.2);
+  background-color: rgba(255,255,255,.26); border-color: rgba(255,255,255,.85);
   text-shadow: 0 1px 10px rgba(0,0,0,.45);
   -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
 }
@@ -310,13 +310,13 @@ body.menu-open { overflow: hidden; }
 .hero-rating {
   display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px;
   margin-bottom: clamp(1.1rem, 2vw, 1.6rem); padding: 0.55em 1.25em; border-radius: 100px;
-  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.45);
+  background: rgba(255,255,255,.3); border: 1px solid rgba(255,255,255,.7);
   -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2);
   box-shadow: 0 6px 24px rgba(13,8,5,.18);
   color: #fff; font-size: 0.95rem; text-shadow: 0 1px 8px rgba(0,0,0,.35);
   transition: background .3s, border-color .3s;
 }
-.hero-rating:hover { background: rgba(255,255,255,.26); border-color: rgba(255,255,255,.7); }
+.hero-rating:hover { background: rgba(255,255,255,.4); border-color: rgba(255,255,255,.9); }
 .hr-stars { color: #f6c24a; letter-spacing: 0.14em; }
 .hr-score strong { font-family: var(--head); font-weight: 600; font-size: 1.12rem; color: #fff; }
 
