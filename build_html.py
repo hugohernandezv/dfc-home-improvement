@@ -100,7 +100,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261009j"
+ASSET_VER = "20261009k"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -412,7 +412,7 @@ def build_index():
         <li>Class A Design-Build</li><li>BBB A+ Accredited</li><li>Northern Virginia</li><li>Richmond</li><li>DC</li>
       </ul>
       <div class="hero-actions">
-        <a class="btn btn--light" href="contact.html">Request a free consultation</a>
+        <a class="btn btn--light btn--primary-glass" href="contact.html">Request a free consultation</a>
         <a class="btn btn--light" href="portfolio.html">View our work</a>
       </div>
     </div>
