@@ -14,6 +14,10 @@ PHONE_DISP = "(703) 596-8375"
 PHONE_TEL = "+17035968375"
 EMAIL = "admin@dfchomeimprovement.com"
 
+# Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
+# or browsers keep serving their cached copy (Caddy sends no Cache-Control).
+ASSET_VER = "20261009b"
+
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
 <script>
@@ -100,7 +104,7 @@ def head_block(title, desc, canonical_path, og_image, jsonld=None):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/styles.css?v={ASSET_VER}">
 {ld}{ARTICLE_CSS}
 {META_PIXEL}
 </head>
@@ -204,8 +208,8 @@ FOOTER = f"""<footer class="site-footer">
     </div>
   </div>
 </footer>
-<script src="/assets/js/track.js" defer></script>
-<script src="/assets/js/script.js" defer></script>
+<script src="/assets/js/track.js?v={ASSET_VER}" defer></script>
+<script src="/assets/js/script.js?v={ASSET_VER}" defer></script>
 </body>
 </html>"""
 

@@ -296,7 +296,7 @@ body.menu-open { overflow: hidden; }
    GOOGLE REVIEWS SLIDER  (overlaps the hero's bottom edge)
    ============================================================ */
 .review-rail {
-  position: absolute; left: 0; right: 0; bottom: clamp(18px, 3.2vh, 34px); z-index: 2;
+  position: absolute; left: 0; right: 0; bottom: clamp(10px, 1.6vh, 18px); z-index: 2;
   padding: 4px 0; overflow: hidden; text-align: left;
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
           mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
