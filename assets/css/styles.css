@@ -245,8 +245,8 @@ body.menu-open { overflow: hidden; }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(13,8,5,.46) 0%, rgba(13,8,5,.30) 38%, rgba(13,8,5,.52) 100%),
-    radial-gradient(120% 90% at 50% 40%, rgba(13,8,5,.10), rgba(13,8,5,.46));
+    linear-gradient(180deg, rgba(13,8,5,.34) 0%, rgba(13,8,5,.18) 38%, rgba(13,8,5,.40) 100%),
+    radial-gradient(120% 90% at 50% 40%, rgba(13,8,5,.06), rgba(13,8,5,.32));
 }
 .hero-inner { position: relative; z-index: 2; width: min(940px, 100%); }
 .hero-logo { width: clamp(130px, 12vw, 180px); margin: 0 auto clamp(18px, 2vw, 26px); filter: drop-shadow(0 6px 28px rgba(0,0,0,.35)); }
@@ -264,10 +264,17 @@ body.menu-open { overflow: hidden; }
   letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,.82);
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-top: clamp(1.8rem, 2.6vw, 2.3rem); }
+/* Lighter overlay: give the small text and outline buttons their own contrast */
+.hero-kicker { color: #fff; text-shadow: 0 1px 14px rgba(0,0,0,.7), 0 0 3px rgba(0,0,0,.45); }
+.hero .hero-actions .btn--light {
+  background-color: rgba(13,8,5,.2);
+  text-shadow: 0 1px 10px rgba(0,0,0,.45);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+}
+.hero .hero-actions .btn--light:hover { background-color: #fff; text-shadow: none; }
 /* Shorter laptop screens: keep buttons + rating on the first screen */
 @media (min-width: 881px) and (max-height: 820px) {
   .hero { padding-top: 104px; }
-  .hero-logo { width: 118px; }
   .hero-tagline { font-size: clamp(2.6rem, 5vw, 4rem); }
 }
 /* Google rating, right under the hero buttons */
@@ -652,7 +659,6 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   .brand img { height: 46px; }
   /* Hero: tighter stack so the buttons and Google rating land on the first screen */
   .hero { padding: 96px var(--gutter) 36px; }
-  .hero-logo { width: 92px; margin-bottom: 16px; }
   .hero-tagline { font-size: clamp(2.05rem, 9.2vw, 2.5rem); }
   .hero h1.hero-service { margin-top: 0.75rem; font-size: 1.08rem; }
   .hero-kicker { margin-top: 0.8rem; font-size: 0.66rem; letter-spacing: 0.15em; }
@@ -670,7 +676,6 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
 @media (max-width: 560px) and (max-height: 620px) {
   /* small phones (iPhone SE): drop the kicker line, shrink the mark */
   .hero-kicker { display: none; }
-  .hero-logo { width: 70px; margin-bottom: 10px; }
   .hero { padding-top: 88px; }
 }
 

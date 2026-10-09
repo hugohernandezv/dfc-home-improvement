@@ -356,7 +356,6 @@ def build_index():
   <section class="hero">
     <div class="hero-bg"><img src="{img('kitchen-thomas-jefferson')}" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
     <div class="hero-inner">
-      <img class="hero-logo" src="assets/logo/dfc-logo-white.png" alt="DFC Home Improvement">
       <p class="hero-tagline">Your home should feel like a vacation.</p>
       <h1 class="hero-service">Kitchen &amp; Bathroom Remodeling in Northern Virginia</h1>
       <p class="hero-kicker">Class A Design-Build · Northern Virginia · Richmond · DC</p>
