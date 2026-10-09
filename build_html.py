@@ -410,12 +410,11 @@ def build_index():
         <a class="btn btn--light" href="portfolio.html" style="background:rgba(255,255,255,.08)">View our work</a>
       </div>
     </div>
-  </section>
-
-  <!-- GOOGLE REVIEWS STRIP: hand-picked 5-star excerpts, scrolling on its own,
-       riding up over the hero's bottom edge -->
-  <section class="review-rail" aria-label="Reviews from Google">
-    <div class="rr-track">{review_strip()}</div>
+    <!-- GOOGLE REVIEWS STRIP: hand-picked 5-star excerpts, scrolling on its own
+         along the bottom of the hero -->
+    <div class="review-rail" role="region" aria-label="Reviews from Google">
+      <div class="rr-track">{review_strip()}</div>
+    </div>
   </section>
   <script src="assets/js/google.js" defer></script>
 

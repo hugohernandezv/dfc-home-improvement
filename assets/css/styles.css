@@ -32,7 +32,7 @@
 
   --maxw: 1280px;
   --gutter: clamp(22px, 5vw, 80px);
-  --rr-overlap: clamp(64px, 8vw, 104px);   /* how far the reviews slider rides up into the hero */
+  --rr-space: 210px;   /* room the reviews strip takes at the bottom of the hero */
   --section: clamp(78px, 11vw, 168px);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -239,7 +239,7 @@ body.menu-open { overflow: hidden; }
    ============================================================ */
 .hero {
   position: relative; min-height: 100svh; display: grid; place-items: center;
-  text-align: center; color: #fff; overflow: hidden; padding: 120px var(--gutter) calc(var(--rr-overlap) + 40px);
+  text-align: center; color: #fff; overflow: hidden; padding: 120px var(--gutter) var(--rr-space);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
@@ -296,9 +296,8 @@ body.menu-open { overflow: hidden; }
    GOOGLE REVIEWS SLIDER  (overlaps the hero's bottom edge)
    ============================================================ */
 .review-rail {
-  position: relative; z-index: 3; margin-top: calc(-1 * var(--rr-overlap));
-  padding: 4px 0 30px; overflow: hidden;
-  background: linear-gradient(to bottom, transparent var(--rr-overlap), var(--sage-soft) var(--rr-overlap));
+  position: absolute; left: 0; right: 0; bottom: clamp(18px, 3.2vh, 34px); z-index: 2;
+  padding: 4px 0; overflow: hidden; text-align: left;
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
           mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
 }
@@ -335,7 +334,7 @@ body.menu-open { overflow: hidden; }
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 /* the section after the slider no longer needs its full top padding */
-.review-rail + script + .section { padding-top: clamp(44px, 5.5vw, 88px); }
+
 .ci-quick { display: none; gap: 10px; margin-top: 14px; }
 .ci-quick a {
   display: inline-flex; align-items: center; justify-content: center; min-width: 96px;
@@ -706,10 +705,12 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   .header-right { gap: 10px; }
   .brand img { height: 46px; }
   /* Hero: tighter stack so the buttons and Google rating land on the first screen */
-  .hero { min-height: 100svh; padding: 96px var(--gutter) calc(var(--rr-overlap) + 22px); }
+  .hero { min-height: 100svh; padding: 96px var(--gutter) var(--rr-space); }
   .hero-tagline { font-size: clamp(2.05rem, 9.2vw, 2.5rem); }
   .hero h1.hero-service { margin-top: 0.75rem; font-size: 1.08rem; }
-  .hero-kicker { margin-top: 0.8rem; font-size: 0.66rem; letter-spacing: 0.15em; }
+  .hero-kicker { display: none; }   /* phones: room for the reviews strip; the h1 already names the area */
+  :root { --rr-space: 196px; }
+  .review-rail { bottom: 14px; }
   .hero-actions { margin-top: 1.5rem; gap: 10px; flex-direction: column; align-items: center; }
   .hero-actions .btn { width: min(100%, 300px); padding-block: 1em; }
   .hero-rating { margin-bottom: 1rem; font-size: 0.86rem; }
@@ -727,6 +728,7 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   /* small phones (iPhone SE): drop the kicker line, shrink the mark */
   .hero-kicker { display: none; }
   .hero { padding-top: 88px; }
+  :root { --rr-space: 222px; }
 }
 
 /* ===================================================== OUR PROCESS PAGE */
