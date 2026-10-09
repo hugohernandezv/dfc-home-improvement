@@ -217,12 +217,12 @@ strong { color: var(--ink); font-weight: 600; }
    nav stays readable over bright photos. Content uses the dark (scrolled) look
    at all times; scrolling just makes the glass a little more solid. */
 .site-header {
-  background: rgba(233, 237, 227, 0.58);
+  background: rgba(233, 237, 227, 0.36);
   -webkit-backdrop-filter: saturate(1.4) blur(16px);
           backdrop-filter: saturate(1.4) blur(16px);
   border-bottom-color: rgba(13,8,5,.08);
 }
-.site-header.scrolled { background: rgba(233, 237, 227, 0.9); }
+.site-header.scrolled { background: rgba(233, 237, 227, 0.78); }
 .site-header .nav a, .site-header .header-phone { color: var(--ink); }
 .site-header .brand .mark-white { display: none; }
 .site-header .brand .mark-black { display: block; }
