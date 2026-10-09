@@ -302,7 +302,7 @@ body.menu-open { overflow: hidden; }
           mask-image: linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%);
 }
 /* Two identical sets side by side; sliding exactly one set width loops seamlessly. */
-.rr-track { display: flex; width: max-content; animation: rr-scroll 70s linear infinite; }
+.rr-track { display: flex; width: max-content; animation: rr-scroll 87.5s linear infinite; }
 .review-rail:hover .rr-track, .review-rail:focus-within .rr-track { animation-play-state: paused; }
 .rr-set { display: flex; gap: 16px; padding-right: 16px; }
 @keyframes rr-scroll { to { transform: translateX(-50%); } }
