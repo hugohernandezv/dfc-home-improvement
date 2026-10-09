@@ -396,7 +396,7 @@ def build_index():
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"><img src="{img('kitchen-thomas-jefferson')}" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
+    <div class="hero-bg"><img src="assets/img/kitchen-thomas-jefferson-hd.jpg" srcset="assets/img/kitchen-thomas-jefferson-hd-1280.jpg 1280w, assets/img/kitchen-thomas-jefferson-hd.jpg 2560w" sizes="100vw" alt="Custom kitchen remodel by DFC Home Improvement" fetchpriority="high"></div>
     <div class="hero-inner">
       <a class="hero-rating" href="{GOOGLE_MAPS_URL}" target="_blank" rel="noopener" data-google-rating aria-label="Rated {GOOGLE_RATING} out of 5 from {GOOGLE_REVIEWS} Google reviews">
         <span class="hr-stars" aria-hidden="true">★★★★★</span>
