@@ -238,7 +238,7 @@ body.menu-open { overflow: hidden; }
    HERO  (full-bleed photo + centered logo + tagline)
    ============================================================ */
 .hero {
-  position: relative; min-height: 95svh; display: grid; place-items: center;
+  position: relative; min-height: 100svh; display: grid; place-items: center;
   text-align: center; color: #fff; overflow: hidden; padding: 120px var(--gutter) calc(var(--rr-overlap) + 40px);
 }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
@@ -706,7 +706,7 @@ form.lead-form .form-actions { grid-column: 1 / -1; display: flex; align-items: 
   .header-right { gap: 10px; }
   .brand img { height: 46px; }
   /* Hero: tighter stack so the buttons and Google rating land on the first screen */
-  .hero { min-height: 95svh; padding: 96px var(--gutter) calc(var(--rr-overlap) + 22px); }
+  .hero { min-height: 100svh; padding: 96px var(--gutter) calc(var(--rr-overlap) + 22px); }
   .hero-tagline { font-size: clamp(2.05rem, 9.2vw, 2.5rem); }
   .hero h1.hero-service { margin-top: 0.75rem; font-size: 1.08rem; }
   .hero-kicker { margin-top: 0.8rem; font-size: 0.66rem; letter-spacing: 0.15em; }
