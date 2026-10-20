@@ -16,7 +16,7 @@ EMAIL = "admin@dfchomeimprovement.com"
 
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261019a"
+ASSET_VER = "20261020a"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -123,8 +123,20 @@ HEADER = f"""<header class="site-header" id="siteHeader">
     <a href="/blog/" class="current">Blog</a>
     <div class="nav-drop">
         <button class="nav-drop-btn" type="button" aria-haspopup="true">Tools <i class="nav-caret" aria-hidden="true"></i></button>
-        <div class="nav-drop-menu">
-          <a href="/ai-kitchen-inspiration.html"><b>AI Kitchen Inspiration</b><span>Upload a photo and see your kitchen remodeled</span></a>
+        <div class="nav-drop-menu nav-drop-menu--feature">
+          <a class="nav-feature" href="/ai-kitchen-inspiration.html">
+            <span class="nf-ba">
+              <span class="nf-img"><img src="/assets/img/ai-example-before.jpg" alt="A dated kitchen before" width="560" height="419" decoding="async"><i>Before</i></span>
+              <span class="nf-img"><img src="/assets/img/ai-example-after.jpg" alt="The same kitchen remodeled by the AI tool" width="560" height="419" decoding="async"><i>After</i></span>
+              <span class="nf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+            </span>
+            <span class="nf-body">
+              <span class="nf-eyebrow">Free design tool</span>
+              <span class="nf-title">AI Kitchen Inspiration</span>
+              <span class="nf-desc">Upload a photo of your kitchen, pick your finishes and see it remodeled in seconds.</span>
+              <span class="nf-cta">Try it free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
         </div>
       </div>
     <a href="/contact.html">Contact</a>
