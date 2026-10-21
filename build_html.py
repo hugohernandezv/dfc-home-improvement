@@ -18,6 +18,8 @@ JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
 <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534" form_url="https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/embedded_work_request_form?form_id=2323534"></script>"""
 # Google Business Profile rating. These are the numbers baked into the page;
 # the homepage pill refreshes them live from /api/google-rating (dfc-api).
+# Customer financing application (Express Financing Solutions), from Brian 2026-10-20
+FINANCING_URL = "https://express-fin.com/application-form?recordId=001UR00000uUkhtYAC"
 GOOGLE_RATING  = "4.8"
 GOOGLE_REVIEWS = "63"
 GOOGLE_MAPS_URL = "https://maps.app.goo.gl/AUjVDsK2nXdHqPy68"
@@ -100,7 +102,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261020a"
+ASSET_VER = "20261021a"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -529,6 +531,21 @@ def build_index():
     <div class="wrap"><div class="stats">
 {stats_html}
     </div></div>
+  </section>
+
+  <!-- FINANCING -->
+  <section class="finance-band" id="financing">
+    <div class="wrap fin-inner reveal">
+      <div class="fin-copy">
+        <p class="eyebrow">Financing available</p>
+        <h2>Flexible financing for your remodel.</h2>
+        <p>Spread the cost of your project into simple monthly payments through our financing partner, Express Financing Solutions, so you can start the remodel you want now.</p>
+      </div>
+      <div class="fin-action">
+        <a class="btn btn--sage" href="{FINANCING_URL}" target="_blank" rel="noopener">Check your financing options {ARROW}</a>
+        <span class="fin-note">Opens our financing partner's application in a new tab.</span>
+      </div>
+    </div>
   </section>
 
   <!-- CLIENT NOTES -->

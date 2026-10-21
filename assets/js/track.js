@@ -7,6 +7,7 @@
  *   mailto:         -> email_click
  *   Jobber request  -> consultation_click
  *   contact page    -> contact_page_click
+ *   financing link  -> financing_click
  * Forms that post their own leads (estimate.html) call dfcTrack('generate_lead')
  * after a successful submit.
  *
@@ -47,6 +48,7 @@
     else if (/^sms:/i.test(href)) send('text_click', p, 'TextClick');
     else if (/^mailto:/i.test(href)) send('email_click', p, 'EmailClick');
     else if (/getjobber\.com/i.test(href)) send('consultation_click', p, 'ConsultationClick');
+    else if (/express-fin\.com/i.test(href)) send('financing_click', p, 'FinancingClick');
     else if (/(^|\/)contact(\.html)?\/?([?#]|$)/i.test(href)) send('contact_page_click', p);
   }, true);
 })();

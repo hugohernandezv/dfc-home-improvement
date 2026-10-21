@@ -583,6 +583,15 @@ body.menu-open { overflow: hidden; }
 /* ============================================================
    STATS
    ============================================================ */
+/* Financing band (homepage, after the stats) */
+.finance-band { background: var(--sage-soft); padding-block: clamp(48px, 6vw, 84px); border-bottom: 1px solid var(--sage-soft2); }
+.fin-inner { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.fin-copy h2 { margin: .35em 0 .45em; }
+.fin-copy p:last-child { color: var(--ink-soft); max-width: 58ch; margin: 0; }
+.fin-action { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.fin-action .btn svg { width: 16px; height: 16px; flex: none; }
+.fin-note { font-size: .86rem; color: var(--ink-mute); }
+@media (max-width: 880px) { .fin-inner { grid-template-columns: 1fr; } .fin-action .btn { width: 100%; } }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 40px); }
 .stat .s-num { font-family: var(--head); font-weight: 500; font-size: clamp(2.7rem, 5vw, 4rem); color: #fff; line-height: 1; }
 .stat .s-lab { margin-top: 12px; font-size: 0.9rem; color: var(--on-night); }
