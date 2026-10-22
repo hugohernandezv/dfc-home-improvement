@@ -102,7 +102,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261021a"
+ASSET_VER = "20261022a"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -1224,6 +1224,79 @@ def build_process():
 # ================================================================ AI KITCHEN INSPIRATION
 # The wizard's look lives in assets/css/ai-tool.css and its behaviour in
 # assets/js/ai-tool.js; the server side is api/public/ai.php (dfc-api).
+# Examples at the bottom of the AI tool page, so homeowners can see what each
+# choice looks like before they pick it. One real kitchen (assets/process/
+# p04-before.jpg) remodeled once per option; source files and prompts in
+# Projects/DFC Home Improvement/style-examples/. Names must match OPTIONS in
+# assets/js/ai-tool.js.
+AI_STYLE_EXAMPLES = [
+    ("Transitional", "transitional",
+     "The best of classic and modern: Shaker cabinets, soft neutral colors and simple, clean details that never go out of style."),
+    ("Modern Farmhouse", "modern-farmhouse",
+     "White cabinets with black accents, a farmhouse sink, open wood shelves and warm, lived-in character."),
+    ("Classic Traditional", "classic-traditional",
+     "Rich wood cabinetry, detailed moldings, granite and elegant fixtures for a timeless, formal look."),
+    ("Contemporary", "contemporary",
+     "Sleek flat cabinets, little to no hardware, bold contrast and clean lines throughout."),
+    ("Warm Minimal", "warm-minimal",
+     "Light wood, soft whites and natural textures, with almost nothing on display. Calm and uncluttered."),
+    ("Coastal", "coastal",
+     "Bright whites, soft blues, light floors and natural rattan for an airy, relaxed feel."),
+]
+AI_PALETTE_EXAMPLES = [
+    ("Warm Neutrals", "warm-neutrals", ("#efe6d8", "#d9c9b3", "#b8a48c", "#b08d57"),
+     "Creamy whites, soft beige and taupe, warmed up with brass."),
+    ("Crisp White", "crisp-white", ("#ffffff", "#eeeeea", "#c9ccd0", "#1f1f1f"),
+     "Bright white from top to bottom, with a few dark accents."),
+    ("Cool Grays", "cool-grays", ("#e6e8ea", "#b9bec4", "#8d939a", "#5e646b"),
+     "Soft grays, white stone and brushed nickel."),
+    ("Deep and Moody", "deep-and-moody", ("#1f3d33", "#23324a", "#2b2b2d", "#b58a4c"),
+     "Rich green, navy or charcoal cabinets with warm brass."),
+    ("Earthy and Natural", "earthy-and-natural", ("#b98552", "#9aa58a", "#c4714f", "#d8cfc0"),
+     "Natural wood, sage green, terracotta and stone."),
+    ("Two Tone Contrast", "two-tone-contrast", ("#f7f6f2", "#22314f", "#e7e3db", "#b08d57"),
+     "Light upper cabinets with a darker base and island."),
+]
+
+def ai_examples():
+    def card(kind, name, slug, desc, swatches=()):
+        src = f"assets/img/ai-examples/{kind}-{slug}"
+        sw = ""
+        if swatches:
+            sw = ('<span class="aip-ex-sw" aria-hidden="true">'
+                  + "".join(f'<i style="background:{c}"></i>' for c in swatches) + "</span>")
+        what = "style" if kind == "style" else "color palette"
+        return f"""
+        <figure class="aip-ex-card">
+          <div class="aip-ex-img"><img src="{src}-800.jpg" srcset="{src}-480.jpg 480w, {src}-800.jpg 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"></div>
+          <figcaption><span class="aip-ex-name">{name}{sw}</span><p>{desc}</p></figcaption>
+        </figure>"""
+    styles = "".join(card("style", n, s, d) for n, s, d in AI_STYLE_EXAMPLES)
+    palettes = "".join(card("palette", n, s, d, sw) for n, s, sw, d in AI_PALETTE_EXAMPLES)
+    return f"""
+  <section class="section aip-ex" id="style-examples">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="reveal"><p class="eyebrow">Style guide</p><h2>See each style before you choose.</h2></div>
+        <p class="h-right reveal d1">Every example starts from the same kitchen, so you can see exactly what each design style and color palette changes. Pick the one that feels most like home.</p>
+      </div>
+      <div class="aip-ex-group reveal">
+        <h3 class="aip-ex-title">Design styles</h3>
+        <div class="aip-ex-grid">{styles}
+        </div>
+      </div>
+      <div class="aip-ex-group reveal">
+        <h3 class="aip-ex-title">Color palettes</h3>
+        <div class="aip-ex-grid">{palettes}
+        </div>
+      </div>
+      <div class="aip-ex-foot">
+        <p>Examples created with AI from one real kitchen. Your design follows the layout of your own space.</p>
+        <a class="btn btn--sage" href="#tool">Try it with your kitchen {ARROW}</a>
+      </div>
+    </div>
+  </section>"""
+
 def build_ai_tool():
     up = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" '
           'stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/>'
@@ -1232,7 +1305,7 @@ def build_ai_tool():
 <main id="top">
 {page_head("AI Kitchen Inspiration", "See your kitchen, reimagined.",
            "Upload a photo of your kitchen as it looks today, choose the finishes you love, and see it remodeled in seconds. Free, with nothing to install.")}
-  <section class="aip">
+  <section class="aip" id="tool">
     <div class="wrap">
       <div class="aip-grid">
         <div class="aip-card">
@@ -1275,6 +1348,7 @@ def build_ai_tool():
                 <span>Advanced <em>(type your own)</em></span>
               </label>
             </div>
+            <a class="aip-ex-link" href="#style-examples">Not sure what a style or palette looks like? See examples</a>
             <div class="aip-fields" id="aipGrid"></div>
             <div class="aip-notes" id="aipNotesWrap" hidden>
               <label class="aip-lab" for="aipNotes">Anything else</label>
@@ -1354,6 +1428,7 @@ def build_ai_tool():
       </div>
     </div>
   </section>
+{ai_examples()}
 {cta()}
 </main>
 <script src="assets/js/ai-tool.js?v={ASSET_VER}" defer></script>"""
