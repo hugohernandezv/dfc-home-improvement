@@ -193,6 +193,27 @@
 .aip-talk .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .aip-talk .btn { width: 100%; padding-inline: 1em; }
 
+/* ---- "not sure where to start?" card under the wizard ---- */
+.aip-main { display: grid; gap: 16px; min-width: 0; align-content: start; }
+.aip-main[data-step="3"] .aip-guide { display: none; }
+.aip-guide {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 22px; align-items: center;
+  background: #fff; border: 1px solid var(--line-soft); border-radius: 8px; padding: 22px;
+  transition: border-color .3s var(--ease);
+}
+.aip-guide:hover { border-color: var(--line); }
+.aip-guide-copy { display: grid; gap: 6px; }
+.aip-guide-copy b { font-family: var(--head); font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+.aip-guide-copy > span:not(.aip-guide-cta) { font-size: .9rem; color: var(--ink-soft); line-height: 1.55; }
+.aip-guide-cta {
+  display: inline-flex; align-items: center; gap: .5em; margin-top: 8px;
+  font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sage-deep);
+}
+.aip-guide-cta svg { width: 15px; height: 15px; flex: none; transition: transform .4s var(--ease); }
+.aip-guide:hover .aip-guide-cta svg { transform: translateY(3px); }
+.aip-guide-thumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.aip-guide-thumbs img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 5px; }
+
 /* ---- style guide: one example photo per design style and color palette ---- */
 #tool, #style-examples { scroll-margin-top: 96px; }
 .aip-ex-link {
@@ -239,4 +260,5 @@
   .aip-ex-name { font-size: 1rem; }
   .aip-ex-card p { font-size: .84rem; line-height: 1.55; }
   .aip-ex-foot .btn { width: 100%; }
+  .aip-guide { grid-template-columns: 1fr; gap: 16px; padding: 18px; }
 }

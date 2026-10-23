@@ -102,7 +102,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261022a"
+ASSET_VER = "20261023a"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -1297,6 +1297,23 @@ def ai_examples():
     </div>
   </section>"""
 
+# Sits right under the wizard, so people who would never scroll down still
+# find the style guide. Hidden on the result step (data-step="3").
+def ai_guide_teaser():
+    down = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
+            'stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>')
+    thumbs = "".join(f'<img src="assets/img/ai-examples/style-{s}-240.jpg" width="240" height="180" alt="" title="{n}">'
+                     for n, s, _ in AI_STYLE_EXAMPLES)
+    return f"""
+          <a class="aip-guide" href="#style-examples">
+            <span class="aip-guide-copy">
+              <b>Not sure where to start?</b>
+              <span>See our style guide below for an example of every design style and color palette.</span>
+              <span class="aip-guide-cta">View the style guide {down}</span>
+            </span>
+            <span class="aip-guide-thumbs" aria-hidden="true">{thumbs}</span>
+          </a>"""
+
 def build_ai_tool():
     up = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" '
           'stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/>'
@@ -1308,6 +1325,7 @@ def build_ai_tool():
   <section class="aip" id="tool">
     <div class="wrap">
       <div class="aip-grid">
+        <div class="aip-main" data-step="1">
         <div class="aip-card">
           <div class="aip-steps">
             <div class="aip-step active" data-step="1"><span class="dot">1</span><span class="lbl">Your space</span></div>
@@ -1397,6 +1415,8 @@ def build_ai_tool():
               </div>
             </div>
           </div>
+        </div>
+{ai_guide_teaser()}
         </div>
 
         <aside class="aip-aside">

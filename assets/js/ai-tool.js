@@ -44,6 +44,7 @@
 
   /* ---- steps ---- */
   function goStep(n) {
+    $('.aip-main').dataset.step = n;
     $$('.aip-panel').forEach(p => p.classList.toggle('show', +p.dataset.panel === n));
     $$('.aip-step').forEach(s => {
       const i = +s.dataset.step;
