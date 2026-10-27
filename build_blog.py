@@ -217,6 +217,71 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "how-to-pay-for-a-remodel",
+        "tag": "Planning",
+        "title": "How Homeowners Pay for a Remodel: Savings, Home Equity, Renovation Loans and Financing",
+        "card_title": "How homeowners pay for a remodel: savings, home equity, renovation loans and financing",
+        "desc": "The ways Northern Virginia, DC and Richmond homeowners actually pay for a kitchen, bathroom, basement or whole-home remodel: savings and a milestone payment schedule, a HELOC or home equity loan, a cash-out refinance, FHA 203(k) and HomeStyle renovation loans, financing through the contractor, and designing the project to the budget. From a Class A licensed design-build contractor.",
+        "card_desc": "Savings and milestone payments, home equity, renovation loans like the FHA 203(k), financing through DFC, and how a project gets designed to a budget.",
+        "hero": "/assets/img/kitchen-monteiro-ave.jpg",
+        "hero_alt": "Remodeled kitchen with a gray island, white cabinets, black pendant lights and a window bench by DFC Home Improvement",
+        "date": "2026-10-27",
+        "date_disp": "October 2026",
+        "body": """
+    <p>The question usually comes up right after the 3D design, when the project stops being an idea and starts being a number: how do people actually pay for this? There is no single answer. Most of the remodels we build are paid for with a mix of two or three of the options below, and the right mix depends on how much equity you have, how long you plan to stay in the house, and how quickly you want to start. Here is how each one works, and what it means for the schedule.</p>
+
+    <h2>1. Savings, paid on a milestone schedule</h2>
+    <p>The simplest path. A remodel is not paid all at once. The quote spells out a deposit at signing and progress payments tied to milestones, such as demolition complete, rough-in inspected, cabinets installed and final walkthrough. That spreads the cost across the length of the project, and it means the money for the last phase does not have to be sitting in the account on day one. Many families combine savings with one of the options below: savings for the deposit and the first phases, a line of credit for the rest.</p>
+
+    <h2>2. Home equity: a HELOC or a home equity loan</h2>
+    <p>Northern Virginia home values are up again this year, which means most homeowners who bought more than a few years ago are sitting on equity they can borrow against. Two products do that:</p>
+    <ul>
+      <li><strong>A home equity line of credit (HELOC)</strong> works like a credit line secured by the house. You draw what you need, when you need it, which fits a milestone payment schedule well, and you pay interest only on what you have drawn. The rate is usually variable.</li>
+      <li><strong>A home equity loan</strong> is a lump sum at a fixed rate with a fixed monthly payment. It fits a project with a known total and a known start date.</li>
+    </ul>
+    <p>Both take a few weeks to set up, because the lender orders an appraisal and reviews your income. Interest on either may be deductible when the money is used to buy, build or substantially improve the home that secures the loan; that is an IRS rule with conditions, so confirm it with your tax professional. We wrote about where values stand and how to use that equity in our <a href="/blog/nova-home-values-2026.html">2026 home values guide</a>.</p>
+
+    <h2>3. Cash-out refinance</h2>
+    <p>A cash-out refinance replaces your current mortgage with a larger one and gives you the difference in cash. It only makes sense when the new rate is close to or better than the rate you already have, so for many homeowners who locked in a low rate a few years ago, a HELOC on top of the existing mortgage is the better fit. Your lender can run both scenarios in a single conversation.</p>
+
+    <h2>4. Renovation loans: FHA 203(k) and HomeStyle</h2>
+    <p>Renovation loans are built for one situation: buying a house that needs work, or refinancing a house you already own, and rolling the cost of the remodel into the mortgage itself. The loan amount is based on what the house will be worth after the work, not what it is worth today. Two programs cover most cases:</p>
+    <ul>
+      <li><strong>FHA 203(k).</strong> Insured by HUD. The Limited version covers non-structural repairs and updates; the Standard version covers larger projects including structural work and requires a HUD-approved 203(k) consultant who reviews the scope and inspects the work before each payment is released.</li>
+      <li><strong>Fannie Mae HomeStyle Renovation.</strong> A conventional loan with a similar structure, used for a wider range of properties and project types.</li>
+    </ul>
+    <p>With either program the contractor does more than build. The lender needs a detailed contractor bid before the loan closes, the work has to follow that scope, and payments come out of an escrow account on a draw schedule after each inspection. That paperwork is where many renovation loan projects stall. Brian, our owner, has direct experience with 203(k) projects, working with the lender on the bid, the draw schedule and the inspections, and on past projects he has gotten lenders to approve a larger repair scope than they first wanted to cover. If you are buying a house that needs a kitchen, a bathroom or a roof, tell us before you make the offer so the bid is ready when the lender asks for it.</p>
+
+    <h2>5. Financing through DFC</h2>
+    <p>We also offer financing options for our projects, which is often the fastest way to start when you would rather not touch savings or wait on an appraisal. We go over the current options and what you would qualify for when we review the quote together, so bring the question to that meeting.</p>
+
+    <h2>6. Designing the project to the budget</h2>
+    <p>Paying for a remodel is not only about where the money comes from. It is also about how the project is shaped. Once we know the number you are comfortable with, the design can be built to it: a good, better and best version of the same room, a project split into two phases with the second one planned now and built later, or a different mix of materials that gets the same look. The 3D design is free and it is where those choices become visible, which is why we ask about budget early rather than at the end. Our <a href="/blog/see-it-before-you-build-it-3d-design.html">3D design guide</a> covers what that meeting looks like.</p>
+
+    <h2>What we see go wrong</h2>
+    <ul>
+      <li><strong>Putting the whole project on credit cards.</strong> Fine for a deposit or a short gap, costly as the main plan. Any of the secured options above is usually cheaper.</li>
+      <li><strong>Starting before the full amount is lined up.</strong> A project that pauses mid-way for money costs more than one that starts a month later, because a crew that leaves has to be rescheduled and exposed work has to be protected.</li>
+      <li><strong>Skipping the permit to save.</strong> Unpermitted work becomes a problem at sale time, at insurance claim time, and with any lender who asks for the records. It is not where the savings are.</li>
+      <li><strong>Getting the loan before the scope.</strong> For home equity products the order does not matter much. For a renovation loan it does: the lender wants the contractor bid first, so the design and quote come before the loan closes, not after.</li>
+    </ul>
+
+    <h2>How to prepare</h2>
+    <ol>
+      <li>Decide the number you are comfortable with for the whole project, including a reserve for the surprises that old houses hide in the walls.</li>
+      <li>Call your lender or credit union and ask what a HELOC or home equity loan would look like for you, so you know how much is available and how long it takes.</li>
+      <li>Bring both to the design meeting. We will design to the number, show you the options in 3D, and walk through financing through DFC if it helps.</li>
+      <li>Expect a few weeks between the signed quote and the start date in any case, for permits and materials, which is usually enough time for the lender to finish on their side. Our <a href="/blog/remodel-timeline-before-the-holidays.html">remodel timeline guide</a> shows how that sequence lines up.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Planning a kitchen, bathroom, basement or addition and wondering how to pay for it?</strong> Send us a few photos of the space and the number you have in mind, and we will show you what that project looks like and the ways to fund it. One team from first concept to final walkthrough: design, permits, materials and construction. Call <a href="tel:+17035968375">(703) 596-8375</a>, <a href="/contact.html">request an evaluation</a>, or see how the process works on <a href="/our-process.html">our process page</a>.</p>
+    </div>
+
+    <p class="article-sources">This article is general information, not financial or tax advice. Loan availability, terms and tax treatment depend on your situation; confirm them with your lender and tax professional. Sources: <a href="https://www.hud.gov/program_offices/housing/sfh/203k" target="_blank" rel="noopener">HUD: 203(k) Rehabilitation Mortgage Insurance</a> &middot; <a href="https://singlefamily.fanniemae.com/originating-underwriting/mortgage-products/homestyle-renovation" target="_blank" rel="noopener">Fannie Mae: HomeStyle Renovation</a> &middot; <a href="https://www.irs.gov/publications/p936" target="_blank" rel="noopener">IRS Publication 936: Home Mortgage Interest Deduction</a></p>
+""",
+    },
+    {
         "slug": "winter-interior-remodel-projects",
         "tag": "Planning",
         "title": "Winter Remodeling: The Indoor Projects That Make Sense Now, and What to Plan for Spring",
