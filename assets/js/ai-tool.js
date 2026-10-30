@@ -330,6 +330,63 @@
     }
   });
 
+  /* Style guide: tap an example for a closer look. Same lightbox look as the
+     portfolio; opens on the cached card photo, then swaps in the 1600px one. */
+  const lb = $('#aipLb');
+  if (lb) {
+    const cards = $$('.aip-ex-card');
+    const lbImg = $('#aipLbImg');
+    const lbCap = $('#aipLbCap');
+    let current = 0;
+    let lastFocus = null;
+    const show = i => {
+      current = (i + cards.length) % cards.length;
+      const card = cards[current];
+      const thumb = card.querySelector('img');
+      const full = card.querySelector('.aip-ex-img').dataset.full;
+      lbImg.src = thumb.currentSrc || thumb.src;
+      lbImg.alt = thumb.alt;
+      lbCap.textContent = card.querySelector('.aip-ex-name').textContent.trim() + ' · ' + card.querySelector('p').textContent;
+      const hi = new Image();
+      const want = current;
+      hi.onload = () => { if (current === want) lbImg.src = full; };
+      hi.src = full;
+    };
+    const open = i => {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('menu-open');
+      $('#aipLbClose').focus();
+    };
+    const close = () => {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('menu-open');
+      if (lastFocus) lastFocus.focus();
+    };
+    cards.forEach((card, i) => card.querySelector('.aip-ex-img').addEventListener('click', () => open(i)));
+    $('#aipLbClose').addEventListener('click', close);
+    $('#aipLbNext').addEventListener('click', () => show(current + 1));
+    $('#aipLbPrev').addEventListener('click', () => show(current - 1));
+    lb.addEventListener('click', e => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') show(current + 1);
+      else if (e.key === 'ArrowLeft') show(current - 1);
+    });
+    let touchX = null;
+    lb.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', e => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    });
+  }
+
   renderFields();
   updateProgress();
 })();

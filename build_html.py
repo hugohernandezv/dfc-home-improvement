@@ -102,7 +102,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261023a"
+ASSET_VER = "20261030a"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -1259,6 +1259,8 @@ AI_PALETTE_EXAMPLES = [
 ]
 
 def ai_examples():
+    ZOOM = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
+            'stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>')
     def card(kind, name, slug, desc, swatches=()):
         src = f"assets/img/ai-examples/{kind}-{slug}"
         sw = ""
@@ -1268,7 +1270,7 @@ def ai_examples():
         what = "style" if kind == "style" else "color palette"
         return f"""
         <figure class="aip-ex-card">
-          <div class="aip-ex-img"><img src="{src}-800.jpg?v={ASSET_VER}" srcset="{src}-480.jpg?v={ASSET_VER} 480w, {src}-800.jpg?v={ASSET_VER} 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"></div>
+          <button type="button" class="aip-ex-img" data-full="{src}-1600.jpg?v={ASSET_VER}" aria-label="Enlarge the {name} example"><img src="{src}-800.jpg?v={ASSET_VER}" srcset="{src}-480.jpg?v={ASSET_VER} 480w, {src}-800.jpg?v={ASSET_VER} 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"><span class="aip-ex-zoom" aria-hidden="true">{ZOOM}</span></button>
           <figcaption><span class="aip-ex-name">{name}{sw}</span><p>{desc}</p></figcaption>
         </figure>"""
     styles = "".join(card("style", n, s, d) for n, s, d in AI_STYLE_EXAMPLES)
@@ -1295,7 +1297,14 @@ def ai_examples():
         <a class="btn btn--sage" href="#tool">Try it with your kitchen {ARROW}</a>
       </div>
     </div>
-  </section>"""
+  </section>
+  <div class="lightbox" id="aipLb" aria-hidden="true" role="dialog" aria-label="Style guide example">
+    <button class="lb-close" id="aipLbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="aipLbPrev" aria-label="Previous">‹</button>
+    <img id="aipLbImg" src="" alt="">
+    <button class="lb-nav lb-next" id="aipLbNext" aria-label="Next">›</button>
+    <div class="lb-cap" id="aipLbCap"></div>
+  </div>"""
 
 # Sits right under the wizard, so people who would never scroll down still
 # find the style guide. Hidden on the result step (data-step="3").
