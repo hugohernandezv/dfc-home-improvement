@@ -1268,7 +1268,7 @@ def ai_examples():
         what = "style" if kind == "style" else "color palette"
         return f"""
         <figure class="aip-ex-card">
-          <div class="aip-ex-img"><img src="{src}-800.jpg" srcset="{src}-480.jpg 480w, {src}-800.jpg 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"></div>
+          <div class="aip-ex-img"><img src="{src}-800.jpg?v={ASSET_VER}" srcset="{src}-480.jpg?v={ASSET_VER} 480w, {src}-800.jpg?v={ASSET_VER} 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"></div>
           <figcaption><span class="aip-ex-name">{name}{sw}</span><p>{desc}</p></figcaption>
         </figure>"""
     styles = "".join(card("style", n, s, d) for n, s, d in AI_STYLE_EXAMPLES)
@@ -1278,7 +1278,7 @@ def ai_examples():
     <div class="wrap">
       <div class="head-row">
         <div class="reveal"><p class="eyebrow">Style guide</p><h2>See each style before you choose.</h2></div>
-        <p class="h-right reveal d1">Every example starts from the same kitchen, so you can see exactly what each design style and color palette changes. Pick the one that feels most like home.</p>
+        <p class="h-right reveal d1">Each example is a full kitchen designed in that style or color palette, so you can picture the finished look. Pick the one that feels most like home.</p>
       </div>
       <div class="aip-ex-group reveal">
         <h3 class="aip-ex-title">Design styles</h3>
@@ -1291,7 +1291,7 @@ def ai_examples():
         </div>
       </div>
       <div class="aip-ex-foot">
-        <p>Examples created with AI from one real kitchen. Your design follows the layout of your own space.</p>
+        <p>Examples created with AI to show each look. Your design follows the layout of your own kitchen.</p>
         <a class="btn btn--sage" href="#tool">Try it with your kitchen {ARROW}</a>
       </div>
     </div>
@@ -1302,7 +1302,7 @@ def ai_examples():
 def ai_guide_teaser():
     down = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
             'stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>')
-    thumbs = "".join(f'<img src="assets/img/ai-examples/style-{s}-240.jpg" width="240" height="180" alt="" title="{n}">'
+    thumbs = "".join(f'<img src="assets/img/ai-examples/style-{s}-240.jpg?v={ASSET_VER}" width="240" height="180" alt="" title="{n}">'
                      for n, s, _ in AI_STYLE_EXAMPLES)
     return f"""
           <a class="aip-guide" href="#style-examples">
