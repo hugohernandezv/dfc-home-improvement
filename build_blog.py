@@ -217,6 +217,77 @@ FOOTER = f"""<footer class="site-footer">
 # ---------------------------------------------------------------- ARTICLES
 ARTICLES = [
     {
+        "slug": "winter-home-freeze-protection",
+        "tag": "Maintenance",
+        "title": "Before the Hard Freeze: How to Protect Your Pipes, Roof and Family This Winter",
+        "card_title": "Before the hard freeze: protect your pipes, roof and family this winter",
+        "desc": "How to keep pipes from freezing, what to do if one freezes or bursts, how ice dams form and how to stop them, keeping furnace and dryer vents clear of snow, safe generator use, and what to set before you travel for the holidays. From a Class A licensed contractor serving Northern Virginia, DC and Richmond.",
+        "card_desc": "Frozen pipes, ice dams, snow-blocked vents, generator safety, and what to set before you leave for the holidays.",
+        "hero": "/assets/img/outdoor-polecat-patio-2.jpg",
+        "hero_alt": "Covered front porch with white columns and wood decking looking out over a lawn and bare winter trees, built by DFC Home Improvement",
+        "date": "2026-11-06",
+        "date_disp": "November 2026",
+        "body": """
+    <p>Northern Virginia, DC and Richmond winters are not long, but they are tricky. A week of mild weather can turn into two nights in the teens, and an inch of ice does more damage than a foot of snow. The calls we get in January and February almost always trace back to the same few things: a pipe in an outside wall, a roof edge that kept refreezing, or a vent buried by a drift. Our <a href="/blog/fall-home-checklist-northern-virginia.html">fall checklist</a> covered the heating system, the outdoor faucets and the gutters. This is the next step, for the weeks when the real cold arrives.</p>
+
+    <h2>1. Know where your pipes are most exposed</h2>
+    <p>Pipes freeze where cold air reaches them: in exterior walls, under kitchen and bathroom sinks on outside walls, in crawlspaces, in unheated garages and in attics. Water pipes in a finished basement are rarely the problem; the bathroom over the garage often is. Take ten minutes with a flashlight and note which sinks and pipes sit against an outside wall or in an unheated space. Those are the ones to protect.</p>
+    <ul>
+      <li>Insulate exposed pipes in crawlspaces, garages and attics with foam pipe sleeves from any hardware store.</li>
+      <li>Seal the gaps where cold air gets in: around the dryer vent, the hose bib and any pipe or cable that passes through the rim joist.</li>
+      <li>Close the crawlspace vents for the winter if your house has them, and keep the garage door closed when water lines run through the garage.</li>
+    </ul>
+
+    <h2>2. On the coldest nights</h2>
+    <ul>
+      <li><strong>Open the cabinet doors</strong> under sinks on outside walls so the warm air of the house reaches the pipes.</li>
+      <li><strong>Let a faucet drip</strong> on those sinks overnight. Moving water is much harder to freeze, and a drip relieves the pressure that actually bursts a pipe.</li>
+      <li><strong>Keep the thermostat steady</strong> day and night instead of setting it back. The few dollars saved on heat are not worth a ceiling.</li>
+    </ul>
+
+    <h2>3. If a pipe freezes, or bursts</h2>
+    <p>The sign of a frozen pipe is a faucet that gives only a trickle or nothing at all when it is cold outside. If that happens:</p>
+    <ol>
+      <li>Leave the faucet open, so water can flow as the ice melts.</li>
+      <li>Warm the pipe gently with a hair dryer, a space heater kept at a safe distance, or warm towels, starting nearest the faucet. Never use an open flame or a torch.</li>
+      <li>If you cannot find or reach the frozen section, or if it does not thaw, call a plumber.</li>
+    </ol>
+    <p>If a pipe bursts, shut off the main water valve first, then turn off the electricity to any area where water is reaching outlets or fixtures. Everyone in the house should know where the main shutoff is before the first freeze, not during it. Our <a href="/blog/water-damage-first-48-hours.html">water damage guide</a> covers what to do in the first 48 hours, including photos for the insurance claim and drying before any rebuild.</p>
+
+    <h2>4. Ice dams: a roof problem that starts in the attic</h2>
+    <p>An ice dam is the ridge of ice that forms along the edge of the roof after a snowfall. Heat escaping from the house warms the roof, the snow melts, and the water refreezes when it reaches the cold eave. The water that backs up behind that ridge can work under the shingles and show up as a stain on a ceiling or a wet spot on an outside wall.</p>
+    <ul>
+      <li>The lasting fix is in the attic, not on the roof: seal the gaps where warm air leaks up from the house, around light fixtures, the attic hatch, plumbing and chimney chases, and bring the attic insulation up to current levels so the roof stays cold.</li>
+      <li>Keep the attic vents at the soffits and the ridge open, so the roof deck stays close to the outside temperature.</li>
+      <li>After a heavy snow, a roof rake used from the ground can pull the first few feet of snow off the roof edge. Do not climb onto an icy roof or chip at an ice dam with a hammer; that damages the shingles and the gutters.</li>
+      <li>If you see icicles along the same stretch of roof every winter, that is where the heat is leaking. It is worth having the attic looked at before next season.</li>
+    </ul>
+
+    <h2>5. Keep vents clear of snow</h2>
+    <p>Many newer furnaces and water heaters vent through plastic pipes in the side wall of the house, close to the ground. A drift that covers those pipes can shut the equipment down, or push exhaust back into the house. After every snowfall, clear the snow from the furnace and water heater vents and intakes, the dryer vent and the gas meter. Test your carbon monoxide alarms now, and replace any alarm past the date printed on the back.</p>
+
+    <h2>6. Power outages and generators</h2>
+    <p>Ice storms are what take the power out in our area, often for a day or more. If you use a portable generator, run it outdoors only, at least 20 feet from the house, with the exhaust pointed away from windows and doors, and never in the garage, even with the door open. Plug appliances into the generator with heavy-duty outdoor cords; connecting a generator to the house wiring requires a transfer switch installed by a licensed electrician. Keep flashlights and batteries where you can find them in the dark, and never heat the house with a gas oven or a grill.</p>
+
+    <h2>7. Steps, decks and walkways</h2>
+    <p>Most winter injuries around the house happen on the steps. Make sure every exterior stair has a solid handrail before the ice arrives, and fix any loose tread or step that rocks. Use an ice melt that suits the surface: rock salt can damage concrete in its first winter and some brick and stone, and composite and wood decks each have the products their manufacturers allow. A plastic shovel is kinder to a deck than a metal one.</p>
+
+    <h2>8. Before you leave for the holidays</h2>
+    <ol>
+      <li>Set the thermostat no lower than 55 degrees, and leave the cabinet doors under the outside-wall sinks open.</li>
+      <li>Consider turning off the main water valve and opening a faucet to drain the lines if the house will be empty for more than a few days.</li>
+      <li>Ask a neighbor or a friend to check inside the house once or twice, especially after a cold night, and give them the location of the main shutoff.</li>
+      <li>A Wi-Fi thermostat or an inexpensive water leak sensor under the sinks and near the water heater will alert your phone if the heat fails or water appears while you are away.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Seeing ice along the same roof edge every winter, a ceiling stain after a thaw, or a pipe that freezes every year?</strong> Send us a few photos and we will tell you where the problem is likely starting and how to fix it at the source. One team for repairs and remodels: plumbing, insulation, roofing, drywall and paint. Call <a href="tel:+17035968375">(703) 596-8375</a>, <a href="/contact.html">request an evaluation</a>, or see how the process works on <a href="/our-process.html">our process page</a>.</p>
+    </div>
+
+    <p class="article-sources">This article is general home maintenance information. Follow the manufacturer's instructions for heating equipment, generators and ice melt products, and call a licensed professional for gas, electrical or structural concerns. Sources: <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/winter-storm/frozen-pipes.html" target="_blank" rel="noopener">American Red Cross: Frozen Pipes</a> &middot; <a href="https://www.energy.gov/energysaver/air-sealing-your-home" target="_blank" rel="noopener">U.S. Department of Energy: Air Sealing Your Home</a> &middot; <a href="https://www.cdc.gov/carbon-monoxide/prevention/index.html" target="_blank" rel="noopener">CDC: Carbon Monoxide Poisoning Prevention</a></p>
+""",
+    },
+    {
         "slug": "how-to-pay-for-a-remodel",
         "tag": "Planning",
         "title": "How Homeowners Pay for a Remodel: Savings, Home Equity, Renovation Loans and Financing",
