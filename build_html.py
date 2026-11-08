@@ -832,10 +832,20 @@ THREED_GROUPS = [
      "desc":"A spa-inspired bath with a barn-door entry, large-format tile and a sculptural vanity wall. Moody and intimate, it feels grounded and restorative — quiet luxury you can truly unwind in."},
     {"title":"Kitchen & Bath Refresh","slugs":["3d-bridetta-1","3d-bridetta-2","3d-bridetta-3"],
      "desc":"A coordinated kitchen and bath in a light, transitional palette — white cabinetry, quartz surfaces and brushed fixtures. Bright and welcoming, the spaces feel fresh, easy and effortlessly put-together."},
+    {"title":"Finished Basement & Primary Bath","slugs":["3d-finished-basement-1","3d-finished-basement-2","3d-finished-basement-3","3d-finished-basement-4","3d-finished-basement-5"],
+     "desc":"Wall-to-wall wood built-ins anchor a bright basement living room, while the primary bath pairs a freestanding tub with a fluted wood vanity nook and a glass shower. A powder room in soft floral wallpaper with an antique brass mirror completes the plan. Warm and layered, every room is made for the way the family really lives."},
+    {"title":"Walkout Basement & Guest Bath","slugs":["3d-walkout-basement-1","3d-walkout-basement-2","3d-walkout-basement-3"],
+     "desc":"Wide-plank wood-look floors, recessed lighting and French doors to the yard turn the lower level into open, light-filled living space, with a full bath in marble-look tile, a white vanity and matte black fixtures. Bright and easy, it adds a whole new level of usable home."},
     {"title":"Covered Patio & Pergola","slugs":["3d-covered-patio-1","3d-covered-patio-2","3d-covered-patio-3"],
      "desc":"A cedar-tone pergola, lounge seating and clean railings that extend the home into the backyard. It transmits ease and escape — a relaxed outdoor room made for slow mornings and evening gatherings."},
     {"title":"Wraparound Porch & Great Room","slugs":["3d-ginger-1","3d-ginger-2"],
      "desc":"An addition that opens the home up — a covered porch for outdoor living and a bright, connected great room inside. It transmits warmth and openness: a home that breathes and brings people together."},
+    {"title":"Home Addition & Backyard Retreat","slugs":["3d-backyard-addition-1","3d-backyard-addition-2","3d-backyard-addition-3","3d-backyard-addition-4","3d-backyard-addition-5"],
+     "desc":"A new rear deck with dark railings steps down to a private backyard with a paver fire pit circle, while inside the addition brings new bedrooms, a primary bath with a sage accent wall, double floating wood vanity and brass fixtures, and a marble-look kids' bath. It gives a growing family room to spread out, and a backyard made for evenings around the fire."},
+    {"title":"Sunroom Addition & Deck","slugs":["3d-sunroom-deck-1","3d-sunroom-deck-2","3d-sunroom-deck-3","3d-sunroom-deck-4"],
+     "desc":"A sunroom addition wrapped in windows opens onto a wide deck with white railings, stairs down to a paver path and fresh landscaping. Light pours in all day, so the home gains a bright, relaxed room that feels like outdoor living in every season."},
+    {"title":"Covered Deck with Gable Roof","slugs":["3d-covered-deck-1","3d-covered-deck-2","3d-covered-deck-3","3d-covered-deck-4"],
+     "desc":"A raised deck with black railings and lattice skirting, topped by an open gable roof with a wood plank ceiling over the main seating area. Shaded, open and connected to the yard, it is an outdoor room the family will use from spring through fall."},
 ]
 
 KITCHEN_GROUPS = [
