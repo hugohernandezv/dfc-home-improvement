@@ -71,7 +71,9 @@ $in = json_decode((string)file_get_contents('php://input'), true) ?: [];
 /* ── generate ─────────────────────────────────────────────────────────── */
 if ($path === '/api/ai-preview') {
     $key   = (string)getenv('GOOGLE_AI_KEY');
-    $model = (string)(getenv('GOOGLE_AI_MODEL') ?: 'gemini-2.5-flash-image');
+    // gemini-3.1-flash-image, as in the iCreate AI Remodel Visualizer kit (tested 2026-11-11): a real remodel of
+    // the same room in about 10 seconds. 2.5 Flash only repainted the old cabinet doors.
+    $model = (string)(getenv('GOOGLE_AI_MODEL') ?: 'gemini-3.1-flash-image');
     if ($key === '') ai_out(['error' => 'The design tool is not configured yet.'], 500);
 
     $prompt = (string)($in['prompt'] ?? '');
@@ -93,11 +95,13 @@ if ($path === '/api/ai-preview') {
         ]]],
         'generationConfig' => ['responseModalities' => ['IMAGE']],
     ]);
-    $ch = curl_init("https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key={$key}");
+    $ch = curl_init('https://generativelanguage.googleapis.com/v1beta/models/' . rawurlencode($model) . ':generateContent');
     curl_setopt_array($ch, [
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST           => true,
-        CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+        // the key goes in a header, so it never appears in a URL or a log
+        CURLOPT_HTTPHEADER     => ['Content-Type: application/json', 'x-goog-api-key: ' . $key],
+        CURLOPT_CONNECTTIMEOUT => 15,
         CURLOPT_POSTFIELDS     => $payload,
         CURLOPT_TIMEOUT        => 120,
     ]);

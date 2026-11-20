@@ -75,12 +75,12 @@
     $('#aipToStyle').disabled = true;
     const img = new Image();
     img.onload = () => {
-      const max = 1280, scale = Math.min(1, max / Math.max(img.width, img.height));
+      const max = 1600, scale = Math.min(1, max / Math.max(img.width, img.height));   // same as the iCreate kit
       const c = document.createElement('canvas');
       c.width = Math.round(img.width * scale);
       c.height = Math.round(img.height * scale);
       c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
-      b64 = c.toDataURL('image/jpeg', 0.88).split(',')[1];
+      b64 = c.toDataURL('image/jpeg', 0.86).split(',')[1];
       mime = 'image/jpeg';
       $('#aipToStyle').disabled = false;
     };
@@ -177,22 +177,82 @@
     g.textContent = n < 6 ? 'Choose ' + (6 - n) + ' more' : 'Show me my kitchen';
   }
 
+  /*PROMPT:START  Prompt from the iCreate AI Remodel Visualizer kit (2026-11-13, same as the McManus tool): a real gut
+    remodel, never a repaint or a reface. DETAIL says what each choice means to the AI; the names stay DFC's own,
+    so they still match the style guide at the bottom of the page. */
+  const DETAIL = {
+    "Design style": {
+      "Transitional": 'transitional, the best of classic and modern: Shaker cabinetry in soft neutral colors, simple clean molding, a mix of polished nickel and brass, and timeless lighting such as linen drum or simple glass pendants',
+      "Modern Farmhouse": 'modern farmhouse: warm and relaxed, white cabinetry with matte black accents, an apron-front sink, a bridge or gooseneck faucet, wood accents such as floating shelves, and simple black metal pendant lights',
+      "Classic Traditional": 'classic traditional: rich, detailed cabinetry with crown molding, furniture-style details, granite or marble, polished nickel or brass hardware and elegant lantern or chandelier lighting',
+      "Contemporary": 'contemporary: sleek flat-panel cabinetry with little or no visible hardware, bold contrast, large-format surfaces, integrated lighting and clean, uncluttered lines',
+      "Warm Minimal": 'warm minimal: light white oak and soft white, smooth plaster or matte finishes, honed stone, minimal hardware, natural textures and almost nothing on display, calm and serene',
+      "Coastal": 'coastal: bright whites and soft sea blues, light wood tones, woven rattan or natural fiber accents, brushed nickel, and an airy, relaxed, light-filled feel'
+    },
+    "Cabinets": {
+      "Shaker": 'classic five-piece shaker doors: a square frame of narrow, flat stiles and rails around a recessed flat center panel, full-overlay',
+      "Flat Panel": 'sleek flat slab doors and drawer fronts with slim or integrated pulls',
+      "Raised Panel": 'refined raised-panel doors with a classic profile',
+      "Glass Front": 'solid lower cabinets with glass-front upper cabinets, slim mullions and lit interiors',
+      "Open Shelving": 'new lower cabinets with open floating wood shelves in place of some upper cabinets',
+      "Two Tone": 'two-tone cabinetry, the lower cabinets (and the island, only if the room already has one) in one color and the uppers in a lighter one'
+    },
+    "Countertops": {
+      "Quartz": 'quartz countertops with a clean, consistent finish and a subtle marble-look vein',
+      "Quartzite": 'natural quartzite countertops with soft, organic veining',
+      "Granite": 'polished granite countertops with natural speckle and movement',
+      "Marble": 'honed marble countertops with classic soft gray veining',
+      "Butcher Block": 'warm oiled butcher-block wood countertops',
+      "Solid Surface": 'seamless matte solid-surface countertops'
+    },
+    "Backsplash": {
+      "Subway Tile": 'handmade-look subway tile in a tight running bond',
+      "Full Slab": 'a full-height stone slab backsplash with soft veining that matches the countertops',
+      "Herringbone Tile": 'tile in a herringbone pattern',
+      "Zellige Tile": 'glossy handmade zellige tile with natural variation in tone',
+      "Mosaic Accent": 'a refined small hexagon or penny-round mosaic tile',
+      "Natural Stone": 'natural stone tile with an organic texture'
+    },
+    "Color palette": {
+      "Warm Neutrals": 'creamy warm whites, soft beige and taupe, light natural wood and soft brass accents',
+      "Crisp White": 'bright white cabinetry, white stone, a few dark accents and an airy, light-filled feel',
+      "Cool Grays": 'soft cool grays, white stone and brushed nickel',
+      "Deep and Moody": 'deep green, navy or charcoal cabinetry with warm brass accents, rich and moody',
+      "Earthy and Natural": 'natural wood tones, sage green, warm stone and terracotta accents',
+      "Two Tone Contrast": 'a crisp contrast of light upper cabinets with darker lower cabinets (and island, only if the room already has one)'
+    },
+    "Budget range": {
+      "Under $50k": 'good-quality new cabinetry, quartz or granite countertops and new stainless appliances',
+      "$50k to $75k": 'semi-custom cabinetry, quartz or natural stone countertops, upgraded lighting and new appliances',
+      "$75k to $100k": 'custom cabinetry to the ceiling, natural stone, a professional range and layered lighting',
+      "$100k to $150k": 'fully custom cabinetry, premium natural stone, integrated panel-ready appliances and designer lighting',
+      "$150k+": 'bespoke custom cabinetry, luxury stone, integrated panel-ready appliances, a professional range and designer lighting and hardware',
+      "Not sure yet": 'tasteful upper-mid-range materials and new appliances'
+    }
+  };
+  const HARDWARE = {
+    "Transitional": 'polished nickel or brushed brass cup pulls on drawers and bar pulls on doors',
+    "Modern Farmhouse": 'matte black or aged brass cup pulls on drawers and bar pulls on doors',
+    "Classic Traditional": 'polished nickel or unlacquered brass bin pulls on drawers and knobs on doors',
+    "Contemporary": 'integrated finger pulls or slim edge pulls, almost invisible',
+    "Warm Minimal": 'minimal slim pulls in matte black or light oak',
+    "Coastal": 'brushed nickel or soft brass knobs and cup pulls'
+  };
+  const said = f => (DETAIL[f] && DETAIL[f][answers[f]]) || answers[f];
+  const hardware = () => HARDWARE[answers['Design style']] || 'new hardware that suits the design style';
   function buildPrompt() {
-    let p = 'You are an expert kitchen designer. Photorealistically remodel the kitchen shown in this'
-          + ' photo in a ' + answers['Design style'] + ' style.'
-          + ' Cabinetry: ' + answers['Cabinets'] + '.'
-          + ' Countertops: ' + answers['Countertops'] + '.'
-          + ' Backsplash: ' + answers['Backsplash'] + '.'
-          + ' Overall color palette: ' + answers['Color palette'] + '.'
-          + ' Budget level: ' + answers['Budget range'] + '.';
+    let p = 'You are a senior designer at a high-end design-build remodeling company. Show this kitchen or bathroom after a complete professional remodel: a full gut renovation, NOT a paint job, NOT cabinet refacing and NOT a light refresh.'
+      + ' KEEP the architecture exactly as it is: the same walls, ceiling height, windows, doorways, camera angle, lens and perspective, and the same layout. Every appliance and fixture stays exactly where it is now: the range or cooktop, the sink, the dishwasher, the refrigerator, the microwave or hood all keep their current positions. Do not add, remove or move any of them, and do not add an island that is not already there.'
+      + ' REPLACE everything else with brand new work: all cabinet boxes and doors, countertops, backsplash, sink and faucet, lighting, hardware, flooring and appliances. Do not reuse, repaint or copy the existing cabinet doors, their panel profiles, their seams, their gaps, their knobs or pulls, or their hardware positions: lay out the doors fresh.'
+      + ' Show real craftsmanship: doors and drawer fronts aligned in clean rows with tight, even 1/8 inch gaps (full-overlay or inset), drawer stacks where they make sense, upper cabinets taken to the ceiling or finished with crown molding, finished end panels, recessed toe kicks and under-cabinet lighting. Throw away all existing knobs and pulls and use completely new ' + hardware() + ', placed consistently on every drawer and door at the same height. Swap every dated appliance for a new modern one in a matching finish (stainless steel unless the style calls for panel-ready), in the same spot. Clear countertops with only a few tasteful styling pieces.'
+      + ' If it is a bathroom, apply the same standard to the vanity, mirror, lighting, shower or tub, tile and plumbing fixtures.'
+      + ' Design direction: ' + said('Design style') + '. Cabinetry: ' + said('Cabinets') + '. Countertops: ' + said('Countertops') + '. Backsplash: ' + said('Backsplash') + '. Color palette: ' + said('Color palette') + '. Flooring: new flooring that suits the design. Materials level: ' + said('Budget range') + '.';
     const notes = $('#aipNotes') ? $('#aipNotes').value.trim() : '';
     if (advanced && notes) p += ' Additional notes from the homeowner to honor: ' + notes + '.';
-    p += ' Keep the EXACT same room layout, camera angle, perspective, proportions and window and door'
-       + ' positions. Only change finishes, materials, cabinetry, fixtures and styling.'
-       + ' Produce one clean, realistic, high-end result with natural lighting.'
-       + ' Do not add any text, labels, people or watermarks.';
+    p += ' Make it photorealistic and magazine quality with natural daylight. Do not add any text, labels, people or watermarks.';
     return p;
   }
+  /*PROMPT:END*/
 
   /* ---- 3. generate ---- */
   $('#aipGo').addEventListener('click', generate);
