@@ -18,6 +18,8 @@ JOBBER_EMBED = """<div id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534"></div>
 <script src="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js" clienthub_id="2fd5e64e-6cab-4257-bd4e-f0e85b523082-2323534" form_url="https://clienthub.getjobber.com/client_hubs/2fd5e64e-6cab-4257-bd4e-f0e85b523082/public/work_request/embedded_work_request_form?form_id=2323534"></script>"""
 # Google Business Profile rating. These are the numbers baked into the page;
 # the homepage pill refreshes them live from /api/google-rating (dfc-api).
+# Customer financing application (Express Financing Solutions), from Brian 2026-10-20
+FINANCING_URL = "https://express-fin.com/application-form?recordId=001UR00000uUkhtYAC"
 GOOGLE_RATING  = "4.8"
 GOOGLE_REVIEWS = "63"
 GOOGLE_MAPS_URL = "https://maps.app.goo.gl/AUjVDsK2nXdHqPy68"
@@ -100,7 +102,7 @@ def thumb(s): return M[s]["thumb"]
 # Google tag (gtag.js) — Google Ads / Analytics
 # Cache-busting version for styles.css / *.js links. Bump on any CSS or JS change,
 # or browsers keep serving their cached copy (Caddy sends no Cache-Control).
-ASSET_VER = "20261009n"
+ASSET_VER = "20261120b"
 
 GTAG = """<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRMHK61G1N"></script>
@@ -173,6 +175,32 @@ def head(title, desc, page):
 </head>
 <body data-page="{page}">"""
 
+# ---------------------------------------------------------------- TOOLS MENU
+# The "Tools" dropdown in the desktop nav. Opens on hover and on keyboard /
+# tap focus (:focus-within), closed by default. The mobile menu lists the
+# tools as plain links instead. `prefix` is "/" for pages outside the root.
+AI_TOOL_PAGE = "ai-kitchen-inspiration.html"
+def tools_menu(prefix="", current=False):
+    cur = ' current' if current else ''
+    return f"""<div class="nav-drop{cur}">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true">Tools <i class="nav-caret" aria-hidden="true"></i></button>
+        <div class="nav-drop-menu nav-drop-menu--feature">
+          <a class="nav-feature" href="{prefix}{AI_TOOL_PAGE}">
+            <span class="nf-ba">
+              <span class="nf-img"><img src="{prefix}assets/img/ai-example-before.jpg" alt="A dated kitchen before" width="560" height="419" decoding="async"><i>Before</i></span>
+              <span class="nf-img"><img src="{prefix}assets/img/ai-example-after.jpg" alt="The same kitchen remodeled by the AI tool" width="560" height="419" decoding="async"><i>After</i></span>
+              <span class="nf-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+            </span>
+            <span class="nf-body">
+              <span class="nf-eyebrow">Free design tool</span>
+              <span class="nf-title">AI Kitchen Inspiration</span>
+              <span class="nf-desc">Upload a photo of your kitchen, pick your finishes and see it remodeled in seconds.</span>
+              <span class="nf-cta">Try it free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+            </span>
+          </a>
+        </div>
+      </div>"""
+
 # ---------------------------------------------------------------- HEADER
 def header(current):
     def link(href, label, key):
@@ -184,6 +212,7 @@ def header(current):
         link("portfolio.html", "Portfolio", "portfolio"),
         link("our-process.html", "Our Process", "process"),
         link("index.html#areas", "Service Areas", "areas"),
+        tools_menu("" , current == "tools"),
         link("blog/", "Blog", "blog"),
         link("contact.html", "Contact", "contact"),
     ])
@@ -194,6 +223,7 @@ def header(current):
         '<a href="portfolio.html">Portfolio</a>',
         '<a href="our-process.html">Our Process</a>',
         '<a href="index.html#areas">Service Areas</a>',
+        f'<a href="{AI_TOOL_PAGE}">AI Kitchen Inspiration</a>',
         '<a href="blog/">Blog</a>',
         '<a href="contact.html">Contact</a>',
     ])
@@ -503,6 +533,21 @@ def build_index():
     </div></div>
   </section>
 
+  <!-- FINANCING -->
+  <section class="finance-band" id="financing">
+    <div class="wrap fin-inner reveal">
+      <div class="fin-copy">
+        <p class="eyebrow">Financing available</p>
+        <h2>Flexible financing for your remodel.</h2>
+        <p>Spread the cost of your project into simple monthly payments through our financing partner, Express Financing Solutions, so you can start the remodel you want now.</p>
+      </div>
+      <div class="fin-action">
+        <a class="btn btn--sage" href="{FINANCING_URL}" target="_blank" rel="noopener">Check your financing options {ARROW}</a>
+        <span class="fin-note">Opens our financing partner's application in a new tab.</span>
+      </div>
+    </div>
+  </section>
+
   <!-- CLIENT NOTES -->
   <section class="section wrap" id="reviews">
     <div class="head-row">
@@ -787,10 +832,20 @@ THREED_GROUPS = [
      "desc":"A spa-inspired bath with a barn-door entry, large-format tile and a sculptural vanity wall. Moody and intimate, it feels grounded and restorative — quiet luxury you can truly unwind in."},
     {"title":"Kitchen & Bath Refresh","slugs":["3d-bridetta-1","3d-bridetta-2","3d-bridetta-3"],
      "desc":"A coordinated kitchen and bath in a light, transitional palette — white cabinetry, quartz surfaces and brushed fixtures. Bright and welcoming, the spaces feel fresh, easy and effortlessly put-together."},
+    {"title":"Finished Basement & Primary Bath","slugs":["3d-finished-basement-1","3d-finished-basement-2","3d-finished-basement-3","3d-finished-basement-4","3d-finished-basement-5"],
+     "desc":"Wall-to-wall wood built-ins anchor a bright basement living room, while the primary bath pairs a freestanding tub with a fluted wood vanity nook and a glass shower. A powder room in soft floral wallpaper with an antique brass mirror completes the plan. Warm and layered, every room is made for the way the family really lives."},
+    {"title":"Walkout Basement & Guest Bath","slugs":["3d-walkout-basement-1","3d-walkout-basement-2","3d-walkout-basement-3"],
+     "desc":"Wide-plank wood-look floors, recessed lighting and French doors to the yard turn the lower level into open, light-filled living space, with a full bath in marble-look tile, a white vanity and matte black fixtures. Bright and easy, it adds a whole new level of usable home."},
     {"title":"Covered Patio & Pergola","slugs":["3d-covered-patio-1","3d-covered-patio-2","3d-covered-patio-3"],
      "desc":"A cedar-tone pergola, lounge seating and clean railings that extend the home into the backyard. It transmits ease and escape — a relaxed outdoor room made for slow mornings and evening gatherings."},
     {"title":"Wraparound Porch & Great Room","slugs":["3d-ginger-1","3d-ginger-2"],
      "desc":"An addition that opens the home up — a covered porch for outdoor living and a bright, connected great room inside. It transmits warmth and openness: a home that breathes and brings people together."},
+    {"title":"Home Addition & Backyard Retreat","slugs":["3d-backyard-addition-1","3d-backyard-addition-2","3d-backyard-addition-3","3d-backyard-addition-4","3d-backyard-addition-5"],
+     "desc":"A new rear deck with dark railings steps down to a private backyard with a paver fire pit circle, while inside the addition brings new bedrooms, a primary bath with a sage accent wall, double floating wood vanity and brass fixtures, and a marble-look kids' bath. It gives a growing family room to spread out, and a backyard made for evenings around the fire."},
+    {"title":"Sunroom Addition & Deck","slugs":["3d-sunroom-deck-1","3d-sunroom-deck-2","3d-sunroom-deck-3","3d-sunroom-deck-4"],
+     "desc":"A sunroom addition wrapped in windows opens onto a wide deck with white railings, stairs down to a paver path and fresh landscaping. Light pours in all day, so the home gains a bright, relaxed room that feels like outdoor living in every season."},
+    {"title":"Covered Deck with Gable Roof","slugs":["3d-covered-deck-1","3d-covered-deck-2","3d-covered-deck-3","3d-covered-deck-4"],
+     "desc":"A raised deck with black railings and lattice skirting, topped by an open gable roof with a wood plank ceiling over the main seating area. Shaded, open and connected to the yard, it is an outdoor room the family will use from spring through fall."},
 ]
 
 KITCHEN_GROUPS = [
@@ -1176,6 +1231,252 @@ def build_process():
               DESC, "process"),
          body, "process")
 
+# ================================================================ AI KITCHEN INSPIRATION
+# The wizard's look lives in assets/css/ai-tool.css and its behaviour in
+# assets/js/ai-tool.js; the server side is api/public/ai.php (dfc-api).
+# Examples at the bottom of the AI tool page, so homeowners can see what each
+# choice looks like before they pick it. One real kitchen (assets/process/
+# p04-before.jpg) remodeled once per option; source files and prompts in
+# Projects/DFC Home Improvement/style-examples/. Names must match OPTIONS in
+# assets/js/ai-tool.js.
+AI_STYLE_EXAMPLES = [
+    ("Transitional", "transitional",
+     "The best of classic and modern: Shaker cabinets, soft neutral colors and simple, clean details that never go out of style."),
+    ("Modern Farmhouse", "modern-farmhouse",
+     "White cabinets with black accents, a farmhouse sink, open wood shelves and warm, lived-in character."),
+    ("Classic Traditional", "classic-traditional",
+     "Rich wood cabinetry, detailed moldings, granite and elegant fixtures for a timeless, formal look."),
+    ("Contemporary", "contemporary",
+     "Sleek flat cabinets, little to no hardware, bold contrast and clean lines throughout."),
+    ("Warm Minimal", "warm-minimal",
+     "Light wood, soft whites and natural textures, with almost nothing on display. Calm and uncluttered."),
+    ("Coastal", "coastal",
+     "Bright whites, soft blues, light floors and natural rattan for an airy, relaxed feel."),
+]
+AI_PALETTE_EXAMPLES = [
+    ("Warm Neutrals", "warm-neutrals", ("#efe6d8", "#d9c9b3", "#b8a48c", "#b08d57"),
+     "Creamy whites, soft beige and taupe, warmed up with brass."),
+    ("Crisp White", "crisp-white", ("#ffffff", "#eeeeea", "#c9ccd0", "#1f1f1f"),
+     "Bright white from top to bottom, with a few dark accents."),
+    ("Cool Grays", "cool-grays", ("#e6e8ea", "#b9bec4", "#8d939a", "#5e646b"),
+     "Soft grays, white stone and brushed nickel."),
+    ("Deep and Moody", "deep-and-moody", ("#1f3d33", "#23324a", "#2b2b2d", "#b58a4c"),
+     "Rich green, navy or charcoal cabinets with warm brass."),
+    ("Earthy and Natural", "earthy-and-natural", ("#b98552", "#9aa58a", "#c4714f", "#d8cfc0"),
+     "Natural wood, sage green, terracotta and stone."),
+    ("Two Tone Contrast", "two-tone-contrast", ("#f7f6f2", "#22314f", "#e7e3db", "#b08d57"),
+     "Light upper cabinets with a darker base and island."),
+]
+
+def ai_examples():
+    ZOOM = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
+            'stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>')
+    def card(kind, name, slug, desc, swatches=()):
+        src = f"assets/img/ai-examples/{kind}-{slug}"
+        sw = ""
+        if swatches:
+            sw = ('<span class="aip-ex-sw" aria-hidden="true">'
+                  + "".join(f'<i style="background:{c}"></i>' for c in swatches) + "</span>")
+        what = "style" if kind == "style" else "color palette"
+        return f"""
+        <figure class="aip-ex-card">
+          <button type="button" class="aip-ex-img" data-full="{src}-1600.jpg?v={ASSET_VER}" aria-label="Enlarge the {name} example"><img src="{src}-800.jpg?v={ASSET_VER}" srcset="{src}-480.jpg?v={ASSET_VER} 480w, {src}-800.jpg?v={ASSET_VER} 800w" sizes="(max-width: 560px) 46vw, (max-width: 980px) 45vw, 390px" width="800" height="600" loading="lazy" alt="Kitchen example with the {name} {what}"><span class="aip-ex-zoom" aria-hidden="true">{ZOOM}</span></button>
+          <figcaption><span class="aip-ex-name">{name}{sw}</span><p>{desc}</p></figcaption>
+        </figure>"""
+    styles = "".join(card("style", n, s, d) for n, s, d in AI_STYLE_EXAMPLES)
+    palettes = "".join(card("palette", n, s, d, sw) for n, s, sw, d in AI_PALETTE_EXAMPLES)
+    return f"""
+  <section class="section aip-ex" id="style-examples">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="reveal"><p class="eyebrow">Style guide</p><h2>See each style before you choose.</h2></div>
+        <p class="h-right reveal d1">Each example is a full kitchen designed in that style or color palette, so you can picture the finished look. Pick the one that feels most like home.</p>
+      </div>
+      <div class="aip-ex-group reveal">
+        <h3 class="aip-ex-title">Design styles</h3>
+        <div class="aip-ex-grid">{styles}
+        </div>
+      </div>
+      <div class="aip-ex-group reveal">
+        <h3 class="aip-ex-title">Color palettes</h3>
+        <div class="aip-ex-grid">{palettes}
+        </div>
+      </div>
+      <div class="aip-ex-foot">
+        <p>Examples created with AI to show each look. Your design follows the layout of your own kitchen.</p>
+        <a class="btn btn--sage" href="#tool">Try it with your kitchen {ARROW}</a>
+      </div>
+    </div>
+  </section>
+  <div class="lightbox" id="aipLb" aria-hidden="true" role="dialog" aria-label="Style guide example">
+    <button class="lb-close" id="aipLbClose" aria-label="Close">✕</button>
+    <button class="lb-nav lb-prev" id="aipLbPrev" aria-label="Previous">‹</button>
+    <img id="aipLbImg" src="" alt="">
+    <button class="lb-nav lb-next" id="aipLbNext" aria-label="Next">›</button>
+    <div class="lb-cap" id="aipLbCap"></div>
+  </div>"""
+
+# Sits right under the wizard, so people who would never scroll down still
+# find the style guide. Hidden on the result step (data-step="3").
+def ai_guide_teaser():
+    down = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
+            'stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>')
+    thumbs = "".join(f'<img src="assets/img/ai-examples/style-{s}-240.jpg?v={ASSET_VER}" width="240" height="180" alt="" title="{n}">'
+                     for n, s, _ in AI_STYLE_EXAMPLES)
+    return f"""
+          <a class="aip-guide" href="#style-examples">
+            <span class="aip-guide-copy">
+              <b>Not sure where to start?</b>
+              <span>See our style guide below for an example of every design style and color palette.</span>
+              <span class="aip-guide-cta">View the style guide {down}</span>
+            </span>
+            <span class="aip-guide-thumbs" aria-hidden="true">{thumbs}</span>
+          </a>"""
+
+def build_ai_tool():
+    up = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" '
+          'stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/>'
+          '<line x1="12" y1="3" x2="12" y2="15"/></svg>')
+    body = f"""
+<main id="top">
+{page_head("AI Kitchen Inspiration", "See your kitchen, reimagined.",
+           "Upload a photo of your kitchen as it looks today, choose the finishes you love, and see it remodeled in seconds. Free, with nothing to install.")}
+  <section class="aip" id="tool">
+    <div class="wrap">
+      <div class="aip-grid">
+        <div class="aip-main" data-step="1">
+        <div class="aip-card">
+          <div class="aip-steps">
+            <div class="aip-step active" data-step="1"><span class="dot">1</span><span class="lbl">Your space</span></div>
+            <div class="aip-line" data-line="1"><i></i></div>
+            <div class="aip-step" data-step="2"><span class="dot">2</span><span class="lbl">Your style</span></div>
+            <div class="aip-line" data-line="2"><i></i></div>
+            <div class="aip-step" data-step="3"><span class="dot">3</span><span class="lbl">Your remodel</span></div>
+          </div>
+
+          <!-- 1. the photo -->
+          <div class="aip-panel show" data-panel="1">
+            <div class="aip-drop" id="aipDrop" role="button" tabindex="0" aria-label="Add a photo of your kitchen">
+              {up}
+              <b>Add a photo of your kitchen</b>
+              <p>Stand back far enough to get the cabinets and counters in the frame.</p>
+              <span class="aip-choose">Choose a photo</span>
+              <input type="file" id="aipFile" accept="image/*" hidden>
+            </div>
+            <div class="aip-preview" id="aipPreview">
+              <img id="aipPreviewImg" alt="The kitchen you uploaded">
+              <span class="aip-change" id="aipChange">Use a different photo</span>
+            </div>
+            <div class="aip-actions">
+              <button class="btn btn--sage" id="aipToStyle" disabled>Continue to style {ARROW}</button>
+            </div>
+          </div>
+
+          <!-- 2. the finishes -->
+          <div class="aip-panel" data-panel="2">
+            <div class="aip-panel-head">
+              <div class="aip-progress">
+                <div class="aip-progress-row"><span id="aipCount">0 of 6 chosen</span><b id="aipPct">0%</b></div>
+                <div class="aip-bar"><i id="aipFill"></i></div>
+              </div>
+              <label class="aip-adv" title="Type your own answers instead of choosing from the lists">
+                <input type="checkbox" id="aipAdv">
+                <span class="aip-track"><span class="aip-thumb"></span></span>
+                <span>Advanced <em>(type your own)</em></span>
+              </label>
+            </div>
+            <a class="aip-ex-link" href="#style-examples">Not sure what a style or palette looks like? See examples</a>
+            <div class="aip-fields" id="aipGrid"></div>
+            <div class="aip-notes" id="aipNotesWrap" hidden>
+              <label class="aip-lab" for="aipNotes">Anything else</label>
+              <textarea id="aipNotes" placeholder="Must-keep features, a material you have your heart set on, a look you are after"></textarea>
+            </div>
+            <div class="aip-actions">
+              <button class="btn" id="aipBack">Back</button>
+              <button class="btn btn--sage" id="aipGo" disabled>Choose 6 to continue</button>
+            </div>
+          </div>
+
+          <!-- 3. the result -->
+          <div class="aip-panel" data-panel="3">
+            <div class="aip-loading" id="aipLoading">
+              <div class="aip-spin"></div>
+              <h3>Designing your new kitchen</h3>
+              <p>This usually takes about twenty seconds. Please keep this page open.</p>
+              <div class="aip-err" id="aipErr"></div>
+            </div>
+            <div class="aip-result" id="aipResult">
+              <h2>Your kitchen, reimagined</h2>
+              <p class="sub">Drag the handle to compare it with the photo you started from.</p>
+              <div class="aip-ba" id="aipBa">
+                <img id="aipAfter" alt="Your kitchen with the finishes you chose">
+                <div class="aip-before"><img id="aipBefore" alt="Your kitchen today"></div>
+                <span class="aip-tag l">Before</span>
+                <span class="aip-tag r">After</span>
+                <div class="aip-div" id="aipDiv"><span class="aip-handle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="10 7 5 12 10 17"/><polyline points="14 7 19 12 14 17"/></svg></span></div>
+                <a class="aip-open" id="aipOpen" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open full size</a>
+              </div>
+              <button class="btn btn--sage aip-cta" id="aipSendOpen">Send this design to DFC {ARROW}</button>
+              <span class="aip-restart" id="aipRestart">Start again with a different photo</span>
+
+              <div class="aip-send" id="aipSend">
+                <h3>Send your design to us</h3>
+                <p>We will look at what you put together and call you within 24 hours to talk through what it would take in your home.</p>
+                <form class="aip-form" id="aipForm" novalidate>
+                  <input type="text" id="aipName" placeholder="Your name" required autocomplete="name" aria-label="Your name">
+                  <input type="tel" id="aipPhone" placeholder="Phone" required autocomplete="tel" aria-label="Phone">
+                  <input class="full" type="email" id="aipEmail" placeholder="Email" required autocomplete="email" aria-label="Email">
+                  <input class="full" type="text" id="aipAddress" placeholder="Project address or ZIP code" required autocomplete="street-address" aria-label="Project address or ZIP code">
+                  <div class="aip-hp" aria-hidden="true"><input type="text" id="aipHoney" tabindex="-1" autocomplete="off"></div>
+                  <button type="submit" class="btn btn--sage" id="aipSubmit">Send my design</button>
+                  <p class="aip-status" id="aipStatus" role="status"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+{ai_guide_teaser()}
+        </div>
+
+        <aside class="aip-aside">
+          <div class="aip-box">
+            <h2>How it works</h2>
+            <ol class="aip-how">
+              <li><span class="n">1</span><div><b>Add a photo</b><p>Your kitchen exactly as it is today. No tidying required.</p></div></li>
+              <li><span class="n">2</span><div><b>Pick your finishes</b><p>Six quick choices, or switch on Advanced and describe it in your own words.</p></div></li>
+              <li><span class="n">3</span><div><b>See it remodeled</b><p>Same room, same layout, new finishes. Compare it side by side.</p></div></li>
+              <li><span class="n">4</span><div><b>Send it to us</b><p>Love where it landed? Send it over and we will show you how to make it real.</p></div></li>
+            </ol>
+          </div>
+          <div class="aip-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div>
+              <b>A starting point for ideas</b>
+              <p>Your design is a picture of the possibilities. Send it to us and our Class A licensed design-build team will show you what is possible in your kitchen, with photoreal 3D design and real pricing.</p>
+            </div>
+          </div>
+          <div class="aip-box aip-talk">
+            <h2>Rather talk it through?</h2>
+            <p>A quick call with our team will answer your questions about cost, timing and what your kitchen can become.</p>
+            <div class="row">
+              <a class="btn btn--sage" href="tel:{PHONE_TEL}">Call</a>
+              <a class="btn" href="sms:{PHONE_TEL}">Text</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+{ai_examples()}
+{cta()}
+</main>
+<script src="assets/js/ai-tool.js?v={ASSET_VER}" defer></script>"""
+    h = head("AI Kitchen Remodel Inspiration | See Your Kitchen Remodeled | DFC Home Improvement",
+             "Upload a photo of your kitchen, choose your style and finishes, and see it remodeled in seconds with AI. Free from DFC Home Improvement, a Class A design-build contractor in Northern Virginia.",
+             "tools")
+    h = h.replace("</head>", f'<link rel="stylesheet" href="assets/css/ai-tool.css?v={ASSET_VER}">\n</head>', 1)
+    page(AI_TOOL_PAGE, h, body, "tools")
+
 if __name__ == "__main__":
     build_index()
     build_new_construction()
@@ -1196,6 +1497,7 @@ if __name__ == "__main__":
     build_contact()
     build_privacy()
     build_terms()
+    build_ai_tool()
     # remove the old services page if present
     old = os.path.join(ROOT, "services.html")
     if os.path.exists(old): os.remove(old); print("removed services.html")

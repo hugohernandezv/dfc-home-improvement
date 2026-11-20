@@ -157,7 +157,24 @@ strong { color: var(--ink); font-weight: 600; }
 .site-header.scrolled .brand .mark-white { display: none; }
 .site-header.scrolled .brand .mark-black { display: block; }
 
-.nav { display: flex; align-items: center; gap: clamp(22px, 2.6vw, 44px); }
+.nav { display: flex; align-items: center; gap: clamp(16px, 1.9vw, 36px); }
+.nav a, .nav-drop-btn, .header-phone { white-space: nowrap; }
+/* With eight menu items the phone number is the first thing to give way on
+   narrower laptops; it stays in the footer, the CTA band and the mobile bar. */
+.header-cta { white-space: nowrap; }
+@media (max-width: 1366px) { .header-phone { display: none; } }
+/* Small laptops and landscape tablets: the full eight-item menu no longer fits
+   beside the buttons, so switch to the compact header (Call / Text / menu). */
+@media (max-width: 1220px) {
+  /* .site-header prefix: these must beat the base header rules further down */
+  .site-header .nav, .site-header .header-cta, .site-header .header-portal { display: none; }
+  .site-header .header-quick { display: inline-flex; }
+  .site-header .header-right { gap: 10px; }
+  .site-header .nav-toggle { display: flex; }
+  .site-header .nav-toggle.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .site-header .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .site-header .nav-toggle.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
 .nav a {
   font-size: 0.98rem; font-weight: 500; letter-spacing: 0.01em;
   color: #fff; position: relative; padding: 4px 0;
@@ -169,6 +186,59 @@ strong { color: var(--ink); font-weight: 600; }
   background: currentColor; transition: width .4s var(--ease);
 }
 .nav a:hover::after, .nav a.current::after { width: 100%; }
+/* "Tools" dropdown: closed by default, opens on hover and on keyboard/tap
+   focus. Desktop only (the nav is hidden at <=880px; the mobile menu lists
+   the tools as plain links). */
+.nav-drop { position: relative; }
+.nav-drop-btn {
+  display: inline-flex; align-items: center; gap: 7px; padding: 4px 0; border: 0; background: none;
+  font: inherit; font-size: 0.98rem; font-weight: 500; letter-spacing: 0.01em; color: var(--ink); cursor: pointer;
+}
+.nav-caret { width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); transition: transform .3s var(--ease); }
+.nav-drop-menu {
+  position: absolute; top: calc(100% + 14px); left: 50%; min-width: 280px;
+  transform: translate(-50%, 6px); opacity: 0; visibility: hidden; pointer-events: none;
+  background: #fff; border: 1px solid var(--line-soft); border-radius: 8px; padding: 8px;
+  box-shadow: 0 24px 50px -22px rgba(13,8,5,.35);
+  transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s linear .25s;
+}
+.nav-drop-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; } /* hover bridge */
+.nav-drop:hover .nav-drop-menu, .nav-drop:focus-within .nav-drop-menu {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+  transition: opacity .25s var(--ease), transform .25s var(--ease), visibility 0s;
+}
+.nav-drop:hover .nav-caret, .nav-drop:focus-within .nav-caret { transform: rotate(225deg) translate(-1px, -1px); }
+/* Feature card: a real before/after from the tool, then title + CTA */
+.nav-drop-menu--feature { width: 500px; min-width: 0; padding: 10px; }
+.nav .nav-feature { display: block; padding: 0; color: var(--ink); white-space: normal; }
+.nav .nav-feature::after { display: none; }
+.nf-ba { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.nf-img { position: relative; display: block; overflow: hidden; border-radius: 6px; aspect-ratio: 4 / 3; background: var(--paper-2); }
+.nf-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.nav-feature:hover .nf-img img, .nav-feature:focus-visible .nf-img img { transform: scale(1.05); }
+.nf-img i {
+  position: absolute; left: 8px; top: 8px; padding: 4px 9px; border-radius: 100px;
+  font-style: normal; font-size: .6rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase;
+  background: rgba(255,255,255,.92); color: var(--ink);
+}
+.nf-img + .nf-img i { background: var(--sage-deep); color: #fff; }
+.nf-arrow {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: #fff; color: var(--sage-deep); box-shadow: 0 4px 14px rgba(13,8,5,.25);
+}
+.nf-arrow svg { width: 15px; height: 15px; }
+.nf-body { display: block; padding: 16px 10px 8px; }
+.nf-eyebrow { display: block; font-size: .64rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); }
+.nf-title { display: block; margin-top: 5px; font-family: var(--head); font-weight: 600; font-size: 1.2rem; color: var(--ink); }
+.nf-desc { display: block; margin-top: 4px; font-size: .88rem; line-height: 1.5; color: var(--ink-soft); }
+.nf-cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+  font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sage-deep);
+}
+.nf-cta svg { width: 15px; height: 15px; transition: transform .3s var(--ease); }
+.nav-feature:hover .nf-cta svg { transform: translateX(4px); }
+.nav-drop.current .nav-drop-btn { box-shadow: inset 0 -1.5px 0 currentColor; }
 
 .header-right { display: flex; align-items: center; gap: 22px; }
 .header-phone {
@@ -513,6 +583,15 @@ body.menu-open { overflow: hidden; }
 /* ============================================================
    STATS
    ============================================================ */
+/* Financing band (homepage, after the stats) */
+.finance-band { background: var(--sage-soft); padding-block: clamp(48px, 6vw, 84px); border-bottom: 1px solid var(--sage-soft2); }
+.fin-inner { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.fin-copy h2 { margin: .35em 0 .45em; }
+.fin-copy p:last-child { color: var(--ink-soft); max-width: 58ch; margin: 0; }
+.fin-action { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.fin-action .btn svg { width: 16px; height: 16px; flex: none; }
+.fin-note { font-size: .86rem; color: var(--ink-mute); }
+@media (max-width: 880px) { .fin-inner { grid-template-columns: 1fr; } .fin-action .btn { width: 100%; } }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 40px); }
 .stat .s-num { font-family: var(--head); font-weight: 500; font-size: clamp(2.7rem, 5vw, 4rem); color: #fff; line-height: 1; }
 .stat .s-lab { margin-top: 12px; font-size: 0.9rem; color: var(--on-night); }
