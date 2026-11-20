@@ -5,8 +5,8 @@
    same before/after slider. On DFC:
    - the image model is reached through /api/ai-preview (dfc-api on Railway,
      the key never reaches the browser);
-   - the lead goes out through FormSubmit, the same path as the price
-     estimator, so it lands in the same inbox (hugo@, cc admin@);
+   - the lead goes out through FormSubmit to admin@, the shared inbox the
+     contact forms use (Hugo's request, 2026-11-20);
    - the design is parked on the server only when the visitor sends it, so
      the email can link to it.
    ------------------------------------------------------------------ */
@@ -15,8 +15,7 @@
   const $$ = s => [...document.querySelectorAll(s)];
   if (!$('#aipDrop')) return;
 
-  const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/hugo@dfchomeimprovement.com';
-  const LEAD_CC = 'admin@dfchomeimprovement.com';
+  const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/admin@dfchomeimprovement.com';
   const PHONE = '(703) 596-8375';
 
   const OPTIONS = {
@@ -368,7 +367,6 @@
     fd.append('_subject', 'Kitchen design from the AI Kitchen Inspiration tool');
     fd.append('_template', 'table');
     fd.append('_captcha', 'false');
-    fd.append('_cc', LEAD_CC);
     fd.append('source', 'AI Kitchen Inspiration tool');
     fd.append('page_url', location.href);
     fd.append('submitted_at', new Date().toISOString());
